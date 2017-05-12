@@ -1,0 +1,117 @@
+List of things that need to be Reimplmeneted to Forgotten Nature 2.0.0
+
+By creative tab
+
+--CRYSTAL--
+
+Crystal Torch
+Crystal Mushroom
+Giant Crystal Mushroom
+Dark/Light Cluster
+Dark/Light Focus Crystal
+Dark/Light Crystal Bricks
+Dark/Light Trees
+Dark/Light Crystal Tools
+
+
+
+--NETHER--
+
+Nether Mushroom
+Giant Nether Mushroom
+
+
+--MISC--
+
+Allium Drumstick
+Bachelor's Button
+Billy Buttons
+Delphinium Belladonna
+Fernflower Yarrow
+Gerbera Daisy
+Hydrangea
+Red Rover
+Snapdragon
+Star of Bethlehem
+Glass Variants
+
+--CROPS--
+
+Knob Celery
+Onion
+Garlic
+Corn
+Peanuts
+Turnip
+Ginger
+Parsley
+Water Chestnut
+Rice
+Tomato
+Cabbage
+Pineapple
+Grapes
+Broccoli
+Cotton
+Hemp (Rope deleted, may find other use)
+
+
+--THINGS TO DELETE--
+
+Bamboo
+Stained Fences
+Stained Stairs
+Obsidian Tools
+Titan Stone
+Random Fluids
+Saw
+Sulfur
+Nitre
+Netherrot
+Soul Dust
+Animal Oil
+Rope
+Obsidian Armor
+Coal Compression
+
+
+--TREES--
+
+Red Maple
+Angel Oak
+Yellow Maple
+Jacaranda
+Fig
+Cypress
+Desert Ironwood
+Eucalyptus
+Sequoia
+Pink Cherry
+White Cherry
+Apple 
+Joshua
+Swamp Willow
+Palm
+Desert Willow
+Cedar
+Ginkgo
+Poplar
+Beech
+Walnut
+Wide-Top Eucalyptus
+Bukkit
+Banana
+Orange
+Lemon
+Nether Ash
+Nether Blaze
+
+
+--BUSHES--
+
+Deciduous
+Evergreen
+Blueberry
+Raspberry
+Blackberry
+Huckleberry
