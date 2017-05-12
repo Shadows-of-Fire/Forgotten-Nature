@@ -1,4 +1,4 @@
-package ForgottenNature.Biomes;
+package shadows.nature.Biomes;
 
 import java.util.Random;
 
@@ -6,116 +6,99 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
 
-class FNBiomeDecorator extends BiomeDecorator 
-{
-	static class Builder 
-	{
+class FNBiomeDecorator extends BiomeDecorator {
+	static class Builder {
 		// required parms
-		private final BiomeGenBase	biome;
+		private final BiomeGenBase biome;
 
 		// optional parms - initialized to defaults
-		private int					waterlilyPerChunk		= 0;
-		private int					treesPerChunk			= 0;
-		private int					flowersPerChunk			= 2;
-		private int					grassPerChunk			= 1;
-		private int					deadBushPerChunk		= 0;
-		private int					mushroomsPerChunk		= 0;
-		private int					reedsPerChunk			= 0;
-		private int					cactiPerChunk			= 0;
-		private int					sandPerChunk			= 1;
-		private int					sandPerChunk2			= 3;
-		private int					clayPerChunk			= 1;
-		private int					bigMushroomsPerChunk	= 0;
+		private int waterlilyPerChunk = 0;
+		private int treesPerChunk = 0;
+		private int flowersPerChunk = 2;
+		private int grassPerChunk = 1;
+		private int deadBushPerChunk = 0;
+		private int mushroomsPerChunk = 0;
+		private int reedsPerChunk = 0;
+		private int cactiPerChunk = 0;
+		private int sandPerChunk = 1;
+		private int sandPerChunk2 = 3;
+		private int clayPerChunk = 1;
+		private int bigMushroomsPerChunk = 0;
 		protected World currentWorld;
-	    protected Random randomGenerator;
-	    protected int chunk_X;
-	    protected int chunk_Z;
-		
-		Builder(BiomeGenBase biome) 
-		{
+		protected Random randomGenerator;
+		protected int chunk_X;
+		protected int chunk_Z;
+
+		Builder(BiomeGenBase biome) {
 			this.biome = biome;
 		}
 
-		Builder bigMushroomsPerChunk(int val) 
-		{
+		Builder bigMushroomsPerChunk(int val) {
 			bigMushroomsPerChunk = val;
 			return this;
 		}
 
-		FNBiomeDecorator build() 
-		{
+		FNBiomeDecorator build() {
 			return new FNBiomeDecorator(this);
 		}
 
-		Builder cactiPerChunk(int val) 
-		{
+		Builder cactiPerChunk(int val) {
 			cactiPerChunk = val;
 			return this;
 		}
 
-		Builder clayPerChunk(int val) 
-		{
+		Builder clayPerChunk(int val) {
 			clayPerChunk = val;
 			return this;
 		}
 
-		Builder deadBushPerChunk(int val) 
-		{
+		Builder deadBushPerChunk(int val) {
 			deadBushPerChunk = val;
 			return this;
 		}
 
-		Builder flowersPerChunk(int val) 
-		{
+		Builder flowersPerChunk(int val) {
 			flowersPerChunk = val;
 			return this;
 		}
 
-		Builder grassPerChunk(int val) 
-		{
+		Builder grassPerChunk(int val) {
 			grassPerChunk = val;
 			return this;
 		}
 
-		Builder mushroomsPerChunk(int val) 
-		{
+		Builder mushroomsPerChunk(int val) {
 			mushroomsPerChunk = val;
 			return this;
 		}
 
-		Builder reedsPerChunk(int val) 
-		{
+		Builder reedsPerChunk(int val) {
 			reedsPerChunk = val;
 			return this;
 		}
 
-		Builder sandPerChunk(int val, int val2) 
-		{
+		Builder sandPerChunk(int val, int val2) {
 			sandPerChunk = val;
 			sandPerChunk2 = val2;
 			return this;
 		}
 
-		Builder treesPerChunk(int val) 
-		{
+		Builder treesPerChunk(int val) {
 			treesPerChunk = val;
 			return this;
 		}
 
-		Builder waterlilyPerChunk(int val) 
-		{
+		Builder waterlilyPerChunk(int val) {
 			waterlilyPerChunk = val;
 			return this;
 		}
 	}
-	
-	private FNBiomeDecorator() 
-	{
+
+	private FNBiomeDecorator() {
 		super();
 	}
 
-	private FNBiomeDecorator(Builder builder) 
-	{
+	private FNBiomeDecorator(Builder builder) {
 		super();
 
 		waterlilyPerChunk = builder.waterlilyPerChunk;
