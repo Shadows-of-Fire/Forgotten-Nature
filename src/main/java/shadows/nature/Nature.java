@@ -12,11 +12,8 @@ import shadows.nature.util.NatureData;
 
 @Mod(modid = NatureData.MODID, version = NatureData.VERSION, name = NatureData.NAME)
 public class Nature {
-	public static final String MODID = "modid";
-	public static final String MODNAME = "modname";
-	public static final String VERSION = "modversion";
 
-	@SidedProxy(clientSide = "shadows.attained.proxy.ClientProxy", serverSide = "shadows.attained.proxy.CommonProxy")
+	@SidedProxy(clientSide = "shadows.nature.proxy.ClientProxy", serverSide = "shadows.nature.proxy.CommonProxy")
 	public static CommonProxy proxy;
 
 	@Instance

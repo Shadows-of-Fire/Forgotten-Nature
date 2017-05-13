@@ -44,3 +44,11 @@ processResources {
         exclude 'mcmod.info'
     }
 }
+
+sourceSets {
+    main {
+		java {
+            exclude '**/shadows/ancient/*'
+		}
+	}
+}
