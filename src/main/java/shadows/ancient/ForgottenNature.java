@@ -1,4 +1,4 @@
-package shadows.nature;
+/*package shadows.nature;
 
 import org.apache.logging.log4j.Level;
 
@@ -20,7 +20,7 @@ import shadows.ancient.gen.RemoveBiomes;
 import shadows.ancient.proxy.FNClientProxy;
 import shadows.ancient.proxy.FNCommonProxy;
 
-@Mod(modid = "ForgottenNature", name = "ForgottenNature", version = "1.7.19")
+//@Mod(modid = "ForgottenNature", name = "ForgottenNature", version = "1.7.19")
 
 public class ForgottenNature {
 	@SidedProxy(clientSide = "ForgottenNature.Proxy.FNClientProxy", serverSide = "ForgottenNature.Proxy.FNCommonProxy")
@@ -318,4 +318,4 @@ public class ForgottenNature {
 			cfg.save();
 		}
 	}
-}
+}*/

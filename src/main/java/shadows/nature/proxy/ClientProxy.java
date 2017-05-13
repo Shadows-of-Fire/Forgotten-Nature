@@ -9,8 +9,9 @@ public class ClientProxy extends CommonProxy {
 	@Override
 	public void preInit(FMLPreInitializationEvent e) {
 		super.preInit(e);
-		for(Block block : NatureBlocks.getBlocks()){
-			if(block instanceof IHasModelLocation) ((IHasModelLocation) block).registerModels();
+		for (Block block : NatureBlocks.getBlocks()) {
+			if (block instanceof IHasModelLocation)
+				((IHasModelLocation) block).registerModels();
 		}
 	}
 }

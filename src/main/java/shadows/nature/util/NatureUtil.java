@@ -16,12 +16,15 @@ public class NatureUtil {
 	public static Item getItem(String regname) {
 		return ForgeRegistries.ITEMS.getValue(new ResourceLocation(regname));
 	}
-	
-	public static void sMRL(Block block, int meta, String variant){
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta, new ModelResourceLocation(block.getRegistryName(), variant));
+
+	public static void sMRL(Block block, int meta, String variant) {
+		System.out.println("Setting model resource location for Block: " + block.getRegistryName() + " with variant string " + variant + " and declaring " + block.getClass().toString());
+		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta,
+				new ModelResourceLocation(block.getRegistryName(), variant));
 	}
-	
-	public static void sMRL(Item item, int meta, String variant){
-		ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(item.getRegistryName(), variant));
+
+	public static void sMRL(Item item, int meta, String variant) {
+		ModelLoader.setCustomModelResourceLocation(item, meta,
+				new ModelResourceLocation(item.getRegistryName(), variant));
 	}
 }

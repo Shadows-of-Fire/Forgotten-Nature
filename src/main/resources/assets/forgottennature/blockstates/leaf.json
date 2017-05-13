@@ -1,0 +1,91 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"model": "cube_all"
+	},
+	"variants": {
+		"type": {
+			"red_maple": {
+				"textures": {
+					"all": "forgottennature:blocks/leaf/red_maple"
+				}
+			},
+			"angel_oak": {
+				"textures": {
+					"all": "forgottennature:blocks/leaf/angel_oak"
+				}
+			},
+			"yellow_maple": {
+				"textures": {
+					"all": "forgottennature:blocks/leaf/yellow_maple"
+				}
+			},
+			"jacaranda": {
+				"textures": {
+					"all": "forgottennature:blocks/leaf/jacaranda"
+				}
+			},
+			"cypress": {
+				"textures": {
+					"all": "forgottennature:blocks/leaf/cypress"
+				}
+			},
+			"desert_ironwood": {
+				"textures": {
+					"all": "forgottennature:blocks/leaf/desert_ironwood"
+				}
+			},
+			"eucalyptus": {
+				"textures": {
+					"all": "forgottennature:blocks/leaf/eucalyptus"
+				}
+			},
+			"sequoia": {
+				"textures": {
+					"all": "forgottennature:blocks/leaf/sequoia"
+				}
+			},
+			"joshua": {
+				"textures": {
+					"all": "forgottennature:blocks/leaf/joshua"
+				}
+			},
+			"swamp_willow": {
+				"textures": {
+					"all": "forgottennature:blocks/leaf/swamp_willow"
+				}
+			},
+			"palm": {
+				"textures": {
+					"all": "forgottennature:blocks/leaf/palm"
+				}
+			},
+			"desert_willow": {
+				"textures": {
+					"all": "forgottennature:blocks/leaf/desert_willow"
+				}
+			},
+			"poplar": {
+				"textures": {
+					"all": "forgottennature:blocks/leaf/poplar"
+				}
+			},
+			"beech": {
+				"textures": {
+					"all": "forgottennature:blocks/leaf/beech"
+				}
+			},
+			"cedar": {
+				"textures": {
+					"all": "forgottennature:blocks/leaf/cedar"
+				}
+			},
+			"wide_top_euc": {
+				"textures": {
+					"all": "forgottennature:blocks/leaf/wide_top_euc"
+				}
+			}
+
+		}
+	}
+}

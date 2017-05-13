@@ -7,5 +7,5 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public interface IHasModelLocation {
 
 	public void registerModels();
-	
+
 }
