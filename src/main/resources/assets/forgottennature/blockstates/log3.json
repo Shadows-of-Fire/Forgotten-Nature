@@ -1,0 +1,48 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"model": "cube_column",
+		"textures": {
+			"end": "blocks/log_oak_top"
+		}
+	},
+	"variants": {
+		"type": {
+			"lemon": {
+				"textures": {
+					"side": "forgottennature:blocks/log/lemon"
+				}
+			},
+			"orange": {
+				"textures": {
+					"side": "forgottennature:blocks/log/orange"
+				}
+			},
+			"palm": {
+				"textures": {
+					"side": "forgottennature:blocks/log/palm"
+				}
+			},
+			"peach": {
+				"textures": {
+					"side": "forgottennature:blocks/log/peach"
+				}
+			},
+			"sequoia": {
+				"textures": {
+					"side": "forgottennature:blocks/log/sequoia"
+				}
+			}
+		},
+		"axis": {
+			"y": {},
+			"x": {
+				"x": 90,
+				"y": 90
+			},
+			"z": {
+				"x": 90
+			}
+		}
+	}
+}

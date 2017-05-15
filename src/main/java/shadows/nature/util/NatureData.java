@@ -5,6 +5,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IStringSerializable;
+import net.minecraft.util.EnumFacing.Axis;
 
 public class NatureData {
 
@@ -20,52 +21,97 @@ public class NatureData {
 
 	};
 
-	public static final PropertyEnum<TREE_TYPES_1> TYPE_1 = PropertyEnum.create("type", TREE_TYPES_1.class);
+	public static final PropertyEnum<LeafSet> LEAVES = PropertyEnum.create("type", LeafSet.class);
+	public static final PropertyEnum<Axis> AXIS = PropertyEnum.create("axis", Axis.class);
 
-	public static enum TREE_TYPES_1 implements IStringSerializable {
-		RED_MAPLE("red_maple"),
-		ANGEL_OAK("angel_oak"),
-		YELLOW_MAPLE("yellow_maple"),
-		JACARANDA("jacaranda"),
-		CYPRESS("cypress"),
-		DESERT_IRONWOOD("desert_ironwood"),
-		EUCALYPTUS("eucalyptus"),
-		SEQUIOA("sequoia"),
-		JOSHUA("joshua"),
-		SWAMP_WILLOW("swamp_willow"),
-		PALM("palm"),
-		DESERT_WILLOW("desert_willow"),
-		POPLAR("poplar"),
-		BEECH("beech"),
-		CEDAR("cedar"),
-		WIDE_TOP_EUCALYPTUS("wide_top_euc");
-
-		final String name;
-
-		TREE_TYPES_1(String name) {
-			this.name = name;
-		}
+	public static enum LeafSet implements IStringSerializable {
+		RED_MAPLE,
+		ANGEL_OAK,
+		YELLOW_MAPLE,
+		JACARANDA,
+		CYPRESS,
+		DESERT_IRONWOOD,
+		EUCALYPTUS,
+		SEQUOIA,
+		JOSHUA,
+		SWAMP_WILLOW,
+		PALM,
+		DESERT_WILLOW,
+		POPLAR,
+		BEECH,
+		CEDAR,
+		BUKKIT;
 
 		@Override
 		public String getName() {
-			return name;
+			return this.toString().toLowerCase();
 		}
 
 	}
-	// GINKGO("ginkgo"),
-	// WALNUT("walnut"),
-	// BUKKIT("bukkit"), <- this one isn't special but it's the 16th tree so it
-	// wont be on the other id
-	// BANANA("banana"),
-	// ORANGE("orange"),
-	// LEMON("lemon")'
-	// NETHER_ASH("nether_ash"),
-	// NETHER_BLAZE("nether_blaze"),
-	// CRYSTAL("crystal"),
-	// DARK_CRYSTAL("dark_crystal"),
-	// PINK_CHERRY("pink_cherry"),
-	// WHITE_CHERRY("white_cherry"),
-	// APPLE("apple"),
-	// FIG("fig"),
+
+	// GINKGO,
+	// WALNUT,
+	// BANANA,
+	// ORANGE,
+	// LEMON'
+	// NETHER_ASH,
+	// NETHER_BLAZE,
+	// CRYSTAL,
+	// DARK_CRYSTAL,
+	// PINK_CHERRY,
+	// WHITE_CHERRY,
+	// APPLE,
+	// FIG,
+	public static enum LogSet1 implements IStringSerializable {
+		BANANA,
+		BEECH,
+		BUKKIT,
+		CEDAR,
+		CHERRY;
+
+		@Override
+		public String getName() {
+			return this.toString().toLowerCase();
+		}
+
+	}
+
+	public static enum LogSet2 implements IStringSerializable {
+		DESERT_IRONWOOD,
+		DESERT_WILLOW,
+		EUCALYPTUS,
+		GINKGO,
+		JOSHUA;
+		@Override
+		public String getName() {
+			return this.toString().toLowerCase();
+		}
+
+	}
+
+	public static enum LogSet3 implements IStringSerializable {
+		LEMON,
+		ORANGE,
+		PALM,
+		PEACH,
+		SEQUOIA;
+
+		@Override
+		public String getName() {
+			return this.toString().toLowerCase();
+		}
+
+	}
+
+	public static enum LogSet4 implements IStringSerializable {
+		SWAMP_WILLOW,
+		WALNUT;
+
+		@Override
+		public String getName() {
+			return this.toString().toLowerCase();
+		}
+
+	}
 
 }

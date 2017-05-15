@@ -8,6 +8,9 @@ public class ItemBlockMeta extends ItemBlock {
 
 	public ItemBlockMeta(Block block) {
 		super(block);
+		setHasSubtypes(true);
+		setMaxDamage(0);
+		setRegistryName(block.getRegistryName());
 	}
 
 	@Override
@@ -16,8 +19,7 @@ public class ItemBlockMeta extends ItemBlock {
 	}
 
 	@Override
-    public String getUnlocalizedName(ItemStack stack)
-    {
-        return "item." + getUnlocalizedName() + stack.getMetadata();
-    }
+	public String getUnlocalizedName(ItemStack stack) {
+		return "item." + getUnlocalizedName() + "." + stack.getMetadata();
+	}
 }

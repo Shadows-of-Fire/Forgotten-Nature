@@ -80,9 +80,9 @@
 					"all": "forgottennature:blocks/leaf/cedar"
 				}
 			},
-			"wide_top_euc": {
+			"bukkit": {
 				"textures": {
-					"all": "forgottennature:blocks/leaf/wide_top_euc"
+					"all": "forgottennature:blocks/leaf/bukkit"
 				}
 			}
 

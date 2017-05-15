@@ -1,0 +1,48 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"model": "cube_column",
+		"textures": {
+			"end": "blocks/log_oak_top"
+		}
+	},
+	"variants": {
+		"type": {
+			"desert_ironwood": {
+				"textures": {
+					"side": "forgottennature:blocks/log/desert_ironwood"
+				}
+			},
+			"desert_willow": {
+				"textures": {
+					"side": "forgottennature:blocks/log/desert_willow"
+				}
+			},
+			"eucalyptus": {
+				"textures": {
+					"side": "forgottennature:blocks/log/eucalyptus"
+				}
+			},
+			"ginkgo": {
+				"textures": {
+					"side": "forgottennature:blocks/log/ginkgo"
+				}
+			},
+			"joshua": {
+				"textures": {
+					"side": "forgottennature:blocks/log/joshua"
+				}
+			}
+		},
+		"axis": {
+			"y": {},
+			"x": {
+				"x": 90,
+				"y": 90
+			},
+			"z": {
+				"x": 90
+			}
+		}
+	}
+}

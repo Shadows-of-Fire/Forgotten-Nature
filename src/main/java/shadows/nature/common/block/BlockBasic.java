@@ -11,17 +11,24 @@ import shadows.nature.util.NatureUtil;
 
 public class BlockBasic extends Block implements IHasModelLocation {
 
-
-	public BlockBasic(String name, Material material, float hardness, float resist, boolean customItemBlock) {
+	public BlockBasic(String name, Material material, float hardness, float resist, boolean customItemBlock,
+			boolean addToList) {
 		super(material);
 		setRegistryName(name);
 		setUnlocalizedName(NatureData.MODID + "." + name);
 		setHardness(hardness);
 		setResistance(resist);
 		setCreativeTab(NatureData.TAB);
-		GameRegistry.register(this);
-		if (!customItemBlock) GameRegistry.register(new ItemBlock(this).setRegistryName(getRegistryName()));
-		NatureBlocks.add(this);
+		if (addToList)
+			GameRegistry.register(this);
+		if (!customItemBlock)
+			GameRegistry.register(new ItemBlock(this).setRegistryName(getRegistryName()));
+		if (addToList)
+			NatureBlocks.add(this);
+	}
+
+	public BlockBasic(String name, Material material, float hardness, float resist, boolean customItemBlock) {
+		this(name, material, hardness, resist, customItemBlock, true);
 	}
 
 	@Override

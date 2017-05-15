@@ -98,7 +98,6 @@ Ginkgo
 Poplar
 Beech
 Walnut
-Wide-Top Eucalyptus
 Bukkit
 Banana
 Orange

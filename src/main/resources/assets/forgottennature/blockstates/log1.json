@@ -1,0 +1,48 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"model": "cube_column",
+		"textures": {
+			"end": "blocks/log_oak_top"
+		}
+	},
+	"variants": {
+		"type": {
+			"banana": {
+				"textures": {
+					"side": "forgottennature:blocks/log/banana"
+				}
+			},
+			"cherry": {
+				"textures": {
+					"side": "forgottennature:blocks/log/cherry"
+				}
+			},
+			"beech": {
+				"textures": {
+					"side": "forgottennature:blocks/log/beech"
+				}
+			},
+			"cedar": {
+				"textures": {
+					"side": "forgottennature:blocks/log/cedar"
+				}
+			},
+			"bukkit": {
+				"textures": {
+					"side": "forgottennature:blocks/log/bukkit"
+				}
+			}
+		},
+		"axis": {
+			"y": {},
+			"x": {
+				"x": 90,
+				"y": 90
+			},
+			"z": {
+				"x": 90
+			}
+		}
+	}
+}
