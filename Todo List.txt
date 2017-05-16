@@ -106,7 +106,7 @@ Nether Ash
 Nether Blaze
 
 
---BUSHES--
+--BUSHES-- (DONE)
 
 Deciduous
 Evergreen

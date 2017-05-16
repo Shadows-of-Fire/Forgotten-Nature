@@ -1,0 +1,31 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"model": "builtin/generated",
+		"transform": "forge:default-item"
+	},
+	"variants": {
+		"type": {
+			"blackberry": {
+				"textures": {
+					"layer0": "forgottennature:items/food/blackberry"
+				}
+			},
+			"blueberry": {
+				"textures": {
+					"layer0": "forgottennature:items/food/blueberry"
+				}
+			},
+			"raspberry": {
+				"textures": {
+					"layer0": "forgottennature:items/food/raspberry"
+				}
+			},
+			"huckleberry": {
+				"textures": {
+					"layer0": "forgottennature:items/food/huckleberry"
+				}
+			}
+		}
+	}
+}

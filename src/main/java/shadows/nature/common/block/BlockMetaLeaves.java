@@ -5,7 +5,6 @@ import java.util.List;
 
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
@@ -34,7 +33,7 @@ public class BlockMetaLeaves extends BlockBasic implements IShearable {
 
 	@Override
 	public void registerModels() {
-		for (int i = 0; i < NatureData.LEAVES.getAllowedValues().size(); i++) {
+		for (int i = 0; i < NatureData.LeafSet.values().length; i++) {
 			NatureUtil.sMRL(this, i, "type=" + NatureData.LeafSet.values()[i].getName());
 		}
 	}
@@ -73,7 +72,7 @@ public class BlockMetaLeaves extends BlockBasic implements IShearable {
 
 	@Override
 	public BlockStateContainer createBlockState() {
-		return new BlockStateContainer(this, new IProperty[] { NatureData.LEAVES });
+		return new BlockStateContainer(this, NatureData.LEAVES);
 	}
 
 	@Override
@@ -91,5 +90,6 @@ public class BlockMetaLeaves extends BlockBasic implements IShearable {
 	public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune) {
 		IBlockState state = world.getBlockState(pos);
 		return Arrays.asList(new ItemStack(state.getBlock(), 1, state.getValue(NatureData.LEAVES).ordinal()));
+		// TODO see above
 	}
 }

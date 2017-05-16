@@ -1,0 +1,41 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"model": "builtin/generated",
+		"transform": "forge:default-item"
+	},
+	"variants": {
+		"type": {
+			"blackberry": {
+				"textures": {
+					"layer0": "forgottennature:blocks/bush/sap_blackberry"
+				}
+			},
+			"blueberry": {
+				"textures": {
+					"layer0": "forgottennature:blocks/bush/sap_blueberry"
+				}
+			},
+			"raspberry": {
+				"textures": {
+					"layer0": "forgottennature:blocks/bush/sap_raspberry"
+				}
+			},
+			"deciduous": {
+				"textures": {
+					"layer0": "forgottennature:blocks/bush/sap_deciduous"
+				}
+			},
+			"evergreen": {
+				"textures": {
+					"layer0": "forgottennature:blocks/bush/sap_evergreen"
+				}
+			},
+			"huckleberry": {
+				"textures": {
+					"layer0": "forgottennature:blocks/bush/sap_huckleberry"
+				}
+			}
+		}
+	}
+}

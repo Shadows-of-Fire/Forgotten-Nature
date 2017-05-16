@@ -1,4 +1,4 @@
-package shadows.nature.common.world.gen;
+package shadows.nature.common.world.feature;
 
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.world.gen.feature.WorldGenTrees;
