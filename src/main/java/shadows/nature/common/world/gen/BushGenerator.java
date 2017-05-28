@@ -32,7 +32,7 @@ public class BushGenerator implements IWorldGenerator {
 		BlockPos genPos = new BlockPos(posX + MathHelper.getInt(rand, 2, 14), 0, posZ + MathHelper.getInt(rand, 2, 14));
 		genPos = world.getTopSolidOrLiquidBlock(genPos);
 		IBlockState state = world.getBlockState(genPos.down());
-		if (state.getBlock().canSustainPlant(state, world, genPos, EnumFacing.DOWN, Blocks.TALLGRASS)) {
+		if (state.getBlock().canSustainPlant(state, world, genPos.down(), EnumFacing.DOWN, Blocks.TALLGRASS)) {
 			BUSHGENS[rand.nextInt(6)].generate(world, rand, genPos);
 		}
 	}

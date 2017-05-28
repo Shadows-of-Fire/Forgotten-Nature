@@ -18,7 +18,7 @@ public class NatureItems {
 	public static final Item BLUEBERRY = new ItemFoodBasic("blueberry", 2);
 	public static final Item RASPBERRY = new ItemFoodBasic("raspberry", 2);
 	public static final Item HUCKLEBERRY = new ItemFoodBasic("huckleberry", 3);
-
+	
 	/**
 	 * @return A list of all items in Forgotten Nature. Does not include
 	 *         ItemBlocks.

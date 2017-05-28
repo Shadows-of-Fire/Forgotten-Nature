@@ -28,7 +28,6 @@ public class BlockMetaLeaves extends BlockBasic implements IShearable {
 		setDefaultState(blockState.getBaseState().withProperty(NatureData.LEAVES, NatureData.LeafSet.values()[0]));
 		setSoundType(SoundType.PLANT);
 		GameRegistry.register(new ItemBlockMeta(this));
-
 	}
 
 	@Override

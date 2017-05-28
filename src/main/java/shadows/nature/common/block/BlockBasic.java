@@ -4,6 +4,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import shadows.nature.registry.NatureBlocks;
 import shadows.nature.util.IHasModelLocation;
 import shadows.nature.util.NatureData;
@@ -31,7 +33,7 @@ public class BlockBasic extends Block implements IHasModelLocation {
 		this(name, material, hardness, resist, customItemBlock, true);
 	}
 
-	@Override
+	@Override @SideOnly(Side.CLIENT)
 	public void registerModels() {
 		NatureUtil.sMRL(this, 0, "inventory");
 	}
