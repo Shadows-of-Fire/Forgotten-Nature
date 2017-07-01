@@ -32,7 +32,7 @@ public class BlockBushling extends BlockBasic implements IGrowable, IPlantable {
 
 	public static final AxisAlignedBB BUSH_AABB = new AxisAlignedBB(.25, 0, .25, .75, 0.5625, .75);
 	public static final AxisAlignedBB BIG_BUSH_AABB = new AxisAlignedBB(.125, 0, .125, .875, 0.625, .875);
-	
+
 	public BlockBushling() {
 		super("bushling", Material.PLANTS, 0, 0, true);
 		setSoundType(SoundType.PLANT);
@@ -52,32 +52,30 @@ public class BlockBushling extends BlockBasic implements IGrowable, IPlantable {
 	public boolean isOpaqueCube(IBlockState state) {
 		return false;
 	}
-	
+
 	@Override
 	public boolean isNormalCube(IBlockState state) {
 		return false;
 	}
-	
+
 	@Override
 	public boolean isFullCube(IBlockState state) {
 		return false;
 	}
-	
+
 	@Override
-    public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos)
-    {
-        return NULL_AABB;
-    }
-	
-    @Override
-    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess world, BlockPos pos)
-    {
-        int k = state.getValue(NatureData.BUSHES).ordinal();
-        if(k == 2 | k == 3){
-        	return BIG_BUSH_AABB;
-        }
-        return BUSH_AABB;
-    }
+	public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos) {
+		return NULL_AABB;
+	}
+
+	@Override
+	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess world, BlockPos pos) {
+		int k = state.getValue(NatureData.BUSHES).ordinal();
+		if (k == 2 | k == 3) {
+			return BIG_BUSH_AABB;
+		}
+		return BUSH_AABB;
+	}
 
 	@Override
 	public boolean canGrow(World world, BlockPos pos, IBlockState state, boolean isClient) {

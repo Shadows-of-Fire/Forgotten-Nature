@@ -278,8 +278,7 @@ public class RecipeHelper {
 				} else if (in instanceof Item) {
 					itemMap.put(chr, Ingredient.fromStacks(new ItemStack((Item) in)));
 				} else if (in instanceof Block) {
-					itemMap.put(chr,
-							Ingredient.fromStacks(new ItemStack((Block) in)));
+					itemMap.put(chr, Ingredient.fromStacks(new ItemStack((Block) in)));
 				} else if (in instanceof String) {
 					itemMap.put(chr, new OreIngredient((String) in));
 				} else if (in instanceof Ingredient) {
@@ -384,12 +383,12 @@ public class RecipeHelper {
 		public int getHeight() {
 			return height;
 		}
-		
+
 		@Override
 		public String func_193358_e() {
 			return this.group.toString();
 		}
-		
+
 		@Override
 		public boolean canFit(int width, int height) {
 			return width >= this.width && height >= this.height;

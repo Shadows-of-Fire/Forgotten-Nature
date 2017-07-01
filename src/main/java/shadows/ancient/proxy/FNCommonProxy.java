@@ -229,37 +229,37 @@ public class FNCommonProxy implements IGuiHandler {
 		{// for saplings
 			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling1, 2, 6),
 					new Object[] { new ItemStack(Item.getItemById(260), 1) });// apple
-																				// saps
+																																				// saps
 			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling1, 2, 1),
 					new Object[] { new ItemStack(ItemFruit, 1, 4) });// cherry
-																		// saps
+																																		// saps
 			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling2, 2, 3),
 					new Object[] { new ItemStack(ItemNuts, 1, 0) });// ginkgo
-																	// saps
+																																		// saps
 			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling2, 2, 6),
 					new Object[] { new ItemStack(ItemNuts, 1, 1) });// walnut
-																	// saps
+																																		// saps
 			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling2, 2, 11),
 					new Object[] { new ItemStack(ItemFruit, 1, 2) });// orange
-																		// saps
+																																		// saps
 			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling2, 2, 12),
 					new Object[] { new ItemStack(ItemFruit, 1, 3) });// peach
-																		// saps
+																																		// saps
 			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling2, 2, 13),
 					new Object[] { new ItemStack(ItemFruit, 1, 9) });// lemon
-																		// saps
+																																		// saps
 			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling2, 2, 14),
 					new Object[] { new ItemStack(ItemFruit, 1, 7) });// blueberry
-																		// saps
+																																		// saps
 			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling2, 2, 15),
 					new Object[] { new ItemStack(ItemFruit, 1, 8) });// raspberry
-																		// saps
+																																		// saps
 			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling3, 2, 1),
 					new Object[] { new ItemStack(ItemFruit, 1, 5) });// blackberry
-																		// saps
+																																		// saps
 			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling3, 2, 0),
 					new Object[] { new ItemStack(ItemFruit, 1, 6) });// huckleberry
-																		// saps
+																																		// saps
 		}
 
 		{// obsidian tools and armor. titanStone tools
@@ -269,11 +269,11 @@ public class FNCommonProxy implements IGuiHandler {
 						new Object[] { "&*&", "*%*", "&*&", '&', new ItemStack(Block.getBlockById(89), 1, 0), '*',
 								new ItemStack(FNBlocks.crystalBlock, 1, 1), '%',
 								new ItemStack(Item.getItemById(381), 1, 0) });// titanstone
-																				// from
-																				// glowstone
-																				// and
-																				// endereye
-				// obsidian and titan
+																																																																			// from
+																																																																							// glowstone
+																																																																							// and
+																																																																							// endereye
+																																																																							// obsidian and titan
 				GameRegistry.addRecipe(new ItemStack(FNItems.helmetObsidian, 1, 0),
 						new Object[] { "&&&", "& &", "   ", '&', new ItemStack(Block.getBlockById(49), 1, 0) });// obsidianhelm
 				GameRegistry.addRecipe(new ItemStack(FNItems.helmetObsidian, 1, 0),
@@ -299,139 +299,154 @@ public class FNCommonProxy implements IGuiHandler {
 				GameRegistry.addRecipe(new ItemStack(FNItems.bootsTitanStone, 1, 0),
 						new Object[] { "& &", "& &", "   ", '&', new ItemStack(FNBlocks.newStones, 1, 9) });// titanstoneboots
 
-				GameRegistry.addRecipe(new ItemStack(oPickaxe, 1, 0), new Object[] { "&&&", " s ", " s ", '&',
-						new ItemStack(Block.getBlockById(49), 1, 0), 's', new ItemStack(Item.getItemById(280), 1) });// obsidianPa
-																														// from
-																														// stick
-				GameRegistry.addRecipe(new ItemStack(oHoe, 1, 0), new Object[] { "&& ", " s ", " s ", '&',
-						new ItemStack(Block.getBlockById(49), 1, 0), 's', new ItemStack(Item.getItemById(280), 1) });// obsidianHoe
-																														// from
-																														// stick
-				GameRegistry.addRecipe(new ItemStack(oHoe, 1, 0), new Object[] { " &&", " s ", " s ", '&',
-						new ItemStack(Block.getBlockById(49), 1, 0), 's', new ItemStack(Item.getItemById(280), 1) });// obsidianHoe
-																														// from
-																														// stick
-				GameRegistry.addRecipe(new ItemStack(oAxe, 1, 0), new Object[] { "&& ", "&s ", " s ", '&',
-						new ItemStack(Block.getBlockById(49), 1, 0), 's', new ItemStack(Item.getItemById(280), 1) });// obsidianAxe
-																														// from
-																														// stick
-				GameRegistry.addRecipe(new ItemStack(oAxe, 1, 0), new Object[] { " &&", " s&", " s ", '&',
-						new ItemStack(Block.getBlockById(49), 1, 0), 's', new ItemStack(Item.getItemById(280), 1) });// obsidianAxe
-																														// from
-																														// stick
-				GameRegistry.addRecipe(new ItemStack(oShovel, 1, 0), new Object[] { " & ", " s ", " s ", '&',
-						new ItemStack(Block.getBlockById(49), 1, 0), 's', new ItemStack(Item.getItemById(280), 1) });// obsidianShovel
-																														// from
-																														// stick
-				GameRegistry.addRecipe(new ItemStack(oSword, 1, 0), new Object[] { " & ", " & ", " s ", '&',
-						new ItemStack(Block.getBlockById(49), 1, 0), 's', new ItemStack(Item.getItemById(280), 1) });// obsidianSword
-																														// from
-																														// stick
-				GameRegistry.addRecipe(new ItemStack(tPickaxe, 1, 0), new Object[] { "&&&", " s ", " s ", '&',
-						new ItemStack(FNBlocks.newStones, 1, 9), 's', new ItemStack(Block.getBlockById(57), 1, 0) });// tsPa
-																														// from
-																														// titan(edge)
-																														// diamond
-																														// block(hilt)
-				GameRegistry.addRecipe(new ItemStack(tSword, 1, 0), new Object[] { " & ", " & ", " s ", '&',
-						new ItemStack(FNBlocks.newStones, 1, 9), 's', new ItemStack(Block.getBlockById(57), 1, 0) });// tsSword
-																														// from
-																														// titan(edge)
-																														// diamond
-																														// block(hilt)
+				GameRegistry.addRecipe(new ItemStack(oPickaxe, 1, 0),
+						new Object[] { "&&&", " s ", " s ", '&', new ItemStack(Block.getBlockById(49), 1, 0), 's',
+								new ItemStack(Item.getItemById(280), 1) });// obsidianPa
+																																																			// from
+																																																							// stick
+				GameRegistry.addRecipe(new ItemStack(oHoe, 1, 0),
+						new Object[] { "&& ", " s ", " s ", '&', new ItemStack(Block.getBlockById(49), 1, 0), 's',
+								new ItemStack(Item.getItemById(280), 1) });// obsidianHoe
+																																																		// from
+																																																						// stick
+				GameRegistry.addRecipe(new ItemStack(oHoe, 1, 0),
+						new Object[] { " &&", " s ", " s ", '&', new ItemStack(Block.getBlockById(49), 1, 0), 's',
+								new ItemStack(Item.getItemById(280), 1) });// obsidianHoe
+																																																		// from
+																																																						// stick
+				GameRegistry.addRecipe(new ItemStack(oAxe, 1, 0),
+						new Object[] { "&& ", "&s ", " s ", '&', new ItemStack(Block.getBlockById(49), 1, 0), 's',
+								new ItemStack(Item.getItemById(280), 1) });// obsidianAxe
+																																																		// from
+																																																						// stick
+				GameRegistry.addRecipe(new ItemStack(oAxe, 1, 0),
+						new Object[] { " &&", " s&", " s ", '&', new ItemStack(Block.getBlockById(49), 1, 0), 's',
+								new ItemStack(Item.getItemById(280), 1) });// obsidianAxe
+																																																		// from
+																																																						// stick
+				GameRegistry.addRecipe(new ItemStack(oShovel, 1, 0),
+						new Object[] { " & ", " s ", " s ", '&', new ItemStack(Block.getBlockById(49), 1, 0), 's',
+								new ItemStack(Item.getItemById(280), 1) });// obsidianShovel
+																																																			// from
+																																																							// stick
+				GameRegistry.addRecipe(new ItemStack(oSword, 1, 0),
+						new Object[] { " & ", " & ", " s ", '&', new ItemStack(Block.getBlockById(49), 1, 0), 's',
+								new ItemStack(Item.getItemById(280), 1) });// obsidianSword
+																																																			// from
+																																																							// stick
+				GameRegistry.addRecipe(new ItemStack(tPickaxe, 1, 0),
+						new Object[] { "&&&", " s ", " s ", '&', new ItemStack(FNBlocks.newStones, 1, 9), 's',
+								new ItemStack(Block.getBlockById(57), 1, 0) });// tsPa
+																																																			// from
+																																																							// titan(edge)
+																																																							// diamond
+																																																							// block(hilt)
+				GameRegistry.addRecipe(new ItemStack(tSword, 1, 0),
+						new Object[] { " & ", " & ", " s ", '&', new ItemStack(FNBlocks.newStones, 1, 9), 's',
+								new ItemStack(Block.getBlockById(57), 1, 0) });// tsSword
+																																																			// from
+																																																							// titan(edge)
+																																																							// diamond
+																																																							// block(hilt)
 			}
 			GameRegistry.addRecipe(new ItemStack(FNItems.scythe, 1, 0), new Object[] { "&&s", " s&", "s  ", '&',
 					new ItemStack(Items.iron_ingot, 1, 0), 's', new ItemStack(Items.stick, 1, 0) });// scythe
 		}
 		if (ForgottenNature.carbonItems) {// carbon recipes
-			GameRegistry.addRecipe(new ItemStack(carbonStuff, 1, 0), new Object[] { "&&&", "&G&", "&&&", '&',
-					new ItemStack(Item.getItemById(263), 1, 0), 'G', new ItemStack(Item.getItemById(318), 1) });// coal
-																												// chunk
-																												// from
-																												// coal
-																												// and
-																												// flint
-			GameRegistry.addRecipe(new ItemStack(carbonStuff, 1, 0), new Object[] { "&&&", "&G&", "&&&", '&',
-					new ItemStack(Item.getItemById(263), 1, 1), 'G', new ItemStack(Item.getItemById(318), 1) });// coal
-																												// chunk
-																												// from
-																												// charcoal
-																												// and
-																												// flint
-			GameRegistry.addRecipe(new ItemStack(carbonStuff, 1, 1), new Object[] { "&&&", "&G&", "&&&", '&',
-					new ItemStack(carbonStuff, 1, 0), 'G', new ItemStack(Block.getBlockById(49), 1) });// compressed
-																										// coal
-																										// chunk
-																										// from
-																										// coal
-																										// chunk
-																										// and
-																										// obsidian
+			GameRegistry.addRecipe(new ItemStack(carbonStuff, 1, 0),
+					new Object[] { "&&&", "&G&", "&&&", '&', new ItemStack(Item.getItemById(263), 1, 0), 'G',
+							new ItemStack(Item.getItemById(318), 1) });// coal
+																																																			// chunk
+																																																							// from
+																																																							// coal
+																																																							// and
+																																																							// flint
+			GameRegistry.addRecipe(new ItemStack(carbonStuff, 1, 0),
+					new Object[] { "&&&", "&G&", "&&&", '&', new ItemStack(Item.getItemById(263), 1, 1), 'G',
+							new ItemStack(Item.getItemById(318), 1) });// coal
+																																																			// chunk
+																																																							// from
+																																																							// charcoal
+																																																							// and
+																																																							// flint
+			GameRegistry.addRecipe(new ItemStack(carbonStuff, 1, 1),
+					new Object[] { "&&&", "&G&", "&&&", '&', new ItemStack(carbonStuff, 1, 0), 'G',
+							new ItemStack(Block.getBlockById(49), 1) });// compressed
+																																																	// coal
+																																																					// chunk
+																																																					// from
+																																																					// coal
+																																																					// chunk
+																																																					// and
+																																																					// obsidian
 			GameRegistry.addRecipe(new ItemStack(Item.getItemById(264), 1),
 					new Object[] { "&&&", "&&&", "&&&", '&', new ItemStack(carbonStuff, 1, 1) });// diamond
-			GameRegistry.addRecipe(new ItemStack(carbonStuff, 6, 2), new Object[] { "&&&", "GGG", "&&&", '&',
-					new ItemStack(Item.getItemById(287), 1), 'G', new ItemStack(Item.getItemById(263), 1, 0) });// carbon
-																												// wafers
-																												// from
-																												// string
-																												// and
-																												// coal
-			GameRegistry.addRecipe(new ItemStack(carbonStuff, 6, 2), new Object[] { "&&&", "GGG", "&&&", '&',
-					new ItemStack(Item.getItemById(287), 1), 'G', new ItemStack(Item.getItemById(263), 1, 1) });// carbon
-																												// wafers
-																												// from
-																												// string
-																												// and
-																												// charcoal
+			GameRegistry.addRecipe(new ItemStack(carbonStuff, 6, 2),
+					new Object[] { "&&&", "GGG", "&&&", '&', new ItemStack(Item.getItemById(287), 1), 'G',
+							new ItemStack(Item.getItemById(263), 1, 0) });// carbon
+																																																			// wafers
+																																																							// from
+																																																							// string
+																																																							// and
+																																																							// coal
+			GameRegistry.addRecipe(new ItemStack(carbonStuff, 6, 2),
+					new Object[] { "&&&", "GGG", "&&&", '&', new ItemStack(Item.getItemById(287), 1), 'G',
+							new ItemStack(Item.getItemById(263), 1, 1) });// carbon
+																																																			// wafers
+																																																							// from
+																																																							// string
+																																																							// and
+																																																							// charcoal
 			GameRegistry.addRecipe(new ItemStack(Item.getItemById(262), 4),
 					new Object[] { " f ", " s ", "&&&", '&', new ItemStack(carbonStuff, 1, 2), 's',
 							new ItemStack(Item.getItemById(280), 1), 'f', new ItemStack(Item.getItemById(318), 1) });// arrows
-																														// from
-																														// wafers
-																														// and
-																														// flint
+																																																														// from
+																																																																		// wafers
+																																																																		// and
+																																																																		// flint
 		}
 		{// convenience recipes
-			GameRegistry.addRecipe(new ItemStack(Item.getItemById(348), 8), new Object[] { "&&&", "&G&", "&&&", '&',
-					new ItemStack(Item.getItemById(331), 1), 'G', new ItemStack(Item.getItemById(266), 1) });// easierGlowstone
-																												// from
-																												// redstone
-																												// and
-																												// gold
-																												// ingot
+			GameRegistry.addRecipe(new ItemStack(Item.getItemById(348), 8),
+					new Object[] { "&&&", "&G&", "&&&", '&', new ItemStack(Item.getItemById(331), 1), 'G',
+							new ItemStack(Item.getItemById(266), 1) });// easierGlowstone
+																																																				// from
+																																																								// redstone
+																																																								// and
+																																																								// gold
+																																																								// ingot
 			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(318), 2),
 					new Object[] { new ItemStack(Block.getBlockById(13), 1), new ItemStack(Block.getBlockById(13), 1),
 							new ItemStack(Block.getBlockById(13), 1), new ItemStack(Block.getBlockById(13), 1) });// flint
-																													// from
-																													// gravel
+																																																																				// from
+																																																																								// gravel
 			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 4),
 					new Object[] { new ItemStack(Item.getItemById(352), 1), new ItemStack(Item.getItemById(352), 1) });// stick
-																														// from
-																														// bones
+																																														// from
+																																																// bones
 			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 1),
 					new Object[] { new ItemStack(Block.getBlockById(6), 1, 0) });// stick
-																					// from
-																					// sapling
+																																					// from
+																																							// sapling
 			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 1),
 					new Object[] { new ItemStack(Block.getBlockById(6), 1, 1) });// stick
-																					// from
-																					// sapling
+																																					// from
+																																							// sapling
 			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 1),
 					new Object[] { new ItemStack(Block.getBlockById(6), 1, 2) });// stick
-																					// from
-																					// sapling
+																																					// from
+																																							// sapling
 			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 1),
 					new Object[] { new ItemStack(Block.getBlockById(6), 1, 3) });// stick
-																					// from
-																					// sapling
+																																					// from
+																																							// sapling
 			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 1),
 					new Object[] { new ItemStack(Block.getBlockById(6), 1, 4) });// stick
-																					// from
-																					// sapling
+																																					// from
+																																							// sapling
 			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 1),
 					new Object[] { new ItemStack(Block.getBlockById(6), 1, 5) });// stick
-																					// from
-																					// sapling
+																																					// from
+																																							// sapling
 			for (int n = 0; n < 16; n++) {
 				GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 1),
 						new Object[] { new ItemStack(newSap, 1, n) });// stick
@@ -440,21 +455,23 @@ public class FNCommonProxy implements IGuiHandler {
 				GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 1),
 						new Object[] { new ItemStack(newSap3, 1, n) });// stick
 			}
-			GameRegistry.addRecipe(new ItemStack(Block.getBlockById(49), 8), new Object[] { "&&&", "&G&", "&&&", '&',
-					new ItemStack(Item.getItemById(327), 1), 'G', new ItemStack(Item.getItemById(326), 1) });// easierObsidian
-																												// from
-																												// buckets
+			GameRegistry.addRecipe(new ItemStack(Block.getBlockById(49), 8),
+					new Object[] { "&&&", "&G&", "&&&", '&', new ItemStack(Item.getItemById(327), 1), 'G',
+							new ItemStack(Item.getItemById(326), 1) });// easierObsidian
+																																																				// from
+																																																								// buckets
 			GameRegistry.addShapelessRecipe(new ItemStack(Block.getBlockById(79), 1),
 					new Object[] { new ItemStack(Block.getBlockById(80), 1), new ItemStack(Block.getBlockById(80), 1),
 							new ItemStack(Block.getBlockById(80), 1), new ItemStack(Block.getBlockById(80), 1) });// ice
-																													// from
-																													// snow
-			GameRegistry.addRecipe(new ItemStack(Block.getBlockById(110), 1), new Object[] { "&&&", "&G&", "&&&", '&',
-					new ItemStack(Block.getBlockById(39), 1), 'G', new ItemStack(Block.getBlockById(3), 1) });// mycelium
-																												// from
-																												// mushroom
-																												// and
-																												// dirt
+																																																																				// from
+																																																																								// snow
+			GameRegistry.addRecipe(new ItemStack(Block.getBlockById(110), 1),
+					new Object[] { "&&&", "&G&", "&&&", '&', new ItemStack(Block.getBlockById(39), 1), 'G',
+							new ItemStack(Block.getBlockById(3), 1) });// mycelium
+																																																					// from
+																																																									// mushroom
+																																																									// and
+																																																									// dirt
 
 		}
 		{// veggie bowls
@@ -553,29 +570,30 @@ public class FNCommonProxy implements IGuiHandler {
 						GameRegistry.addShapelessRecipe(new ItemStack(ItemNewFood3, 1, 1),
 								new Object[] { Item.getItemById(332), new ItemStack(ItemNewCup, 1, 0),
 										new ItemStack(ItemFruit, 1, x), new ItemStack(ItemFruit, 1, y) });// smoothie
-																											// from
-																											// snowball
+																																																									// from
+																																																													// snowball
 						GameRegistry.addShapelessRecipe(new ItemStack(ItemNewFood2, 1, 0),
 								new Object[] { Item.getItemById(281), new ItemStack(ItemFruit, 1, x),
 										new ItemStack(ItemFruit, 1, y), new ItemStack(Item.getItemById(260), 1) });// fruit
-																													// salad
+																																																											// salad
 					}
 					if (y < 3)
-						GameRegistry.addShapelessRecipe(new ItemStack(ItemNewFood, 1, 4), new Object[] {
-								Item.getItemById(297), new ItemStack(ItemFruit, 1, x), new ItemStack(ItemNuts, 1, y) });// fruit-nut
-																														// bread
+						GameRegistry.addShapelessRecipe(new ItemStack(ItemNewFood, 1, 4),
+								new Object[] { Item.getItemById(297), new ItemStack(ItemFruit, 1, x),
+										new ItemStack(ItemNuts, 1, y) });// fruit-nut
+																																																// bread
 					for (int z = 0; z < 10; z++) {
 						if (x != y) {
 							if (y != z && x != z)
 								GameRegistry.addShapelessRecipe(new ItemStack(ItemNewFood2, 1, 0),
 										new Object[] { Item.getItemById(281), new ItemStack(ItemFruit, 1, x),
 												new ItemStack(ItemFruit, 1, y), new ItemStack(ItemFruit, 1, z) });// fruit
-																													// salad
+																																																										// salad
 							if (z < 3)
 								GameRegistry.addShapelessRecipe(new ItemStack(ItemNewFood2, 1, 1),
 										new Object[] { Item.getItemById(281), new ItemStack(ItemFruit, 1, x),
 												new ItemStack(ItemFruit, 1, y), new ItemStack(ItemNuts, 1, z) });// frui-nut
-																													// salad
+																																																										// salad
 						}
 					}
 				}
@@ -596,8 +614,8 @@ public class FNCommonProxy implements IGuiHandler {
 			GameRegistry.addShapelessRecipe(new ItemStack(Block.getBlockById(35), 1, 0),
 					new Object[] { new ItemStack(newCropGoods, 1, 0), new ItemStack(newCropGoods, 1, 0),
 							new ItemStack(newCropGoods, 1, 0), new ItemStack(newCropGoods, 1, 0) });// wool
-																									// from
-																									// cotton
+																																																														// from
+																																																																		// cotton
 			GameRegistry.addShapelessRecipe(new ItemStack(newCropGoods, 1, 2),
 					new Object[] { new ItemStack(newCropGoods, 1, 1), new ItemStack(newCropGoods, 1, 1),
 							new ItemStack(newCropGoods, 1, 1) });// rope yarn
@@ -605,7 +623,7 @@ public class FNCommonProxy implements IGuiHandler {
 					new Object[] { new ItemStack(newCropGoods, 1, 2), new ItemStack(newCropGoods, 1, 2),
 							new ItemStack(newCropGoods, 1, 2), new ItemStack(newCropGoods, 1, 2),
 							new ItemStack(newCropGoods, 1, 2), new ItemStack(newCropGoods, 1, 2) });// rope
-																									// strand
+																																																																													// strand
 			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.rope, 1, 0),
 					new Object[] { new ItemStack(newCropGoods, 1, 3), new ItemStack(newCropGoods, 1, 3),
 							new ItemStack(newCropGoods, 1, 3), new ItemStack(newCropGoods, 1, 3),
@@ -622,25 +640,25 @@ public class FNCommonProxy implements IGuiHandler {
 				GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(289), 3, 0),
 						new Object[] { new ItemStack(powders, 1, 0), new ItemStack(powders, 1, 1),
 								new ItemStack(Item.getItemById(263), 1, 0) });// gunpowder
-																				// from
-																				// powders
-																				// and
-																				// coal
+																																																						// from
+																																																										// powders
+																																																										// and
+																																																										// coal
 				GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(289), 3, 0),
 						new Object[] { new ItemStack(powders, 1, 0), new ItemStack(powders, 1, 1),
 								new ItemStack(Item.getItemById(263), 1, 1) });// gunpowder
-																				// from
-																				// powders
-																				// and
-																				// charcoal
+																																																						// from
+																																																										// powders
+																																																										// and
+																																																										// charcoal
 			}
 		}
 		{// Cobble and flint from new stones, bricks from new stones, stairs
-			// from new stone bricks
+				// from new stone bricks
 			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(318), 4),
 					new Object[] { new ItemStack(newStones, 1, 0) });// flint
-																		// from
-																		// chert
+																																		// from
+																																				// chert
 			GameRegistry.addShapelessRecipe(new ItemStack(Block.getBlockById(4)),
 					new Object[] { new ItemStack(newStones, 1, 1) });
 			GameRegistry.addShapelessRecipe(new ItemStack(Block.getBlockById(4)),
@@ -835,7 +853,7 @@ public class FNCommonProxy implements IGuiHandler {
 					new Object[] { "&& ", "&  ", "&  ", '&', new ItemStack(Block.getBlockById(5), 1, 4) });
 			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 1),
 					new Object[] { "& &", "   ", "& &", '&', new ItemStack(newPlanks, 1, 0) });/// =====X-parquet
-																								/// plank
+																																				/// plank
 			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 1),
 					new Object[] { "& &", "   ", "& &", '&', new ItemStack(newPlanks, 1, 10) });
 			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 1),
@@ -844,8 +862,8 @@ public class FNCommonProxy implements IGuiHandler {
 					new Object[] { "& &", "   ", "& &", '&', new ItemStack(Block.getBlockById(5), 1, 1) });
 			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 2),
 					new Object[] { "& &", " & ", "& &", '&', new ItemStack(newPlanks, 1, 4) });/// =====Frederiksborg
-																								/// parquet
-																								/// plank
+																																				/// parquet
+																																						/// plank
 			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 2),
 					new Object[] { "& &", " & ", "& &", '&', new ItemStack(newPlanks, 1, 5) });
 			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 2),
@@ -854,32 +872,32 @@ public class FNCommonProxy implements IGuiHandler {
 					new Object[] { "& &", " & ", "& &", '&', new ItemStack(Block.getBlockById(5), 1, 3) });
 			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 3),
 					new Object[] { "& &", "   ", "& &", '&', new ItemStack(newPlanks, 1, 6) });/// =====For
-																								/// Don
-																								/// Parquet
-																								/// plank
+																																				/// Don
+																																						/// Parquet
+																																						/// plank
 			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 3),
 					new Object[] { "& &", "   ", "& &", '&', new ItemStack(newPlanks, 1, 14) });
 			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 3),
 					new Object[] { "& &", "   ", "& &", '&', new ItemStack(Block.getBlockById(5), 1, 0) });
 			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 4),
 					new Object[] { " & ", "& &", " & ", '&', new ItemStack(newPlanks, 1, 6) });/// =====Lattice
-																								/// Parquet
-																								/// plank
+																																				/// Parquet
+																																						/// plank
 			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 4),
 					new Object[] { " & ", "& &", " & ", '&', new ItemStack(Block.getBlockById(5), 1, 0) });
 			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 5),
 					new Object[] { " & ", "& &", " & ", '&', new ItemStack(newPlanks, 1, 8) });
 			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 6),
 					new Object[] { "& &", " & ", "& &", '&', new ItemStack(newPlanks, 1, 0) });/// =====Pavimente
-																								/// parquet
-																								/// plank
+																																				/// parquet
+																																						/// plank
 			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 6),
 					new Object[] { "& &", " & ", "& &", '&', new ItemStack(newPlanks, 1, 10) });
 			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 6),
 					new Object[] { "& &", " & ", "& &", '&', new ItemStack(Block.getBlockById(5), 1, 1) });
 		}
 		{// netherrot spores and souldust from nether logs, soul sand and
-			// netherrack
+				// netherrack
 			GameRegistry.addShapelessRecipe(new ItemStack(powders, 8, 2),
 					new Object[] { new ItemStack(FNBlocks.netherLogs, 1, 3), new ItemStack(Block.getBlockById(87)) });
 			GameRegistry.addShapelessRecipe(new ItemStack(powders, 8, 3),
@@ -887,25 +905,26 @@ public class FNCommonProxy implements IGuiHandler {
 			// Nether mushroom
 			GameRegistry.addShapelessRecipe(new ItemStack(newSap3, 2, 5),
 					new Object[] { new ItemStack(FNBlocks.netherLogs, 1, 2) });// nether
-																				// mushroom
+																																		// mushroom
 			GameRegistry.addShapelessRecipe(new ItemStack(newSap3, 4, 5),
 					new Object[] { new ItemStack(FNBlocks.netherLogs, 1, 3) });// nether
-																				// mushroom
-			// saw items//
+																																		// mushroom
+																																				// saw items//
 			GameRegistry.addRecipe(new ItemStack(sawItem, 1, 0),
 					new Object[] { "   ", "&&&", " & ", '&', new ItemStack(Item.getItemById(265), 1) });// sawtooth
-																										// from
-																										// iron
+																																						// from
+																																								// iron
 			GameRegistry.addRecipe(new ItemStack(sawItem, 1, 0),
 					new Object[] { "&&&", " & ", "   ", '&', new ItemStack(Item.getItemById(265), 1) });// sawtooth
-																										// from
-																										// iron
-			GameRegistry.addRecipe(new ItemStack(sawItem, 1, 2), new Object[] { "s&&", "& &", "&&&", 's',
-					new ItemStack(Item.getItemById(265), 1), '&', new ItemStack(Block.getBlockById(5)) });// sawhandle
-																											// from
-																											// wood
-																											// and
-																											// iron
+																																						// from
+																																								// iron
+			GameRegistry.addRecipe(new ItemStack(sawItem, 1, 2),
+					new Object[] { "s&&", "& &", "&&&", 's', new ItemStack(Item.getItemById(265), 1), '&',
+							new ItemStack(Block.getBlockById(5)) });// sawhandle
+																																																// from
+																																																				// wood
+																																																				// and
+																																																				// iron
 			GameRegistry.addShapelessRecipe(new ItemStack(sawItem, 1, 1), new Object[] { new ItemStack(sawItem, 1, 0),
 					new ItemStack(sawItem, 1, 0), new ItemStack(sawItem, 1, 0), new ItemStack(sawItem, 1, 0) });// sawBlade
 			GameRegistry.addShapelessRecipe(new ItemStack(sawTool, 1),
@@ -914,129 +933,130 @@ public class FNCommonProxy implements IGuiHandler {
 		{// Sticks, tools and stairs from new planks.
 			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs1, 4),
 					new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 0) });// new
-																								// stairs
-																								// from
-																								// new
-																								// planks
+																																						// stairs
+																																								// from
+																																								// new
+																																								// planks
 			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs2, 4),
 					new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 1) });// new
-																								// stairs
-																								// from
-																								// new
-																								// planks
+																																						// stairs
+																																								// from
+																																								// new
+																																								// planks
 			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs3, 4),
 					new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 2) });// new
-																								// stairs
-																								// from
-																								// new
-																								// planks
+																																						// stairs
+																																								// from
+																																								// new
+																																								// planks
 			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs4, 4),
 					new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 3) });// new
-																								// stairs
-																								// from
-																								// new
-																								// planks
+																																						// stairs
+																																								// from
+																																								// new
+																																								// planks
 			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs5, 4),
 					new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 4) });// new
-																								// stairs
-																								// from
-																								// new
-																								// planks
+																																						// stairs
+																																								// from
+																																								// new
+																																								// planks
 			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs6, 4),
 					new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 5) });// new
-																								// stairs
-																								// from
-																								// new
-																								// planks
+																																						// stairs
+																																								// from
+																																								// new
+																																								// planks
 			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs7, 4),
 					new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 6) });// new
-																								// stairs
-																								// from
-																								// new
-																								// planks
+																																						// stairs
+																																								// from
+																																								// new
+																																								// planks
 			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs8, 4),
 					new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 7) });// new
-																								// stairs
-																								// from
-																								// new
-																								// planks
+																																						// stairs
+																																								// from
+																																								// new
+																																								// planks
 			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs10, 4),
 					new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 9) });// new
-																								// stairs
-																								// from
-																								// new
-																								// planks
+																																						// stairs
+																																								// from
+																																								// new
+																																								// planks
 			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs11, 4),
 					new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 10) });// new
-																								// stairs
-																								// from
-																								// new
-																								// planks
+																																						// stairs
+																																								// from
+																																								// new
+																																								// planks
 			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs12, 4),
 					new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 11) });// new
-																								// stairs
-																								// from
-																								// new
-																								// planks
+																																						// stairs
+																																								// from
+																																								// new
+																																								// planks
 			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs13, 4),
 					new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 12) });// new
-																								// stairs
-																								// from
-																								// new
-																								// planks
+																																						// stairs
+																																								// from
+																																								// new
+																																								// planks
 			for (int x = 0; x < 15; x++) {
 				GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 0),
 						new Object[] { "&& ", "&  ", "&  ", '&', new ItemStack(newPlanks, 1, x) });// parquet
 				GameRegistry.addShapelessRecipe(new ItemStack(Block.getBlockById(5), 1),
 						new Object[] { new ItemStack(newPlanks, 1, x) });// special
-																			// planks
-																			// to
-																			// normal
-																			// planks
+																																			// planks
+																																					// to
+																																					// normal
+																																					// planks
 				if (x < 8) {
 					GameRegistry.addRecipe(new ItemStack(halfPlank, 6, x),
 							new Object[] { "   ", "   ", "&&&", '&', new ItemStack(newPlanks, 1, x) });// half
-																										// planks
-																										// from
-																										// new
-																										// planks
+																																						// planks
+																																								// from
+																																								// new
+																																								// planks
 					GameRegistry.addRecipe(new ItemStack(halfPlank, 6, x),
 							new Object[] { "   ", "&&&", "   ", '&', new ItemStack(newPlanks, 1, x) });// half
-																										// planks
-																										// from
-																										// new
-																										// planks
+																																						// planks
+																																								// from
+																																								// new
+																																								// planks
 					GameRegistry.addRecipe(new ItemStack(halfPlank, 6, x),
 							new Object[] { "&&&", "   ", "   ", '&', new ItemStack(newPlanks, 1, x) });// half
-																										// planks
-																										// from
-																										// new
-																										// planks
+																																						// planks
+																																								// from
+																																								// new
+																																								// planks
 				} else if (x < 13) {
 					GameRegistry.addRecipe(new ItemStack(halfPlank2, 6, x - 8),
 							new Object[] { "   ", "   ", "&&&", '&', new ItemStack(newPlanks, 1, x) });// half
-																										// planks
-																										// from
-																										// new
-																										// planks
+																																							// planks
+																																									// from
+																																									// new
+																																									// planks
 					GameRegistry.addRecipe(new ItemStack(halfPlank2, 6, x - 8),
 							new Object[] { "   ", "&&&", "   ", '&', new ItemStack(newPlanks, 1, x) });// half
-																										// planks
-																										// from
-																										// new
-																										// planks
+																																							// planks
+																																									// from
+																																									// new
+																																									// planks
 					GameRegistry.addRecipe(new ItemStack(halfPlank2, 6, x - 8),
 							new Object[] { "&&&", "   ", "   ", '&', new ItemStack(newPlanks, 1, x) });// half
-																										// planks
-																										// from
-																										// new
-																										// planks
+																																							// planks
+																																									// from
+																																									// new
+																																									// planks
 				}
 				if (x < 13)
-					GameRegistry.addRecipe(new ItemStack(sawItem, 1, 2), new Object[] { "s&&", "& &", "&&&", 's',
-							new ItemStack(Item.getItemById(265), 1), '&', new ItemStack(newPlanks, 1, x) });// sawhandle
-																											// from
-																											// iron
+					GameRegistry.addRecipe(new ItemStack(sawItem, 1, 2),
+							new Object[] { "s&&", "& &", "&&&", 's', new ItemStack(Item.getItemById(265), 1), '&',
+									new ItemStack(newPlanks, 1, x) });// sawhandle
+																																																// from
+																																																					// iron
 				GameRegistry.addRecipe(new ItemStack(Item.getItemById(280), 4),
 						new Object[] { "   ", " & ", " & ", '&', new ItemStack(newPlanks, 1, x) });// stick
 				GameRegistry.addRecipe(new ItemStack(Item.getItemById(280), 4),
@@ -1049,51 +1069,62 @@ public class FNCommonProxy implements IGuiHandler {
 						new Object[] { "   ", "  &", "  &", '&', new ItemStack(newPlanks, 1, x) });// stick
 				GameRegistry.addRecipe(new ItemStack(Item.getItemById(280), 4),
 						new Object[] { "  &", "  &", "   ", '&', new ItemStack(newPlanks, 1, x) });// stick
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(270)), new Object[] { "&&&", " * ", " * ", '&',
-						new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(280)) });// woodpa
-																										// from
-																										// stick
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(269)), new Object[] { " & ", " * ", " * ", '&',
-						new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(280)) });// woodshovel
-																										// from
-																										// stick
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(269)), new Object[] { "&  ", "*  ", "*  ", '&',
-						new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(280)) });// woodshovel
-																										// from
-																										// stick
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(269)), new Object[] { "  &", "  *", "  *", '&',
-						new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(280)) });// woodshovel
-																										// from
-																										// stick
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(290)), new Object[] { "&& ", " * ", " * ", '&',
-						new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(280)) });// woodhoe
-																										// from
-																										// stick
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(290)), new Object[] { " &&", " * ", " * ", '&',
-						new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(280)) });// woodhoe
-																										// from
-																										// stick
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(271)), new Object[] { "&& ", "&* ", " * ", '&',
-						new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(280)) });// woodaxe
-																										// from
-																										// stick
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(271)), new Object[] { " &&", " *&", " * ", '&',
-						new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(280)) });// woodaxe
-																										// from
-																										// stick
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(268)), new Object[] { " & ", " & ", " * ", '&',
-						new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(280)) });// woodsword
-																										// from
-																										// stick
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(268)), new Object[] { "&  ", "&  ", "*  ", '&',
-						new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(280)) });// woodsword
-																										// from
-																										// stick
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(268)), new Object[] { "  &", "  &", "  *", '&',
-						new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(280)) });// woodsword
-																										// from
-																										// stick
-				// workbench from new planks
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(270)),
+						new Object[] { "&&&", " * ", " * ", '&', new ItemStack(newPlanks, 1, x), '*',
+								new ItemStack(Item.getItemById(280)) });// woodpa
+																																																	// from
+																																																					// stick
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(269)),
+						new Object[] { " & ", " * ", " * ", '&', new ItemStack(newPlanks, 1, x), '*',
+								new ItemStack(Item.getItemById(280)) });// woodshovel
+																																																	// from
+																																																					// stick
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(269)),
+						new Object[] { "&  ", "*  ", "*  ", '&', new ItemStack(newPlanks, 1, x), '*',
+								new ItemStack(Item.getItemById(280)) });// woodshovel
+																																																	// from
+																																																					// stick
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(269)),
+						new Object[] { "  &", "  *", "  *", '&', new ItemStack(newPlanks, 1, x), '*',
+								new ItemStack(Item.getItemById(280)) });// woodshovel
+																																																	// from
+																																																					// stick
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(290)),
+						new Object[] { "&& ", " * ", " * ", '&', new ItemStack(newPlanks, 1, x), '*',
+								new ItemStack(Item.getItemById(280)) });// woodhoe
+																																																	// from
+																																																					// stick
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(290)),
+						new Object[] { " &&", " * ", " * ", '&', new ItemStack(newPlanks, 1, x), '*',
+								new ItemStack(Item.getItemById(280)) });// woodhoe
+																																																	// from
+																																																					// stick
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(271)),
+						new Object[] { "&& ", "&* ", " * ", '&', new ItemStack(newPlanks, 1, x), '*',
+								new ItemStack(Item.getItemById(280)) });// woodaxe
+																																																	// from
+																																																					// stick
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(271)),
+						new Object[] { " &&", " *&", " * ", '&', new ItemStack(newPlanks, 1, x), '*',
+								new ItemStack(Item.getItemById(280)) });// woodaxe
+																																																	// from
+																																																					// stick
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(268)),
+						new Object[] { " & ", " & ", " * ", '&', new ItemStack(newPlanks, 1, x), '*',
+								new ItemStack(Item.getItemById(280)) });// woodsword
+																																																	// from
+																																																					// stick
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(268)),
+						new Object[] { "&  ", "&  ", "*  ", '&', new ItemStack(newPlanks, 1, x), '*',
+								new ItemStack(Item.getItemById(280)) });// woodsword
+																																																	// from
+																																																					// stick
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(268)),
+						new Object[] { "  &", "  &", "  *", '&', new ItemStack(newPlanks, 1, x), '*',
+								new ItemStack(Item.getItemById(280)) });// woodsword
+																																																	// from
+																																																					// stick
+																																																					// workbench from new planks
 				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(58)),
 						new Object[] { "   ", "&& ", "&& ", '&', new ItemStack(newPlanks, 1, x) });// workbench
 				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(58)),
@@ -1105,14 +1136,15 @@ public class FNCommonProxy implements IGuiHandler {
 				// chest, bookshelf, and stairs from new planks
 				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(54)),
 						new Object[] { "&&&", "& &", "&&&", '&', new ItemStack(newPlanks, 1, x) });
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(47)), new Object[] { "&&&", "***", "&&&", '&',
-						new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(340)) });// bookshelf
-																										// from
-																										// books
-																										// and
-																										// new
-																										// planks
-				// boat and bowl from new planks
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(47)),
+						new Object[] { "&&&", "***", "&&&", '&', new ItemStack(newPlanks, 1, x), '*',
+								new ItemStack(Item.getItemById(340)) });// bookshelf
+																																																	// from
+																																																					// books
+																																																					// and
+																																																					// new
+																																																					// planks
+																																																					// boat and bowl from new planks
 				GameRegistry.addRecipe(new ItemStack(Item.getItemById(333)),
 						new Object[] { "   ", "& &", "&&&", '&', new ItemStack(newPlanks, 1, x) });// boat
 				GameRegistry.addRecipe(new ItemStack(Item.getItemById(333)),
@@ -1124,132 +1156,139 @@ public class FNCommonProxy implements IGuiHandler {
 				// preasure plate, trap door and door from new planks
 				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(72)),
 						new Object[] { "   ", "&& ", "   ", '&', new ItemStack(newPlanks, 1, x) });// wooden
-																									// pressure
-																									// plate
+																																							// pressure
+																																									// plate
 				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(72)),
 						new Object[] { "&& ", "   ", "   ", '&', new ItemStack(newPlanks, 1, x) });// wooden
-																									// pressure
-																									// plate
+																																							// pressure
+																																									// plate
 				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(72)),
 						new Object[] { "   ", "   ", "&& ", '&', new ItemStack(newPlanks, 1, x) });// wooden
-																									// pressure
-																									// plate
+																																							// pressure
+																																									// plate
 				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(72)),
 						new Object[] { "   ", "   ", " &&", '&', new ItemStack(newPlanks, 1, x) });// wooden
-																									// pressure
-																									// plate
+																																							// pressure
+																																									// plate
 				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(72)),
 						new Object[] { "   ", " &&", "   ", '&', new ItemStack(newPlanks, 1, x) });// wooden
-																									// pressure
-																									// plate
+																																							// pressure
+																																									// plate
 				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(72)),
 						new Object[] { " &&", "   ", "   ", '&', new ItemStack(newPlanks, 1, x) });// pressure
-																									// plate
-																									// wooden
+																																							// plate
+																																									// wooden
 				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(96), 2),
 						new Object[] { "&&&", "&&&", "   ", '&', new ItemStack(newPlanks, 1, x) });// trapdoor
 				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(96), 2),
 						new Object[] { "   ", "&&&", "&&&", '&', new ItemStack(newPlanks, 1, x) });// trapdoor
 				GameRegistry.addRecipe(new ItemStack(Item.getItemById(324)),
 						new Object[] { "&& ", "&& ", "&& ", '&', new ItemStack(newPlanks, 1, x) });// wood
-																									// door
+																																						// door
 				GameRegistry.addRecipe(new ItemStack(Item.getItemById(324)),
 						new Object[] { " &&", " &&", " &&", '&', new ItemStack(newPlanks, 1, x) });// wood
-																									// door
-				// Jukebox, note block, piston and sign from new planks
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(84)), new Object[] { "&&&", "&*&", "&&&", '&',
-						new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(264)) });// jukebox
-																										// from
-																										// diamond
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(25)), new Object[] { "&&&", "&*&", "&&&", '&',
-						new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(331)) });// music
-																										// block
-																										// from
-																										// redstone
+																																						// door
+																																								// Jukebox, note block, piston and sign from new planks
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(84)),
+						new Object[] { "&&&", "&*&", "&&&", '&', new ItemStack(newPlanks, 1, x), '*',
+								new ItemStack(Item.getItemById(264)) });// jukebox
+																																																	// from
+																																																					// diamond
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(25)),
+						new Object[] { "&&&", "&*&", "&&&", '&', new ItemStack(newPlanks, 1, x), '*',
+								new ItemStack(Item.getItemById(331)) });// music
+																																																	// block
+																																																					// from
+																																																					// redstone
 				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(33)),
 						new Object[] { "&&&", "$*$", "$r$", '&', new ItemStack(newPlanks, 1, x), '$',
 								Block.getBlockById(4), '*', new ItemStack(Item.getItemById(265)), 'r',
 								new ItemStack(Item.getItemById(331)) });// piston
-																		// from
-																		// cobble,
-																		// iron
-																		// and
-																		// redstone
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(323)), new Object[] { "&&&", "&&&", " * ", '&',
-						new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(280)) });// sign
-																										// from
-																										// planks
-																										// and
-																										// stick
-				// bed and gate from new planks
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(355)), new Object[] { "&&&", "***", "   ", '*',
-						new ItemStack(newPlanks, 1, x), '&', Block.getBlockById(35) });// bed
-																						// from
-																						// wool
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(355)), new Object[] { "   ", "&&&", "***", '*',
-						new ItemStack(newPlanks, 1, x), '&', Block.getBlockById(35) });// bed
-																						// from
-																						// wool
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(85)), new Object[] { "*&*", "*&*", "   ", '&',
-						new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(280)) });// fence
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(85)), new Object[] { "   ", "*&*", "*&*", '&',
-						new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(280)) });// fence
-																										// from
-																										// sticks
+																																																																			// from
+																																																																							// cobble,
+																																																																							// iron
+																																																																							// and
+																																																																							// redstone
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(323)),
+						new Object[] { "&&&", "&&&", " * ", '&', new ItemStack(newPlanks, 1, x), '*',
+								new ItemStack(Item.getItemById(280)) });// sign
+																																																	// from
+																																																					// planks
+																																																					// and
+																																																					// stick
+																																																					// bed and gate from new planks
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(355)),
+						new Object[] { "&&&", "***", "   ", '*', new ItemStack(newPlanks, 1, x), '&',
+								Block.getBlockById(35) });// bed
+																																														// from
+																																																		// wool
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(355)),
+						new Object[] { "   ", "&&&", "***", '*', new ItemStack(newPlanks, 1, x), '&',
+								Block.getBlockById(35) });// bed
+																																														// from
+																																																		// wool
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(85)),
+						new Object[] { "*&*", "*&*", "   ", '&', new ItemStack(newPlanks, 1, x), '*',
+								new ItemStack(Item.getItemById(280)) });// fence
+																																																	// from
+																																																					// sticks
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(85)),
+						new Object[] { "   ", "*&*", "*&*", '&', new ItemStack(newPlanks, 1, x), '*',
+								new ItemStack(Item.getItemById(280)) });// fence
+																																																	// from
+																																																					// sticks
 			}
 			{// Crystal Stuff
-				// crystal half planks and stairs
+					// crystal half planks and stairs
 				GameRegistry.addRecipe(new ItemStack(halfPlank2, 6, 5),
 						new Object[] { "   ", "   ", "&&&", '&', new ItemStack(crystalWood, 1, 2) });// chalf
-																										// planks
-																										// from
-																										// new
-																										// cplanks
+																																						// planks
+																																								// from
+																																								// new
+																																								// cplanks
 				GameRegistry.addRecipe(new ItemStack(halfPlank2, 6, 5),
 						new Object[] { "   ", "&&&", "   ", '&', new ItemStack(crystalWood, 1, 2) });// chalf
-																										// planks
-																										// from
-																										// new
-																										// cplanks
+																																						// planks
+																																								// from
+																																								// new
+																																								// cplanks
 				GameRegistry.addRecipe(new ItemStack(halfPlank2, 6, 5),
 						new Object[] { "&&&", "   ", "   ", '&', new ItemStack(crystalWood, 1, 2) });// chalf
-																										// planks
-																										// from
-																										// new
-																										// cplanks
+																																						// planks
+																																								// from
+																																								// new
+																																								// cplanks
 				GameRegistry.addRecipe(new ItemStack(halfPlank2, 6, 6),
 						new Object[] { "   ", "   ", "&&&", '&', new ItemStack(crystalWood, 1, 3) });// dchalf
-																										// planks
-																										// from
-																										// new
-																										// cplanks
+																																						// planks
+																																								// from
+																																								// new
+																																								// cplanks
 				GameRegistry.addRecipe(new ItemStack(halfPlank2, 6, 6),
 						new Object[] { "   ", "&&&", "   ", '&', new ItemStack(crystalWood, 1, 3) });// dchalf
-																										// planks
-																										// from
-																										// new
-																										// cplanks
+																																						// planks
+																																								// from
+																																								// new
+																																								// cplanks
 				GameRegistry.addRecipe(new ItemStack(halfPlank2, 6, 6),
 						new Object[] { "&&&", "   ", "   ", '&', new ItemStack(crystalWood, 1, 3) });// dchalf
-																										// planks
-																										// from
-																										// new
-																										// cplanks
+																																						// planks
+																																								// from
+																																								// new
+																																								// cplanks
 				GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs14, 4),
 						new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(crystalWood, 1, 2) });// new
-																										// cstairs
-																										// from
-																										// new
-																										// cplanks
+																																							// cstairs
+																																									// from
+																																									// new
+																																									// cplanks
 				GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs15, 4),
 						new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(crystalWood, 1, 3) });// new
-																										// dcstairs
-																										// from
-																										// new
-																										// dcplanks
-				// dark Crystal bricks from stone and dark focus crystal
+																																							// dcstairs
+																																									// from
+																																									// new
+																																									// dcplanks
+																																									// dark Crystal bricks from stone and dark focus crystal
 				GameRegistry.addRecipe(new ItemStack(blockCrystal, 8, 3), new Object[] { "&&&", "&*&", "&&&", '&',
 						new ItemStack(Block.getBlockById(1)), '*', new ItemStack(blockCrystal, 1, 1) });
 				// Crystal bricks from stone and focus crystal
@@ -1351,14 +1390,16 @@ public class FNCommonProxy implements IGuiHandler {
 							" * ", '&', new ItemStack(crystalItem, 1, 2), '*', new ItemStack(crystalItem, 1, 3) });
 					GameRegistry.addRecipe(new ItemStack(FNItems.cAxeItem, 1, 0), new Object[] { "&& ", "&* ", " * ",
 							'&', new ItemStack(crystalItem, 1, 2), '*', new ItemStack(crystalItem, 1, 3) });// axe
-					GameRegistry.addRecipe(new ItemStack(FNItems.cAxeItem, 1, 0), new Object[] { " &&", " *&", " * ",
-							'&', new ItemStack(crystalItem, 1, 2), '*', new ItemStack(crystalItem, 1, 3) });// second
-																											// axe
+					GameRegistry.addRecipe(new ItemStack(FNItems.cAxeItem, 1, 0),
+							new Object[] { " &&", " *&", " * ", '&', new ItemStack(crystalItem, 1, 2), '*',
+									new ItemStack(crystalItem, 1, 3) });// second
+																																																		// axe
 					GameRegistry.addRecipe(new ItemStack(FNItems.cHoeItem, 1, 0), new Object[] { "&& ", " * ", " * ",
 							'&', new ItemStack(crystalItem, 1, 2), '*', new ItemStack(crystalItem, 1, 3) });// hoe
-					GameRegistry.addRecipe(new ItemStack(FNItems.cHoeItem, 1, 0), new Object[] { "&& ", " * ", " * ",
-							'&', new ItemStack(crystalItem, 1, 2), '*', new ItemStack(crystalItem, 1, 3) });// second
-																											// hoe
+					GameRegistry.addRecipe(new ItemStack(FNItems.cHoeItem, 1, 0),
+							new Object[] { "&& ", " * ", " * ", '&', new ItemStack(crystalItem, 1, 2), '*',
+									new ItemStack(crystalItem, 1, 3) });// second
+																																																		// hoe
 					GameRegistry.addRecipe(new ItemStack(FNItems.cShovelItem, 1, 0), new Object[] { " & ", " * ", " * ",
 							'&', new ItemStack(crystalItem, 1, 2), '*', new ItemStack(crystalItem, 1, 3) });// shovel
 					GameRegistry.addRecipe(new ItemStack(FNItems.cSwordItem, 1, 0), new Object[] { " & ", " & ", " * ",
@@ -1367,14 +1408,16 @@ public class FNCommonProxy implements IGuiHandler {
 							" * ", '&', new ItemStack(crystalItem, 1, 0), '*', new ItemStack(crystalItem, 1, 3) });// bpa
 					GameRegistry.addRecipe(new ItemStack(FNItems.cAxeItem, 1, 0), new Object[] { "&& ", "&* ", " * ",
 							'&', new ItemStack(crystalItem, 1, 0), '*', new ItemStack(crystalItem, 1, 3) });// baxe
-					GameRegistry.addRecipe(new ItemStack(FNItems.cAxeItem, 1, 0), new Object[] { " &&", " *&", " * ",
-							'&', new ItemStack(crystalItem, 1, 0), '*', new ItemStack(crystalItem, 1, 3) });// bsecond
-																											// axe
+					GameRegistry.addRecipe(new ItemStack(FNItems.cAxeItem, 1, 0),
+							new Object[] { " &&", " *&", " * ", '&', new ItemStack(crystalItem, 1, 0), '*',
+									new ItemStack(crystalItem, 1, 3) });// bsecond
+																																																		// axe
 					GameRegistry.addRecipe(new ItemStack(FNItems.cHoeItem, 1, 0), new Object[] { "&& ", " * ", " * ",
 							'&', new ItemStack(crystalItem, 1, 0), '*', new ItemStack(crystalItem, 1, 3) });// bhoe
-					GameRegistry.addRecipe(new ItemStack(FNItems.cHoeItem, 1, 0), new Object[] { "&& ", " * ", " * ",
-							'&', new ItemStack(crystalItem, 1, 0), '*', new ItemStack(crystalItem, 1, 3) });// bsecond
-																											// hoe
+					GameRegistry.addRecipe(new ItemStack(FNItems.cHoeItem, 1, 0),
+							new Object[] { "&& ", " * ", " * ", '&', new ItemStack(crystalItem, 1, 0), '*',
+									new ItemStack(crystalItem, 1, 3) });// bsecond
+																																																		// hoe
 					GameRegistry.addRecipe(new ItemStack(FNItems.cShovelItem, 1, 0), new Object[] { " & ", " * ", " * ",
 							'&', new ItemStack(crystalItem, 1, 0), '*', new ItemStack(crystalItem, 1, 3) });// bshovel
 					GameRegistry.addRecipe(new ItemStack(FNItems.cSwordItem, 1, 0), new Object[] { " & ", " & ", " * ",
@@ -1404,121 +1447,133 @@ public class FNCommonProxy implements IGuiHandler {
 				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(54), 1),
 						new Object[] { "&&&", "& &", "&&&", '&', new ItemStack(crystalWood, 1, 3) });// chest
 				// book shelf from crystal wood
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(47), 1), new Object[] { "&&&", "***", "&&&",
-						'&', new ItemStack(crystalWood, 1, 2), '*', new ItemStack(Item.getItemById(340)) });// bookshelf
-																											// from
-																											// book
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(47), 1), new Object[] { "&&&", "***", "&&&",
-						'&', new ItemStack(crystalWood, 1, 3), '*', new ItemStack(Item.getItemById(340)) });// bookshelf
-																											// from
-																											// book
-				// bed from crystal wood
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(255)), new Object[] { "***", "&&&", "   ", '&',
-						new ItemStack(crystalWood, 1, 2), '*', Block.getBlockById(35) });// bed
-																							// from
-																							// wool
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(255)), new Object[] { "   ", "***", "&&&", '&',
-						new ItemStack(crystalWood, 1, 2), '*', Block.getBlockById(35) });// bed
-																							// from
-																							// wool
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(255)), new Object[] { "***", "&&&", "   ", '&',
-						new ItemStack(crystalWood, 1, 3), '*', Block.getBlockById(35) });// bed
-																							// from
-																							// wool
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(255)), new Object[] { "   ", "***", "&&&", '&',
-						new ItemStack(crystalWood, 1, 3), '*', Block.getBlockById(35) });// bed
-																							// from
-																							// wool
-				// crystal torches from crystal chunk and crystal stick
-				GameRegistry.addRecipe(new ItemStack(newTorch, 8, 0), new Object[] { "   ", " * ", " & ", '&',
-						new ItemStack(crystalItem, 1, 3), '*', new ItemStack(crystalItem, 1, 2) });// crystal
-																									// torch
-				GameRegistry.addRecipe(new ItemStack(newTorch, 8, 0), new Object[] { " * ", " & ", "   ", '&',
-						new ItemStack(crystalItem, 1, 3), '*', new ItemStack(crystalItem, 1, 2) });// crystal
-																									// torch
-				GameRegistry.addRecipe(new ItemStack(newTorch, 8, 0), new Object[] { "   ", "*  ", "&  ", '&',
-						new ItemStack(crystalItem, 1, 3), '*', new ItemStack(crystalItem, 1, 2) });// crystal
-																									// torch
-				GameRegistry.addRecipe(new ItemStack(newTorch, 8, 0), new Object[] { "*  ", "&  ", "   ", '&',
-						new ItemStack(crystalItem, 1, 3), '*', new ItemStack(crystalItem, 1, 2) });// crystal
-																									// torch
-				GameRegistry.addRecipe(new ItemStack(newTorch, 8, 0), new Object[] { "   ", "  *", "  &", '&',
-						new ItemStack(crystalItem, 1, 3), '*', new ItemStack(crystalItem, 1, 2) });// crystal
-																									// torch
-				GameRegistry.addRecipe(new ItemStack(newTorch, 8, 0), new Object[] { "  *", "  &", "   ", '&',
-						new ItemStack(crystalItem, 1, 3), '*', new ItemStack(crystalItem, 1, 2) });// crystal
-																									// torch
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(47), 1),
+						new Object[] { "&&&", "***", "&&&", '&', new ItemStack(crystalWood, 1, 2), '*',
+								new ItemStack(Item.getItemById(340)) });// bookshelf
+																																																			// from
+																																																							// book
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(47), 1),
+						new Object[] { "&&&", "***", "&&&", '&', new ItemStack(crystalWood, 1, 3), '*',
+								new ItemStack(Item.getItemById(340)) });// bookshelf
+																																																			// from
+																																																							// book
+																																																							// bed from crystal wood
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(255)),
+						new Object[] { "***", "&&&", "   ", '&', new ItemStack(crystalWood, 1, 2), '*',
+								Block.getBlockById(35) });// bed
+																																														// from
+																																																		// wool
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(255)),
+						new Object[] { "   ", "***", "&&&", '&', new ItemStack(crystalWood, 1, 2), '*',
+								Block.getBlockById(35) });// bed
+																																														// from
+																																																		// wool
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(255)),
+						new Object[] { "***", "&&&", "   ", '&', new ItemStack(crystalWood, 1, 3), '*',
+								Block.getBlockById(35) });// bed
+																																														// from
+																																																		// wool
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(255)),
+						new Object[] { "   ", "***", "&&&", '&', new ItemStack(crystalWood, 1, 3), '*',
+								Block.getBlockById(35) });// bed
+																																														// from
+																																																		// wool
+																																																		// crystal torches from crystal chunk and crystal stick
+				GameRegistry.addRecipe(new ItemStack(newTorch, 8, 0),
+						new Object[] { "   ", " * ", " & ", '&', new ItemStack(crystalItem, 1, 3), '*',
+								new ItemStack(crystalItem, 1, 2) });// crystal
+																																															// torch
+				GameRegistry.addRecipe(new ItemStack(newTorch, 8, 0),
+						new Object[] { " * ", " & ", "   ", '&', new ItemStack(crystalItem, 1, 3), '*',
+								new ItemStack(crystalItem, 1, 2) });// crystal
+																																															// torch
+				GameRegistry.addRecipe(new ItemStack(newTorch, 8, 0),
+						new Object[] { "   ", "*  ", "&  ", '&', new ItemStack(crystalItem, 1, 3), '*',
+								new ItemStack(crystalItem, 1, 2) });// crystal
+																																															// torch
+				GameRegistry.addRecipe(new ItemStack(newTorch, 8, 0),
+						new Object[] { "*  ", "&  ", "   ", '&', new ItemStack(crystalItem, 1, 3), '*',
+								new ItemStack(crystalItem, 1, 2) });// crystal
+																																															// torch
+				GameRegistry.addRecipe(new ItemStack(newTorch, 8, 0),
+						new Object[] { "   ", "  *", "  &", '&', new ItemStack(crystalItem, 1, 3), '*',
+								new ItemStack(crystalItem, 1, 2) });// crystal
+																																															// torch
+				GameRegistry.addRecipe(new ItemStack(newTorch, 8, 0),
+						new Object[] { "  *", "  &", "   ", '&', new ItemStack(crystalItem, 1, 3), '*',
+								new ItemStack(crystalItem, 1, 2) });// crystal
+																																															// torch
 			}
 			{// all about stains
-				// animal oils from bucket and raw meat
+					// animal oils from bucket and raw meat
 				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewCup, 1, 1),
 						new Object[] { Item.getItemById(325), Item.getItemById(363) });// oils
-																						// from
-																						// beef
+																																				// from
+																																						// beef
 				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewCup, 1, 1),
 						new Object[] { Item.getItemById(325), Item.getItemById(365) });// oils
-																						// from
-																						// chicken
+																																				// from
+																																						// chicken
 				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewCup, 1, 1),
 						new Object[] { Item.getItemById(325), Item.getItemById(349) });// oils
-																						// from
-																						// fish
+																																				// from
+																																						// fish
 				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewCup, 1, 1),
 						new Object[] { Item.getItemById(325), Item.getItemById(319) });// oils
-																						// from
-																						// pork
-				// wood stains from animal oil and dye
+																																				// from
+																																						// pork
+																																						// wood stains from animal oil and dye
 				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewContainer, 1, 2),
 						new Object[] { new ItemStack(ItemNewCup, 1, 1), new ItemStack(Item.getItemById(351), 1, 3) });// stain
-																														// from
-																														// dye
-																														// -
-																														// brown
+																																														// from
+																																																// dye
+																																																// -
+																																																// brown
 				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewContainer, 1, 3),
 						new Object[] { new ItemStack(ItemNewCup, 1, 1), new ItemStack(Item.getItemById(351), 1, 5) });// stain
-																														// from
-																														// dye
-																														// -
-																														// purple
+																																														// from
+																																																// dye
+																																																// -
+																																																// purple
 				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewContainer, 1, 4),
 						new Object[] { new ItemStack(ItemNewCup, 1, 1), new ItemStack(Item.getItemById(351), 1, 1),
 								new ItemStack(Item.getItemById(351), 1, 1) });// stain
-																				// from
-																				// dye
-																				// -
-																				// dark
-																				// red
+																																																									// from
+																																																													// dye
+																																																													// -
+																																																													// dark
+																																																													// red
 				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewContainer, 1, 5),
 						new Object[] { new ItemStack(ItemNewCup, 1, 1), new ItemStack(Item.getItemById(351), 1, 11),
 								new ItemStack(Item.getItemById(351), 1, 11) });// stain
-																				// from
-																				// dye
-																				// -
-																				// dark
-																				// yellow
+																																																									// from
+																																																													// dye
+																																																													// -
+																																																													// dark
+																																																													// yellow
 				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewContainer, 1, 6),
 						new Object[] { new ItemStack(ItemNewCup, 1, 1), new ItemStack(Item.getItemById(351), 1, 3),
 								new ItemStack(Item.getItemById(351), 1, 14) });// stain
-																				// from
-																				// dye
-																				// -
-																				// peach
+																																																									// from
+																																																													// dye
+																																																													// -
+																																																													// peach
 				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewContainer, 1, 7),
 						new Object[] { new ItemStack(ItemNewCup, 1, 1), new ItemStack(Item.getItemById(351), 1, 14) });// stain
-																														// from
-																														// dye
+																																														// from
+																																																// dye
 				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewContainer, 1, 8),
 						new Object[] { new ItemStack(ItemNewCup, 1, 1), new ItemStack(Item.getItemById(351), 1, 1) });// stain
-																														// from
-																														// dye
-																														// -
-																														// red
+																																														// from
+																																																// dye
+																																																// -
+																																																// red
 				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewContainer, 1, 9),
 						new Object[] { new ItemStack(ItemNewCup, 1, 1), new ItemStack(Item.getItemById(351), 1, 11) });// stain
-																														// from
-																														// dye
-																														// -
-																														// yellow
+																																														// from
+																																																// dye
+																																																// -
+																																																// yellow
 				GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(351), 2, 3),
 						new Object[] { new ItemStack(ItemNuts, 1, 3) });
 				// new planks from new logs and stains
@@ -1594,16 +1649,18 @@ public class FNCommonProxy implements IGuiHandler {
 						new Object[] { " & ", "&&&", " & ", '&', new ItemStack(Block.getBlockById(20)) });
 				GameRegistry.addRecipe(new ItemStack(newGlass, 8, 1), new Object[] { "&&&", "&p&", "&&&", '&',
 						new ItemStack(Block.getBlockById(20)), 'p', new ItemStack(Block.getBlockById(102)) });
-				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 2), new Object[] { "&s&", "s&s", "&s&", '&',
-						new ItemStack(newGlass, 1, 1), 's', new ItemStack(Item.getItemById(280)) });// framed
-																									// from
-																									// sticks
+				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 2),
+						new Object[] { "&s&", "s&s", "&s&", '&', new ItemStack(newGlass, 1, 1), 's',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
 				GameRegistry.addRecipe(new ItemStack(newGlass, 9, 3),
 						new Object[] { "&&&", "&&&", "&&&", '&', new ItemStack(Block.getBlockById(20)) });
-				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 4), new Object[] { "&s&", "s&s", "&s&", '&',
-						new ItemStack(newGlass, 1, 3), 's', new ItemStack(Item.getItemById(280)) });// framed
-																									// from
-																									// sticks
+				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 4),
+						new Object[] { "&s&", "s&s", "&s&", '&', new ItemStack(newGlass, 1, 3), 's',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
 				GameRegistry.addRecipe(new ItemStack(newGlass, 4, 5),
 						new Object[] { " & ", "& &", " & ", '&', new ItemStack(Block.getBlockById(20)) });
 				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 6),
@@ -1616,162 +1673,200 @@ public class FNCommonProxy implements IGuiHandler {
 						new Object[] { "   ", "&& ", "&& ", '&', new ItemStack(Block.getBlockById(20)) });// 2x2
 				GameRegistry.addRecipe(new ItemStack(newGlass, 4, 7),
 						new Object[] { "   ", " &&", " &&", '&', new ItemStack(Block.getBlockById(20)) });// 2x2
-				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 8), new Object[] { "&s&", "s&s", "&s&", '&',
-						new ItemStack(newGlass, 1, 7), 's', new ItemStack(Item.getItemById(280)) });// framed
-																									// from
-																									// sticks
-				GameRegistry.addRecipe(new ItemStack(newGlass, 4, 9), new Object[] { "s&s", "& &", "s&s", '&',
-						new ItemStack(Block.getBlockById(20)), 's', new ItemStack(Item.getItemById(280)) });// framed
-																											// from
-																											// sticks
-				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 10), new Object[] { "&s&", "s&s", "&s&", '&',
-						new ItemStack(Block.getBlockById(20)), 's', new ItemStack(Item.getItemById(280)) });// framed
-																											// from
-																											// sticks
-				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 11), new Object[] { "s&s", "&s&", "s&s", '&',
-						new ItemStack(Block.getBlockById(20)), 's', new ItemStack(Item.getItemById(280)) });// framed
-																											// from
-																											// sticks
-				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 12), new Object[] { "sss", "&&&", "sss", '&',
-						new ItemStack(Block.getBlockById(20)), 's', new ItemStack(Item.getItemById(280)) });// framed
-																											// from
-																											// sticks
+				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 8),
+						new Object[] { "&s&", "s&s", "&s&", '&', new ItemStack(newGlass, 1, 7), 's',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(newGlass, 4, 9),
+						new Object[] { "s&s", "& &", "s&s", '&', new ItemStack(Block.getBlockById(20)), 's',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																																	// from
+																																																					// sticks
+				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 10),
+						new Object[] { "&s&", "s&s", "&s&", '&', new ItemStack(Block.getBlockById(20)), 's',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																																	// from
+																																																					// sticks
+				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 11),
+						new Object[] { "s&s", "&s&", "s&s", '&', new ItemStack(Block.getBlockById(20)), 's',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																																	// from
+																																																					// sticks
+				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 12),
+						new Object[] { "sss", "&&&", "sss", '&', new ItemStack(Block.getBlockById(20)), 's',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																																	// from
+																																																					// sticks
 				GameRegistry.addRecipe(new ItemStack(newGlass, 4, 13),
 						new Object[] { "& &", "   ", "& &", '&', new ItemStack(Block.getBlockById(20)) });
-				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 14), new Object[] { "ss ", "&& ", "&& ", '&',
-						new ItemStack(Block.getBlockById(20)), 's', new ItemStack(Item.getItemById(280)) });// framed
-																											// from
-																											// sticks
-				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 14), new Object[] { " ss", " &&", " &&", '&',
-						new ItemStack(Block.getBlockById(20)), 's', new ItemStack(Item.getItemById(280)) });// framed
-																											// from
-																											// sticks
-				GameRegistry.addRecipe(new ItemStack(newGlass, 6, 15), new Object[] { "&s&", "&s&", "&s&", '&',
-						new ItemStack(Block.getBlockById(20)), 's', new ItemStack(Item.getItemById(280)) });// framed
-																											// from
-																											// sticks
+				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 14),
+						new Object[] { "ss ", "&& ", "&& ", '&', new ItemStack(Block.getBlockById(20)), 's',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																																	// from
+																																																					// sticks
+				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 14),
+						new Object[] { " ss", " &&", " &&", '&', new ItemStack(Block.getBlockById(20)), 's',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																																	// from
+																																																					// sticks
+				GameRegistry.addRecipe(new ItemStack(newGlass, 6, 15),
+						new Object[] { "&s&", "&s&", "&s&", '&', new ItemStack(Block.getBlockById(20)), 's',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																																	// from
+																																																					// sticks
 			}
 			{// new fences from sticks and new planks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 0), new Object[] { "&*&", "&*&", "   ", '&',
-						new ItemStack(newPlanks, 1, 0), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 0), new Object[] { "   ", "&*&", "&*&", '&',
-						new ItemStack(newPlanks, 1, 0), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 1), new Object[] { "&*&", "&*&", "   ", '&',
-						new ItemStack(newPlanks, 1, 1), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 1), new Object[] { "   ", "&*&", "&*&", '&',
-						new ItemStack(newPlanks, 1, 1), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 2), new Object[] { "&*&", "&*&", "   ", '&',
-						new ItemStack(newPlanks, 1, 2), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 2), new Object[] { "   ", "&*&", "&*&", '&',
-						new ItemStack(newPlanks, 1, 2), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 3), new Object[] { "&*&", "&*&", "   ", '&',
-						new ItemStack(newPlanks, 1, 3), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 3), new Object[] { "   ", "&*&", "&*&", '&',
-						new ItemStack(newPlanks, 1, 3), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 4), new Object[] { "&*&", "&*&", "   ", '&',
-						new ItemStack(newPlanks, 1, 4), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 4), new Object[] { "   ", "&*&", "&*&", '&',
-						new ItemStack(newPlanks, 1, 4), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 5), new Object[] { "&*&", "&*&", "   ", '&',
-						new ItemStack(newPlanks, 1, 5), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 5), new Object[] { "   ", "&*&", "&*&", '&',
-						new ItemStack(newPlanks, 1, 5), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 6), new Object[] { "&*&", "&*&", "   ", '&',
-						new ItemStack(newPlanks, 1, 6), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 6), new Object[] { "   ", "&*&", "&*&", '&',
-						new ItemStack(newPlanks, 1, 6), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 7), new Object[] { "&*&", "&*&", "   ", '&',
-						new ItemStack(newPlanks, 1, 7), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 7), new Object[] { "   ", "&*&", "&*&", '&',
-						new ItemStack(newPlanks, 1, 7), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 8), new Object[] { "&*&", "&*&", "   ", '&',
-						new ItemStack(newPlanks, 1, 8), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 8), new Object[] { "   ", "&*&", "&*&", '&',
-						new ItemStack(newPlanks, 1, 8), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 9), new Object[] { "&*&", "&*&", "   ", '&',
-						new ItemStack(newPlanks, 1, 9), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 9), new Object[] { "   ", "&*&", "&*&", '&',
-						new ItemStack(newPlanks, 1, 9), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 10), new Object[] { "&*&", "&*&", "   ", '&',
-						new ItemStack(newPlanks, 1, 10), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 10), new Object[] { "   ", "&*&", "&*&", '&',
-						new ItemStack(newPlanks, 1, 10), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 11), new Object[] { "&*&", "&*&", "   ", '&',
-						new ItemStack(newPlanks, 1, 11), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 11), new Object[] { "   ", "&*&", "&*&", '&',
-						new ItemStack(newPlanks, 1, 11), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 12), new Object[] { "&*&", "&*&", "   ", '&',
-						new ItemStack(newPlanks, 1, 12), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 12), new Object[] { "   ", "&*&", "&*&", '&',
-						new ItemStack(newPlanks, 1, 12), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 13), new Object[] { "&*&", "&*&", "   ", '&',
-						new ItemStack(crystalWood, 1, 2), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 13), new Object[] { "   ", "&*&", "&*&", '&',
-						new ItemStack(crystalWood, 1, 2), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 14), new Object[] { "&*&", "&*&", "   ", '&',
-						new ItemStack(crystalWood, 1, 3), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 14), new Object[] { "   ", "&*&", "&*&", '&',
-						new ItemStack(crystalWood, 1, 3), '*', new ItemStack(Item.getItemById(280)) });// framed
-																										// from
-																										// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 0),
+						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 0), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 0),
+						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 0), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 1),
+						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 1), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 1),
+						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 1), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 2),
+						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 2), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 2),
+						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 2), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 3),
+						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 3), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 3),
+						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 3), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 4),
+						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 4), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 4),
+						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 4), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 5),
+						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 5), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 5),
+						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 5), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 6),
+						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 6), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 6),
+						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 6), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 7),
+						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 7), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 7),
+						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 7), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 8),
+						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 8), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 8),
+						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 8), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 9),
+						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 9), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 9),
+						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 9), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 10),
+						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 10), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 10),
+						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 10), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 11),
+						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 11), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 11),
+						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 11), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 12),
+						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 12), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 12),
+						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 12), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 13),
+						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(crystalWood, 1, 2), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 13),
+						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(crystalWood, 1, 2), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 14),
+						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(crystalWood, 1, 3), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 14),
+						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(crystalWood, 1, 3), '*',
+								new ItemStack(Item.getItemById(280)) });// framed
+																																															// from
+																																																			// sticks
 			}
 			{// flowerPot from vanilla flowerPot
 				GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.flowerPot),

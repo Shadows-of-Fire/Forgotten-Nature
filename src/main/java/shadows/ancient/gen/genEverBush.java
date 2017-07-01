@@ -64,7 +64,7 @@ public class genEverBush extends WorldGenerator {
 				metWoodGen3 = Block.getIdFromBlock(world.getBlock(i1 + e, j1, k1));
 				metWoodGen4 = Block.getIdFromBlock(world.getBlock(i1 - e, j1, k1));
 				if (metWoodGen1 == 0 || metWoodGen1 == 31 || metWoodGen1 == 78) // air,
-																				// grass,
+																					// grass,
 																				// snow
 					world.setBlock(i1, j1, k1 + e, Block.getBlockById(17), logmeta, 3);
 				if (metWoodGen2 == 0 || metWoodGen2 == 31 || metWoodGen2 == 78)

@@ -194,7 +194,7 @@ public class genDesertTree extends WorldGenerator {
 			if (next <= 9 && size == 2) {
 				if (world.isAirBlock(i2 - iDir, j2, k2 - kDir) || world.getBlock(i2 - iDir, j2, k2 - kDir) == leaf2)
 					world.setBlock(i2 - iDir, j2, k2 - kDir, log2, logmeta, 3); // extra
-																				// tree
+																			// tree
 																				// thickness
 			}
 

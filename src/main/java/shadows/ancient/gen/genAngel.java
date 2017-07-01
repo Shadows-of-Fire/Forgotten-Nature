@@ -42,11 +42,11 @@ public class genAngel extends WorldGenerator {
 				for (int k3 = 0; k3 <= bh; k3++) {
 					if (world.isAirBlock(i1 + i2, j1 + k3, k1 + k2) || (k3 == 0 && i2 == 0 && k2 == 0))
 						world.setBlock(i1 + i2, j1 + k3, k1 + k2, Block.getBlockById(17), 0, 3);// oak
-																								// log
+																							// log
 				}
 				if (world.isAirBlock(i1, j1 + bh + 1, k1))
 					world.setBlock(i1, j1 + bh + 1, k1, Block.getBlockById(17), 0, 3);// oak
-																						// log
+																					// log
 			}
 		}
 		for (int id = -1; id <= 1; id++) {
@@ -82,7 +82,7 @@ public class genAngel extends WorldGenerator {
 				j2++;
 			if (world.isAirBlock(i2, j2, k2))
 				world.setBlock(i2, j2, k2, Block.getBlockById(17), 0, 3);// oak
-																			// log
+																		// log
 			if (random.nextInt(3) == 0 || index == size - 1)
 				leafGen(world, i2, j2, k2, leaf2, leafmeta);
 			if (iD == 0)
@@ -114,7 +114,7 @@ public class genAngel extends WorldGenerator {
 		while (index < 2 * size / 3) {
 			if (world.isAirBlock(i2, j2, k2) || world.getBlock(i2, j2, k2) == leaf2)
 				world.setBlock(i2, j2, k2, Block.getBlockById(17), 0, 3);// oak
-																			// log
+																		// log
 			if (random.nextInt(3) == 0 || index == 2 * size / 3 - 1)
 				leafGen(world, i2, j2, k2, leaf2, leafmeta);
 			if (iD == 0)
@@ -142,7 +142,7 @@ public class genAngel extends WorldGenerator {
 		while (index < size / 3) {
 			if (world.isAirBlock(i2, j2, k2) || world.getBlock(i2, j2, k2) == leaf2)
 				world.setBlock(i2, j2, k2, Block.getBlockById(17), 0, 3); // oak
-																			// log
+																		// log
 			if (random.nextInt(3) == 0 || index == size / 3 - 1)
 				leafGen(world, i2, j2, k2, leaf2, leafmeta);
 			if (iD == 0)
@@ -176,7 +176,7 @@ public class genAngel extends WorldGenerator {
 					j4++;
 				if (world.isAirBlock(i4, j4, k4))
 					world.setBlock(i4, j4, k4, Block.getBlockById(17), 0, 3); // oak
-																				// log
+																			// log
 				if (random.nextInt(4) == 0 || index == size2 - 1)
 					leafGen(world, i4, j4, k4, leaf2, leafmeta);
 				if (kkD == 0) {

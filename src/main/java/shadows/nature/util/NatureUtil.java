@@ -33,7 +33,7 @@ public class NatureUtil {
 		ModelLoader.setCustomModelResourceLocation(item, meta,
 				new ModelResourceLocation(item.getRegistryName(), variant));
 	}
-	
+
 	public static void sMRL(Item item, String suffix, int meta, String variant) {
 		ModelLoader.setCustomModelResourceLocation(item, meta,
 				new ModelResourceLocation(item.getRegistryName() + suffix, variant));
@@ -52,7 +52,7 @@ public class NatureUtil {
 	public static void sMRL(Block block, int meta, String variant) {
 		sMRL(Item.getItemFromBlock(block), meta, variant);
 	}
-	
+
 	/**
 	 * Sets a custom ModelResourceLocation for this block's ItemBlock
 	 * 

@@ -33,7 +33,8 @@ public class BlockBasic extends Block implements IHasModelLocation {
 		this(name, material, hardness, resist, customItemBlock, true);
 	}
 
-	@Override @SideOnly(Side.CLIENT)
+	@Override
+	@SideOnly(Side.CLIENT)
 	public void registerModels() {
 		NatureUtil.sMRL(this, 0, "inventory");
 	}

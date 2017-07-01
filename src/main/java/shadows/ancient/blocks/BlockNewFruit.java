@@ -72,7 +72,7 @@ public class BlockNewFruit extends Block {
 				dropBlockAsItem(world, i, j, k, new ItemStack(ItemFruit, 1, 0)); // banana
 			else if (ll2 == 4)
 				dropBlockAsItem(world, i, j, k, new ItemStack(ItemNut, 1, 0)); // ginkgo
-																				// nuts
+																			// nuts
 			else if (ll2 == 5)
 				dropBlockAsItem(world, i, j, k, new ItemStack(ItemFruit, 1, 2)); // orange
 			else if (ll2 == 6)
@@ -106,7 +106,7 @@ public class BlockNewFruit extends Block {
 					dropBlockAsItem(world, i, j, k, new ItemStack(ItemFruit, 1, 0)); // banana
 				if ((l & 15) == 4)
 					dropBlockAsItem(world, i, j, k, new ItemStack(ItemNut, 1, 0)); // ginkgo
-																					// nuts
+																				// nuts
 			}
 		}
 		if ((l & 15) == 5)
