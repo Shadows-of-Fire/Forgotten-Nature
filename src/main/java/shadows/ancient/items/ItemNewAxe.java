@@ -22,15 +22,11 @@ public class ItemNewAxe extends ItemTool {
 	private IIcon axeIcons;
 
 	/** an array of the blocks this axe is effective against */
-	public static final Set blocksEffectiveAgainst = Sets
-			.newHashSet(new Block[] { FNBlocks.newPlanks1, FNBlocks.newPlanks2, FNBlocks.newLogs1, FNBlocks.newLogs2,
-					FNBlocks.newLogs3, FNBlocks.newLogs4, Blocks.planks, Blocks.bookshelf, Blocks.log, Blocks.log2,
-					Blocks.chest, Blocks.wooden_slab, Blocks.pumpkin, Blocks.lit_pumpkin, FNBlocks.crystalWood });
+	public static final Set blocksEffectiveAgainst = Sets.newHashSet(new Block[] { FNBlocks.newPlanks1, FNBlocks.newPlanks2, FNBlocks.newLogs1, FNBlocks.newLogs2, FNBlocks.newLogs3, FNBlocks.newLogs4, Blocks.planks, Blocks.bookshelf, Blocks.log, Blocks.log2, Blocks.chest, Blocks.wooden_slab, Blocks.pumpkin, Blocks.lit_pumpkin, FNBlocks.crystalWood });
 
 	public float func_150893_a(ItemStack par1ItemStack, Block par2Block)// getStrengthVsBlock
 	{
-		return par2Block != null && par2Block.getMaterial() == Material.wood ? this.efficiencyOnProperMaterial
-				: super.func_150893_a(par1ItemStack, par2Block);
+		return par2Block != null && par2Block.getMaterial() == Material.wood ? this.efficiencyOnProperMaterial : super.func_150893_a(par1ItemStack, par2Block);
 	}
 
 	public ItemNewAxe(Item.ToolMaterial enumtoolmaterial) {

@@ -40,16 +40,10 @@ public class BlockNewFlowerPot extends BlockFlowerPot {
 	}
 
 	private boolean func_149928_a(Block blk, int p_149928_2_) {
-		return blk != Blocks.yellow_flower && blk != Blocks.red_flower && blk != Blocks.cactus
-				&& blk != Blocks.brown_mushroom && blk != Blocks.red_mushroom && blk != Blocks.sapling
-				&& blk != FNBlocks.fNFlowers && blk != FNBlocks.fNSapling1 && blk != FNBlocks.fNSapling2
-				&& blk != FNBlocks.fNSapling3 && blk != FNBlocks.mushroomCrystal && blk != FNBlocks.crystalStone
-				&& blk != FNBlocks.mushroomCrystal && blk != Blocks.deadbush
-						? blk == Blocks.tallgrass && p_149928_2_ == 2 : true;
+		return blk != Blocks.yellow_flower && blk != Blocks.red_flower && blk != Blocks.cactus && blk != Blocks.brown_mushroom && blk != Blocks.red_mushroom && blk != Blocks.sapling && blk != FNBlocks.fNFlowers && blk != FNBlocks.fNSapling1 && blk != FNBlocks.fNSapling2 && blk != FNBlocks.fNSapling3 && blk != FNBlocks.mushroomCrystal && blk != FNBlocks.crystalStone && blk != FNBlocks.mushroomCrystal && blk != Blocks.deadbush ? blk == Blocks.tallgrass && p_149928_2_ == 2 : true;
 	}
 
-	public boolean onBlockActivated(World world, int i, int j, int k, EntityPlayer entityplayer, int p_149727_6_,
-			float p_149727_7_, float p_149727_8_, float p_149727_9_) {
+	public boolean onBlockActivated(World world, int i, int j, int k, EntityPlayer entityplayer, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_) {
 		ItemStack itemstack = entityplayer.inventory.getCurrentItem();
 
 		if (itemstack != null && itemstack.getItem() instanceof ItemBlock) {
@@ -72,8 +66,7 @@ public class BlockNewFlowerPot extends BlockFlowerPot {
 						}
 
 						if (!entityplayer.capabilities.isCreativeMode && --itemstack.stackSize <= 0) {
-							entityplayer.inventory.setInventorySlotContents(entityplayer.inventory.currentItem,
-									(ItemStack) null);
+							entityplayer.inventory.setInventorySlotContents(entityplayer.inventory.currentItem, (ItemStack) null);
 						}
 
 						return true;
@@ -89,26 +82,20 @@ public class BlockNewFlowerPot extends BlockFlowerPot {
 
 	@SideOnly(Side.CLIENT)
 	public Item getItem(World p_149694_1_, int p_149694_2_, int p_149694_3_, int p_149694_4_) {
-		TileEntityFlowerPot tileentityflowerpot = this.func_149929_e(p_149694_1_, p_149694_2_, p_149694_3_,
-				p_149694_4_);
-		return tileentityflowerpot != null && tileentityflowerpot.getFlowerPotItem() != null
-				? tileentityflowerpot.getFlowerPotItem() : Item.getItemFromBlock(FNBlocks.flowerPot);
+		TileEntityFlowerPot tileentityflowerpot = this.func_149929_e(p_149694_1_, p_149694_2_, p_149694_3_, p_149694_4_);
+		return tileentityflowerpot != null && tileentityflowerpot.getFlowerPotItem() != null ? tileentityflowerpot.getFlowerPotItem() : Item.getItemFromBlock(FNBlocks.flowerPot);
 	}
 
 	public int getDamageValue(World p_149643_1_, int p_149643_2_, int p_149643_3_, int p_149643_4_) {
-		TileEntityFlowerPot tileentityflowerpot = this.func_149929_e(p_149643_1_, p_149643_2_, p_149643_3_,
-				p_149643_4_);
-		return tileentityflowerpot != null && tileentityflowerpot.getFlowerPotItem() != null
-				? tileentityflowerpot.getFlowerPotData() : 0;
+		TileEntityFlowerPot tileentityflowerpot = this.func_149929_e(p_149643_1_, p_149643_2_, p_149643_3_, p_149643_4_);
+		return tileentityflowerpot != null && tileentityflowerpot.getFlowerPotItem() != null ? tileentityflowerpot.getFlowerPotData() : 0;
 	}
 
-	public void onBlockHarvested(World p_149681_1_, int p_149681_2_, int p_149681_3_, int p_149681_4_, int p_149681_5_,
-			EntityPlayer p_149681_6_) {
+	public void onBlockHarvested(World p_149681_1_, int p_149681_2_, int p_149681_3_, int p_149681_4_, int p_149681_5_, EntityPlayer p_149681_6_) {
 		super.onBlockHarvested(p_149681_1_, p_149681_2_, p_149681_3_, p_149681_4_, p_149681_5_, p_149681_6_);
 
 		if (p_149681_6_.capabilities.isCreativeMode) {
-			TileEntityFlowerPot tileentityflowerpot = this.func_149929_e(p_149681_1_, p_149681_2_, p_149681_3_,
-					p_149681_4_);
+			TileEntityFlowerPot tileentityflowerpot = this.func_149929_e(p_149681_1_, p_149681_2_, p_149681_3_, p_149681_4_);
 
 			if (tileentityflowerpot != null) {
 				tileentityflowerpot.func_145964_a(Item.getItemById(0), 0);
@@ -122,8 +109,7 @@ public class BlockNewFlowerPot extends BlockFlowerPot {
 
 	private TileEntityFlowerPot func_149929_e(World world, int i, int j, int k) {
 		TileEntity tileentity = world.getTileEntity(i, j, k);
-		return tileentity != null && tileentity instanceof TileEntityFlowerPot ? (TileEntityFlowerPot) tileentity
-				: null;
+		return tileentity != null && tileentity instanceof TileEntityFlowerPot ? (TileEntityFlowerPot) tileentity : null;
 	}
 
 	public TileEntity createNewTileEntity(World world, int p_149915_2_) {

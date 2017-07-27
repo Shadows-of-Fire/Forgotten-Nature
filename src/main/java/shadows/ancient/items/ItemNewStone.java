@@ -7,8 +7,7 @@ import net.minecraft.util.IIcon;
 import shadows.ancient.FNBlocks;
 
 public class ItemNewStone extends ItemBlock {
-	public static final String[] names = new String[] { "chert", "granite", "gneiss", "hornfels", "marble",
-			"granitebricks", "gneissbricks", "hornfelsbricks", "marblebricks", "titanstone" };
+	public static final String[] names = new String[] { "chert", "granite", "gneiss", "hornfels", "marble", "granitebricks", "gneissbricks", "hornfelsbricks", "marblebricks", "titanstone" };
 
 	public ItemNewStone(Block i) {
 		super(i);

@@ -114,8 +114,7 @@ public class genSequoia extends WorldGenerator {
 
 			for (int l1 = -byte0; l1 <= byte0; l1++) {
 				for (int l2 = -byte0; l2 <= byte0; l2++) {
-					if ((byte0 == Math.abs(l2) || byte0 == Math.abs(l1))
-							|| (Math.abs(l2) == byte0 - 1 && Math.abs(l1) == byte0 - 1)) {
+					if ((byte0 == Math.abs(l2) || byte0 == Math.abs(l1)) || (Math.abs(l2) == byte0 - 1 && Math.abs(l1) == byte0 - 1)) {
 						border = 1; // shaping the top of the tree
 					}
 
@@ -141,8 +140,7 @@ public class genSequoia extends WorldGenerator {
 
 			for (int i2 = -byte0; i2 <= byte0; i2++) {
 				for (int i3 = -byte0; i3 <= byte0; i3++) {
-					if ((byte0 == Math.abs(i2) || byte0 == Math.abs(i3))
-							|| (Math.abs(i2) == byte0 - 1 && Math.abs(i3) == byte0 - 1)) {
+					if ((byte0 == Math.abs(i2) || byte0 == Math.abs(i3)) || (Math.abs(i2) == byte0 - 1 && Math.abs(i3) == byte0 - 1)) {
 						border = 1; // shaping the top of the tree
 					}
 
@@ -152,15 +150,12 @@ public class genSequoia extends WorldGenerator {
 						border = 0;
 					}
 
-					if ((byte0 != Math.abs(i2) && byte0 != Math.abs(i3))
-							|| (byte0 == Math.abs(i2) && byte0 == Math.abs(i3))) {
+					if ((byte0 != Math.abs(i2) && byte0 != Math.abs(i3)) || (byte0 == Math.abs(i2) && byte0 == Math.abs(i3))) {
 						continue;
 					}
 
 					for (int j5 = l / 2; j5 <= l; j5++) {
-						if (random.nextInt(2) > 0 && (Math.abs(i2) != byte0 || Math.abs(i3) != byte0 - 1)
-								&& (Math.abs(i2) != byte0 - 1 || Math.abs(i3) != byte0) && j5 > l / 2 + 1
-								&& (world.isAirBlock(iin + i2, i1 + j5, kin + i3))) {
+						if (random.nextInt(2) > 0 && (Math.abs(i2) != byte0 || Math.abs(i3) != byte0 - 1) && (Math.abs(i2) != byte0 - 1 || Math.abs(i3) != byte0) && j5 > l / 2 + 1 && (world.isAirBlock(iin + i2, i1 + j5, kin + i3))) {
 							world.setBlock(iin + i2, i1 + j5, kin + i3, leaf, leafmeta, 3);
 						}
 					}
@@ -273,8 +268,7 @@ public class genSequoia extends WorldGenerator {
 
 					if (center == 0) {
 						for (int j5 = ls / 2; j5 <= ls; j5++) {
-							if (random.nextInt(3) > 0 && j5 > ls / 2 + 1
-									&& (world.isAirBlock(iin + i2, i1 + j5, kin + i3))) {
+							if (random.nextInt(3) > 0 && j5 > ls / 2 + 1 && (world.isAirBlock(iin + i2, i1 + j5, kin + i3))) {
 								world.setBlock(iin + i2, i1 + j5, kin + i3, leaf, leafmeta, 3);
 							}
 						}
@@ -322,8 +316,7 @@ public class genSequoia extends WorldGenerator {
 		}
 	}
 
-	public static void branches(World world, Random random, int ii, int jj, int kk, int iD, int kD, Block leaf2,
-			int leafmeta, Block log2, int logmeta) {
+	public static void branches(World world, Random random, int ii, int jj, int kk, int iD, int kD, Block leaf2, int leafmeta, Block log2, int logmeta) {
 		for (int br = 0; br < 9; br++) {
 			if (iD == -1 && random.nextInt(3) == 0) {
 				ii--;
@@ -356,8 +349,7 @@ public class genSequoia extends WorldGenerator {
 	public static void genSeqLeaves(World world, int i3, int j3, int k3, Block leaf2, int leafmeta) {
 		for (int x = -3; x <= 3; x++) {
 			for (int y = -3; y <= 3; y++) {
-				if ((Math.abs(x) != 3 || Math.abs(y) != 3) && (Math.abs(x) != 2 || Math.abs(y) != 3)
-						&& (Math.abs(x) != 3 || Math.abs(y) != 2)) {
+				if ((Math.abs(x) != 3 || Math.abs(y) != 3) && (Math.abs(x) != 2 || Math.abs(y) != 3) && (Math.abs(x) != 3 || Math.abs(y) != 2)) {
 					if (world.isAirBlock(i3 + x, j3, k3 + y)) {
 						world.setBlock(i3 + x, j3, k3 + y, leaf2, leafmeta, 3);
 					}

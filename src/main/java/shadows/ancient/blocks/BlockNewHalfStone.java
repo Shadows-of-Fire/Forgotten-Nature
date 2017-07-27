@@ -17,8 +17,7 @@ import shadows.ancient.FNBlocks;
 
 public class BlockNewHalfStone extends BlockSlab {
 	/** The type of tree this slab came from. */
-	public static final String[] rockType = new String[] { "granite", "gneiss", "hornfels", "marble", "granitebricks",
-			"gneissbricks", "hornfelsbricks", "marblebricks" };
+	public static final String[] rockType = new String[] { "granite", "gneiss", "hornfels", "marble", "granitebricks", "gneissbricks", "hornfelsbricks", "marblebricks" };
 
 	@SideOnly(Side.CLIENT)
 	private IIcon[] hStoneIcons;

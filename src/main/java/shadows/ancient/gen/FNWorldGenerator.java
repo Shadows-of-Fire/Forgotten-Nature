@@ -14,8 +14,7 @@ import shadows.ancient.ForgottenNature;
 
 public class FNWorldGenerator implements IWorldGenerator {
 	@Override
-	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator,
-			IChunkProvider chunkProvider) {
+	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
 		Block flowers = FNBlocks.fNFlowers;
 		Block nStone = FNBlocks.newStones;
 		Block fNNewLogs1 = FNBlocks.newLogs1;
@@ -361,8 +360,7 @@ public class FNWorldGenerator implements IWorldGenerator {
 				tree.generate(world, random, k, il, l);
 			}
 		}
-		if ((biome.biomeID == 5 || biome.biomeID == 19 || biome.biomeID == 30 || biome.biomeID == 31
-				|| biome.biomeID == 32 || biome.biomeID == 33))// taigas
+		if ((biome.biomeID == 5 || biome.biomeID == 19 || biome.biomeID == 30 || biome.biomeID == 31 || biome.biomeID == 32 || biome.biomeID == 33))// taigas
 		{
 			if (random.nextInt(50) == 0 && ForgottenNature.RedMaple) // rMaple
 			{

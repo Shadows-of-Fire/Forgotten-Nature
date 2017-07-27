@@ -57,17 +57,13 @@ public class genCedar extends WorldGenerator {
 
 					if (jj == h - 4) {
 						for (int next = 1; next < 3; next++) {
-							if (world.isAirBlock(i1 + next, j1 + jj - 2, k1)
-									|| world.getBlock(i1 + next, j1 + jj - 2, k1) == leaf)
+							if (world.isAirBlock(i1 + next, j1 + jj - 2, k1) || world.getBlock(i1 + next, j1 + jj - 2, k1) == leaf)
 								world.setBlock(i1 + next, j1 + jj - 2, k1, log, logmeta, 3);
-							if (world.isAirBlock(i1 - next, j1 + jj - 2, k1)
-									|| world.getBlock(i1 - next, j1 + jj - 2, k1) == leaf)
+							if (world.isAirBlock(i1 - next, j1 + jj - 2, k1) || world.getBlock(i1 - next, j1 + jj - 2, k1) == leaf)
 								world.setBlock(i1 - next, j1 + jj - 2, k1, log, logmeta, 3);
-							if (world.isAirBlock(i1, j1 + jj - 2, k1 + next)
-									|| world.getBlock(i1, j1 + jj - 2, k1 + next) == leaf)
+							if (world.isAirBlock(i1, j1 + jj - 2, k1 + next) || world.getBlock(i1, j1 + jj - 2, k1 + next) == leaf)
 								world.setBlock(i1, j1 + jj - 2, k1 + next, log, logmeta, 3);
-							if (world.isAirBlock(i1, j1 + jj - 2, k1 - next)
-									|| world.getBlock(i1, j1 + jj - 2, k1 - next) == leaf)
+							if (world.isAirBlock(i1, j1 + jj - 2, k1 - next) || world.getBlock(i1, j1 + jj - 2, k1 - next) == leaf)
 								world.setBlock(i1, j1 + jj - 2, k1 - next, log, logmeta, 3);
 						}
 
@@ -76,17 +72,13 @@ public class genCedar extends WorldGenerator {
 
 					if (jj == h - 7) {
 						for (int next = 1; next <= 3; next++) {
-							if (world.isAirBlock(i1 + next, j1 + jj - 2, k1)
-									|| world.getBlock(i1 + next, j1 + jj - 2, k1) == leaf)
+							if (world.isAirBlock(i1 + next, j1 + jj - 2, k1) || world.getBlock(i1 + next, j1 + jj - 2, k1) == leaf)
 								world.setBlock(i1 + next, j1 + jj - 2, k1, log, logmeta, 3);
-							if (world.isAirBlock(i1 - next, j1 + jj - 2, k1)
-									|| world.getBlock(i1 - next, j1 + jj - 2, k1) == leaf)
+							if (world.isAirBlock(i1 - next, j1 + jj - 2, k1) || world.getBlock(i1 - next, j1 + jj - 2, k1) == leaf)
 								world.setBlock(i1 - next, j1 + jj - 2, k1, log, logmeta, 3);
-							if (world.isAirBlock(i1, j1 + jj - 2, k1 + next)
-									|| world.getBlock(i1, j1 + jj - 2, k1 + next) == leaf)
+							if (world.isAirBlock(i1, j1 + jj - 2, k1 + next) || world.getBlock(i1, j1 + jj - 2, k1 + next) == leaf)
 								world.setBlock(i1, j1 + jj - 2, k1 + next, log, logmeta, 3);
-							if (world.isAirBlock(i1, j1 + jj - 2, k1 - next)
-									|| world.getBlock(i1, j1 + jj - 2, k1 - next) == leaf)
+							if (world.isAirBlock(i1, j1 + jj - 2, k1 - next) || world.getBlock(i1, j1 + jj - 2, k1 - next) == leaf)
 								world.setBlock(i1, j1 + jj - 2, k1 - next, log, logmeta, 3);
 						}
 
@@ -118,17 +110,13 @@ public class genCedar extends WorldGenerator {
 
 					if (jj == h - 4) {
 						for (int next = 1; next < 3; next++) {
-							if (world.isAirBlock(i1 + next, j1 + jj - 2, k1)
-									|| world.getBlock(i1 + next, j1 + jj - 2, k1) == leaf)
+							if (world.isAirBlock(i1 + next, j1 + jj - 2, k1) || world.getBlock(i1 + next, j1 + jj - 2, k1) == leaf)
 								world.setBlock(i1 + next, j1 + jj - 2, k1, log, logmeta, 3);
-							if (world.isAirBlock(i1 - next, j1 + jj - 2, k1)
-									|| world.getBlock(i1 - next, j1 + jj - 2, k1) == leaf)
+							if (world.isAirBlock(i1 - next, j1 + jj - 2, k1) || world.getBlock(i1 - next, j1 + jj - 2, k1) == leaf)
 								world.setBlock(i1 - next, j1 + jj - 2, k1, log, logmeta, 3);
-							if (world.isAirBlock(i1, j1 + jj - 2, k1 + next)
-									|| world.getBlock(i1, j1 + jj - 2, k1 + next) == leaf)
+							if (world.isAirBlock(i1, j1 + jj - 2, k1 + next) || world.getBlock(i1, j1 + jj - 2, k1 + next) == leaf)
 								world.setBlock(i1, j1 + jj - 2, k1 + next, log, logmeta, 3);
-							if (world.isAirBlock(i1, j1 + jj - 2, k1 - next)
-									|| world.getBlock(i1, j1 + jj - 2, k1 - next) == leaf)
+							if (world.isAirBlock(i1, j1 + jj - 2, k1 - next) || world.getBlock(i1, j1 + jj - 2, k1 - next) == leaf)
 								world.setBlock(i1, j1 + jj - 2, k1 - next, log, logmeta, 3);
 						}
 
@@ -137,17 +125,13 @@ public class genCedar extends WorldGenerator {
 
 					if (jj == h - 7) {
 						for (int next = 1; next <= 3; next++) {
-							if (world.isAirBlock(i1 + next, j1 + jj - 2, k1)
-									|| world.getBlock(i1 + next, j1 + jj - 2, k1) == leaf)
+							if (world.isAirBlock(i1 + next, j1 + jj - 2, k1) || world.getBlock(i1 + next, j1 + jj - 2, k1) == leaf)
 								world.setBlock(i1 + next, j1 + jj - 2, k1, log, logmeta, 3);
-							if (world.isAirBlock(i1 - next, j1 + jj - 2, k1)
-									|| world.getBlock(i1 - next, j1 + jj - 2, k1) == leaf)
+							if (world.isAirBlock(i1 - next, j1 + jj - 2, k1) || world.getBlock(i1 - next, j1 + jj - 2, k1) == leaf)
 								world.setBlock(i1 - next, j1 + jj - 2, k1, log, logmeta, 3);
-							if (world.isAirBlock(i1, j1 + jj - 2, k1 + next)
-									|| world.getBlock(i1, j1 + jj - 2, k1 + next) == leaf)
+							if (world.isAirBlock(i1, j1 + jj - 2, k1 + next) || world.getBlock(i1, j1 + jj - 2, k1 + next) == leaf)
 								world.setBlock(i1, j1 + jj - 2, k1 + next, log, logmeta, 3);
-							if (world.isAirBlock(i1, j1 + jj - 2, k1 - next)
-									|| world.getBlock(i1, j1 + jj - 2, k1 - next) == leaf)
+							if (world.isAirBlock(i1, j1 + jj - 2, k1 - next) || world.getBlock(i1, j1 + jj - 2, k1 - next) == leaf)
 								world.setBlock(i1, j1 + jj - 2, k1 - next, log, logmeta, 3);
 						}
 
@@ -156,17 +140,13 @@ public class genCedar extends WorldGenerator {
 
 					if (jj == h - 10) {
 						for (int next = 1; next <= 4; next++) {
-							if (world.isAirBlock(i1 + next, j1 + jj - 2, k1)
-									|| world.getBlock(i1 + next, j1 + jj - 2, k1) == leaf)
+							if (world.isAirBlock(i1 + next, j1 + jj - 2, k1) || world.getBlock(i1 + next, j1 + jj - 2, k1) == leaf)
 								world.setBlock(i1 + next, j1 + jj - 2, k1, log, logmeta, 3);
-							if (world.isAirBlock(i1 - next, j1 + jj - 2, k1)
-									|| world.getBlock(i1 - next, j1 + jj - 2, k1) == leaf)
+							if (world.isAirBlock(i1 - next, j1 + jj - 2, k1) || world.getBlock(i1 - next, j1 + jj - 2, k1) == leaf)
 								world.setBlock(i1 - next, j1 + jj - 2, k1, log, logmeta, 3);
-							if (world.isAirBlock(i1, j1 + jj - 2, k1 + next)
-									|| world.getBlock(i1, j1 + jj - 2, k1 + next) == leaf)
+							if (world.isAirBlock(i1, j1 + jj - 2, k1 + next) || world.getBlock(i1, j1 + jj - 2, k1 + next) == leaf)
 								world.setBlock(i1, j1 + jj - 2, k1 + next, log, logmeta, 3);
-							if (world.isAirBlock(i1, j1 + jj - 2, k1 - next)
-									|| world.getBlock(i1, j1 + jj - 2, k1 - next) == leaf)
+							if (world.isAirBlock(i1, j1 + jj - 2, k1 - next) || world.getBlock(i1, j1 + jj - 2, k1 - next) == leaf)
 								world.setBlock(i1, j1 + jj - 2, k1 - next, log, logmeta, 3);
 						}
 
@@ -174,17 +154,13 @@ public class genCedar extends WorldGenerator {
 					}
 
 					if (jj == h - 13) {
-						if (world.isAirBlock(i1 + 1, j1 + jj - 2, k1)
-								|| world.getBlock(i1 + 1, j1 + jj - 2, k1) == leaf)
+						if (world.isAirBlock(i1 + 1, j1 + jj - 2, k1) || world.getBlock(i1 + 1, j1 + jj - 2, k1) == leaf)
 							world.setBlock(i1 + 1, j1 + jj - 2, k1, log, logmeta, 3);
-						if (world.isAirBlock(i1 - 1, j1 + jj - 2, k1)
-								|| world.getBlock(i1 - 1, j1 + jj - 2, k1) == leaf)
+						if (world.isAirBlock(i1 - 1, j1 + jj - 2, k1) || world.getBlock(i1 - 1, j1 + jj - 2, k1) == leaf)
 							world.setBlock(i1 - 1, j1 + jj - 2, k1, log, logmeta, 3);
-						if (world.isAirBlock(i1, j1 + jj - 2, k1 + 1)
-								|| world.getBlock(i1, j1 + jj - 2, k1 + 1) == leaf)
+						if (world.isAirBlock(i1, j1 + jj - 2, k1 + 1) || world.getBlock(i1, j1 + jj - 2, k1 + 1) == leaf)
 							world.setBlock(i1, j1 + jj - 2, k1 + 1, log, logmeta, 3);
-						if (world.isAirBlock(i1, j1 + jj - 2, k1 - 1)
-								|| world.getBlock(i1, j1 + jj - 2, k1 - 1) == leaf)
+						if (world.isAirBlock(i1, j1 + jj - 2, k1 - 1) || world.getBlock(i1, j1 + jj - 2, k1 - 1) == leaf)
 							world.setBlock(i1, j1 + jj - 2, k1 - 1, log, logmeta, 3);
 						int r = random.nextInt(3) + 2;
 						leafGen(world, r, i1, j1 + jj, k1, leaf, leafmeta, log);

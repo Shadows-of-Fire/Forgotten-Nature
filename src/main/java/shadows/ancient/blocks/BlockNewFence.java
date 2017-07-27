@@ -74,8 +74,7 @@ public class BlockNewFence extends BlockFence {
 		Block l = par1IBlockAccess.getBlock(par2, par3, par4);
 
 		if (l != this && l != Blocks.fence_gate) {
-			return l != null && l.getMaterial().isOpaque() && l.renderAsNormalBlock()
-					? l.getMaterial() != Material.gourd : false;
+			return l != null && l.getMaterial().isOpaque() && l.renderAsNormalBlock() ? l.getMaterial() != Material.gourd : false;
 		} else {
 			return true;
 		}

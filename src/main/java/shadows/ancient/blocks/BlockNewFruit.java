@@ -72,7 +72,7 @@ public class BlockNewFruit extends Block {
 				dropBlockAsItem(world, i, j, k, new ItemStack(ItemFruit, 1, 0)); // banana
 			else if (ll2 == 4)
 				dropBlockAsItem(world, i, j, k, new ItemStack(ItemNut, 1, 0)); // ginkgo
-																			// nuts
+																				// nuts
 			else if (ll2 == 5)
 				dropBlockAsItem(world, i, j, k, new ItemStack(ItemFruit, 1, 2)); // orange
 			else if (ll2 == 6)
@@ -86,8 +86,7 @@ public class BlockNewFruit extends Block {
 			world.setBlock(i, j, k, Blocks.air, 0, 3);
 		}
 		if (world.getBlockLightValue(i, j + 1, k) >= 9 && random.nextInt(8) == 0) {
-			if (ll2 == 1 && random.nextInt(4) == 0 && ll == FNBlocks.newLeaves4
-					&& world.getBlock(i, j - 1, k) == Blocks.air) {
+			if (ll2 == 1 && random.nextInt(4) == 0 && ll == FNBlocks.newLeaves4 && world.getBlock(i, j - 1, k) == Blocks.air) {
 				world.setBlock(i, j - 1, k, this, 1, 3);
 			}
 		}
@@ -106,7 +105,7 @@ public class BlockNewFruit extends Block {
 					dropBlockAsItem(world, i, j, k, new ItemStack(ItemFruit, 1, 0)); // banana
 				if ((l & 15) == 4)
 					dropBlockAsItem(world, i, j, k, new ItemStack(ItemNut, 1, 0)); // ginkgo
-																				// nuts
+																					// nuts
 			}
 		}
 		if ((l & 15) == 5)

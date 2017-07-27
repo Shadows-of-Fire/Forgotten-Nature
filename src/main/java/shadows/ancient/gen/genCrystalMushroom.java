@@ -60,8 +60,7 @@ public class genCrystalMushroom extends WorldGenerator
 		return true;
 	}
 
-	public static void genCap(World world, Random random, int type, int i3, int j3, int k3, Block block2, int blockmeta,
-			int l) {
+	public static void genCap(World world, Random random, int type, int i3, int j3, int k3, Block block2, int blockmeta, int l) {
 		int height = l / 6;
 		int mult;
 		int tier = 0;

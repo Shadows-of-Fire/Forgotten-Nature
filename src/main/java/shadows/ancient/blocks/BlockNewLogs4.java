@@ -34,28 +34,7 @@ public class BlockNewLogs4 extends Block {
 
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(int i, int j) {
-		return (i == 3 || i == 2) ? logIcons[0]
-				: (j == 0 ? logIcons[1]
-						: (j == 1 ? logIcons[2]
-								: (j == 2 ? logIcons[3]
-										: (j == 3 ? logIcons[4]
-												: (j == 4 ? logIcons[5]
-														: (j == 5 ? logIcons[6]
-																: (j == 6 ? logIcons[7]
-																		: (j == 7 ? logIcons[8]
-																				: (j == 8 ? logIcons[9]
-																						: (j == 9 ? logIcons[10]
-																								: (j == 10
-																										? logIcons[11]
-																										: (j == 11
-																												? logIcons[12]
-																												: (j == 12
-																														? logIcons[13]
-																														: (j == 13
-																																? logIcons[14]
-																																: (j == 14
-																																		? logIcons[15]
-																																		: logIcons[16])))))))))))))));
+		return (i == 3 || i == 2) ? logIcons[0] : (j == 0 ? logIcons[1] : (j == 1 ? logIcons[2] : (j == 2 ? logIcons[3] : (j == 3 ? logIcons[4] : (j == 4 ? logIcons[5] : (j == 5 ? logIcons[6] : (j == 6 ? logIcons[7] : (j == 7 ? logIcons[8] : (j == 8 ? logIcons[9] : (j == 9 ? logIcons[10] : (j == 10 ? logIcons[11] : (j == 11 ? logIcons[12] : (j == 12 ? logIcons[13] : (j == 13 ? logIcons[14] : (j == 14 ? logIcons[15] : logIcons[16])))))))))))))));
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -94,17 +73,14 @@ public class BlockNewLogs4 extends Block {
 		Boolean boolean1 = Boolean.valueOf(true);
 		Boolean isAxe = false;
 		ItemStack equipped = entityplayer.getCurrentEquippedItem();
-		if (equipped != null && (equipped.getItem() == Items.golden_axe || equipped.getItem() == Items.iron_axe
-				|| equipped.getItem() == Items.diamond_axe || equipped.getItem() == FNItems.dcAxeItem
-				|| equipped.getItem() == FNItems.cAxeItem) || equipped.getItem() == FNItems.sawItemTool)
+		if (equipped != null && (equipped.getItem() == Items.golden_axe || equipped.getItem() == Items.iron_axe || equipped.getItem() == Items.diamond_axe || equipped.getItem() == FNItems.dcAxeItem || equipped.getItem() == FNItems.cAxeItem) || equipped.getItem() == FNItems.sawItemTool)
 			isAxe = true;
 
 		if (isAxe && world.getBlock(ai[0], ai[1], ai[2]) == this && ForgottenNature.lumberjack == true) {
 			for (int i1 = -1; i1 <= 1; i1++) {
 				for (int k1 = -1; k1 <= 0; k1++) {
 					for (int i2 = -1; i2 <= 1; i2++) {
-						if ((i1 + i != i || k1 + j != j || i2 + k != k)
-								&& world.getBlock(i1 + i, k1 + j, i2 + k) == this) {
+						if ((i1 + i != i || k1 + j != j || i2 + k != k) && world.getBlock(i1 + i, k1 + j, i2 + k) == this) {
 							boolean1 = Boolean.valueOf(false);
 						}
 					}
@@ -176,15 +152,13 @@ public class BlockNewLogs4 extends Block {
 				int met;
 				for (int i3 = 0; i3 < ai1.length; i3++) {
 					met = world.getBlockMetadata(ai1[i3][0], ai1[i3][1], ai1[i3][2]);
-					if (ai1[i3][1] > 0 && ai1[i3][1] < ForgottenNature.lumberjackPower
-							&& world.getBlock(ai1[i3][0], ai1[i3][1], ai1[i3][2]) == this) {
+					if (ai1[i3][1] > 0 && ai1[i3][1] < ForgottenNature.lumberjackPower && world.getBlock(ai1[i3][0], ai1[i3][1], ai1[i3][2]) == this) {
 						if (met % 2 == 0)
 							dropBlockAsItem(world, i, j + 1, k, new ItemStack(FNBlocks.newLogs1, 1, met));
 						else
 							dropBlockAsItem(world, i, j + 1, k, new ItemStack(FNBlocks.newLogs2, 1, met - 1));
 						world.setBlockToAir(ai1[i3][0], ai1[i3][1], ai1[i3][2]);
-						if (equipped.getItemDamage() + 1 <= equipped.getMaxDamage() && ForgottenNature.lumberjackDamage
-								&& !entityplayer.capabilities.isCreativeMode)
+						if (equipped.getItemDamage() + 1 <= equipped.getMaxDamage() && ForgottenNature.lumberjackDamage && !entityplayer.capabilities.isCreativeMode)
 							equipped.setItemDamage(equipped.getItemDamage() + 1);
 					}
 				}
@@ -203,8 +177,7 @@ public class BlockNewLogs4 extends Block {
 						int var12 = Block.getIdFromBlock(par1World.getBlock(par2 + var9, par3 + var10, par4 + var11));
 
 						if (Block.getBlockById(var12) != null) {
-							Block.getBlockById(var12).beginLeavesDecay(par1World, par2 + var9, par3 + var10,
-									par4 + var11);
+							Block.getBlockById(var12).beginLeavesDecay(par1World, par2 + var9, par3 + var10, par4 + var11);
 						}
 					}
 				}

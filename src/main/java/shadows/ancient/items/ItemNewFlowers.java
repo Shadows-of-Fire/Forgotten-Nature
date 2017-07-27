@@ -9,9 +9,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import shadows.ancient.FNBlocks;
 
 public class ItemNewFlowers extends ItemBlock {
-	public static final String[] names = new String[] { "alliumDrumstick", "bachelorsbutton", "billybuttons",
-			"delphiniumbelladonna", "fernfloweryarrow", "gerberadaisy", "hydrangea", "redrover", "snapdragon",
-			"starofbethlehem" };
+	public static final String[] names = new String[] { "alliumDrumstick", "bachelorsbutton", "billybuttons", "delphiniumbelladonna", "fernfloweryarrow", "gerberadaisy", "hydrangea", "redrover", "snapdragon", "starofbethlehem" };
 
 	public ItemNewFlowers(Block i) {
 		super(i);

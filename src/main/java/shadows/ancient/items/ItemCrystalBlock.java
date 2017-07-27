@@ -7,8 +7,7 @@ import net.minecraft.util.IIcon;
 import shadows.ancient.FNBlocks;
 
 public class ItemCrystalBlock extends ItemBlock {
-	public static final String[] names = new String[] { "focuscrystal", "darkfocuscrystal", "crystalbricks",
-			"darkcrystalbricks" };
+	public static final String[] names = new String[] { "focuscrystal", "darkfocuscrystal", "crystalbricks", "darkcrystalbricks" };
 
 	public ItemCrystalBlock(Block i) {
 		super(i);

@@ -105,14 +105,11 @@ public class BlockNetherLeaves extends BlockLeavesBase implements IShearable {
 								Block block = Block.getBlockById(var15);
 
 								if (block != null && block.canSustainLeaves(world, i + var12, j + var13, k + var14)) {
-									this.adjacentTreeBlocks[(var12 + var11) * var10 + (var13 + var11) * var9 + var14
-											+ var11] = 0;
+									this.adjacentTreeBlocks[(var12 + var11) * var10 + (var13 + var11) * var9 + var14 + var11] = 0;
 								} else if (block != null && block.isLeaves(world, i + var12, j + var13, k + var14)) {
-									this.adjacentTreeBlocks[(var12 + var11) * var10 + (var13 + var11) * var9 + var14
-											+ var11] = -2;
+									this.adjacentTreeBlocks[(var12 + var11) * var10 + (var13 + var11) * var9 + var14 + var11] = -2;
 								} else {
-									this.adjacentTreeBlocks[(var12 + var11) * var10 + (var13 + var11) * var9 + var14
-											+ var11] = -1;
+									this.adjacentTreeBlocks[(var12 + var11) * var10 + (var13 + var11) * var9 + var14 + var11] = -1;
 								}
 							}
 						}
@@ -121,42 +118,29 @@ public class BlockNetherLeaves extends BlockLeavesBase implements IShearable {
 						for (var13 = -var7; var13 <= var7; ++var13) {
 							for (var14 = -var7; var14 <= var7; ++var14) {
 								for (var15 = -var7; var15 <= var7; ++var15) {
-									if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9 + var15
-											+ var11] == var12 - 1) {
-										if (this.adjacentTreeBlocks[(var13 + var11 - 1) * var10 + (var14 + var11) * var9
-												+ var15 + var11] == -2) {
-											this.adjacentTreeBlocks[(var13 + var11 - 1) * var10 + (var14 + var11) * var9
-													+ var15 + var11] = var12;
+									if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9 + var15 + var11] == var12 - 1) {
+										if (this.adjacentTreeBlocks[(var13 + var11 - 1) * var10 + (var14 + var11) * var9 + var15 + var11] == -2) {
+											this.adjacentTreeBlocks[(var13 + var11 - 1) * var10 + (var14 + var11) * var9 + var15 + var11] = var12;
 										}
 
-										if (this.adjacentTreeBlocks[(var13 + var11 + 1) * var10 + (var14 + var11) * var9
-												+ var15 + var11] == -2) {
-											this.adjacentTreeBlocks[(var13 + var11 + 1) * var10 + (var14 + var11) * var9
-													+ var15 + var11] = var12;
+										if (this.adjacentTreeBlocks[(var13 + var11 + 1) * var10 + (var14 + var11) * var9 + var15 + var11] == -2) {
+											this.adjacentTreeBlocks[(var13 + var11 + 1) * var10 + (var14 + var11) * var9 + var15 + var11] = var12;
 										}
 
-										if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11 - 1) * var9
-												+ var15 + var11] == -2) {
-											this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11 - 1) * var9
-													+ var15 + var11] = var12;
+										if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11 - 1) * var9 + var15 + var11] == -2) {
+											this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11 - 1) * var9 + var15 + var11] = var12;
 										}
 
-										if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11 + 1) * var9
-												+ var15 + var11] == -2) {
-											this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11 + 1) * var9
-													+ var15 + var11] = var12;
+										if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11 + 1) * var9 + var15 + var11] == -2) {
+											this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11 + 1) * var9 + var15 + var11] = var12;
 										}
 
-										if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9
-												+ (var15 + var11 - 1)] == -2) {
-											this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9
-													+ (var15 + var11 - 1)] = var12;
+										if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9 + (var15 + var11 - 1)] == -2) {
+											this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9 + (var15 + var11 - 1)] = var12;
 										}
 
-										if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9
-												+ var15 + var11 + 1] == -2) {
-											this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9
-													+ var15 + var11 + 1] = var12;
+										if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9 + var15 + var11 + 1] == -2) {
+											this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9 + var15 + var11 + 1] = var12;
 										}
 									}
 								}

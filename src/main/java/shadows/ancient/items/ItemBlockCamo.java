@@ -21,8 +21,7 @@ public class ItemBlockCamo extends ItemBlock {
 		return FNBlocks.camo.getIcon(0, i);
 	}
 
-	public boolean onItemUse(ItemStack iStack, EntityPlayer entityPlayer, World world, int i, int j, int k, int side,
-			float par8, float par9, float par10) {
+	public boolean onItemUse(ItemStack iStack, EntityPlayer entityPlayer, World world, int i, int j, int k, int side, float par8, float par9, float par10) {
 		Block blk = world.getBlock(i, j, k);
 		int met = world.getBlockMetadata(i, j, k);
 		int renderCase;

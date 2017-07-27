@@ -15,8 +15,7 @@ public class BiomeGenCherryBlossomWoodland extends BiomeGenBase {
 		super(par1);
 		spawnableMonsterList.add(new SpawnListEntry(EntityOcelot.class, 2, 1, 1));
 		spawnableCreatureList.add(new SpawnListEntry(EntityCow.class, 10, 4, 4));
-		this.setHeight(new BiomeGenBase.Height(0.1F * ForgottenNature.cherryBlossomWoodlandMin,
-				0.1F * ForgottenNature.cherryBlossomWoodlandMax));
+		this.setHeight(new BiomeGenBase.Height(0.1F * ForgottenNature.cherryBlossomWoodlandMin, 0.1F * ForgottenNature.cherryBlossomWoodlandMax));
 		this.temperature = 0.7F;
 		this.rainfall = 0.8F;
 		this.setBiomeName("Cherry Blossom Woodland");

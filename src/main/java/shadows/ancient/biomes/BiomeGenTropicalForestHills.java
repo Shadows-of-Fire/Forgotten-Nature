@@ -15,8 +15,7 @@ public class BiomeGenTropicalForestHills extends BiomeGenBase {
 		super(par1);
 		spawnableMonsterList.add(new SpawnListEntry(EntityOcelot.class, 2, 1, 1));
 		spawnableCreatureList.add(new SpawnListEntry(EntityChicken.class, 10, 4, 4));
-		this.setHeight(new BiomeGenBase.Height(0.1F * ForgottenNature.tropicalForestHillMin,
-				0.1F * ForgottenNature.tropicalForestHillMax));
+		this.setHeight(new BiomeGenBase.Height(0.1F * ForgottenNature.tropicalForestHillMin, 0.1F * ForgottenNature.tropicalForestHillMax));
 		this.temperature = 0.9F;
 		this.rainfall = 0.9F;
 		this.setBiomeName("Tropical Forest Hills");

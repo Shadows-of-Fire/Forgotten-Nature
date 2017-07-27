@@ -79,8 +79,7 @@ public class genWillow extends WorldGenerator {
 		return true;
 	}
 
-	public static void mainBranch(World world, Random random, int i2, int j2, int k2, int iD, int kD, int size,
-			Block leaf2, int leafmeta, Block log2, int logmeta) {
+	public static void mainBranch(World world, Random random, int i2, int j2, int k2, int iD, int kD, int size, Block leaf2, int leafmeta, Block log2, int logmeta) {
 		int a = 0;
 		int b = 0;
 		int c = 0;
@@ -179,8 +178,7 @@ public class genWillow extends WorldGenerator {
 		}
 	}
 
-	public static void secFlag(World world, Random random, int i11, int j11, int k11, int iD, int kD, int size,
-			Block leaf2, int leafmeta, Block log2, int logmeta) {
+	public static void secFlag(World world, Random random, int i11, int j11, int k11, int iD, int kD, int size, Block leaf2, int leafmeta, Block log2, int logmeta) {
 		int index0 = 0;
 		while (index0 < 2 * size) {
 			j11 = j11 + random.nextInt(3) - 1;
@@ -209,8 +207,7 @@ public class genWillow extends WorldGenerator {
 		}
 	}
 
-	public static void inner(World world, Random random, int i3, int j3, int k3, int iD, int kD, int size, Block leaf2,
-			int leafmeta, Block log2, int logmeta) {
+	public static void inner(World world, Random random, int i3, int j3, int k3, int iD, int kD, int size, Block leaf2, int leafmeta, Block log2, int logmeta) {
 		int pos = 2 * size;
 		int index = 0;
 		int jindex = 5;
@@ -245,8 +242,7 @@ public class genWillow extends WorldGenerator {
 		}
 	}
 
-	public static void innerInner(World world, Random random, int i4, int j4, int k4, int iD, int kD, int size,
-			Block leaf2, int leafmeta, Block log2, int logmeta) {
+	public static void innerInner(World world, Random random, int i4, int j4, int k4, int iD, int kD, int size, Block leaf2, int leafmeta, Block log2, int logmeta) {
 		int index1 = 0;
 		int jindex1 = 6 + size / 2;
 		while (index1 < 2 * size + 1 && jindex1 < 16) {
@@ -285,8 +281,7 @@ public class genWillow extends WorldGenerator {
 
 			for (int x = -1; x <= 1; x++) {
 				for (int y = -1; y <= 1; y++) {
-					if ((x != 0 | y != 0) && (Math.abs(x) != 1 | Math.abs(y) != 1)
-							&& world.isAirBlock(i3 + x, j3 + jh, k3 + y)) {
+					if ((x != 0 | y != 0) && (Math.abs(x) != 1 | Math.abs(y) != 1) && world.isAirBlock(i3 + x, j3 + jh, k3 + y)) {
 						world.setBlock(i3 + x, j3 + jh, k3 + y, leaf2, leafmeta, 3);
 					}
 				}

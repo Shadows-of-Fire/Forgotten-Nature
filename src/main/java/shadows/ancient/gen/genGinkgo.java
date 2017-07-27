@@ -138,8 +138,7 @@ public class genGinkgo extends WorldGenerator {
 		return true;
 	}
 
-	public static void branch(World world, Random random, int H, int ii, int js, int jj2, int kk, int iD, int kD,
-			Block leaf2, int leafmeta, Block log2, int logmeta) {
+	public static void branch(World world, Random random, int H, int ii, int js, int jj2, int kk, int iD, int kD, Block leaf2, int leafmeta, Block log2, int logmeta) {
 		int index = 0;
 		int lengthToGo = H - jj2;
 		jj2 = jj2 + js;
@@ -198,8 +197,7 @@ public class genGinkgo extends WorldGenerator {
 	public static void leafGen(World world, int i3, int j3, int k3, Block leaf2, int leafmeta) {
 		for (int x = -3; x <= 3; x++) {
 			for (int y = -3; y <= 3; y++) {
-				if ((Math.abs(x) != 3 || Math.abs(y) != 3) && (Math.abs(x) != 2 || Math.abs(y) != 3)
-						&& (Math.abs(x) != 3 || Math.abs(y) != 2) && world.isAirBlock(i3 + x, j3, k3 + y)) {
+				if ((Math.abs(x) != 3 || Math.abs(y) != 3) && (Math.abs(x) != 2 || Math.abs(y) != 3) && (Math.abs(x) != 3 || Math.abs(y) != 2) && world.isAirBlock(i3 + x, j3, k3 + y)) {
 					world.setBlock(i3 + x, j3, k3 + y, leaf2, leafmeta, 3);
 				}
 

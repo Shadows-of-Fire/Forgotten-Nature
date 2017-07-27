@@ -94,8 +94,7 @@ public class BlockCrystalLeaves extends BlockLeavesBase {
 
 				int var12;
 
-				if (par1World.checkChunksExist(par2 - var8, par3 - var8, par4 - var8, par2 + var8, par3 + var8,
-						par4 + var8)) {
+				if (par1World.checkChunksExist(par2 - var8, par3 - var8, par4 - var8, par2 + var8, par3 + var8, par4 + var8)) {
 					int var13;
 					int var14;
 					int var15;
@@ -103,22 +102,16 @@ public class BlockCrystalLeaves extends BlockLeavesBase {
 					for (var12 = -var7; var12 <= var7; ++var12) {
 						for (var13 = -var7; var13 <= var7; ++var13) {
 							for (var14 = -var7; var14 <= var7; ++var14) {
-								var15 = Block
-										.getIdFromBlock(par1World.getBlock(par2 + var12, par3 + var13, par4 + var14));
+								var15 = Block.getIdFromBlock(par1World.getBlock(par2 + var12, par3 + var13, par4 + var14));
 
 								Block block = Block.getBlockById(var15);
 
-								if (block != null && block.canSustainLeaves(par1World, par2 + var12, par3 + var13,
-										par4 + var14)) {
-									this.adjacentTreeBlocks[(var12 + var11) * var10 + (var13 + var11) * var9 + var14
-											+ var11] = 0;
-								} else if (block != null
-										&& block.isLeaves(par1World, par2 + var12, par3 + var13, par4 + var14)) {
-									this.adjacentTreeBlocks[(var12 + var11) * var10 + (var13 + var11) * var9 + var14
-											+ var11] = -2;
+								if (block != null && block.canSustainLeaves(par1World, par2 + var12, par3 + var13, par4 + var14)) {
+									this.adjacentTreeBlocks[(var12 + var11) * var10 + (var13 + var11) * var9 + var14 + var11] = 0;
+								} else if (block != null && block.isLeaves(par1World, par2 + var12, par3 + var13, par4 + var14)) {
+									this.adjacentTreeBlocks[(var12 + var11) * var10 + (var13 + var11) * var9 + var14 + var11] = -2;
 								} else {
-									this.adjacentTreeBlocks[(var12 + var11) * var10 + (var13 + var11) * var9 + var14
-											+ var11] = -1;
+									this.adjacentTreeBlocks[(var12 + var11) * var10 + (var13 + var11) * var9 + var14 + var11] = -1;
 								}
 							}
 						}
@@ -128,42 +121,29 @@ public class BlockCrystalLeaves extends BlockLeavesBase {
 						for (var13 = -var7; var13 <= var7; ++var13) {
 							for (var14 = -var7; var14 <= var7; ++var14) {
 								for (var15 = -var7; var15 <= var7; ++var15) {
-									if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9 + var15
-											+ var11] == var12 - 1) {
-										if (this.adjacentTreeBlocks[(var13 + var11 - 1) * var10 + (var14 + var11) * var9
-												+ var15 + var11] == -2) {
-											this.adjacentTreeBlocks[(var13 + var11 - 1) * var10 + (var14 + var11) * var9
-													+ var15 + var11] = var12;
+									if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9 + var15 + var11] == var12 - 1) {
+										if (this.adjacentTreeBlocks[(var13 + var11 - 1) * var10 + (var14 + var11) * var9 + var15 + var11] == -2) {
+											this.adjacentTreeBlocks[(var13 + var11 - 1) * var10 + (var14 + var11) * var9 + var15 + var11] = var12;
 										}
 
-										if (this.adjacentTreeBlocks[(var13 + var11 + 1) * var10 + (var14 + var11) * var9
-												+ var15 + var11] == -2) {
-											this.adjacentTreeBlocks[(var13 + var11 + 1) * var10 + (var14 + var11) * var9
-													+ var15 + var11] = var12;
+										if (this.adjacentTreeBlocks[(var13 + var11 + 1) * var10 + (var14 + var11) * var9 + var15 + var11] == -2) {
+											this.adjacentTreeBlocks[(var13 + var11 + 1) * var10 + (var14 + var11) * var9 + var15 + var11] = var12;
 										}
 
-										if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11 - 1) * var9
-												+ var15 + var11] == -2) {
-											this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11 - 1) * var9
-													+ var15 + var11] = var12;
+										if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11 - 1) * var9 + var15 + var11] == -2) {
+											this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11 - 1) * var9 + var15 + var11] = var12;
 										}
 
-										if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11 + 1) * var9
-												+ var15 + var11] == -2) {
-											this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11 + 1) * var9
-													+ var15 + var11] = var12;
+										if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11 + 1) * var9 + var15 + var11] == -2) {
+											this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11 + 1) * var9 + var15 + var11] = var12;
 										}
 
-										if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9
-												+ (var15 + var11 - 1)] == -2) {
-											this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9
-													+ (var15 + var11 - 1)] = var12;
+										if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9 + (var15 + var11 - 1)] == -2) {
+											this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9 + (var15 + var11 - 1)] = var12;
 										}
 
-										if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9
-												+ var15 + var11 + 1] == -2) {
-											this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9
-													+ var15 + var11 + 1] = var12;
+										if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9 + var15 + var11 + 1] == -2) {
+											this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9 + var15 + var11 + 1] = var12;
 										}
 									}
 								}
@@ -192,8 +172,7 @@ public class BlockCrystalLeaves extends BlockLeavesBase {
 		return par1Random.nextInt(20) == 0 ? 0 : 0;
 	}
 
-	public void dropBlockAsItemWithChance(World par1World, int par2, int par3, int par4, int par5, float par6,
-			int par7) {
+	public void dropBlockAsItemWithChance(World par1World, int par2, int par3, int par4, int par5, float par6, int par7) {
 		if (!par1World.isRemote) {
 			if ((par5 & 3) == 0 && par1World.rand.nextInt(3) == 0) {
 				this.dropBlockAsItem(par1World, par2, par3, par4, new ItemStack(FNItems.crystalItem, 1, 4));

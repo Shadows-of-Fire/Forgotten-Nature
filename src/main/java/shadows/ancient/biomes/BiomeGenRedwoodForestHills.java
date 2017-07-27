@@ -12,8 +12,7 @@ public class BiomeGenRedwoodForestHills extends BiomeGenBase {
 	public BiomeGenRedwoodForestHills(int i) {
 		super(i);
 		spawnableCreatureList.add(new SpawnListEntry(EntityWolf.class, 5, 4, 4));
-		this.setHeight(new BiomeGenBase.Height(0.1F * ForgottenNature.redwoodForestHillMin,
-				0.1F * ForgottenNature.redwoodForestHillMax));
+		this.setHeight(new BiomeGenBase.Height(0.1F * ForgottenNature.redwoodForestHillMin, 0.1F * ForgottenNature.redwoodForestHillMax));
 		this.temperature = 0.5F;
 		this.rainfall = 0.7F;
 		this.setBiomeName("Redwood Forest Hills");

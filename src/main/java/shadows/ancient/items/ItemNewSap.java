@@ -14,16 +14,9 @@ import shadows.ancient.FNBlocks;
 
 public class ItemNewSap extends ItemBlock {
 	Block blk;
-	public static final String[] names1 = new String[] { "desertironwoodsapling", "cherrysappling", "redmaplesapling",
-			"angeloaksapling", "yellowmaplesapling", "jacarandasapling", "applesapling", "eucalyptussapling",
-			"sequoiasapling", "figsapling", "cypresssapling", "dummy", "joshuasapling", "swampwillowsapling",
-			"deciduoubushling", "evergreenbushling" };
-	public static final String[] names2 = new String[] { "palmsapling", "desertwillowsapling", "cedarsapling",
-			"ginkgosapling", "poplarsapling", "beechsapling", "walnutsapling", "dummy", "widtopeucalyptussapling",
-			"bukkitsapling", "bananasapling", "orangesapling", "peachsapling", "lemonsapling", "blueberrybushling",
-			"raspberrysapling" };
-	public static final String[] names3 = new String[] { "huckleberrybushling", "blackberrybushling", "crystalsapling",
-			"netherashsapling", "netherblazesapling", "nethermushroom" };
+	public static final String[] names1 = new String[] { "desertironwoodsapling", "cherrysappling", "redmaplesapling", "angeloaksapling", "yellowmaplesapling", "jacarandasapling", "applesapling", "eucalyptussapling", "sequoiasapling", "figsapling", "cypresssapling", "dummy", "joshuasapling", "swampwillowsapling", "deciduoubushling", "evergreenbushling" };
+	public static final String[] names2 = new String[] { "palmsapling", "desertwillowsapling", "cedarsapling", "ginkgosapling", "poplarsapling", "beechsapling", "walnutsapling", "dummy", "widtopeucalyptussapling", "bukkitsapling", "bananasapling", "orangesapling", "peachsapling", "lemonsapling", "blueberrybushling", "raspberrysapling" };
+	public static final String[] names3 = new String[] { "huckleberrybushling", "blackberrybushling", "crystalsapling", "netherashsapling", "netherblazesapling", "nethermushroom" };
 
 	public ItemNewSap(Block i) {
 		super(i);

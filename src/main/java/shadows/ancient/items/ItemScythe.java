@@ -36,8 +36,7 @@ public class ItemScythe extends ItemHoe {
 		return "scythe";
 	}
 
-	public boolean onItemUse(ItemStack par1ItemStack, EntityPlayer entityplayer, World world, int par4, int par5,
-			int par6, int par7, float par8, float par9, float par10) {
+	public boolean onItemUse(ItemStack par1ItemStack, EntityPlayer entityplayer, World world, int par4, int par5, int par6, int par7, float par8, float par9, float par10) {
 		if (!world.isRemote) {
 			byte var8 = 0;
 			ItemStack equipped = entityplayer.getCurrentEquippedItem();
@@ -45,20 +44,16 @@ public class ItemScythe extends ItemHoe {
 			int met;
 			if (!entityplayer.canPlayerEdit(par4, par5, par6, par7, par1ItemStack))
 				return false;
-			if (blk == Blocks.double_plant || blk == Blocks.tallgrass || blk.isLeaves(world, par4, par5, par6)
-					|| blk == Blocks.red_flower || blk == Blocks.yellow_flower || blk == FNBlocks.fNFlowers) {
+			if (blk == Blocks.double_plant || blk == Blocks.tallgrass || blk.isLeaves(world, par4, par5, par6) || blk == Blocks.red_flower || blk == Blocks.yellow_flower || blk == FNBlocks.fNFlowers) {
 				for (int i = -3; i <= 3; i++) {
 					for (int k = -3; k <= 3; k++) {
 						if ((k > -3 && k < 3) || (i > -3 && i < 3)) {
 							blk = world.getBlock(par4 + i, par5, par6 + k);
 							met = world.getBlockMetadata(par4 + i, par5, par6 + k);
-							if (blk == Blocks.double_plant || blk == Blocks.tallgrass
-									|| blk.isLeaves(world, par4 + i, par5, par6 + k) || blk == Blocks.red_flower
-									|| blk == Blocks.yellow_flower || blk == FNBlocks.fNFlowers) {
+							if (blk == Blocks.double_plant || blk == Blocks.tallgrass || blk.isLeaves(world, par4 + i, par5, par6 + k) || blk == Blocks.red_flower || blk == Blocks.yellow_flower || blk == FNBlocks.fNFlowers) {
 								blk.harvestBlock(world, entityplayer, par4 + i, par5, par6 + k, met);
 								world.setBlockToAir(par4 + i, par5, par6 + k);
-								world.getBlock(par4 + i, par5 - 1, par6 + k).updateTick(world, par4 + i, par5 - 1,
-										par6 + k, world.rand);
+								world.getBlock(par4 + i, par5 - 1, par6 + k).updateTick(world, par4 + i, par5 - 1, par6 + k, world.rand);
 								if (equipped.getItemDamage() + 1 <= equipped.getMaxDamage())
 									par1ItemStack.damageItem(1, entityplayer);
 							}

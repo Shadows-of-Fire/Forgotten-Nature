@@ -74,17 +74,13 @@ public class genDecBush extends WorldGenerator {
 		return true;
 	}
 
-	public static void leafGen(World world, Random random, int var, int ran, int i3, int j3, int k3, Block leaf2,
-			int leafmeta) {
+	public static void leafGen(World world, Random random, int var, int ran, int i3, int j3, int k3, Block leaf2, int leafmeta) {
 		int met1;
 		for (int x = -var; x <= var; x++) {
 			for (int y = -var; y <= var; y++) {
 				met1 = Block.getIdFromBlock(world.getBlock(i3 + x, j3, k3 + y));
 				if (ran > 2) {
-					if (world.isAirBlock(i3 + x, j3, k3 + y) && (Math.abs(x) != var || Math.abs(y) != var)
-							&& (Math.abs(x) != var - 1 || Math.abs(y) != var)
-							&& (Math.abs(x) != var || Math.abs(y) != var - 1)
-							&& (met1 == 0 || met1 == 31 || met1 == 37 || met1 == 38 || met1 == 78)) {
+					if (world.isAirBlock(i3 + x, j3, k3 + y) && (Math.abs(x) != var || Math.abs(y) != var) && (Math.abs(x) != var - 1 || Math.abs(y) != var) && (Math.abs(x) != var || Math.abs(y) != var - 1) && (met1 == 0 || met1 == 31 || met1 == 37 || met1 == 38 || met1 == 78)) {
 						world.setBlock(i3 + x, j3, k3 + y, leaf2, leafmeta, 3);
 					}
 
@@ -97,30 +93,24 @@ public class genDecBush extends WorldGenerator {
 				}
 
 				if (ran == 2 || ran == 1) {
-					if (world.isAirBlock(i3 + x, j3, k3 + y) && (Math.abs(x) != var || Math.abs(y) != var)
-							&& (met1 == 0 || met1 == 31 || met1 == 37 || met1 == 38 || met1 == 78)) {
+					if (world.isAirBlock(i3 + x, j3, k3 + y) && (Math.abs(x) != var || Math.abs(y) != var) && (met1 == 0 || met1 == 31 || met1 == 37 || met1 == 38 || met1 == 78)) {
 						world.setBlock(i3 + x, j3, k3 + y, leaf2, leafmeta, 3);
 					}
 
-					if ((Math.abs(x) != var || Math.abs(y) != var) && (Math.abs(x) != var - 1 || Math.abs(y) != var)
-							&& (Math.abs(x) != var || Math.abs(y) != var - 1)) {
+					if ((Math.abs(x) != var || Math.abs(y) != var) && (Math.abs(x) != var - 1 || Math.abs(y) != var) && (Math.abs(x) != var || Math.abs(y) != var - 1)) {
 						if (world.isAirBlock(i3 + x, j3 + 1, k3 + y))
 							world.setBlock(i3 + x, j3 + 1, k3 + y, leaf2, leafmeta, 3);
 						if (world.isAirBlock(i3 + x, j3 - 1, k3 + y))
 							world.setBlock(i3 + x, j3 - 1, k3 + y, leaf2, leafmeta, 3);
 					}
 
-					if (Math.abs(x) < var && Math.abs(y) < var && (Math.abs(x) != var - 1 || Math.abs(y) != var - 1)
-							&& world.isAirBlock(i3 + x, j3 + 2, k3 + y)) {
+					if (Math.abs(x) < var && Math.abs(y) < var && (Math.abs(x) != var - 1 || Math.abs(y) != var - 1) && world.isAirBlock(i3 + x, j3 + 2, k3 + y)) {
 						world.setBlock(i3 + x, j3 + 2, k3 + y, leaf2, leafmeta, 3);
 					}
 				}
 
 				if (ran == 0) {
-					if (world.isAirBlock(i3 + x, j3, k3 + y) && (Math.abs(x) != var || Math.abs(y) != var)
-							&& (Math.abs(x) != var - 1 || Math.abs(y) != var)
-							&& (Math.abs(x) != var || Math.abs(y) != var - 1)
-							&& (met1 == 0 || met1 == 31 || met1 == 37 || met1 == 38 || met1 == 78)) {
+					if (world.isAirBlock(i3 + x, j3, k3 + y) && (Math.abs(x) != var || Math.abs(y) != var) && (Math.abs(x) != var - 1 || Math.abs(y) != var) && (Math.abs(x) != var || Math.abs(y) != var - 1) && (met1 == 0 || met1 == 31 || met1 == 37 || met1 == 38 || met1 == 78)) {
 						world.setBlock(i3 + x, j3, k3 + y, leaf2, leafmeta, 3);
 					}
 
@@ -131,8 +121,7 @@ public class genDecBush extends WorldGenerator {
 							world.setBlock(i3 + x, j3 - 1, k3 + y, leaf2, leafmeta, 3);
 					}
 
-					if (Math.abs(x) < var && Math.abs(y) < var && (Math.abs(x) + Math.abs(y) < 3)
-							&& world.isAirBlock(i3 + x, j3 + 2, k3 + y)) {
+					if (Math.abs(x) < var && Math.abs(y) < var && (Math.abs(x) + Math.abs(y) < 3) && world.isAirBlock(i3 + x, j3 + 2, k3 + y)) {
 						world.setBlock(i3 + x, j3 + 2, k3 + y, leaf2, leafmeta, 3);
 					}
 				}

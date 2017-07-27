@@ -13,9 +13,7 @@ import shadows.ancient.FNBlocks;
 
 public class ItemNewLogs2 extends ItemBlock {
 	Block log;
-	public static final String[] names = new String[] { "desertwillowlog", "*desertwillowlog", "cedarlog", "*cedarlog",
-			"ginkgolog", "*ginkgolog", "beechlog", "*beechlog", "walnutlog", "*walnutlog", "dummy", "*dummy", "dummy2",
-			"*dummy2", "widetopeucalyptus", "*widetopeucalyptus" };
+	public static final String[] names = new String[] { "desertwillowlog", "*desertwillowlog", "cedarlog", "*cedarlog", "ginkgolog", "*ginkgolog", "beechlog", "*beechlog", "walnutlog", "*walnutlog", "dummy", "*dummy", "dummy2", "*dummy2", "widetopeucalyptus", "*widetopeucalyptus" };
 
 	public ItemNewLogs2(Block i) {
 		super(i);
@@ -32,15 +30,13 @@ public class ItemNewLogs2 extends ItemBlock {
 		return i;
 	}
 
-	public boolean onItemUse(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, World par3World, int par4,
-			int par5, int par6, int par7, float par8, float par9, float par10) {
+	public boolean onItemUse(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, World par3World, int par4, int par5, int par6, int par7, float par8, float par9, float par10) {
 		Block var11 = par3World.getBlock(par4, par5, par6);
 		int var10 = 0;
 
 		if (var11 == Blocks.snow)
 			par7 = 1;
-		else if (var11 != Blocks.vine && var11 != Blocks.tallgrass && var11 != Blocks.deadbush
-				&& (var11 == null || !var11.canReplace(par3World, par4, par5, par6, par7, par1ItemStack))) {
+		else if (var11 != Blocks.vine && var11 != Blocks.tallgrass && var11 != Blocks.deadbush && (var11 == null || !var11.canReplace(par3World, par4, par5, par6, par7, par1ItemStack))) {
 			if (par7 == 0) {
 				var10 = 0;
 				--par5;
@@ -75,8 +71,7 @@ public class ItemNewLogs2 extends ItemBlock {
 			return false;
 		else if (par5 == 255 && this.log.getMaterial().isSolid())
 			return false;
-		else if (par3World.canPlaceEntityOnSide(this.log, par4, par5, par6, false, par7, par2EntityPlayer,
-				par1ItemStack)) {
+		else if (par3World.canPlaceEntityOnSide(this.log, par4, par5, par6, false, par7, par2EntityPlayer, par1ItemStack)) {
 			Block var12 = this.log;
 			int met = 0;
 			int var13 = this.getMetadata(par1ItemStack.getItemDamage());
@@ -89,11 +84,8 @@ public class ItemNewLogs2 extends ItemBlock {
 				else
 					met = var14;
 			}
-			if (placeBlockAt(par1ItemStack, par2EntityPlayer, par3World, par4, par5, par6, par7, par8, par9, par10,
-					met)) {
-				par3World.playSoundEffect((double) ((float) par4 + 0.5F), (double) ((float) par5 + 0.5F),
-						(double) ((float) par6 + 0.5F), Block.soundTypeWood.getBreakSound(),
-						(var12.stepSound.getVolume() + 1.0F) / 2.0F, var12.stepSound.getPitch() * 0.8F);
+			if (placeBlockAt(par1ItemStack, par2EntityPlayer, par3World, par4, par5, par6, par7, par8, par9, par10, met)) {
+				par3World.playSoundEffect((double) ((float) par4 + 0.5F), (double) ((float) par5 + 0.5F), (double) ((float) par6 + 0.5F), Block.soundTypeWood.getBreakSound(), (var12.stepSound.getVolume() + 1.0F) / 2.0F, var12.stepSound.getPitch() * 0.8F);
 				--par1ItemStack.stackSize;
 			}
 			log = FNBlocks.newLogs2;
@@ -103,14 +95,12 @@ public class ItemNewLogs2 extends ItemBlock {
 	}
 
 	@SideOnly(Side.CLIENT)
-	public boolean canPlaceItemBlockOnSide(World par1World, int par2, int par3, int par4, int par5,
-			EntityPlayer par6EntityPlayer, ItemStack par7ItemStack) {
+	public boolean canPlaceItemBlockOnSide(World par1World, int par2, int par3, int par4, int par5, EntityPlayer par6EntityPlayer, ItemStack par7ItemStack) {
 		Block var8 = par1World.getBlock(par2, par3, par4);
 
 		if (var8 == Blocks.snow)
 			par5 = 1;
-		else if (var8 != Blocks.vine && var8 != Blocks.tallgrass && var8 != Blocks.deadbush
-				&& (var8 == null || !var8.canReplace(par1World, par2, par3, par4, par5, par7ItemStack))) {
+		else if (var8 != Blocks.vine && var8 != Blocks.tallgrass && var8 != Blocks.deadbush && (var8 == null || !var8.canReplace(par1World, par2, par3, par4, par5, par7ItemStack))) {
 			if (par5 == 0)
 				--par3;
 			if (par5 == 1)
@@ -128,8 +118,7 @@ public class ItemNewLogs2 extends ItemBlock {
 		return par1World.canPlaceEntityOnSide(this.log, par2, par3, par4, false, par5, (Entity) null, par7ItemStack);
 	}
 
-	public boolean placeBlockAt(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side,
-			float hitX, float hitY, float hitZ, int metadata) {
+	public boolean placeBlockAt(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ, int metadata) {
 		if (!world.setBlock(x, y, z, this.log, metadata, 3))
 			return false;
 

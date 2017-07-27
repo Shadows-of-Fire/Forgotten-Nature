@@ -96,8 +96,7 @@ public class genCypress extends WorldGenerator {
 								world.setBlock(i1 + x, j1 + jn, k1 + y, leaf, leafmeta, 3);
 							}
 						}
-						if ((Math.abs(x) != 2 || Math.abs(y) != 2) && (Math.abs(x) != 2 || Math.abs(y) != 1)
-								&& (Math.abs(x) != 1 || Math.abs(y) != 2) && jn <= 6 && jn >= 2) {
+						if ((Math.abs(x) != 2 || Math.abs(y) != 2) && (Math.abs(x) != 2 || Math.abs(y) != 1) && (Math.abs(x) != 1 || Math.abs(y) != 2) && jn <= 6 && jn >= 2) {
 							//
 							if (world.isAirBlock(i1 + x, j1 + jn, k1 + y)) // second
 																			// layer
@@ -122,8 +121,7 @@ public class genCypress extends WorldGenerator {
 								world.setBlock(i1 + x, j1 + jn, k1 + y, leaf, leafmeta, 3);
 							}
 						}
-						if ((Math.abs(x) != 2 || Math.abs(y) != 2) && (Math.abs(x) != 2 || Math.abs(y) != 1)
-								&& (Math.abs(x) != 1 || Math.abs(y) != 2) && jn <= 10 && jn >= 2) {
+						if ((Math.abs(x) != 2 || Math.abs(y) != 2) && (Math.abs(x) != 2 || Math.abs(y) != 1) && (Math.abs(x) != 1 || Math.abs(y) != 2) && jn <= 10 && jn >= 2) {
 							if (world.isAirBlock(i1 + x, j1 + jn, k1 + y)) // 2nd
 																			// layer
 																			// of
@@ -156,15 +154,13 @@ public class genCypress extends WorldGenerator {
 								world.setBlock(i1 + x, j1 + jn, k1 + y, leaf, leafmeta, 3);
 							}
 						}
-						if (Math.abs(x) <= 2 && Math.abs(y) <= 2 && (Math.abs(x) != 2 || Math.abs(y) != 2)
-								&& (jn == 12 | jn == 11 | jn == 3)) {
+						if (Math.abs(x) <= 2 && Math.abs(y) <= 2 && (Math.abs(x) != 2 || Math.abs(y) != 2) && (jn == 12 | jn == 11 | jn == 3)) {
 							//
 							if (world.isAirBlock(i1 + x, j1 + jn, k1 + y)) {
 								world.setBlock(i1 + x, j1 + jn, k1 + y, leaf, leafmeta, 3);
 							}
 						}
-						if ((Math.abs(x) != 3 || Math.abs(y) != 3) && (Math.abs(x) != 3 || Math.abs(y) != 2)
-								&& (Math.abs(x) != 2 || Math.abs(y) != 3) && jn <= 10 && jn >= 4) {
+						if ((Math.abs(x) != 3 || Math.abs(y) != 3) && (Math.abs(x) != 3 || Math.abs(y) != 2) && (Math.abs(x) != 2 || Math.abs(y) != 3) && jn <= 10 && jn >= 4) {
 							if (world.isAirBlock(i1 + x, j1 + jn, k1 + y)) // 3rd
 																			// layer
 																			// of

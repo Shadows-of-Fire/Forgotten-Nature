@@ -16,12 +16,10 @@ public class ItemRope extends Item {
 		setTextureName("forgottennature:Rope");
 	}
 
-	public boolean onItemUse(ItemStack par1ItemStack, EntityPlayer entityplayer, World world, int par4, int par5,
-			int par6, int par7, float par8, float par9, float par10) {
+	public boolean onItemUse(ItemStack par1ItemStack, EntityPlayer entityplayer, World world, int par4, int par5, int par6, int par7, float par8, float par9, float par10) {
 		int var8 = 0;
 		Block blk = world.getBlock(par4, par5, par6);
-		if (blk == Blocks.cobblestone || blk == Blocks.mossy_cobblestone || blk == Blocks.stone
-				|| blk == Blocks.stonebrick || blk == Blocks.sandstone || blk == FNBlocks.newStones) {
+		if (blk == Blocks.cobblestone || blk == Blocks.mossy_cobblestone || blk == Blocks.stone || blk == Blocks.stonebrick || blk == Blocks.sandstone || blk == FNBlocks.newStones) {
 			switch (par7) {
 			case 2:
 				if (entityplayer.canPlayerEdit(par4, par5, par6 - 1, par7, par1ItemStack))

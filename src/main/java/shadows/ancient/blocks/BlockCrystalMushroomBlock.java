@@ -35,8 +35,7 @@ public class BlockCrystalMushroomBlock extends Block {
 
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(int par1, int par2) {
-		return par2 == 0 && (par1 == 0 || par1 == 1) ? this.mushroomIcons[0]
-				: (par2 == 0 && par1 > 1 ? this.mushroomIcons[1] : this.mushroomIcons[2]);
+		return par2 == 0 && (par1 == 0 || par1 == 1) ? this.mushroomIcons[0] : (par2 == 0 && par1 > 1 ? this.mushroomIcons[1] : this.mushroomIcons[2]);
 	}
 
 	@SideOnly(Side.CLIENT)

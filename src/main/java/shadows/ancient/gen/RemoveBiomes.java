@@ -9,9 +9,7 @@ import net.minecraftforge.common.BiomeManager.BiomeEntry;
 
 public class RemoveBiomes {
 
-	public RemoveBiomes(boolean vanDesert, boolean vanExtremeHills, boolean vanMesa, boolean vanForest,
-			boolean vanBirchForest, boolean vanRoofedForest, boolean vanJungle, boolean vanIcePlains,
-			boolean vanSwampland, boolean vanTaiga, boolean vanMegaTaiga) {
+	public RemoveBiomes(boolean vanDesert, boolean vanExtremeHills, boolean vanMesa, boolean vanForest, boolean vanBirchForest, boolean vanRoofedForest, boolean vanJungle, boolean vanIcePlains, boolean vanSwampland, boolean vanTaiga, boolean vanMegaTaiga) {
 		if (!vanDesert) {
 			// remove(BiomeGenBase.desert);
 			BiomeManager.removeSpawnBiome(BiomeGenBase.desert);

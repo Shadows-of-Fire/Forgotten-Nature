@@ -78,8 +78,7 @@ public class genFig extends WorldGenerator {
 		return true;
 	}
 
-	public static void mainBranch(World world, Random random, int i2, int j2, int k2, int iD, int kD, int size,
-			Block leaf2, int leafmeta, Block oak) {
+	public static void mainBranch(World world, Random random, int i2, int j2, int k2, int iD, int kD, int size, Block leaf2, int leafmeta, Block oak) {
 		int a = 0;
 		int b = 0;
 		int c = 0;
@@ -179,8 +178,7 @@ public class genFig extends WorldGenerator {
 		}
 	}
 
-	public static void secFlag(World world, Random random, int i11, int j11, int k11, int iD, int kD, int size,
-			Block leaf2, int leafmeta, Block oak) {
+	public static void secFlag(World world, Random random, int i11, int j11, int k11, int iD, int kD, int size, Block leaf2, int leafmeta, Block oak) {
 		int index0 = 0;
 		while (index0 < 2 * size) {
 			j11 = j11 + random.nextInt(3) - 1;
@@ -209,8 +207,7 @@ public class genFig extends WorldGenerator {
 		}
 	}
 
-	public static void inner(World world, Random random, int i3, int j3, int k3, int iD, int kD, int size, Block leaf2,
-			int leafmeta, Block oak) {
+	public static void inner(World world, Random random, int i3, int j3, int k3, int iD, int kD, int size, Block leaf2, int leafmeta, Block oak) {
 		int pos = 2 * size + size / 2;
 		int index = 0;
 		int jindex = 5;
@@ -246,8 +243,7 @@ public class genFig extends WorldGenerator {
 		}
 	}
 
-	public static void innerInner(World world, Random random, int i4, int j4, int k4, int iD, int kD, int size,
-			Block leaf2, int leafmeta, Block oak) {
+	public static void innerInner(World world, Random random, int i4, int j4, int k4, int iD, int kD, int size, Block leaf2, int leafmeta, Block oak) {
 		int index1 = 0;
 		int jindex1 = 6 + size / 2;
 		while (index1 < 2 * size + 1 && jindex1 < 16) {

@@ -11,13 +11,8 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemOreMats extends Item {
-	public static final String[] names1 = new String[] { "aluminumIngot", "antimonyIngot", "bariumIngot",
-			"berylliumIngot", "calciumIngot", "chromeIngot", "cobaltIngot", "copperIngot", "erbiumIngot",
-			"galliumIngot", "leadIngot", "lithiumIngot", "manganeseIngot", "molybdenumIngot", "neodymiumIngot",
-			"nickelIngot" };
-	public static final String[] names2 = new String[] { "PGMIngots", "potassiumIngot", "pyritePowder", "salt",
-			"samariumIngot", "siliconIngot", "silverIngot", "sphaleriteIngot", "sulfurChunk", "tantalumIngot",
-			"thoriumIngot", "tinIngot", "titaniumIngot", "tungstenIngot", "uraniumIngot", "vanadiumIngot" };
+	public static final String[] names1 = new String[] { "aluminumIngot", "antimonyIngot", "bariumIngot", "berylliumIngot", "calciumIngot", "chromeIngot", "cobaltIngot", "copperIngot", "erbiumIngot", "galliumIngot", "leadIngot", "lithiumIngot", "manganeseIngot", "molybdenumIngot", "neodymiumIngot", "nickelIngot" };
+	public static final String[] names2 = new String[] { "PGMIngots", "potassiumIngot", "pyritePowder", "salt", "samariumIngot", "siliconIngot", "silverIngot", "sphaleriteIngot", "sulfurChunk", "tantalumIngot", "thoriumIngot", "tinIngot", "titaniumIngot", "tungstenIngot", "uraniumIngot", "vanadiumIngot" };
 	public static final String[] names3 = new String[] { "ytterbiumIngot" };
 
 	@SideOnly(Side.CLIENT)

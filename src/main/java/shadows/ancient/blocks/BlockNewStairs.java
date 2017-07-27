@@ -7,8 +7,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import shadows.ancient.FNBlocks;
 
 public class BlockNewStairs extends BlockStairs {
-	private static final int[][] field = new int[][] { { 2, 6 }, { 3, 7 }, { 2, 3 }, { 6, 7 }, { 0, 4 }, { 1, 5 },
-			{ 0, 1 }, { 4, 5 } };
+	private static final int[][] field = new int[][] { { 2, 6 }, { 3, 7 }, { 2, 3 }, { 6, 7 }, { 0, 4 }, { 1, 5 }, { 0, 1 }, { 4, 5 } };
 	private boolean bool1;
 	private int i2;
 	private static final String __OBFID = "CL_00000314";

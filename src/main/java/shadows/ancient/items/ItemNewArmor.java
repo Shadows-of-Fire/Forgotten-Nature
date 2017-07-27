@@ -58,10 +58,8 @@ public class ItemNewArmor extends ItemArmor {
 
 	@Override
 	public String getArmorTexture(ItemStack itemstack, Entity entity, int slot, String type) {
-		if (this == FNItems.helmetObsidian || this == FNItems.plateObsidian || this == FNItems.legsObsidian
-				|| this == FNItems.bootsObsidian) {
-			if (this == FNItems.helmetObsidian || this == (FNItems.plateObsidian)
-					|| itemstack.getItem() == FNItems.bootsObsidian) {
+		if (this == FNItems.helmetObsidian || this == FNItems.plateObsidian || this == FNItems.legsObsidian || this == FNItems.bootsObsidian) {
+			if (this == FNItems.helmetObsidian || this == (FNItems.plateObsidian) || itemstack.getItem() == FNItems.bootsObsidian) {
 				return "forgottennature:textures/armor/obsidianArmor_1.png";// all
 																			// but
 																			// legs
@@ -72,8 +70,7 @@ public class ItemNewArmor extends ItemArmor {
 			} else
 				return "ForgottenNature:textures/armor/obsidianArmor_1.png";
 		} else {
-			if (this == FNItems.helmetTitanStone || this == FNItems.plateTitanStone
-					|| itemstack.getItem() == FNItems.bootsTitanStone) {
+			if (this == FNItems.helmetTitanStone || this == FNItems.plateTitanStone || itemstack.getItem() == FNItems.bootsTitanStone) {
 				return "ForgottenNature:textures/armor/titanStoneArmor_1.png";// all
 																				// but
 																				// legs

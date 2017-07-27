@@ -100,8 +100,7 @@ public class genPoplar extends WorldGenerator {
 							}
 						}
 
-						if ((Math.abs(x) != 2 || Math.abs(y) != 2) && (Math.abs(x) != 2 || Math.abs(y) != 1)
-								&& (Math.abs(x) != 1 || Math.abs(y) != 2) && jn <= 6 * hight - 1 && jn > 3) {
+						if ((Math.abs(x) != 2 || Math.abs(y) != 2) && (Math.abs(x) != 2 || Math.abs(y) != 1) && (Math.abs(x) != 1 || Math.abs(y) != 2) && jn <= 6 * hight - 1 && jn > 3) {
 							//
 							if (world.isAirBlock(i1 + x, j1 + jn, k1 + y))// second
 																			// layer
@@ -130,8 +129,7 @@ public class genPoplar extends WorldGenerator {
 								world.setBlock(i1 + x, j1 + jn, k1 + y, leaf, leafmeta, 3);
 							}
 						} //
-						if ((Math.abs(x) != 2 || Math.abs(y) != 2) && (Math.abs(x) != 2 || Math.abs(y) != 1)
-								&& (Math.abs(x) != 1 || Math.abs(y) != 2) && jn <= 6 * hight && jn > 3) { //
+						if ((Math.abs(x) != 2 || Math.abs(y) != 2) && (Math.abs(x) != 2 || Math.abs(y) != 1) && (Math.abs(x) != 1 || Math.abs(y) != 2) && jn <= 6 * hight && jn > 3) { //
 							if (world.isAirBlock(i1 + x, j1 + jn, k1 + y)) // 2nd
 																			// layer
 																			// of
@@ -168,8 +166,7 @@ public class genPoplar extends WorldGenerator {
 								world.setBlock(i1 + x, j1 + jn, k1 + y, leaf, leafmeta, 3);
 							}
 						} //
-						if (Math.abs(x) <= 2 && Math.abs(y) <= 2 && (Math.abs(x) != 2 || Math.abs(y) != 2)
-								&& (jn == 6 * hight | jn == 5)) {
+						if (Math.abs(x) <= 2 && Math.abs(y) <= 2 && (Math.abs(x) != 2 || Math.abs(y) != 2) && (jn == 6 * hight | jn == 5)) {
 							//
 							if (world.isAirBlock(i1 + x, j1 + jn, k1 + y)) //
 							{
@@ -177,8 +174,7 @@ public class genPoplar extends WorldGenerator {
 							}
 						} //
 
-						if ((Math.abs(x) != 3 || Math.abs(y) != 3) && (Math.abs(x) != 3 || Math.abs(y) != 2)
-								&& (Math.abs(x) != 2 || Math.abs(y) != 3) && jn <= 6 * hight - 1 && jn > 5) { //
+						if ((Math.abs(x) != 3 || Math.abs(y) != 3) && (Math.abs(x) != 3 || Math.abs(y) != 2) && (Math.abs(x) != 2 || Math.abs(y) != 3) && jn <= 6 * hight - 1 && jn > 5) { //
 							if (world.isAirBlock(i1 + x, j1 + jn, k1 + y)) // 3rd
 																			// layer
 																			// of

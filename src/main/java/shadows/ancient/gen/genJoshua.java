@@ -118,8 +118,7 @@ public class genJoshua extends WorldGenerator {
 		return true;
 	}
 
-	public static void branch(World world, Random random, int ii, int jj, int kk, int iD, int kD, Block leaf2,
-			int leafmeta, Block log2, int logmeta) {
+	public static void branch(World world, Random random, int ii, int jj, int kk, int iD, int kD, Block leaf2, int leafmeta, Block log2, int logmeta) {
 		for (int br = 0; br < 4; br++) {
 			if (iD == -1 && random.nextInt(3) > 0) {
 				ii--;
@@ -157,8 +156,7 @@ public class genJoshua extends WorldGenerator {
 		for (int x = -1; x <= 1; x++) {
 			for (int y = -1; y <= 1; y++) {
 				for (int jh = -1; jh <= 1; jh++) {
-					if ((Math.abs(x) != 1 || Math.abs(y) != 1) && (Math.abs(y) != 1 || Math.abs(jh) != 1)
-							&& (Math.abs(x) != 1 || Math.abs(jh) != 1) && world.isAirBlock(i3 + x, j3 + jh, k3 + y)) {
+					if ((Math.abs(x) != 1 || Math.abs(y) != 1) && (Math.abs(y) != 1 || Math.abs(jh) != 1) && (Math.abs(x) != 1 || Math.abs(jh) != 1) && world.isAirBlock(i3 + x, j3 + jh, k3 + y)) {
 						world.setBlock(i3 + x, j3 + jh, k3 + y, leaf2, leafmeta, 3);
 					}
 				}
@@ -166,8 +164,7 @@ public class genJoshua extends WorldGenerator {
 		}
 	}
 
-	public static void rootGen(World world, Random random, int ii, int jj, int kk, int iD, int kD, Block log2,
-			int logmeta) {
+	public static void rootGen(World world, Random random, int ii, int jj, int kk, int iD, int kD, Block log2, int logmeta) {
 		for (int br = 0; br < 6; br++) {
 			if (iD == -1 && random.nextInt(3) == 0) {
 				ii--;

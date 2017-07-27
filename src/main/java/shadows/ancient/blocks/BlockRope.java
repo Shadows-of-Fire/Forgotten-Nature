@@ -101,9 +101,7 @@ public class BlockRope extends Block {
 	}
 
 	public boolean canPlaceBlockAt(World par1World, int par2, int par3, int par4) {
-		return par1World.isSideSolid(par2 - 1, par3, par4, EAST) || par1World.isSideSolid(par2 + 1, par3, par4, WEST)
-				|| par1World.isSideSolid(par2, par3, par4 - 1, SOUTH)
-				|| par1World.isSideSolid(par2, par3, par4 + 1, NORTH);
+		return par1World.isSideSolid(par2 - 1, par3, par4, EAST) || par1World.isSideSolid(par2 + 1, par3, par4, WEST) || par1World.isSideSolid(par2, par3, par4 - 1, SOUTH) || par1World.isSideSolid(par2, par3, par4 + 1, NORTH);
 	}
 
 	public void onBlockPlaced(World par1World, int par2, int par3, int par4, int par5) {

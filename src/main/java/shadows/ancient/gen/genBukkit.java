@@ -55,8 +55,7 @@ public class genBukkit extends WorldGenerator {
 		return true;
 	}
 
-	public static void branch(World world, Random random, int H, int ii, int j, int jj, int kk, int iD, int kD,
-			Block leaf2, int leafmeta, Block log2, int logmeta) {
+	public static void branch(World world, Random random, int H, int ii, int j, int jj, int kk, int iD, int kD, Block leaf2, int leafmeta, Block log2, int logmeta) {
 		int index = 0;
 		jj = jj + j;
 
@@ -133,8 +132,7 @@ public class genBukkit extends WorldGenerator {
 		}
 	}
 
-	public static void extraWood(World world, int iD, int kD, int ii, int jj, int kk, Block log2, int logmeta,
-			Block leaf2, int leafmeta) {
+	public static void extraWood(World world, int iD, int kD, int ii, int jj, int kk, Block log2, int logmeta, Block leaf2, int leafmeta) {
 		for (int x = -2; x <= 2; x++) {
 			for (int y = -2; y <= 2; y++) {
 				if (y != 0 && x == 0 || y == 0 && x != 0) {

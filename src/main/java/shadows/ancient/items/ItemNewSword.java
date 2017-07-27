@@ -53,19 +53,16 @@ public class ItemNewSword extends ItemSword {
 			return 15.0F;
 		} else {
 			Material material = block2.getMaterial();
-			return material != Material.plants && material != Material.vine && material != Material.coral
-					&& material != Material.leaves && material != Material.gourd ? 1.0F : 1.5F;
+			return material != Material.plants && material != Material.vine && material != Material.coral && material != Material.leaves && material != Material.gourd ? 1.0F : 1.5F;
 		}
 	}
 
-	public boolean hitEntity(ItemStack par1ItemStack, EntityLivingBase par2EntityLivingBase,
-			EntityLivingBase par3EntityLivingBase) {
+	public boolean hitEntity(ItemStack par1ItemStack, EntityLivingBase par2EntityLivingBase, EntityLivingBase par3EntityLivingBase) {
 		par1ItemStack.damageItem(1, par3EntityLivingBase);
 		return true;
 	}
 
-	public boolean onBlockDestroyed(ItemStack par1ItemStack, World par2World, Block block1, int par4, int par5,
-			int par6, EntityLivingBase par7EntityLivingBase) {
+	public boolean onBlockDestroyed(ItemStack par1ItemStack, World par2World, Block block1, int par4, int par5, int par6, EntityLivingBase par7EntityLivingBase) {
 		if ((double) block1.getBlockHardness(par2World, par4, par5, par6) != 0.0D) {
 			par1ItemStack.damageItem(2, par7EntityLivingBase);
 		}

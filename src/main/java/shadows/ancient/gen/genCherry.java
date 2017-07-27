@@ -91,8 +91,7 @@ public class genCherry extends WorldGenerator {
 					int[] var18 = new int[] { var15, var3 + this.leafDistanceLimit, var16 };
 					if (this.checkBlockLine(var17, var18) == -1) {
 						int[] var19 = new int[] { this.basePos[0], this.basePos[1], this.basePos[2] };
-						double var20 = Math.sqrt(Math.pow((double) Math.abs(this.basePos[0] - var17[0]), 2.0D)
-								+ Math.pow((double) Math.abs(this.basePos[2] - var17[2]), 2.0D));
+						double var20 = Math.sqrt(Math.pow((double) Math.abs(this.basePos[0] - var17[0]), 2.0D) + Math.pow((double) Math.abs(this.basePos[2] - var17[2]), 2.0D));
 						double var22 = var20 * this.branchSlope;
 
 						if ((double) var17[1] - var22 > (double) var5) {
@@ -132,8 +131,7 @@ public class genCherry extends WorldGenerator {
 			var13 = -var7;
 
 			while (var13 <= var7) {
-				double var15 = Math.pow((double) Math.abs(var12) + 0.5D, 2.0D)
-						+ Math.pow((double) Math.abs(var13) + 0.5D, 2.0D);
+				double var15 = Math.pow((double) Math.abs(var12) + 0.5D, 2.0D) + Math.pow((double) Math.abs(var13) + 0.5D, 2.0D);
 
 				if (var15 > (double) (par4 * par4)) {
 					++var13;
@@ -168,8 +166,7 @@ public class genCherry extends WorldGenerator {
 			} else if (Math.abs(var3) >= var2) {
 				var4 = 0.0F;
 			} else {
-				var4 = (float) Math
-						.sqrt(Math.pow((double) Math.abs(var2), 2.0D) - Math.pow((double) Math.abs(var3), 2.0D));
+				var4 = (float) Math.sqrt(Math.pow((double) Math.abs(var2), 2.0D) - Math.pow((double) Math.abs(var3), 2.0D));
 			}
 
 			var4 *= 0.5F;
@@ -178,8 +175,7 @@ public class genCherry extends WorldGenerator {
 	}
 
 	float leafSize(int par1) {
-		return par1 >= 0 && par1 < this.leafDistanceLimit
-				? (par1 != 0 && par1 != this.leafDistanceLimit - 1 ? 3.0F : 2.0F) : -1.0F;
+		return par1 >= 0 && par1 < this.leafDistanceLimit ? (par1 != 0 && par1 != this.leafDistanceLimit - 1 ? 3.0F : 2.0F) : -1.0F;
 	}
 
 	/**
@@ -230,10 +226,8 @@ public class genCherry extends WorldGenerator {
 
 			for (int var16 = var4[var6] + var9; var15 != var16; var15 += var9) {
 				var14[var6] = MathHelper.floor_double((double) (par1ArrayOfInteger[var6] + var15) + 0.5D);
-				var14[var7] = MathHelper
-						.floor_double((double) par1ArrayOfInteger[var7] + (double) var15 * var10 + 0.5D);
-				var14[var8] = MathHelper
-						.floor_double((double) par1ArrayOfInteger[var8] + (double) var15 * var12 + 0.5D);
+				var14[var7] = MathHelper.floor_double((double) par1ArrayOfInteger[var7] + (double) var15 * var10 + 0.5D);
+				var14[var8] = MathHelper.floor_double((double) par1ArrayOfInteger[var8] + (double) var15 * var12 + 0.5D);
 				int var18 = Math.abs(var14[0] - par1ArrayOfInteger[0]);
 				int var19 = Math.abs(var14[2] - par1ArrayOfInteger[2]);
 				int var20 = Math.max(var18, var19);

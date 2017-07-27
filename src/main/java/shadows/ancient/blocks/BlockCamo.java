@@ -32,12 +32,9 @@ public class BlockCamo extends Block implements ITileEntityProvider {
 		solid = sld;
 	}
 
-	public AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_,
-			int p_149668_4_) {
+	public AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_) {
 		if (solid)
-			return AxisAlignedBB.getBoundingBox((double) p_149668_2_ + this.minX, (double) p_149668_3_ + this.minY,
-					(double) p_149668_4_ + this.minZ, (double) p_149668_2_ + this.maxX,
-					(double) p_149668_3_ + this.maxY, (double) p_149668_4_ + this.maxZ);
+			return AxisAlignedBB.getBoundingBox((double) p_149668_2_ + this.minX, (double) p_149668_3_ + this.minY, (double) p_149668_4_ + this.minZ, (double) p_149668_2_ + this.maxX, (double) p_149668_3_ + this.maxY, (double) p_149668_4_ + this.maxZ);
 		else
 			return null;
 	}
@@ -81,9 +78,7 @@ public class BlockCamo extends Block implements ITileEntityProvider {
 
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(int side, int met) {
-		if (solid && (met > 74 && met < 149 && side == 0) || (met > 148 && met < 223 && side == 1)
-				|| (met > 222 && met < 297 && side == 2) || (met > 296 && met < 371 && side == 3)
-				|| (met > 370 && met < 445 && side == 4) || (met > 444 && met < 519 && side == 5)) {
+		if (solid && (met > 74 && met < 149 && side == 0) || (met > 148 && met < 223 && side == 1) || (met > 222 && met < 297 && side == 2) || (met > 296 && met < 371 && side == 3) || (met > 370 && met < 445 && side == 4) || (met > 444 && met < 519 && side == 5)) {
 			return Blocks.glass.getIcon(side, 0);
 		} else {
 			while (met > 74)// reset icon index
@@ -244,8 +239,7 @@ public class BlockCamo extends Block implements ITileEntityProvider {
 		}
 	}
 
-	public boolean onBlockActivated(World world, int i, int j, int k, EntityPlayer eplayer, int side, float hx,
-			float hy, float hz) {
+	public boolean onBlockActivated(World world, int i, int j, int k, EntityPlayer eplayer, int side, float hx, float hy, float hz) {
 		if (this.solid && eplayer.getCurrentEquippedItem() == null) {
 			int met = world.getTileEntity(i, j, k).blockMetadata;
 			// eplayer.addChatMessage(new

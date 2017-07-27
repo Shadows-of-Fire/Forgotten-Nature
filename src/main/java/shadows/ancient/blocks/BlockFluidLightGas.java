@@ -117,8 +117,7 @@ public class BlockFluidLightGas extends BlockFluidClassic {
 				} else
 					for (int x1 = -1; x1 < 2; x1++) {
 						for (int z1 = -1; z1 < 2; z1++) {
-							if (world.isAirBlock(x + x1, y + 1, z + z1) && done == 0
-									&& (world.isAirBlock(x + x1, y, z + z1) || world.getBlock(x, y + 1, z) == this)) {
+							if (world.isAirBlock(x + x1, y + 1, z + z1) && done == 0 && (world.isAirBlock(x + x1, y, z + z1) || world.getBlock(x, y + 1, z) == this)) {
 								world.setBlockToAir(x, y, z);
 								world.setBlock(x + x1, y + 1, z + z1, this);
 								done = 1;
@@ -140,9 +139,7 @@ public class BlockFluidLightGas extends BlockFluidClassic {
 			if (quantaRemaining < quantaPerBlock) {
 				int y2 = y - densityDir;
 
-				if (world.getBlock(x, y2, z) == this || world.getBlock(x - 1, y2, z) == this
-						|| world.getBlock(x + 1, y2, z) == this || world.getBlock(x, y2, z - 1) == this
-						|| world.getBlock(x, y2, z + 1) == this) {
+				if (world.getBlock(x, y2, z) == this || world.getBlock(x - 1, y2, z) == this || world.getBlock(x + 1, y2, z) == this || world.getBlock(x, y2, z - 1) == this || world.getBlock(x, y2, z + 1) == this) {
 					expQuanta = quantaPerBlock - 1;
 				} else {
 					int maxQuanta = -100;

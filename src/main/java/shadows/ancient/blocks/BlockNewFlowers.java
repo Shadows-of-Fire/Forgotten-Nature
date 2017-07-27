@@ -54,8 +54,7 @@ public class BlockNewFlowers extends BlockFlower {
 		return i & 15;
 	}
 
-	public boolean onBlockActivated(World world, int i, int j, int k, EntityPlayer entityplayer, int par6, float par7,
-			float par8, float par9) {
+	public boolean onBlockActivated(World world, int i, int j, int k, EntityPlayer entityplayer, int par6, float par7, float par8, float par9) {
 		ItemStack equipped = entityplayer.getCurrentEquippedItem();
 		if (equipped == null) {
 			return false;
@@ -71,10 +70,8 @@ public class BlockNewFlowers extends BlockFlower {
 					for (int three = -2; three < 3; three++) {
 						bid = Block.getIdFromBlock(world.getBlock(i + one, j + two, k + three));
 						bidu = Block.getIdFromBlock(world.getBlock(i + one, j + two - 1, k + three));
-						if ((bid == 31 || bid == 37 || bid == 38 || bid == 0) && (bidu == 2 || bidu == 3)
-								&& (Math.abs(one) + Math.abs(three) < 4) && world.rand.nextInt(3) == 0) {
-							world.setBlock(i + one, j + two, k + three, world.getBlock(i, j, k),
-									world.getBlockMetadata(i, j, k), 3);
+						if ((bid == 31 || bid == 37 || bid == 38 || bid == 0) && (bidu == 2 || bidu == 3) && (Math.abs(one) + Math.abs(three) < 4) && world.rand.nextInt(3) == 0) {
+							world.setBlock(i + one, j + two, k + three, world.getBlock(i, j, k), world.getBlockMetadata(i, j, k), 3);
 						}
 					}
 				}

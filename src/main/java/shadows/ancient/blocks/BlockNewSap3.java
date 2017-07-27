@@ -54,9 +54,7 @@ public class BlockNewSap3 extends BlockFlower {
 			return;
 		}
 		super.updateTick(world, i, j, k, random);
-		if (world.getBlockLightValue(i, j + 1, k) >= 9 && random.nextInt(14) == 0
-				&& ((world.getBlock(i, j - 1, k) != Blocks.netherrack || world.getBlockMetadata(i, j, k) < 3)
-						|| world.getBlockMetadata(i, j, k) > 2)) {
+		if (world.getBlockLightValue(i, j + 1, k) >= 9 && random.nextInt(14) == 0 && ((world.getBlock(i, j - 1, k) != Blocks.netherrack || world.getBlockMetadata(i, j, k) < 3) || world.getBlockMetadata(i, j, k) > 2)) {
 			growTree(world, i, j, k, random);
 		}
 	}
@@ -104,8 +102,7 @@ public class BlockNewSap3 extends BlockFlower {
 		}
 	}
 
-	public boolean onBlockActivated(World world, int i, int j, int k, EntityPlayer entityplayer, int par2, float par3,
-			float par4, float par5) {
+	public boolean onBlockActivated(World world, int i, int j, int k, EntityPlayer entityplayer, int par2, float par3, float par4, float par5) {
 		ItemStack equipped = entityplayer.getCurrentEquippedItem();
 
 		if (equipped == null)

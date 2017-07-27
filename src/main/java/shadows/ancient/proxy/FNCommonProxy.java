@@ -101,9 +101,7 @@ public class FNCommonProxy implements IGuiHandler {
 	public static BiomeGenBase cherryBlossomWoodland;
 	public static BiomeGenBase eucalyptusForest;
 
-	public void registerWorldStuff(int biomeIDIndex, boolean tForest, boolean rwForest, boolean tForestHill,
-			boolean rwForestHill, boolean cForest, boolean gForest, boolean mForest, boolean cBWoodland,
-			boolean eForest) {
+	public void registerWorldStuff(int biomeIDIndex, boolean tForest, boolean rwForest, boolean tForestHill, boolean rwForestHill, boolean cForest, boolean gForest, boolean mForest, boolean cBWoodland, boolean eForest) {
 		addVillages();
 		GameRegistry.registerFuelHandler(new FNFuelHandler());
 		GameRegistry.registerWorldGenerator(new FNWorldGenerator(), 3);
@@ -114,21 +112,14 @@ public class FNCommonProxy implements IGuiHandler {
 
 		// add seeds to tall grass
 		for (int x = 0; x < 11; x++) {
-			MinecraftForge.addGrassSeed(new ItemStack(Item.getItemById(Item.getIdFromItem(FNItems.newSeedItems)), 1, x),
-					ForgottenNature.newSeedWeight);
+			MinecraftForge.addGrassSeed(new ItemStack(Item.getItemById(Item.getIdFromItem(FNItems.newSeedItems)), 1, x), ForgottenNature.newSeedWeight);
 		}
-		MinecraftForge.addGrassSeed(new ItemStack(Item.getItemById(Item.getIdFromItem(FNItems.FNFoodItems)), 1, 1),
-				ForgottenNature.newSeedWeight);
-		MinecraftForge.addGrassSeed(new ItemStack(Item.getItemById(Item.getIdFromItem(FNItems.FNFoodItems)), 1, 2),
-				ForgottenNature.newSeedWeight);
-		MinecraftForge.addGrassSeed(new ItemStack(Item.getItemById(Item.getIdFromItem(FNItems.FNFoodItems)), 1, 4),
-				ForgottenNature.newSeedWeight);
-		MinecraftForge.addGrassSeed(new ItemStack(Item.getItemById(Item.getIdFromItem(FNItems.FNFoodItems)), 1, 5),
-				ForgottenNature.newSeedWeight);
-		MinecraftForge.addGrassSeed(new ItemStack(Item.getItemById(Item.getIdFromItem(FNItems.FNFoodItems)), 1, 6),
-				ForgottenNature.newSeedWeight);
-		MinecraftForge.addGrassSeed(new ItemStack(Item.getItemById(Item.getIdFromItem(FNItems.FNFoodItems)), 1, 9),
-				ForgottenNature.newSeedWeight);
+		MinecraftForge.addGrassSeed(new ItemStack(Item.getItemById(Item.getIdFromItem(FNItems.FNFoodItems)), 1, 1), ForgottenNature.newSeedWeight);
+		MinecraftForge.addGrassSeed(new ItemStack(Item.getItemById(Item.getIdFromItem(FNItems.FNFoodItems)), 1, 2), ForgottenNature.newSeedWeight);
+		MinecraftForge.addGrassSeed(new ItemStack(Item.getItemById(Item.getIdFromItem(FNItems.FNFoodItems)), 1, 4), ForgottenNature.newSeedWeight);
+		MinecraftForge.addGrassSeed(new ItemStack(Item.getItemById(Item.getIdFromItem(FNItems.FNFoodItems)), 1, 5), ForgottenNature.newSeedWeight);
+		MinecraftForge.addGrassSeed(new ItemStack(Item.getItemById(Item.getIdFromItem(FNItems.FNFoodItems)), 1, 6), ForgottenNature.newSeedWeight);
+		MinecraftForge.addGrassSeed(new ItemStack(Item.getItemById(Item.getIdFromItem(FNItems.FNFoodItems)), 1, 9), ForgottenNature.newSeedWeight);
 
 		// flowers to be planted when bonemeal is used on grass
 		for (int i = 0; i < 10; i++) {
@@ -227,1667 +218,1043 @@ public class FNCommonProxy implements IGuiHandler {
 
 	public static void newRecipes() {
 		{// for saplings
-			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling1, 2, 6),
-					new Object[] { new ItemStack(Item.getItemById(260), 1) });// apple
+			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling1, 2, 6), new Object[] { new ItemStack(Item.getItemById(260), 1) });// apple
 																																				// saps
-			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling1, 2, 1),
-					new Object[] { new ItemStack(ItemFruit, 1, 4) });// cherry
+			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling1, 2, 1), new Object[] { new ItemStack(ItemFruit, 1, 4) });// cherry
 																																		// saps
-			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling2, 2, 3),
-					new Object[] { new ItemStack(ItemNuts, 1, 0) });// ginkgo
+			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling2, 2, 3), new Object[] { new ItemStack(ItemNuts, 1, 0) });// ginkgo
 																																		// saps
-			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling2, 2, 6),
-					new Object[] { new ItemStack(ItemNuts, 1, 1) });// walnut
+			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling2, 2, 6), new Object[] { new ItemStack(ItemNuts, 1, 1) });// walnut
 																																		// saps
-			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling2, 2, 11),
-					new Object[] { new ItemStack(ItemFruit, 1, 2) });// orange
+			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling2, 2, 11), new Object[] { new ItemStack(ItemFruit, 1, 2) });// orange
 																																		// saps
-			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling2, 2, 12),
-					new Object[] { new ItemStack(ItemFruit, 1, 3) });// peach
+			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling2, 2, 12), new Object[] { new ItemStack(ItemFruit, 1, 3) });// peach
 																																		// saps
-			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling2, 2, 13),
-					new Object[] { new ItemStack(ItemFruit, 1, 9) });// lemon
+			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling2, 2, 13), new Object[] { new ItemStack(ItemFruit, 1, 9) });// lemon
 																																		// saps
-			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling2, 2, 14),
-					new Object[] { new ItemStack(ItemFruit, 1, 7) });// blueberry
+			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling2, 2, 14), new Object[] { new ItemStack(ItemFruit, 1, 7) });// blueberry
 																																		// saps
-			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling2, 2, 15),
-					new Object[] { new ItemStack(ItemFruit, 1, 8) });// raspberry
+			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling2, 2, 15), new Object[] { new ItemStack(ItemFruit, 1, 8) });// raspberry
 																																		// saps
-			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling3, 2, 1),
-					new Object[] { new ItemStack(ItemFruit, 1, 5) });// blackberry
+			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling3, 2, 1), new Object[] { new ItemStack(ItemFruit, 1, 5) });// blackberry
 																																		// saps
-			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling3, 2, 0),
-					new Object[] { new ItemStack(ItemFruit, 1, 6) });// huckleberry
+			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.fNSapling3, 2, 0), new Object[] { new ItemStack(ItemFruit, 1, 6) });// huckleberry
 																																		// saps
 		}
 
 		{// obsidian tools and armor. titanStone tools
 			if (ForgottenNature.obsidianTools) {
 				// titan stone
-				GameRegistry.addRecipe(new ItemStack(FNBlocks.newStones, 1, 9),
-						new Object[] { "&*&", "*%*", "&*&", '&', new ItemStack(Block.getBlockById(89), 1, 0), '*',
-								new ItemStack(FNBlocks.crystalBlock, 1, 1), '%',
-								new ItemStack(Item.getItemById(381), 1, 0) });// titanstone
+				GameRegistry.addRecipe(new ItemStack(FNBlocks.newStones, 1, 9), new Object[] { "&*&", "*%*", "&*&", '&', new ItemStack(Block.getBlockById(89), 1, 0), '*', new ItemStack(FNBlocks.crystalBlock, 1, 1), '%', new ItemStack(Item.getItemById(381), 1, 0) });// titanstone
 																																																																			// from
-																																																																							// glowstone
-																																																																							// and
-																																																																							// endereye
-																																																																							// obsidian and titan
-				GameRegistry.addRecipe(new ItemStack(FNItems.helmetObsidian, 1, 0),
-						new Object[] { "&&&", "& &", "   ", '&', new ItemStack(Block.getBlockById(49), 1, 0) });// obsidianhelm
-				GameRegistry.addRecipe(new ItemStack(FNItems.helmetObsidian, 1, 0),
-						new Object[] { "   ", "&&&", "& &", '&', new ItemStack(Block.getBlockById(49), 1, 0) });// obsidianhelm
-				GameRegistry.addRecipe(new ItemStack(FNItems.plateObsidian, 1, 0),
-						new Object[] { "& &", "&&&", "&&&", '&', new ItemStack(Block.getBlockById(49), 1, 0) });// obsidianplate
-				GameRegistry.addRecipe(new ItemStack(FNItems.legsObsidian, 1, 0),
-						new Object[] { "&&&", "& &", "& &", '&', new ItemStack(Block.getBlockById(49), 1, 0) });// obsidianpants
-				GameRegistry.addRecipe(new ItemStack(FNItems.bootsObsidian, 1, 0),
-						new Object[] { "   ", "& &", "& &", '&', new ItemStack(Block.getBlockById(49), 1, 0) });// obsidianboots
-				GameRegistry.addRecipe(new ItemStack(FNItems.bootsObsidian, 1, 0),
-						new Object[] { "& &", "& &", "   ", '&', new ItemStack(Block.getBlockById(49), 1, 0) });// obsidianboots
-				GameRegistry.addRecipe(new ItemStack(FNItems.helmetTitanStone, 1, 0),
-						new Object[] { "&&&", "& &", "   ", '&', new ItemStack(FNBlocks.newStones, 1, 9) });// titanstonehelm
-				GameRegistry.addRecipe(new ItemStack(FNItems.helmetTitanStone, 1, 0),
-						new Object[] { "   ", "&&&", "& &", '&', new ItemStack(FNBlocks.newStones, 1, 9) });// titanstonehelm
-				GameRegistry.addRecipe(new ItemStack(FNItems.plateTitanStone, 1, 0),
-						new Object[] { "& &", "&&&", "&&&", '&', new ItemStack(FNBlocks.newStones, 1, 9) });// titanstoneplate
-				GameRegistry.addRecipe(new ItemStack(FNItems.legsTitanStone, 1, 0),
-						new Object[] { "&&&", "& &", "& &", '&', new ItemStack(FNBlocks.newStones, 1, 9) });// titanstonepants
-				GameRegistry.addRecipe(new ItemStack(FNItems.bootsTitanStone, 1, 0),
-						new Object[] { "   ", "& &", "& &", '&', new ItemStack(FNBlocks.newStones, 1, 9) });// titanstoneboots
-				GameRegistry.addRecipe(new ItemStack(FNItems.bootsTitanStone, 1, 0),
-						new Object[] { "& &", "& &", "   ", '&', new ItemStack(FNBlocks.newStones, 1, 9) });// titanstoneboots
+																																																																			// glowstone
+																																																																			// and
+																																																																			// endereye
+																																																																			// obsidian and titan
+				GameRegistry.addRecipe(new ItemStack(FNItems.helmetObsidian, 1, 0), new Object[] { "&&&", "& &", "   ", '&', new ItemStack(Block.getBlockById(49), 1, 0) });// obsidianhelm
+				GameRegistry.addRecipe(new ItemStack(FNItems.helmetObsidian, 1, 0), new Object[] { "   ", "&&&", "& &", '&', new ItemStack(Block.getBlockById(49), 1, 0) });// obsidianhelm
+				GameRegistry.addRecipe(new ItemStack(FNItems.plateObsidian, 1, 0), new Object[] { "& &", "&&&", "&&&", '&', new ItemStack(Block.getBlockById(49), 1, 0) });// obsidianplate
+				GameRegistry.addRecipe(new ItemStack(FNItems.legsObsidian, 1, 0), new Object[] { "&&&", "& &", "& &", '&', new ItemStack(Block.getBlockById(49), 1, 0) });// obsidianpants
+				GameRegistry.addRecipe(new ItemStack(FNItems.bootsObsidian, 1, 0), new Object[] { "   ", "& &", "& &", '&', new ItemStack(Block.getBlockById(49), 1, 0) });// obsidianboots
+				GameRegistry.addRecipe(new ItemStack(FNItems.bootsObsidian, 1, 0), new Object[] { "& &", "& &", "   ", '&', new ItemStack(Block.getBlockById(49), 1, 0) });// obsidianboots
+				GameRegistry.addRecipe(new ItemStack(FNItems.helmetTitanStone, 1, 0), new Object[] { "&&&", "& &", "   ", '&', new ItemStack(FNBlocks.newStones, 1, 9) });// titanstonehelm
+				GameRegistry.addRecipe(new ItemStack(FNItems.helmetTitanStone, 1, 0), new Object[] { "   ", "&&&", "& &", '&', new ItemStack(FNBlocks.newStones, 1, 9) });// titanstonehelm
+				GameRegistry.addRecipe(new ItemStack(FNItems.plateTitanStone, 1, 0), new Object[] { "& &", "&&&", "&&&", '&', new ItemStack(FNBlocks.newStones, 1, 9) });// titanstoneplate
+				GameRegistry.addRecipe(new ItemStack(FNItems.legsTitanStone, 1, 0), new Object[] { "&&&", "& &", "& &", '&', new ItemStack(FNBlocks.newStones, 1, 9) });// titanstonepants
+				GameRegistry.addRecipe(new ItemStack(FNItems.bootsTitanStone, 1, 0), new Object[] { "   ", "& &", "& &", '&', new ItemStack(FNBlocks.newStones, 1, 9) });// titanstoneboots
+				GameRegistry.addRecipe(new ItemStack(FNItems.bootsTitanStone, 1, 0), new Object[] { "& &", "& &", "   ", '&', new ItemStack(FNBlocks.newStones, 1, 9) });// titanstoneboots
 
-				GameRegistry.addRecipe(new ItemStack(oPickaxe, 1, 0),
-						new Object[] { "&&&", " s ", " s ", '&', new ItemStack(Block.getBlockById(49), 1, 0), 's',
-								new ItemStack(Item.getItemById(280), 1) });// obsidianPa
+				GameRegistry.addRecipe(new ItemStack(oPickaxe, 1, 0), new Object[] { "&&&", " s ", " s ", '&', new ItemStack(Block.getBlockById(49), 1, 0), 's', new ItemStack(Item.getItemById(280), 1) });// obsidianPa
 																																																			// from
-																																																							// stick
-				GameRegistry.addRecipe(new ItemStack(oHoe, 1, 0),
-						new Object[] { "&& ", " s ", " s ", '&', new ItemStack(Block.getBlockById(49), 1, 0), 's',
-								new ItemStack(Item.getItemById(280), 1) });// obsidianHoe
+																																																			// stick
+				GameRegistry.addRecipe(new ItemStack(oHoe, 1, 0), new Object[] { "&& ", " s ", " s ", '&', new ItemStack(Block.getBlockById(49), 1, 0), 's', new ItemStack(Item.getItemById(280), 1) });// obsidianHoe
 																																																		// from
-																																																						// stick
-				GameRegistry.addRecipe(new ItemStack(oHoe, 1, 0),
-						new Object[] { " &&", " s ", " s ", '&', new ItemStack(Block.getBlockById(49), 1, 0), 's',
-								new ItemStack(Item.getItemById(280), 1) });// obsidianHoe
+																																																		// stick
+				GameRegistry.addRecipe(new ItemStack(oHoe, 1, 0), new Object[] { " &&", " s ", " s ", '&', new ItemStack(Block.getBlockById(49), 1, 0), 's', new ItemStack(Item.getItemById(280), 1) });// obsidianHoe
 																																																		// from
-																																																						// stick
-				GameRegistry.addRecipe(new ItemStack(oAxe, 1, 0),
-						new Object[] { "&& ", "&s ", " s ", '&', new ItemStack(Block.getBlockById(49), 1, 0), 's',
-								new ItemStack(Item.getItemById(280), 1) });// obsidianAxe
+																																																		// stick
+				GameRegistry.addRecipe(new ItemStack(oAxe, 1, 0), new Object[] { "&& ", "&s ", " s ", '&', new ItemStack(Block.getBlockById(49), 1, 0), 's', new ItemStack(Item.getItemById(280), 1) });// obsidianAxe
 																																																		// from
-																																																						// stick
-				GameRegistry.addRecipe(new ItemStack(oAxe, 1, 0),
-						new Object[] { " &&", " s&", " s ", '&', new ItemStack(Block.getBlockById(49), 1, 0), 's',
-								new ItemStack(Item.getItemById(280), 1) });// obsidianAxe
+																																																		// stick
+				GameRegistry.addRecipe(new ItemStack(oAxe, 1, 0), new Object[] { " &&", " s&", " s ", '&', new ItemStack(Block.getBlockById(49), 1, 0), 's', new ItemStack(Item.getItemById(280), 1) });// obsidianAxe
 																																																		// from
-																																																						// stick
-				GameRegistry.addRecipe(new ItemStack(oShovel, 1, 0),
-						new Object[] { " & ", " s ", " s ", '&', new ItemStack(Block.getBlockById(49), 1, 0), 's',
-								new ItemStack(Item.getItemById(280), 1) });// obsidianShovel
+																																																		// stick
+				GameRegistry.addRecipe(new ItemStack(oShovel, 1, 0), new Object[] { " & ", " s ", " s ", '&', new ItemStack(Block.getBlockById(49), 1, 0), 's', new ItemStack(Item.getItemById(280), 1) });// obsidianShovel
 																																																			// from
-																																																							// stick
-				GameRegistry.addRecipe(new ItemStack(oSword, 1, 0),
-						new Object[] { " & ", " & ", " s ", '&', new ItemStack(Block.getBlockById(49), 1, 0), 's',
-								new ItemStack(Item.getItemById(280), 1) });// obsidianSword
+																																																			// stick
+				GameRegistry.addRecipe(new ItemStack(oSword, 1, 0), new Object[] { " & ", " & ", " s ", '&', new ItemStack(Block.getBlockById(49), 1, 0), 's', new ItemStack(Item.getItemById(280), 1) });// obsidianSword
 																																																			// from
-																																																							// stick
-				GameRegistry.addRecipe(new ItemStack(tPickaxe, 1, 0),
-						new Object[] { "&&&", " s ", " s ", '&', new ItemStack(FNBlocks.newStones, 1, 9), 's',
-								new ItemStack(Block.getBlockById(57), 1, 0) });// tsPa
+																																																			// stick
+				GameRegistry.addRecipe(new ItemStack(tPickaxe, 1, 0), new Object[] { "&&&", " s ", " s ", '&', new ItemStack(FNBlocks.newStones, 1, 9), 's', new ItemStack(Block.getBlockById(57), 1, 0) });// tsPa
 																																																			// from
-																																																							// titan(edge)
-																																																							// diamond
-																																																							// block(hilt)
-				GameRegistry.addRecipe(new ItemStack(tSword, 1, 0),
-						new Object[] { " & ", " & ", " s ", '&', new ItemStack(FNBlocks.newStones, 1, 9), 's',
-								new ItemStack(Block.getBlockById(57), 1, 0) });// tsSword
+																																																			// titan(edge)
+																																																			// diamond
+																																																			// block(hilt)
+				GameRegistry.addRecipe(new ItemStack(tSword, 1, 0), new Object[] { " & ", " & ", " s ", '&', new ItemStack(FNBlocks.newStones, 1, 9), 's', new ItemStack(Block.getBlockById(57), 1, 0) });// tsSword
 																																																			// from
-																																																							// titan(edge)
-																																																							// diamond
-																																																							// block(hilt)
+																																																			// titan(edge)
+																																																			// diamond
+																																																			// block(hilt)
 			}
-			GameRegistry.addRecipe(new ItemStack(FNItems.scythe, 1, 0), new Object[] { "&&s", " s&", "s  ", '&',
-					new ItemStack(Items.iron_ingot, 1, 0), 's', new ItemStack(Items.stick, 1, 0) });// scythe
+			GameRegistry.addRecipe(new ItemStack(FNItems.scythe, 1, 0), new Object[] { "&&s", " s&", "s  ", '&', new ItemStack(Items.iron_ingot, 1, 0), 's', new ItemStack(Items.stick, 1, 0) });// scythe
 		}
 		if (ForgottenNature.carbonItems) {// carbon recipes
-			GameRegistry.addRecipe(new ItemStack(carbonStuff, 1, 0),
-					new Object[] { "&&&", "&G&", "&&&", '&', new ItemStack(Item.getItemById(263), 1, 0), 'G',
-							new ItemStack(Item.getItemById(318), 1) });// coal
+			GameRegistry.addRecipe(new ItemStack(carbonStuff, 1, 0), new Object[] { "&&&", "&G&", "&&&", '&', new ItemStack(Item.getItemById(263), 1, 0), 'G', new ItemStack(Item.getItemById(318), 1) });// coal
 																																																			// chunk
-																																																							// from
-																																																							// coal
-																																																							// and
-																																																							// flint
-			GameRegistry.addRecipe(new ItemStack(carbonStuff, 1, 0),
-					new Object[] { "&&&", "&G&", "&&&", '&', new ItemStack(Item.getItemById(263), 1, 1), 'G',
-							new ItemStack(Item.getItemById(318), 1) });// coal
+																																																			// from
+																																																			// coal
+																																																			// and
+																																																			// flint
+			GameRegistry.addRecipe(new ItemStack(carbonStuff, 1, 0), new Object[] { "&&&", "&G&", "&&&", '&', new ItemStack(Item.getItemById(263), 1, 1), 'G', new ItemStack(Item.getItemById(318), 1) });// coal
 																																																			// chunk
-																																																							// from
-																																																							// charcoal
-																																																							// and
-																																																							// flint
-			GameRegistry.addRecipe(new ItemStack(carbonStuff, 1, 1),
-					new Object[] { "&&&", "&G&", "&&&", '&', new ItemStack(carbonStuff, 1, 0), 'G',
-							new ItemStack(Block.getBlockById(49), 1) });// compressed
+																																																			// from
+																																																			// charcoal
+																																																			// and
+																																																			// flint
+			GameRegistry.addRecipe(new ItemStack(carbonStuff, 1, 1), new Object[] { "&&&", "&G&", "&&&", '&', new ItemStack(carbonStuff, 1, 0), 'G', new ItemStack(Block.getBlockById(49), 1) });// compressed
 																																																	// coal
-																																																					// chunk
-																																																					// from
-																																																					// coal
-																																																					// chunk
-																																																					// and
-																																																					// obsidian
-			GameRegistry.addRecipe(new ItemStack(Item.getItemById(264), 1),
-					new Object[] { "&&&", "&&&", "&&&", '&', new ItemStack(carbonStuff, 1, 1) });// diamond
-			GameRegistry.addRecipe(new ItemStack(carbonStuff, 6, 2),
-					new Object[] { "&&&", "GGG", "&&&", '&', new ItemStack(Item.getItemById(287), 1), 'G',
-							new ItemStack(Item.getItemById(263), 1, 0) });// carbon
+																																																	// chunk
+																																																	// from
+																																																	// coal
+																																																	// chunk
+																																																	// and
+																																																	// obsidian
+			GameRegistry.addRecipe(new ItemStack(Item.getItemById(264), 1), new Object[] { "&&&", "&&&", "&&&", '&', new ItemStack(carbonStuff, 1, 1) });// diamond
+			GameRegistry.addRecipe(new ItemStack(carbonStuff, 6, 2), new Object[] { "&&&", "GGG", "&&&", '&', new ItemStack(Item.getItemById(287), 1), 'G', new ItemStack(Item.getItemById(263), 1, 0) });// carbon
 																																																			// wafers
-																																																							// from
-																																																							// string
-																																																							// and
-																																																							// coal
-			GameRegistry.addRecipe(new ItemStack(carbonStuff, 6, 2),
-					new Object[] { "&&&", "GGG", "&&&", '&', new ItemStack(Item.getItemById(287), 1), 'G',
-							new ItemStack(Item.getItemById(263), 1, 1) });// carbon
+																																																			// from
+																																																			// string
+																																																			// and
+																																																			// coal
+			GameRegistry.addRecipe(new ItemStack(carbonStuff, 6, 2), new Object[] { "&&&", "GGG", "&&&", '&', new ItemStack(Item.getItemById(287), 1), 'G', new ItemStack(Item.getItemById(263), 1, 1) });// carbon
 																																																			// wafers
-																																																							// from
-																																																							// string
-																																																							// and
-																																																							// charcoal
-			GameRegistry.addRecipe(new ItemStack(Item.getItemById(262), 4),
-					new Object[] { " f ", " s ", "&&&", '&', new ItemStack(carbonStuff, 1, 2), 's',
-							new ItemStack(Item.getItemById(280), 1), 'f', new ItemStack(Item.getItemById(318), 1) });// arrows
+																																																			// from
+																																																			// string
+																																																			// and
+																																																			// charcoal
+			GameRegistry.addRecipe(new ItemStack(Item.getItemById(262), 4), new Object[] { " f ", " s ", "&&&", '&', new ItemStack(carbonStuff, 1, 2), 's', new ItemStack(Item.getItemById(280), 1), 'f', new ItemStack(Item.getItemById(318), 1) });// arrows
 																																																														// from
-																																																																		// wafers
-																																																																		// and
-																																																																		// flint
+																																																														// wafers
+																																																														// and
+																																																														// flint
 		}
 		{// convenience recipes
-			GameRegistry.addRecipe(new ItemStack(Item.getItemById(348), 8),
-					new Object[] { "&&&", "&G&", "&&&", '&', new ItemStack(Item.getItemById(331), 1), 'G',
-							new ItemStack(Item.getItemById(266), 1) });// easierGlowstone
+			GameRegistry.addRecipe(new ItemStack(Item.getItemById(348), 8), new Object[] { "&&&", "&G&", "&&&", '&', new ItemStack(Item.getItemById(331), 1), 'G', new ItemStack(Item.getItemById(266), 1) });// easierGlowstone
 																																																				// from
-																																																								// redstone
-																																																								// and
-																																																								// gold
-																																																								// ingot
-			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(318), 2),
-					new Object[] { new ItemStack(Block.getBlockById(13), 1), new ItemStack(Block.getBlockById(13), 1),
-							new ItemStack(Block.getBlockById(13), 1), new ItemStack(Block.getBlockById(13), 1) });// flint
+																																																				// redstone
+																																																				// and
+																																																				// gold
+																																																				// ingot
+			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(318), 2), new Object[] { new ItemStack(Block.getBlockById(13), 1), new ItemStack(Block.getBlockById(13), 1), new ItemStack(Block.getBlockById(13), 1), new ItemStack(Block.getBlockById(13), 1) });// flint
 																																																																				// from
-																																																																								// gravel
-			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 4),
-					new Object[] { new ItemStack(Item.getItemById(352), 1), new ItemStack(Item.getItemById(352), 1) });// stick
+																																																																				// gravel
+			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 4), new Object[] { new ItemStack(Item.getItemById(352), 1), new ItemStack(Item.getItemById(352), 1) });// stick
 																																														// from
-																																																// bones
-			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 1),
-					new Object[] { new ItemStack(Block.getBlockById(6), 1, 0) });// stick
+																																														// bones
+			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 1), new Object[] { new ItemStack(Block.getBlockById(6), 1, 0) });// stick
 																																					// from
-																																							// sapling
-			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 1),
-					new Object[] { new ItemStack(Block.getBlockById(6), 1, 1) });// stick
+																																					// sapling
+			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 1), new Object[] { new ItemStack(Block.getBlockById(6), 1, 1) });// stick
 																																					// from
-																																							// sapling
-			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 1),
-					new Object[] { new ItemStack(Block.getBlockById(6), 1, 2) });// stick
+																																					// sapling
+			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 1), new Object[] { new ItemStack(Block.getBlockById(6), 1, 2) });// stick
 																																					// from
-																																							// sapling
-			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 1),
-					new Object[] { new ItemStack(Block.getBlockById(6), 1, 3) });// stick
+																																					// sapling
+			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 1), new Object[] { new ItemStack(Block.getBlockById(6), 1, 3) });// stick
 																																					// from
-																																							// sapling
-			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 1),
-					new Object[] { new ItemStack(Block.getBlockById(6), 1, 4) });// stick
+																																					// sapling
+			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 1), new Object[] { new ItemStack(Block.getBlockById(6), 1, 4) });// stick
 																																					// from
-																																							// sapling
-			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 1),
-					new Object[] { new ItemStack(Block.getBlockById(6), 1, 5) });// stick
+																																					// sapling
+			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 1), new Object[] { new ItemStack(Block.getBlockById(6), 1, 5) });// stick
 																																					// from
-																																							// sapling
+																																					// sapling
 			for (int n = 0; n < 16; n++) {
-				GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 1),
-						new Object[] { new ItemStack(newSap, 1, n) });// stick
-				GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 1),
-						new Object[] { new ItemStack(newSap2, 1, n) });// stick
-				GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 1),
-						new Object[] { new ItemStack(newSap3, 1, n) });// stick
+				GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 1), new Object[] { new ItemStack(newSap, 1, n) });// stick
+				GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 1), new Object[] { new ItemStack(newSap2, 1, n) });// stick
+				GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(280), 1), new Object[] { new ItemStack(newSap3, 1, n) });// stick
 			}
-			GameRegistry.addRecipe(new ItemStack(Block.getBlockById(49), 8),
-					new Object[] { "&&&", "&G&", "&&&", '&', new ItemStack(Item.getItemById(327), 1), 'G',
-							new ItemStack(Item.getItemById(326), 1) });// easierObsidian
+			GameRegistry.addRecipe(new ItemStack(Block.getBlockById(49), 8), new Object[] { "&&&", "&G&", "&&&", '&', new ItemStack(Item.getItemById(327), 1), 'G', new ItemStack(Item.getItemById(326), 1) });// easierObsidian
 																																																				// from
-																																																								// buckets
-			GameRegistry.addShapelessRecipe(new ItemStack(Block.getBlockById(79), 1),
-					new Object[] { new ItemStack(Block.getBlockById(80), 1), new ItemStack(Block.getBlockById(80), 1),
-							new ItemStack(Block.getBlockById(80), 1), new ItemStack(Block.getBlockById(80), 1) });// ice
+																																																				// buckets
+			GameRegistry.addShapelessRecipe(new ItemStack(Block.getBlockById(79), 1), new Object[] { new ItemStack(Block.getBlockById(80), 1), new ItemStack(Block.getBlockById(80), 1), new ItemStack(Block.getBlockById(80), 1), new ItemStack(Block.getBlockById(80), 1) });// ice
 																																																																				// from
-																																																																								// snow
-			GameRegistry.addRecipe(new ItemStack(Block.getBlockById(110), 1),
-					new Object[] { "&&&", "&G&", "&&&", '&', new ItemStack(Block.getBlockById(39), 1), 'G',
-							new ItemStack(Block.getBlockById(3), 1) });// mycelium
+																																																																				// snow
+			GameRegistry.addRecipe(new ItemStack(Block.getBlockById(110), 1), new Object[] { "&&&", "&G&", "&&&", '&', new ItemStack(Block.getBlockById(39), 1), 'G', new ItemStack(Block.getBlockById(3), 1) });// mycelium
 																																																					// from
-																																																									// mushroom
-																																																									// and
-																																																									// dirt
+																																																					// mushroom
+																																																					// and
+																																																					// dirt
 
 		}
 		{// veggie bowls
-			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 0),
-					new Object[] { new ItemStack(newCropFood, 1, 0), new ItemStack(newCropFood, 1, 6),
-							new ItemStack(newCropFood, 1, 7), new ItemStack(Item.getItemById(281), 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 1),
-					new Object[] { new ItemStack(newCropFood, 1, 1), new ItemStack(newCropFood, 1, 2),
-							new ItemStack(newCropFood, 1, 3), new ItemStack(Item.getItemById(281), 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 2),
-					new Object[] { new ItemStack(newCropFood, 1, 7), new ItemStack(newCropFood, 1, 14),
-							new ItemStack(newCropFood, 1, 15), new ItemStack(Item.getItemById(281), 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 3),
-					new Object[] { new ItemStack(newCropFood, 1, 1), new ItemStack(newCropFood, 1, 2),
-							new ItemStack(newCropFood, 1, 3), new ItemStack(newCropFood, 1, 7),
-							new ItemStack(newCropFood, 1, 14), new ItemStack(newCropFood, 1, 15),
-							new ItemStack(Item.getItemById(281), 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 4),
-					new Object[] { new ItemStack(newCropFood, 1, 2), new ItemStack(newCropFood, 1, 11),
-							new ItemStack(newCropFood, 1, 11), new ItemStack(Item.getItemById(281), 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 4),
-					new Object[] { new ItemStack(newCropFood, 1, 2), new ItemStack(newCropFood, 1, 2),
-							new ItemStack(newCropFood, 1, 11), new ItemStack(Item.getItemById(281), 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 5),
-					new Object[] { new ItemStack(newCropFood, 1, 4), new ItemStack(newCropFood, 1, 4),
-							new ItemStack(newCropFood, 1, 5), new ItemStack(Item.getItemById(281), 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 5),
-					new Object[] { new ItemStack(newCropFood, 1, 4), new ItemStack(newCropFood, 1, 5),
-							new ItemStack(newCropFood, 1, 5), new ItemStack(Item.getItemById(281), 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 5),
-					new Object[] { new ItemStack(newCropFood, 1, 4), new ItemStack(newCropFood, 1, 5),
-							new ItemStack(newCropFood, 1, 12), new ItemStack(Item.getItemById(281), 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 5),
-					new Object[] { new ItemStack(newCropFood, 1, 4), new ItemStack(newCropFood, 1, 4),
-							new ItemStack(newCropFood, 1, 12), new ItemStack(Item.getItemById(281), 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 5),
-					new Object[] { new ItemStack(newCropFood, 1, 4), new ItemStack(newCropFood, 1, 12),
-							new ItemStack(newCropFood, 1, 12), new ItemStack(Item.getItemById(281), 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 6),
-					new Object[] { new ItemStack(newCropFood, 1, 3), new ItemStack(newCropFood, 1, 6),
-							new ItemStack(newCropFood, 1, 10), new ItemStack(Item.getItemById(281), 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 7),
-					new Object[] { new ItemStack(newCropFood, 1, 11), new ItemStack(newCropFood, 1, 14),
-							new ItemStack(newCropFood, 1, 15), new ItemStack(Item.getItemById(281), 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 9),
-					new Object[] { new ItemStack(newCropFood, 1, 13), new ItemStack(newCropFood, 1, 13),
-							new ItemStack(newCropFood, 1, 3), new ItemStack(Item.getItemById(281), 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 9),
-					new Object[] { new ItemStack(newCropFood, 1, 13), new ItemStack(newCropFood, 1, 13),
-							new ItemStack(newCropFood, 1, 6), new ItemStack(Item.getItemById(281), 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 9),
-					new Object[] { new ItemStack(newCropFood, 1, 13), new ItemStack(newCropFood, 1, 13),
-							new ItemStack(newCropFood, 1, 10), new ItemStack(Item.getItemById(281), 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 9),
-					new Object[] { new ItemStack(newCropFood, 1, 13), new ItemStack(newCropFood, 1, 13),
-							new ItemStack(newCropFood, 1, 11), new ItemStack(Item.getItemById(281), 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 9),
-					new Object[] { new ItemStack(newCropFood, 1, 13), new ItemStack(newCropFood, 1, 13),
-							new ItemStack(newCropFood, 1, 14), new ItemStack(Item.getItemById(281), 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 9),
-					new Object[] { new ItemStack(newCropFood, 1, 13), new ItemStack(newCropFood, 1, 13),
-							new ItemStack(newCropFood, 1, 15), new ItemStack(Item.getItemById(281), 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 10),
-					new Object[] { new ItemStack(newCropFood, 1, 9), new ItemStack(newCropFood, 1, 9),
-							new ItemStack(newCropFood, 1, 3), new ItemStack(Item.getItemById(281), 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 10),
-					new Object[] { new ItemStack(newCropFood, 1, 9), new ItemStack(newCropFood, 1, 9),
-							new ItemStack(newCropFood, 1, 6), new ItemStack(Item.getItemById(281), 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 10),
-					new Object[] { new ItemStack(newCropFood, 1, 9), new ItemStack(newCropFood, 1, 9),
-							new ItemStack(newCropFood, 1, 10), new ItemStack(Item.getItemById(281), 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 10),
-					new Object[] { new ItemStack(newCropFood, 1, 9), new ItemStack(newCropFood, 1, 9),
-							new ItemStack(newCropFood, 1, 11), new ItemStack(Item.getItemById(281), 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 10),
-					new Object[] { new ItemStack(newCropFood, 1, 9), new ItemStack(newCropFood, 1, 9),
-							new ItemStack(newCropFood, 1, 14), new ItemStack(Item.getItemById(281), 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 10),
-					new Object[] { new ItemStack(newCropFood, 1, 9), new ItemStack(newCropFood, 1, 9),
-							new ItemStack(newCropFood, 1, 15), new ItemStack(Item.getItemById(281), 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 11),
-					new Object[] { new ItemStack(newCropFood, 1, 9), new ItemStack(newCropFood, 1, 9),
-							new ItemStack(newCropFood, 1, 13), new ItemStack(newCropFood, 1, 13),
-							new ItemStack(Item.getItemById(281), 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 12),
-					new Object[] { new ItemStack(newCropFood, 1, 10), new ItemStack(newCropFood, 1, 11),
-							new ItemStack(newCropFood, 1, 13), new ItemStack(newCropFood, 1, 14),
-							new ItemStack(Item.getItemById(281), 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 0), new Object[] { new ItemStack(newCropFood, 1, 0), new ItemStack(newCropFood, 1, 6), new ItemStack(newCropFood, 1, 7), new ItemStack(Item.getItemById(281), 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 1), new Object[] { new ItemStack(newCropFood, 1, 1), new ItemStack(newCropFood, 1, 2), new ItemStack(newCropFood, 1, 3), new ItemStack(Item.getItemById(281), 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 2), new Object[] { new ItemStack(newCropFood, 1, 7), new ItemStack(newCropFood, 1, 14), new ItemStack(newCropFood, 1, 15), new ItemStack(Item.getItemById(281), 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 3), new Object[] { new ItemStack(newCropFood, 1, 1), new ItemStack(newCropFood, 1, 2), new ItemStack(newCropFood, 1, 3), new ItemStack(newCropFood, 1, 7), new ItemStack(newCropFood, 1, 14), new ItemStack(newCropFood, 1, 15), new ItemStack(Item.getItemById(281), 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 4), new Object[] { new ItemStack(newCropFood, 1, 2), new ItemStack(newCropFood, 1, 11), new ItemStack(newCropFood, 1, 11), new ItemStack(Item.getItemById(281), 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 4), new Object[] { new ItemStack(newCropFood, 1, 2), new ItemStack(newCropFood, 1, 2), new ItemStack(newCropFood, 1, 11), new ItemStack(Item.getItemById(281), 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 5), new Object[] { new ItemStack(newCropFood, 1, 4), new ItemStack(newCropFood, 1, 4), new ItemStack(newCropFood, 1, 5), new ItemStack(Item.getItemById(281), 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 5), new Object[] { new ItemStack(newCropFood, 1, 4), new ItemStack(newCropFood, 1, 5), new ItemStack(newCropFood, 1, 5), new ItemStack(Item.getItemById(281), 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 5), new Object[] { new ItemStack(newCropFood, 1, 4), new ItemStack(newCropFood, 1, 5), new ItemStack(newCropFood, 1, 12), new ItemStack(Item.getItemById(281), 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 5), new Object[] { new ItemStack(newCropFood, 1, 4), new ItemStack(newCropFood, 1, 4), new ItemStack(newCropFood, 1, 12), new ItemStack(Item.getItemById(281), 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 5), new Object[] { new ItemStack(newCropFood, 1, 4), new ItemStack(newCropFood, 1, 12), new ItemStack(newCropFood, 1, 12), new ItemStack(Item.getItemById(281), 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 6), new Object[] { new ItemStack(newCropFood, 1, 3), new ItemStack(newCropFood, 1, 6), new ItemStack(newCropFood, 1, 10), new ItemStack(Item.getItemById(281), 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 7), new Object[] { new ItemStack(newCropFood, 1, 11), new ItemStack(newCropFood, 1, 14), new ItemStack(newCropFood, 1, 15), new ItemStack(Item.getItemById(281), 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 9), new Object[] { new ItemStack(newCropFood, 1, 13), new ItemStack(newCropFood, 1, 13), new ItemStack(newCropFood, 1, 3), new ItemStack(Item.getItemById(281), 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 9), new Object[] { new ItemStack(newCropFood, 1, 13), new ItemStack(newCropFood, 1, 13), new ItemStack(newCropFood, 1, 6), new ItemStack(Item.getItemById(281), 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 9), new Object[] { new ItemStack(newCropFood, 1, 13), new ItemStack(newCropFood, 1, 13), new ItemStack(newCropFood, 1, 10), new ItemStack(Item.getItemById(281), 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 9), new Object[] { new ItemStack(newCropFood, 1, 13), new ItemStack(newCropFood, 1, 13), new ItemStack(newCropFood, 1, 11), new ItemStack(Item.getItemById(281), 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 9), new Object[] { new ItemStack(newCropFood, 1, 13), new ItemStack(newCropFood, 1, 13), new ItemStack(newCropFood, 1, 14), new ItemStack(Item.getItemById(281), 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 9), new Object[] { new ItemStack(newCropFood, 1, 13), new ItemStack(newCropFood, 1, 13), new ItemStack(newCropFood, 1, 15), new ItemStack(Item.getItemById(281), 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 10), new Object[] { new ItemStack(newCropFood, 1, 9), new ItemStack(newCropFood, 1, 9), new ItemStack(newCropFood, 1, 3), new ItemStack(Item.getItemById(281), 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 10), new Object[] { new ItemStack(newCropFood, 1, 9), new ItemStack(newCropFood, 1, 9), new ItemStack(newCropFood, 1, 6), new ItemStack(Item.getItemById(281), 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 10), new Object[] { new ItemStack(newCropFood, 1, 9), new ItemStack(newCropFood, 1, 9), new ItemStack(newCropFood, 1, 10), new ItemStack(Item.getItemById(281), 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 10), new Object[] { new ItemStack(newCropFood, 1, 9), new ItemStack(newCropFood, 1, 9), new ItemStack(newCropFood, 1, 11), new ItemStack(Item.getItemById(281), 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 10), new Object[] { new ItemStack(newCropFood, 1, 9), new ItemStack(newCropFood, 1, 9), new ItemStack(newCropFood, 1, 14), new ItemStack(Item.getItemById(281), 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 10), new Object[] { new ItemStack(newCropFood, 1, 9), new ItemStack(newCropFood, 1, 9), new ItemStack(newCropFood, 1, 15), new ItemStack(Item.getItemById(281), 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 11), new Object[] { new ItemStack(newCropFood, 1, 9), new ItemStack(newCropFood, 1, 9), new ItemStack(newCropFood, 1, 13), new ItemStack(newCropFood, 1, 13), new ItemStack(Item.getItemById(281), 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newFoodDish, 1, 12), new Object[] { new ItemStack(newCropFood, 1, 10), new ItemStack(newCropFood, 1, 11), new ItemStack(newCropFood, 1, 13), new ItemStack(newCropFood, 1, 14), new ItemStack(Item.getItemById(281), 1) });
 			// fruit stuff
 			for (int x = 0; x < 10; x++) {
 				for (int y = 0; y < 10; y++) {
 					if (x != y) {
-						GameRegistry.addShapelessRecipe(new ItemStack(ItemNewFood3, 1, 2),
-								new Object[] { new ItemStack(ItemNewCup, 1, 0), new ItemStack(ItemFruit, 1, x),
-										new ItemStack(ItemFruit, 1, y) });// juice
-						GameRegistry.addShapelessRecipe(new ItemStack(ItemNewFood3, 1, 1),
-								new Object[] { Item.getItemById(332), new ItemStack(ItemNewCup, 1, 0),
-										new ItemStack(ItemFruit, 1, x), new ItemStack(ItemFruit, 1, y) });// smoothie
+						GameRegistry.addShapelessRecipe(new ItemStack(ItemNewFood3, 1, 2), new Object[] { new ItemStack(ItemNewCup, 1, 0), new ItemStack(ItemFruit, 1, x), new ItemStack(ItemFruit, 1, y) });// juice
+						GameRegistry.addShapelessRecipe(new ItemStack(ItemNewFood3, 1, 1), new Object[] { Item.getItemById(332), new ItemStack(ItemNewCup, 1, 0), new ItemStack(ItemFruit, 1, x), new ItemStack(ItemFruit, 1, y) });// smoothie
 																																																									// from
-																																																													// snowball
-						GameRegistry.addShapelessRecipe(new ItemStack(ItemNewFood2, 1, 0),
-								new Object[] { Item.getItemById(281), new ItemStack(ItemFruit, 1, x),
-										new ItemStack(ItemFruit, 1, y), new ItemStack(Item.getItemById(260), 1) });// fruit
+																																																									// snowball
+						GameRegistry.addShapelessRecipe(new ItemStack(ItemNewFood2, 1, 0), new Object[] { Item.getItemById(281), new ItemStack(ItemFruit, 1, x), new ItemStack(ItemFruit, 1, y), new ItemStack(Item.getItemById(260), 1) });// fruit
 																																																											// salad
 					}
 					if (y < 3)
-						GameRegistry.addShapelessRecipe(new ItemStack(ItemNewFood, 1, 4),
-								new Object[] { Item.getItemById(297), new ItemStack(ItemFruit, 1, x),
-										new ItemStack(ItemNuts, 1, y) });// fruit-nut
-																																																// bread
+						GameRegistry.addShapelessRecipe(new ItemStack(ItemNewFood, 1, 4), new Object[] { Item.getItemById(297), new ItemStack(ItemFruit, 1, x), new ItemStack(ItemNuts, 1, y) });// fruit-nut
+																																																	// bread
 					for (int z = 0; z < 10; z++) {
 						if (x != y) {
 							if (y != z && x != z)
-								GameRegistry.addShapelessRecipe(new ItemStack(ItemNewFood2, 1, 0),
-										new Object[] { Item.getItemById(281), new ItemStack(ItemFruit, 1, x),
-												new ItemStack(ItemFruit, 1, y), new ItemStack(ItemFruit, 1, z) });// fruit
-																																																										// salad
+								GameRegistry.addShapelessRecipe(new ItemStack(ItemNewFood2, 1, 0), new Object[] { Item.getItemById(281), new ItemStack(ItemFruit, 1, x), new ItemStack(ItemFruit, 1, y), new ItemStack(ItemFruit, 1, z) });// fruit
+																																																											// salad
 							if (z < 3)
-								GameRegistry.addShapelessRecipe(new ItemStack(ItemNewFood2, 1, 1),
-										new Object[] { Item.getItemById(281), new ItemStack(ItemFruit, 1, x),
-												new ItemStack(ItemFruit, 1, y), new ItemStack(ItemNuts, 1, z) });// frui-nut
-																																																										// salad
+								GameRegistry.addShapelessRecipe(new ItemStack(ItemNewFood2, 1, 1), new Object[] { Item.getItemById(281), new ItemStack(ItemFruit, 1, x), new ItemStack(ItemFruit, 1, y), new ItemStack(ItemNuts, 1, z) });// frui-nut
+																																																											// salad
 						}
 					}
 				}
 			}
 			// berry bread from a set of berries.
-			GameRegistry.addShapelessRecipe(new ItemStack(ItemNewFood, 1, 0), new Object[] { Item.getItemById(297),
-					new ItemStack(ItemFruit, 1, 5), new ItemStack(ItemFruit, 1, 5) });
-			GameRegistry.addShapelessRecipe(new ItemStack(ItemNewFood, 1, 1), new Object[] { Item.getItemById(297),
-					new ItemStack(ItemFruit, 1, 6), new ItemStack(ItemFruit, 1, 6) });
-			GameRegistry.addShapelessRecipe(new ItemStack(ItemNewFood, 1, 2), new Object[] { Item.getItemById(297),
-					new ItemStack(ItemFruit, 1, 7), new ItemStack(ItemFruit, 1, 7) });
-			GameRegistry.addShapelessRecipe(new ItemStack(ItemNewFood, 1, 3), new Object[] { Item.getItemById(297),
-					new ItemStack(ItemFruit, 1, 8), new ItemStack(ItemFruit, 1, 8) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ItemNewFood, 1, 0), new Object[] { Item.getItemById(297), new ItemStack(ItemFruit, 1, 5), new ItemStack(ItemFruit, 1, 5) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ItemNewFood, 1, 1), new Object[] { Item.getItemById(297), new ItemStack(ItemFruit, 1, 6), new ItemStack(ItemFruit, 1, 6) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ItemNewFood, 1, 2), new Object[] { Item.getItemById(297), new ItemStack(ItemFruit, 1, 7), new ItemStack(ItemFruit, 1, 7) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ItemNewFood, 1, 3), new Object[] { Item.getItemById(297), new ItemStack(ItemFruit, 1, 8), new ItemStack(ItemFruit, 1, 8) });
 			// Coconut milk from glass cup and coconut
-			GameRegistry.addShapelessRecipe(new ItemStack(ItemNewFood3, 1, 0),
-					new Object[] { new ItemStack(ItemNewCup, 1, 0), new ItemStack(ItemNuts, 1, 2) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ItemNewFood3, 1, 0), new Object[] { new ItemStack(ItemNewCup, 1, 0), new ItemStack(ItemNuts, 1, 2) });
 			// other crop goods
-			GameRegistry.addShapelessRecipe(new ItemStack(Block.getBlockById(35), 1, 0),
-					new Object[] { new ItemStack(newCropGoods, 1, 0), new ItemStack(newCropGoods, 1, 0),
-							new ItemStack(newCropGoods, 1, 0), new ItemStack(newCropGoods, 1, 0) });// wool
+			GameRegistry.addShapelessRecipe(new ItemStack(Block.getBlockById(35), 1, 0), new Object[] { new ItemStack(newCropGoods, 1, 0), new ItemStack(newCropGoods, 1, 0), new ItemStack(newCropGoods, 1, 0), new ItemStack(newCropGoods, 1, 0) });// wool
 																																																														// from
-																																																																		// cotton
-			GameRegistry.addShapelessRecipe(new ItemStack(newCropGoods, 1, 2),
-					new Object[] { new ItemStack(newCropGoods, 1, 1), new ItemStack(newCropGoods, 1, 1),
-							new ItemStack(newCropGoods, 1, 1) });// rope yarn
-			GameRegistry.addShapelessRecipe(new ItemStack(newCropGoods, 1, 3),
-					new Object[] { new ItemStack(newCropGoods, 1, 2), new ItemStack(newCropGoods, 1, 2),
-							new ItemStack(newCropGoods, 1, 2), new ItemStack(newCropGoods, 1, 2),
-							new ItemStack(newCropGoods, 1, 2), new ItemStack(newCropGoods, 1, 2) });// rope
+																																																														// cotton
+			GameRegistry.addShapelessRecipe(new ItemStack(newCropGoods, 1, 2), new Object[] { new ItemStack(newCropGoods, 1, 1), new ItemStack(newCropGoods, 1, 1), new ItemStack(newCropGoods, 1, 1) });// rope yarn
+			GameRegistry.addShapelessRecipe(new ItemStack(newCropGoods, 1, 3), new Object[] { new ItemStack(newCropGoods, 1, 2), new ItemStack(newCropGoods, 1, 2), new ItemStack(newCropGoods, 1, 2), new ItemStack(newCropGoods, 1, 2), new ItemStack(newCropGoods, 1, 2), new ItemStack(newCropGoods, 1, 2) });// rope
 																																																																													// strand
-			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.rope, 1, 0),
-					new Object[] { new ItemStack(newCropGoods, 1, 3), new ItemStack(newCropGoods, 1, 3),
-							new ItemStack(newCropGoods, 1, 3), new ItemStack(newCropGoods, 1, 3),
-							new ItemStack(newCropGoods, 1, 3), new ItemStack(newCropGoods, 1, 3) });// rope
+			GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.rope, 1, 0), new Object[] { new ItemStack(newCropGoods, 1, 3), new ItemStack(newCropGoods, 1, 3), new ItemStack(newCropGoods, 1, 3), new ItemStack(newCropGoods, 1, 3), new ItemStack(newCropGoods, 1, 3), new ItemStack(newCropGoods, 1, 3) });// rope
 			// dried bamboo
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 1, 12),
-					new Object[] { new ItemStack(newPlanks, 1, 11) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 1, 12), new Object[] { new ItemStack(newPlanks, 1, 11) });
 			// Bamboo planks
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 1, 11), new Object[] {
-					new ItemStack(FNBlocks.hempCotBamCorn, 1, 11), new ItemStack(FNBlocks.hempCotBamCorn, 1, 11),
-					new ItemStack(FNBlocks.hempCotBamCorn, 1, 11), new ItemStack(FNBlocks.hempCotBamCorn, 1, 11) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 1, 11), new Object[] { new ItemStack(FNBlocks.hempCotBamCorn, 1, 11), new ItemStack(FNBlocks.hempCotBamCorn, 1, 11), new ItemStack(FNBlocks.hempCotBamCorn, 1, 11), new ItemStack(FNBlocks.hempCotBamCorn, 1, 11) });
 			// gunpowder from nitre and sulfur//
 			if (ForgottenNature.craftGunpowder) {
-				GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(289), 3, 0),
-						new Object[] { new ItemStack(powders, 1, 0), new ItemStack(powders, 1, 1),
-								new ItemStack(Item.getItemById(263), 1, 0) });// gunpowder
+				GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(289), 3, 0), new Object[] { new ItemStack(powders, 1, 0), new ItemStack(powders, 1, 1), new ItemStack(Item.getItemById(263), 1, 0) });// gunpowder
 																																																						// from
-																																																										// powders
-																																																										// and
-																																																										// coal
-				GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(289), 3, 0),
-						new Object[] { new ItemStack(powders, 1, 0), new ItemStack(powders, 1, 1),
-								new ItemStack(Item.getItemById(263), 1, 1) });// gunpowder
+																																																						// powders
+																																																						// and
+																																																						// coal
+				GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(289), 3, 0), new Object[] { new ItemStack(powders, 1, 0), new ItemStack(powders, 1, 1), new ItemStack(Item.getItemById(263), 1, 1) });// gunpowder
 																																																						// from
-																																																										// powders
-																																																										// and
-																																																										// charcoal
+																																																						// powders
+																																																						// and
+																																																						// charcoal
 			}
 		}
 		{// Cobble and flint from new stones, bricks from new stones, stairs
-				// from new stone bricks
-			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(318), 4),
-					new Object[] { new ItemStack(newStones, 1, 0) });// flint
+			// from new stone bricks
+			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(318), 4), new Object[] { new ItemStack(newStones, 1, 0) });// flint
 																																		// from
-																																				// chert
-			GameRegistry.addShapelessRecipe(new ItemStack(Block.getBlockById(4)),
-					new Object[] { new ItemStack(newStones, 1, 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(Block.getBlockById(4)),
-					new Object[] { new ItemStack(newStones, 1, 2) });
-			GameRegistry.addShapelessRecipe(new ItemStack(Block.getBlockById(4)),
-					new Object[] { new ItemStack(newStones, 1, 3) });
-			GameRegistry.addShapelessRecipe(new ItemStack(Block.getBlockById(4)),
-					new Object[] { new ItemStack(newStones, 1, 4) });
+																																		// chert
+			GameRegistry.addShapelessRecipe(new ItemStack(Block.getBlockById(4)), new Object[] { new ItemStack(newStones, 1, 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(Block.getBlockById(4)), new Object[] { new ItemStack(newStones, 1, 2) });
+			GameRegistry.addShapelessRecipe(new ItemStack(Block.getBlockById(4)), new Object[] { new ItemStack(newStones, 1, 3) });
+			GameRegistry.addShapelessRecipe(new ItemStack(Block.getBlockById(4)), new Object[] { new ItemStack(newStones, 1, 4) });
 			// new stones to new bricks
-			GameRegistry.addShapelessRecipe(new ItemStack(newStones, 4, 5),
-					new Object[] { new ItemStack(newStones, 1, 1), new ItemStack(newStones, 1, 1),
-							new ItemStack(newStones, 1, 1), new ItemStack(newStones, 1, 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newStones, 4, 6),
-					new Object[] { new ItemStack(newStones, 1, 2), new ItemStack(newStones, 1, 2),
-							new ItemStack(newStones, 1, 2), new ItemStack(newStones, 1, 2) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newStones, 4, 7),
-					new Object[] { new ItemStack(newStones, 1, 3), new ItemStack(newStones, 1, 3),
-							new ItemStack(newStones, 1, 3), new ItemStack(newStones, 1, 3) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newStones, 4, 8),
-					new Object[] { new ItemStack(newStones, 1, 4), new ItemStack(newStones, 1, 4),
-							new ItemStack(newStones, 1, 4), new ItemStack(newStones, 1, 4) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newStones, 4, 5), new Object[] { new ItemStack(newStones, 1, 1), new ItemStack(newStones, 1, 1), new ItemStack(newStones, 1, 1), new ItemStack(newStones, 1, 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newStones, 4, 6), new Object[] { new ItemStack(newStones, 1, 2), new ItemStack(newStones, 1, 2), new ItemStack(newStones, 1, 2), new ItemStack(newStones, 1, 2) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newStones, 4, 7), new Object[] { new ItemStack(newStones, 1, 3), new ItemStack(newStones, 1, 3), new ItemStack(newStones, 1, 3), new ItemStack(newStones, 1, 3) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newStones, 4, 8), new Object[] { new ItemStack(newStones, 1, 4), new ItemStack(newStones, 1, 4), new ItemStack(newStones, 1, 4), new ItemStack(newStones, 1, 4) });
 			// new stone brick stairs
-			GameRegistry.addRecipe(new ItemStack(sStairs1, 4),
-					new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(FNBlocks.newStones, 1, 5) });
-			GameRegistry.addRecipe(new ItemStack(sStairs2, 4),
-					new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(FNBlocks.newStones, 1, 6) });
-			GameRegistry.addRecipe(new ItemStack(sStairs3, 4),
-					new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(FNBlocks.newStones, 1, 7) });
-			GameRegistry.addRecipe(new ItemStack(sStairs4, 4),
-					new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(FNBlocks.newStones, 1, 8) });
+			GameRegistry.addRecipe(new ItemStack(sStairs1, 4), new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(FNBlocks.newStones, 1, 5) });
+			GameRegistry.addRecipe(new ItemStack(sStairs2, 4), new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(FNBlocks.newStones, 1, 6) });
+			GameRegistry.addRecipe(new ItemStack(sStairs3, 4), new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(FNBlocks.newStones, 1, 7) });
+			GameRegistry.addRecipe(new ItemStack(sStairs4, 4), new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(FNBlocks.newStones, 1, 8) });
 			// new stones and bricks to half stones and bricks
-			GameRegistry.addShapelessRecipe(new ItemStack(halfStone, 6, 0), new Object[] {
-					new ItemStack(newStones, 1, 1), new ItemStack(newStones, 1, 1), new ItemStack(newStones, 1, 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(halfStone, 6, 1), new Object[] {
-					new ItemStack(newStones, 1, 2), new ItemStack(newStones, 1, 2), new ItemStack(newStones, 1, 2) });
-			GameRegistry.addShapelessRecipe(new ItemStack(halfStone, 6, 2), new Object[] {
-					new ItemStack(newStones, 1, 3), new ItemStack(newStones, 1, 3), new ItemStack(newStones, 1, 3) });
-			GameRegistry.addShapelessRecipe(new ItemStack(halfStone, 6, 3), new Object[] {
-					new ItemStack(newStones, 1, 4), new ItemStack(newStones, 1, 4), new ItemStack(newStones, 1, 4) });
-			GameRegistry.addShapelessRecipe(new ItemStack(halfStone, 6, 4), new Object[] {
-					new ItemStack(newStones, 1, 5), new ItemStack(newStones, 1, 5), new ItemStack(newStones, 1, 5) });
-			GameRegistry.addShapelessRecipe(new ItemStack(halfStone, 6, 5), new Object[] {
-					new ItemStack(newStones, 1, 6), new ItemStack(newStones, 1, 6), new ItemStack(newStones, 1, 6) });
-			GameRegistry.addShapelessRecipe(new ItemStack(halfStone, 6, 6), new Object[] {
-					new ItemStack(newStones, 1, 7), new ItemStack(newStones, 1, 7), new ItemStack(newStones, 1, 7) });
-			GameRegistry.addShapelessRecipe(new ItemStack(halfStone, 6, 7), new Object[] {
-					new ItemStack(newStones, 1, 8), new ItemStack(newStones, 1, 8), new ItemStack(newStones, 1, 8) });
+			GameRegistry.addShapelessRecipe(new ItemStack(halfStone, 6, 0), new Object[] { new ItemStack(newStones, 1, 1), new ItemStack(newStones, 1, 1), new ItemStack(newStones, 1, 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(halfStone, 6, 1), new Object[] { new ItemStack(newStones, 1, 2), new ItemStack(newStones, 1, 2), new ItemStack(newStones, 1, 2) });
+			GameRegistry.addShapelessRecipe(new ItemStack(halfStone, 6, 2), new Object[] { new ItemStack(newStones, 1, 3), new ItemStack(newStones, 1, 3), new ItemStack(newStones, 1, 3) });
+			GameRegistry.addShapelessRecipe(new ItemStack(halfStone, 6, 3), new Object[] { new ItemStack(newStones, 1, 4), new ItemStack(newStones, 1, 4), new ItemStack(newStones, 1, 4) });
+			GameRegistry.addShapelessRecipe(new ItemStack(halfStone, 6, 4), new Object[] { new ItemStack(newStones, 1, 5), new ItemStack(newStones, 1, 5), new ItemStack(newStones, 1, 5) });
+			GameRegistry.addShapelessRecipe(new ItemStack(halfStone, 6, 5), new Object[] { new ItemStack(newStones, 1, 6), new ItemStack(newStones, 1, 6), new ItemStack(newStones, 1, 6) });
+			GameRegistry.addShapelessRecipe(new ItemStack(halfStone, 6, 6), new Object[] { new ItemStack(newStones, 1, 7), new ItemStack(newStones, 1, 7), new ItemStack(newStones, 1, 7) });
+			GameRegistry.addShapelessRecipe(new ItemStack(halfStone, 6, 7), new Object[] { new ItemStack(newStones, 1, 8), new ItemStack(newStones, 1, 8), new ItemStack(newStones, 1, 8) });
 		}
 		{// Dye from new flowers//
-			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(351), 1, 9),
-					new Object[] { new ItemStack(newF, 1, 0) });
-			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(351), 1, 6),
-					new Object[] { new ItemStack(newF, 1, 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(351), 1, 11),
-					new Object[] { new ItemStack(newF, 1, 2) });
-			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(351), 1, 6),
-					new Object[] { new ItemStack(newF, 1, 3) });
-			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(351), 1, 11),
-					new Object[] { new ItemStack(newF, 1, 4) });
-			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(351), 1, 9),
-					new Object[] { new ItemStack(newF, 1, 5) });
-			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(351), 1, 5),
-					new Object[] { new ItemStack(newF, 1, 6) });
-			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(351), 1, 14),
-					new Object[] { new ItemStack(newF, 1, 7) });
-			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(351), 1, 13),
-					new Object[] { new ItemStack(newF, 1, 8) });
-			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(351), 1, 7),
-					new Object[] { new ItemStack(newF, 1, 9) });
+			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(351), 1, 9), new Object[] { new ItemStack(newF, 1, 0) });
+			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(351), 1, 6), new Object[] { new ItemStack(newF, 1, 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(351), 1, 11), new Object[] { new ItemStack(newF, 1, 2) });
+			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(351), 1, 6), new Object[] { new ItemStack(newF, 1, 3) });
+			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(351), 1, 11), new Object[] { new ItemStack(newF, 1, 4) });
+			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(351), 1, 9), new Object[] { new ItemStack(newF, 1, 5) });
+			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(351), 1, 5), new Object[] { new ItemStack(newF, 1, 6) });
+			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(351), 1, 14), new Object[] { new ItemStack(newF, 1, 7) });
+			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(351), 1, 13), new Object[] { new ItemStack(newF, 1, 8) });
+			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(351), 1, 7), new Object[] { new ItemStack(newF, 1, 9) });
 		}
 		{// planks and new planks from new logs//
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 2),
-					new Object[] { new ItemStack(newLogs, 1, 0) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 6),
-					new Object[] { new ItemStack(newLogs, 1, 2) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 6),
-					new Object[] { new ItemStack(newLogs, 1, 4) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 7),
-					new Object[] { new ItemStack(newLogs, 1, 6) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 8),
-					new Object[] { new ItemStack(newLogs, 1, 8) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 6),
-					new Object[] { new ItemStack(newLogs, 1, 10) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 10),
-					new Object[] { new ItemStack(newLogs, 1, 12) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 3),
-					new Object[] { new ItemStack(newLogs, 1, 14) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 6),
-					new Object[] { new ItemStack(newLogs2, 1, 0) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 0),
-					new Object[] { new ItemStack(newLogs2, 1, 2) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 0),
-					new Object[] { new ItemStack(newLogs2, 1, 4) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 6),
-					new Object[] { new ItemStack(newLogs2, 1, 6) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 6),
-					new Object[] { new ItemStack(newLogs2, 1, 8) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 0),
-					new Object[] { new ItemStack(newLogs2, 1, 10) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 0),
-					new Object[] { new ItemStack(newLogs2, 1, 12) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 6),
-					new Object[] { new ItemStack(newLogs2, 1, 14) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 0),
-					new Object[] { new ItemStack(newLogs3, 1, 0) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 3),
-					new Object[] { new ItemStack(newLogs3, 1, 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 5),
-					new Object[] { new ItemStack(newLogs3, 1, 2) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 4),
-					new Object[] { new ItemStack(newLogs3, 1, 3) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 9),
-					new Object[] { new ItemStack(newLogs3, 1, 4) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 0),
-					new Object[] { new ItemStack(newLogs3, 1, 5) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 3),
-					new Object[] { new ItemStack(newLogs3, 1, 6) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 5),
-					new Object[] { new ItemStack(newLogs3, 1, 7) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 4),
-					new Object[] { new ItemStack(newLogs3, 1, 8) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 9),
-					new Object[] { new ItemStack(newLogs3, 1, 9) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 0),
-					new Object[] { new ItemStack(newLogs3, 1, 10) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 3),
-					new Object[] { new ItemStack(newLogs3, 1, 11) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 5),
-					new Object[] { new ItemStack(newLogs3, 1, 12) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 4),
-					new Object[] { new ItemStack(newLogs3, 1, 13) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 9),
-					new Object[] { new ItemStack(newLogs3, 1, 14) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 13),
-					new Object[] { new ItemStack(FNBlocks.netherLogs, 1, 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 14),
-					new Object[] { new ItemStack(FNBlocks.netherLogs, 1, 0) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 2), new Object[] { new ItemStack(newLogs, 1, 0) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 6), new Object[] { new ItemStack(newLogs, 1, 2) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 6), new Object[] { new ItemStack(newLogs, 1, 4) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 7), new Object[] { new ItemStack(newLogs, 1, 6) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 8), new Object[] { new ItemStack(newLogs, 1, 8) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 6), new Object[] { new ItemStack(newLogs, 1, 10) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 10), new Object[] { new ItemStack(newLogs, 1, 12) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 3), new Object[] { new ItemStack(newLogs, 1, 14) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 6), new Object[] { new ItemStack(newLogs2, 1, 0) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 0), new Object[] { new ItemStack(newLogs2, 1, 2) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 0), new Object[] { new ItemStack(newLogs2, 1, 4) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 6), new Object[] { new ItemStack(newLogs2, 1, 6) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 6), new Object[] { new ItemStack(newLogs2, 1, 8) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 0), new Object[] { new ItemStack(newLogs2, 1, 10) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 0), new Object[] { new ItemStack(newLogs2, 1, 12) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 6), new Object[] { new ItemStack(newLogs2, 1, 14) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 0), new Object[] { new ItemStack(newLogs3, 1, 0) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 3), new Object[] { new ItemStack(newLogs3, 1, 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 5), new Object[] { new ItemStack(newLogs3, 1, 2) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 4), new Object[] { new ItemStack(newLogs3, 1, 3) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 9), new Object[] { new ItemStack(newLogs3, 1, 4) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 0), new Object[] { new ItemStack(newLogs3, 1, 5) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 3), new Object[] { new ItemStack(newLogs3, 1, 6) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 5), new Object[] { new ItemStack(newLogs3, 1, 7) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 4), new Object[] { new ItemStack(newLogs3, 1, 8) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 9), new Object[] { new ItemStack(newLogs3, 1, 9) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 0), new Object[] { new ItemStack(newLogs3, 1, 10) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 3), new Object[] { new ItemStack(newLogs3, 1, 11) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 5), new Object[] { new ItemStack(newLogs3, 1, 12) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 4), new Object[] { new ItemStack(newLogs3, 1, 13) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 9), new Object[] { new ItemStack(newLogs3, 1, 14) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 13), new Object[] { new ItemStack(FNBlocks.netherLogs, 1, 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 14), new Object[] { new ItemStack(FNBlocks.netherLogs, 1, 0) });
 
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 2),
-					new Object[] { new ItemStack(newLogs, 1, 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 6),
-					new Object[] { new ItemStack(newLogs, 1, 3) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 6),
-					new Object[] { new ItemStack(newLogs, 1, 5) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 7),
-					new Object[] { new ItemStack(newLogs, 1, 7) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 8),
-					new Object[] { new ItemStack(newLogs, 1, 9) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 6),
-					new Object[] { new ItemStack(newLogs, 1, 11) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 10),
-					new Object[] { new ItemStack(newLogs, 1, 13) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 3),
-					new Object[] { new ItemStack(newLogs, 1, 15) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 6),
-					new Object[] { new ItemStack(newLogs2, 1, 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 0),
-					new Object[] { new ItemStack(newLogs2, 1, 3) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 0),
-					new Object[] { new ItemStack(newLogs2, 1, 5) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 6),
-					new Object[] { new ItemStack(newLogs2, 1, 7) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 6),
-					new Object[] { new ItemStack(newLogs2, 1, 9) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 0),
-					new Object[] { new ItemStack(newLogs2, 1, 11) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 0),
-					new Object[] { new ItemStack(newLogs2, 1, 13) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 6),
-					new Object[] { new ItemStack(newLogs2, 1, 15) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 0),
-					new Object[] { new ItemStack(newLogs3, 1, 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 3),
-					new Object[] { new ItemStack(newLogs3, 1, 3) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 5),
-					new Object[] { new ItemStack(newLogs3, 1, 5) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 4),
-					new Object[] { new ItemStack(newLogs3, 1, 7) });
-			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 9),
-					new Object[] { new ItemStack(newLogs3, 1, 9) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 2), new Object[] { new ItemStack(newLogs, 1, 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 6), new Object[] { new ItemStack(newLogs, 1, 3) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 6), new Object[] { new ItemStack(newLogs, 1, 5) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 7), new Object[] { new ItemStack(newLogs, 1, 7) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 8), new Object[] { new ItemStack(newLogs, 1, 9) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 6), new Object[] { new ItemStack(newLogs, 1, 11) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 10), new Object[] { new ItemStack(newLogs, 1, 13) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 3), new Object[] { new ItemStack(newLogs, 1, 15) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 6), new Object[] { new ItemStack(newLogs2, 1, 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 0), new Object[] { new ItemStack(newLogs2, 1, 3) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 0), new Object[] { new ItemStack(newLogs2, 1, 5) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 6), new Object[] { new ItemStack(newLogs2, 1, 7) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 6), new Object[] { new ItemStack(newLogs2, 1, 9) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 0), new Object[] { new ItemStack(newLogs2, 1, 11) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 0), new Object[] { new ItemStack(newLogs2, 1, 13) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 6), new Object[] { new ItemStack(newLogs2, 1, 15) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 0), new Object[] { new ItemStack(newLogs3, 1, 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 3), new Object[] { new ItemStack(newLogs3, 1, 3) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 5), new Object[] { new ItemStack(newLogs3, 1, 5) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 4), new Object[] { new ItemStack(newLogs3, 1, 7) });
+			GameRegistry.addShapelessRecipe(new ItemStack(newPlanks, 4, 9), new Object[] { new ItemStack(newLogs3, 1, 9) });
 
 			// parquet planks
-			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 0),
-					new Object[] { "&& ", "&  ", "&  ", '&', new ItemStack(Block.getBlockById(5), 1, 0) });// =====harringbone
-			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 0),
-					new Object[] { "&& ", "&  ", "&  ", '&', new ItemStack(Block.getBlockById(5), 1, 1) });
-			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 0),
-					new Object[] { "&& ", "&  ", "&  ", '&', new ItemStack(Block.getBlockById(5), 1, 2) });
-			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 0),
-					new Object[] { "&& ", "&  ", "&  ", '&', new ItemStack(Block.getBlockById(5), 1, 3) });
-			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 0),
-					new Object[] { "&& ", "&  ", "&  ", '&', new ItemStack(Block.getBlockById(5), 1, 4) });
-			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 1),
-					new Object[] { "& &", "   ", "& &", '&', new ItemStack(newPlanks, 1, 0) });/// =====X-parquet
+			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 0), new Object[] { "&& ", "&  ", "&  ", '&', new ItemStack(Block.getBlockById(5), 1, 0) });// =====harringbone
+			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 0), new Object[] { "&& ", "&  ", "&  ", '&', new ItemStack(Block.getBlockById(5), 1, 1) });
+			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 0), new Object[] { "&& ", "&  ", "&  ", '&', new ItemStack(Block.getBlockById(5), 1, 2) });
+			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 0), new Object[] { "&& ", "&  ", "&  ", '&', new ItemStack(Block.getBlockById(5), 1, 3) });
+			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 0), new Object[] { "&& ", "&  ", "&  ", '&', new ItemStack(Block.getBlockById(5), 1, 4) });
+			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 1), new Object[] { "& &", "   ", "& &", '&', new ItemStack(newPlanks, 1, 0) });/// =====X-parquet
 																																				/// plank
-			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 1),
-					new Object[] { "& &", "   ", "& &", '&', new ItemStack(newPlanks, 1, 10) });
-			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 1),
-					new Object[] { "& &", "   ", "& &", '&', new ItemStack(Block.getBlockById(5), 1, 5) });
-			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 1),
-					new Object[] { "& &", "   ", "& &", '&', new ItemStack(Block.getBlockById(5), 1, 1) });
-			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 2),
-					new Object[] { "& &", " & ", "& &", '&', new ItemStack(newPlanks, 1, 4) });/// =====Frederiksborg
+			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 1), new Object[] { "& &", "   ", "& &", '&', new ItemStack(newPlanks, 1, 10) });
+			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 1), new Object[] { "& &", "   ", "& &", '&', new ItemStack(Block.getBlockById(5), 1, 5) });
+			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 1), new Object[] { "& &", "   ", "& &", '&', new ItemStack(Block.getBlockById(5), 1, 1) });
+			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 2), new Object[] { "& &", " & ", "& &", '&', new ItemStack(newPlanks, 1, 4) });/// =====Frederiksborg
 																																				/// parquet
-																																						/// plank
-			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 2),
-					new Object[] { "& &", " & ", "& &", '&', new ItemStack(newPlanks, 1, 5) });
-			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 2),
-					new Object[] { "& &", " & ", "& &", '&', new ItemStack(Block.getBlockById(5), 1, 0) });
-			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 2),
-					new Object[] { "& &", " & ", "& &", '&', new ItemStack(Block.getBlockById(5), 1, 3) });
-			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 3),
-					new Object[] { "& &", "   ", "& &", '&', new ItemStack(newPlanks, 1, 6) });/// =====For
+																																				/// plank
+			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 2), new Object[] { "& &", " & ", "& &", '&', new ItemStack(newPlanks, 1, 5) });
+			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 2), new Object[] { "& &", " & ", "& &", '&', new ItemStack(Block.getBlockById(5), 1, 0) });
+			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 2), new Object[] { "& &", " & ", "& &", '&', new ItemStack(Block.getBlockById(5), 1, 3) });
+			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 3), new Object[] { "& &", "   ", "& &", '&', new ItemStack(newPlanks, 1, 6) });/// =====For
 																																				/// Don
-																																						/// Parquet
-																																						/// plank
-			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 3),
-					new Object[] { "& &", "   ", "& &", '&', new ItemStack(newPlanks, 1, 14) });
-			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 3),
-					new Object[] { "& &", "   ", "& &", '&', new ItemStack(Block.getBlockById(5), 1, 0) });
-			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 4),
-					new Object[] { " & ", "& &", " & ", '&', new ItemStack(newPlanks, 1, 6) });/// =====Lattice
 																																				/// Parquet
-																																						/// plank
-			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 4),
-					new Object[] { " & ", "& &", " & ", '&', new ItemStack(Block.getBlockById(5), 1, 0) });
-			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 5),
-					new Object[] { " & ", "& &", " & ", '&', new ItemStack(newPlanks, 1, 8) });
-			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 6),
-					new Object[] { "& &", " & ", "& &", '&', new ItemStack(newPlanks, 1, 0) });/// =====Pavimente
+																																				/// plank
+			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 3), new Object[] { "& &", "   ", "& &", '&', new ItemStack(newPlanks, 1, 14) });
+			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 3), new Object[] { "& &", "   ", "& &", '&', new ItemStack(Block.getBlockById(5), 1, 0) });
+			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 4), new Object[] { " & ", "& &", " & ", '&', new ItemStack(newPlanks, 1, 6) });/// =====Lattice
+																																				/// Parquet
+																																				/// plank
+			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 4), new Object[] { " & ", "& &", " & ", '&', new ItemStack(Block.getBlockById(5), 1, 0) });
+			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 5), new Object[] { " & ", "& &", " & ", '&', new ItemStack(newPlanks, 1, 8) });
+			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 6), new Object[] { "& &", " & ", "& &", '&', new ItemStack(newPlanks, 1, 0) });/// =====Pavimente
 																																				/// parquet
-																																						/// plank
-			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 6),
-					new Object[] { "& &", " & ", "& &", '&', new ItemStack(newPlanks, 1, 10) });
-			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 6),
-					new Object[] { "& &", " & ", "& &", '&', new ItemStack(Block.getBlockById(5), 1, 1) });
+																																				/// plank
+			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 6), new Object[] { "& &", " & ", "& &", '&', new ItemStack(newPlanks, 1, 10) });
+			GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 6), new Object[] { "& &", " & ", "& &", '&', new ItemStack(Block.getBlockById(5), 1, 1) });
 		}
 		{// netherrot spores and souldust from nether logs, soul sand and
-				// netherrack
-			GameRegistry.addShapelessRecipe(new ItemStack(powders, 8, 2),
-					new Object[] { new ItemStack(FNBlocks.netherLogs, 1, 3), new ItemStack(Block.getBlockById(87)) });
-			GameRegistry.addShapelessRecipe(new ItemStack(powders, 8, 3),
-					new Object[] { new ItemStack(FNBlocks.netherLogs, 1, 0), new ItemStack(Block.getBlockById(88)) });
+			// netherrack
+			GameRegistry.addShapelessRecipe(new ItemStack(powders, 8, 2), new Object[] { new ItemStack(FNBlocks.netherLogs, 1, 3), new ItemStack(Block.getBlockById(87)) });
+			GameRegistry.addShapelessRecipe(new ItemStack(powders, 8, 3), new Object[] { new ItemStack(FNBlocks.netherLogs, 1, 0), new ItemStack(Block.getBlockById(88)) });
 			// Nether mushroom
-			GameRegistry.addShapelessRecipe(new ItemStack(newSap3, 2, 5),
-					new Object[] { new ItemStack(FNBlocks.netherLogs, 1, 2) });// nether
+			GameRegistry.addShapelessRecipe(new ItemStack(newSap3, 2, 5), new Object[] { new ItemStack(FNBlocks.netherLogs, 1, 2) });// nether
 																																		// mushroom
-			GameRegistry.addShapelessRecipe(new ItemStack(newSap3, 4, 5),
-					new Object[] { new ItemStack(FNBlocks.netherLogs, 1, 3) });// nether
+			GameRegistry.addShapelessRecipe(new ItemStack(newSap3, 4, 5), new Object[] { new ItemStack(FNBlocks.netherLogs, 1, 3) });// nether
 																																		// mushroom
-																																				// saw items//
-			GameRegistry.addRecipe(new ItemStack(sawItem, 1, 0),
-					new Object[] { "   ", "&&&", " & ", '&', new ItemStack(Item.getItemById(265), 1) });// sawtooth
+																																		// saw items//
+			GameRegistry.addRecipe(new ItemStack(sawItem, 1, 0), new Object[] { "   ", "&&&", " & ", '&', new ItemStack(Item.getItemById(265), 1) });// sawtooth
 																																						// from
-																																								// iron
-			GameRegistry.addRecipe(new ItemStack(sawItem, 1, 0),
-					new Object[] { "&&&", " & ", "   ", '&', new ItemStack(Item.getItemById(265), 1) });// sawtooth
+																																						// iron
+			GameRegistry.addRecipe(new ItemStack(sawItem, 1, 0), new Object[] { "&&&", " & ", "   ", '&', new ItemStack(Item.getItemById(265), 1) });// sawtooth
 																																						// from
-																																								// iron
-			GameRegistry.addRecipe(new ItemStack(sawItem, 1, 2),
-					new Object[] { "s&&", "& &", "&&&", 's', new ItemStack(Item.getItemById(265), 1), '&',
-							new ItemStack(Block.getBlockById(5)) });// sawhandle
+																																						// iron
+			GameRegistry.addRecipe(new ItemStack(sawItem, 1, 2), new Object[] { "s&&", "& &", "&&&", 's', new ItemStack(Item.getItemById(265), 1), '&', new ItemStack(Block.getBlockById(5)) });// sawhandle
 																																																// from
-																																																				// wood
-																																																				// and
-																																																				// iron
-			GameRegistry.addShapelessRecipe(new ItemStack(sawItem, 1, 1), new Object[] { new ItemStack(sawItem, 1, 0),
-					new ItemStack(sawItem, 1, 0), new ItemStack(sawItem, 1, 0), new ItemStack(sawItem, 1, 0) });// sawBlade
-			GameRegistry.addShapelessRecipe(new ItemStack(sawTool, 1),
-					new Object[] { new ItemStack(sawItem, 1, 1), new ItemStack(sawItem, 1, 2) });// saw
+																																																// wood
+																																																// and
+																																																// iron
+			GameRegistry.addShapelessRecipe(new ItemStack(sawItem, 1, 1), new Object[] { new ItemStack(sawItem, 1, 0), new ItemStack(sawItem, 1, 0), new ItemStack(sawItem, 1, 0), new ItemStack(sawItem, 1, 0) });// sawBlade
+			GameRegistry.addShapelessRecipe(new ItemStack(sawTool, 1), new Object[] { new ItemStack(sawItem, 1, 1), new ItemStack(sawItem, 1, 2) });// saw
 		}
 		{// Sticks, tools and stairs from new planks.
-			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs1, 4),
-					new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 0) });// new
+			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs1, 4), new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 0) });// new
 																																						// stairs
-																																								// from
-																																								// new
-																																								// planks
-			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs2, 4),
-					new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 1) });// new
+																																						// from
+																																						// new
+																																						// planks
+			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs2, 4), new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 1) });// new
 																																						// stairs
-																																								// from
-																																								// new
-																																								// planks
-			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs3, 4),
-					new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 2) });// new
+																																						// from
+																																						// new
+																																						// planks
+			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs3, 4), new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 2) });// new
 																																						// stairs
-																																								// from
-																																								// new
-																																								// planks
-			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs4, 4),
-					new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 3) });// new
+																																						// from
+																																						// new
+																																						// planks
+			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs4, 4), new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 3) });// new
 																																						// stairs
-																																								// from
-																																								// new
-																																								// planks
-			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs5, 4),
-					new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 4) });// new
+																																						// from
+																																						// new
+																																						// planks
+			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs5, 4), new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 4) });// new
 																																						// stairs
-																																								// from
-																																								// new
-																																								// planks
-			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs6, 4),
-					new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 5) });// new
+																																						// from
+																																						// new
+																																						// planks
+			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs6, 4), new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 5) });// new
 																																						// stairs
-																																								// from
-																																								// new
-																																								// planks
-			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs7, 4),
-					new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 6) });// new
+																																						// from
+																																						// new
+																																						// planks
+			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs7, 4), new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 6) });// new
 																																						// stairs
-																																								// from
-																																								// new
-																																								// planks
-			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs8, 4),
-					new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 7) });// new
+																																						// from
+																																						// new
+																																						// planks
+			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs8, 4), new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 7) });// new
 																																						// stairs
-																																								// from
-																																								// new
-																																								// planks
-			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs10, 4),
-					new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 9) });// new
+																																						// from
+																																						// new
+																																						// planks
+			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs10, 4), new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 9) });// new
 																																						// stairs
-																																								// from
-																																								// new
-																																								// planks
-			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs11, 4),
-					new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 10) });// new
+																																						// from
+																																						// new
+																																						// planks
+			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs11, 4), new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 10) });// new
 																																						// stairs
-																																								// from
-																																								// new
-																																								// planks
-			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs12, 4),
-					new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 11) });// new
+																																						// from
+																																						// new
+																																						// planks
+			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs12, 4), new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 11) });// new
 																																						// stairs
-																																								// from
-																																								// new
-																																								// planks
-			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs13, 4),
-					new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 12) });// new
+																																						// from
+																																						// new
+																																						// planks
+			GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs13, 4), new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(newPlanks, 1, 12) });// new
 																																						// stairs
-																																								// from
-																																								// new
-																																								// planks
+																																						// from
+																																						// new
+																																						// planks
 			for (int x = 0; x < 15; x++) {
-				GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 0),
-						new Object[] { "&& ", "&  ", "&  ", '&', new ItemStack(newPlanks, 1, x) });// parquet
-				GameRegistry.addShapelessRecipe(new ItemStack(Block.getBlockById(5), 1),
-						new Object[] { new ItemStack(newPlanks, 1, x) });// special
+				GameRegistry.addRecipe(new ItemStack(newPlanks2, 4, 0), new Object[] { "&& ", "&  ", "&  ", '&', new ItemStack(newPlanks, 1, x) });// parquet
+				GameRegistry.addShapelessRecipe(new ItemStack(Block.getBlockById(5), 1), new Object[] { new ItemStack(newPlanks, 1, x) });// special
 																																			// planks
-																																					// to
-																																					// normal
-																																					// planks
+																																			// to
+																																			// normal
+																																			// planks
 				if (x < 8) {
-					GameRegistry.addRecipe(new ItemStack(halfPlank, 6, x),
-							new Object[] { "   ", "   ", "&&&", '&', new ItemStack(newPlanks, 1, x) });// half
+					GameRegistry.addRecipe(new ItemStack(halfPlank, 6, x), new Object[] { "   ", "   ", "&&&", '&', new ItemStack(newPlanks, 1, x) });// half
 																																						// planks
-																																								// from
-																																								// new
-																																								// planks
-					GameRegistry.addRecipe(new ItemStack(halfPlank, 6, x),
-							new Object[] { "   ", "&&&", "   ", '&', new ItemStack(newPlanks, 1, x) });// half
+																																						// from
+																																						// new
 																																						// planks
-																																								// from
-																																								// new
-																																								// planks
-					GameRegistry.addRecipe(new ItemStack(halfPlank, 6, x),
-							new Object[] { "&&&", "   ", "   ", '&', new ItemStack(newPlanks, 1, x) });// half
+					GameRegistry.addRecipe(new ItemStack(halfPlank, 6, x), new Object[] { "   ", "&&&", "   ", '&', new ItemStack(newPlanks, 1, x) });// half
 																																						// planks
-																																								// from
-																																								// new
-																																								// planks
+																																						// from
+																																						// new
+																																						// planks
+					GameRegistry.addRecipe(new ItemStack(halfPlank, 6, x), new Object[] { "&&&", "   ", "   ", '&', new ItemStack(newPlanks, 1, x) });// half
+																																						// planks
+																																						// from
+																																						// new
+																																						// planks
 				} else if (x < 13) {
-					GameRegistry.addRecipe(new ItemStack(halfPlank2, 6, x - 8),
-							new Object[] { "   ", "   ", "&&&", '&', new ItemStack(newPlanks, 1, x) });// half
+					GameRegistry.addRecipe(new ItemStack(halfPlank2, 6, x - 8), new Object[] { "   ", "   ", "&&&", '&', new ItemStack(newPlanks, 1, x) });// half
 																																							// planks
-																																									// from
-																																									// new
-																																									// planks
-					GameRegistry.addRecipe(new ItemStack(halfPlank2, 6, x - 8),
-							new Object[] { "   ", "&&&", "   ", '&', new ItemStack(newPlanks, 1, x) });// half
+																																							// from
+																																							// new
 																																							// planks
-																																									// from
-																																									// new
-																																									// planks
-					GameRegistry.addRecipe(new ItemStack(halfPlank2, 6, x - 8),
-							new Object[] { "&&&", "   ", "   ", '&', new ItemStack(newPlanks, 1, x) });// half
+					GameRegistry.addRecipe(new ItemStack(halfPlank2, 6, x - 8), new Object[] { "   ", "&&&", "   ", '&', new ItemStack(newPlanks, 1, x) });// half
 																																							// planks
-																																									// from
-																																									// new
-																																									// planks
+																																							// from
+																																							// new
+																																							// planks
+					GameRegistry.addRecipe(new ItemStack(halfPlank2, 6, x - 8), new Object[] { "&&&", "   ", "   ", '&', new ItemStack(newPlanks, 1, x) });// half
+																																							// planks
+																																							// from
+																																							// new
+																																							// planks
 				}
 				if (x < 13)
-					GameRegistry.addRecipe(new ItemStack(sawItem, 1, 2),
-							new Object[] { "s&&", "& &", "&&&", 's', new ItemStack(Item.getItemById(265), 1), '&',
-									new ItemStack(newPlanks, 1, x) });// sawhandle
-																																																// from
-																																																					// iron
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(280), 4),
-						new Object[] { "   ", " & ", " & ", '&', new ItemStack(newPlanks, 1, x) });// stick
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(280), 4),
-						new Object[] { " & ", " & ", "   ", '&', new ItemStack(newPlanks, 1, x) });// stick
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(280), 4),
-						new Object[] { "   ", "&  ", "&  ", '&', new ItemStack(newPlanks, 1, x) });// stick
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(280), 4),
-						new Object[] { "&  ", "&  ", "   ", '&', new ItemStack(newPlanks, 1, x) });// stick
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(280), 4),
-						new Object[] { "   ", "  &", "  &", '&', new ItemStack(newPlanks, 1, x) });// stick
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(280), 4),
-						new Object[] { "  &", "  &", "   ", '&', new ItemStack(newPlanks, 1, x) });// stick
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(270)),
-						new Object[] { "&&&", " * ", " * ", '&', new ItemStack(newPlanks, 1, x), '*',
-								new ItemStack(Item.getItemById(280)) });// woodpa
+					GameRegistry.addRecipe(new ItemStack(sawItem, 1, 2), new Object[] { "s&&", "& &", "&&&", 's', new ItemStack(Item.getItemById(265), 1), '&', new ItemStack(newPlanks, 1, x) });// sawhandle
 																																																	// from
-																																																					// stick
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(269)),
-						new Object[] { " & ", " * ", " * ", '&', new ItemStack(newPlanks, 1, x), '*',
-								new ItemStack(Item.getItemById(280)) });// woodshovel
+																																																	// iron
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(280), 4), new Object[] { "   ", " & ", " & ", '&', new ItemStack(newPlanks, 1, x) });// stick
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(280), 4), new Object[] { " & ", " & ", "   ", '&', new ItemStack(newPlanks, 1, x) });// stick
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(280), 4), new Object[] { "   ", "&  ", "&  ", '&', new ItemStack(newPlanks, 1, x) });// stick
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(280), 4), new Object[] { "&  ", "&  ", "   ", '&', new ItemStack(newPlanks, 1, x) });// stick
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(280), 4), new Object[] { "   ", "  &", "  &", '&', new ItemStack(newPlanks, 1, x) });// stick
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(280), 4), new Object[] { "  &", "  &", "   ", '&', new ItemStack(newPlanks, 1, x) });// stick
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(270)), new Object[] { "&&&", " * ", " * ", '&', new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(280)) });// woodpa
 																																																	// from
-																																																					// stick
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(269)),
-						new Object[] { "&  ", "*  ", "*  ", '&', new ItemStack(newPlanks, 1, x), '*',
-								new ItemStack(Item.getItemById(280)) });// woodshovel
+																																																	// stick
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(269)), new Object[] { " & ", " * ", " * ", '&', new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(280)) });// woodshovel
 																																																	// from
-																																																					// stick
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(269)),
-						new Object[] { "  &", "  *", "  *", '&', new ItemStack(newPlanks, 1, x), '*',
-								new ItemStack(Item.getItemById(280)) });// woodshovel
+																																																	// stick
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(269)), new Object[] { "&  ", "*  ", "*  ", '&', new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(280)) });// woodshovel
 																																																	// from
-																																																					// stick
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(290)),
-						new Object[] { "&& ", " * ", " * ", '&', new ItemStack(newPlanks, 1, x), '*',
-								new ItemStack(Item.getItemById(280)) });// woodhoe
+																																																	// stick
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(269)), new Object[] { "  &", "  *", "  *", '&', new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(280)) });// woodshovel
 																																																	// from
-																																																					// stick
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(290)),
-						new Object[] { " &&", " * ", " * ", '&', new ItemStack(newPlanks, 1, x), '*',
-								new ItemStack(Item.getItemById(280)) });// woodhoe
+																																																	// stick
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(290)), new Object[] { "&& ", " * ", " * ", '&', new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(280)) });// woodhoe
 																																																	// from
-																																																					// stick
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(271)),
-						new Object[] { "&& ", "&* ", " * ", '&', new ItemStack(newPlanks, 1, x), '*',
-								new ItemStack(Item.getItemById(280)) });// woodaxe
+																																																	// stick
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(290)), new Object[] { " &&", " * ", " * ", '&', new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(280)) });// woodhoe
 																																																	// from
-																																																					// stick
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(271)),
-						new Object[] { " &&", " *&", " * ", '&', new ItemStack(newPlanks, 1, x), '*',
-								new ItemStack(Item.getItemById(280)) });// woodaxe
+																																																	// stick
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(271)), new Object[] { "&& ", "&* ", " * ", '&', new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(280)) });// woodaxe
 																																																	// from
-																																																					// stick
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(268)),
-						new Object[] { " & ", " & ", " * ", '&', new ItemStack(newPlanks, 1, x), '*',
-								new ItemStack(Item.getItemById(280)) });// woodsword
+																																																	// stick
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(271)), new Object[] { " &&", " *&", " * ", '&', new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(280)) });// woodaxe
 																																																	// from
-																																																					// stick
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(268)),
-						new Object[] { "&  ", "&  ", "*  ", '&', new ItemStack(newPlanks, 1, x), '*',
-								new ItemStack(Item.getItemById(280)) });// woodsword
+																																																	// stick
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(268)), new Object[] { " & ", " & ", " * ", '&', new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(280)) });// woodsword
 																																																	// from
-																																																					// stick
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(268)),
-						new Object[] { "  &", "  &", "  *", '&', new ItemStack(newPlanks, 1, x), '*',
-								new ItemStack(Item.getItemById(280)) });// woodsword
+																																																	// stick
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(268)), new Object[] { "&  ", "&  ", "*  ", '&', new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(280)) });// woodsword
 																																																	// from
-																																																					// stick
-																																																					// workbench from new planks
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(58)),
-						new Object[] { "   ", "&& ", "&& ", '&', new ItemStack(newPlanks, 1, x) });// workbench
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(58)),
-						new Object[] { "&& ", "&& ", "   ", '&', new ItemStack(newPlanks, 1, x) });// workbench
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(58)),
-						new Object[] { "   ", " &&", " &&", '&', new ItemStack(newPlanks, 1, x) });// workbench
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(58)),
-						new Object[] { " &&", " &&", "   ", '&', new ItemStack(newPlanks, 1, x) });// workbench
+																																																	// stick
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(268)), new Object[] { "  &", "  &", "  *", '&', new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(280)) });// woodsword
+																																																	// from
+																																																	// stick
+																																																	// workbench from new planks
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(58)), new Object[] { "   ", "&& ", "&& ", '&', new ItemStack(newPlanks, 1, x) });// workbench
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(58)), new Object[] { "&& ", "&& ", "   ", '&', new ItemStack(newPlanks, 1, x) });// workbench
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(58)), new Object[] { "   ", " &&", " &&", '&', new ItemStack(newPlanks, 1, x) });// workbench
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(58)), new Object[] { " &&", " &&", "   ", '&', new ItemStack(newPlanks, 1, x) });// workbench
 				// chest, bookshelf, and stairs from new planks
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(54)),
-						new Object[] { "&&&", "& &", "&&&", '&', new ItemStack(newPlanks, 1, x) });
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(47)),
-						new Object[] { "&&&", "***", "&&&", '&', new ItemStack(newPlanks, 1, x), '*',
-								new ItemStack(Item.getItemById(340)) });// bookshelf
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(54)), new Object[] { "&&&", "& &", "&&&", '&', new ItemStack(newPlanks, 1, x) });
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(47)), new Object[] { "&&&", "***", "&&&", '&', new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(340)) });// bookshelf
 																																																	// from
-																																																					// books
-																																																					// and
-																																																					// new
-																																																					// planks
-																																																					// boat and bowl from new planks
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(333)),
-						new Object[] { "   ", "& &", "&&&", '&', new ItemStack(newPlanks, 1, x) });// boat
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(333)),
-						new Object[] { "& &", "&&&", "   ", '&', new ItemStack(newPlanks, 1, x) });// boat
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(281), 4),
-						new Object[] { "& &", " & ", "   ", '&', new ItemStack(newPlanks, 1, x) });// bowl
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(281), 4),
-						new Object[] { "   ", "& &", " & ", '&', new ItemStack(newPlanks, 1, x) });// bowl
+																																																	// books
+																																																	// and
+																																																	// new
+																																																	// planks
+																																																	// boat and bowl from new planks
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(333)), new Object[] { "   ", "& &", "&&&", '&', new ItemStack(newPlanks, 1, x) });// boat
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(333)), new Object[] { "& &", "&&&", "   ", '&', new ItemStack(newPlanks, 1, x) });// boat
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(281), 4), new Object[] { "& &", " & ", "   ", '&', new ItemStack(newPlanks, 1, x) });// bowl
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(281), 4), new Object[] { "   ", "& &", " & ", '&', new ItemStack(newPlanks, 1, x) });// bowl
 				// preasure plate, trap door and door from new planks
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(72)),
-						new Object[] { "   ", "&& ", "   ", '&', new ItemStack(newPlanks, 1, x) });// wooden
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(72)), new Object[] { "   ", "&& ", "   ", '&', new ItemStack(newPlanks, 1, x) });// wooden
 																																							// pressure
-																																									// plate
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(72)),
-						new Object[] { "&& ", "   ", "   ", '&', new ItemStack(newPlanks, 1, x) });// wooden
-																																							// pressure
-																																									// plate
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(72)),
-						new Object[] { "   ", "   ", "&& ", '&', new ItemStack(newPlanks, 1, x) });// wooden
-																																							// pressure
-																																									// plate
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(72)),
-						new Object[] { "   ", "   ", " &&", '&', new ItemStack(newPlanks, 1, x) });// wooden
-																																							// pressure
-																																									// plate
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(72)),
-						new Object[] { "   ", " &&", "   ", '&', new ItemStack(newPlanks, 1, x) });// wooden
-																																							// pressure
-																																									// plate
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(72)),
-						new Object[] { " &&", "   ", "   ", '&', new ItemStack(newPlanks, 1, x) });// pressure
 																																							// plate
-																																									// wooden
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(96), 2),
-						new Object[] { "&&&", "&&&", "   ", '&', new ItemStack(newPlanks, 1, x) });// trapdoor
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(96), 2),
-						new Object[] { "   ", "&&&", "&&&", '&', new ItemStack(newPlanks, 1, x) });// trapdoor
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(324)),
-						new Object[] { "&& ", "&& ", "&& ", '&', new ItemStack(newPlanks, 1, x) });// wood
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(72)), new Object[] { "&& ", "   ", "   ", '&', new ItemStack(newPlanks, 1, x) });// wooden
+																																							// pressure
+																																							// plate
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(72)), new Object[] { "   ", "   ", "&& ", '&', new ItemStack(newPlanks, 1, x) });// wooden
+																																							// pressure
+																																							// plate
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(72)), new Object[] { "   ", "   ", " &&", '&', new ItemStack(newPlanks, 1, x) });// wooden
+																																							// pressure
+																																							// plate
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(72)), new Object[] { "   ", " &&", "   ", '&', new ItemStack(newPlanks, 1, x) });// wooden
+																																							// pressure
+																																							// plate
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(72)), new Object[] { " &&", "   ", "   ", '&', new ItemStack(newPlanks, 1, x) });// pressure
+																																							// plate
+																																							// wooden
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(96), 2), new Object[] { "&&&", "&&&", "   ", '&', new ItemStack(newPlanks, 1, x) });// trapdoor
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(96), 2), new Object[] { "   ", "&&&", "&&&", '&', new ItemStack(newPlanks, 1, x) });// trapdoor
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(324)), new Object[] { "&& ", "&& ", "&& ", '&', new ItemStack(newPlanks, 1, x) });// wood
 																																						// door
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(324)),
-						new Object[] { " &&", " &&", " &&", '&', new ItemStack(newPlanks, 1, x) });// wood
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(324)), new Object[] { " &&", " &&", " &&", '&', new ItemStack(newPlanks, 1, x) });// wood
 																																						// door
-																																								// Jukebox, note block, piston and sign from new planks
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(84)),
-						new Object[] { "&&&", "&*&", "&&&", '&', new ItemStack(newPlanks, 1, x), '*',
-								new ItemStack(Item.getItemById(264)) });// jukebox
+																																						// Jukebox, note block, piston and sign from new planks
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(84)), new Object[] { "&&&", "&*&", "&&&", '&', new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(264)) });// jukebox
 																																																	// from
-																																																					// diamond
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(25)),
-						new Object[] { "&&&", "&*&", "&&&", '&', new ItemStack(newPlanks, 1, x), '*',
-								new ItemStack(Item.getItemById(331)) });// music
+																																																	// diamond
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(25)), new Object[] { "&&&", "&*&", "&&&", '&', new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(331)) });// music
 																																																	// block
-																																																					// from
-																																																					// redstone
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(33)),
-						new Object[] { "&&&", "$*$", "$r$", '&', new ItemStack(newPlanks, 1, x), '$',
-								Block.getBlockById(4), '*', new ItemStack(Item.getItemById(265)), 'r',
-								new ItemStack(Item.getItemById(331)) });// piston
+																																																	// from
+																																																	// redstone
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(33)), new Object[] { "&&&", "$*$", "$r$", '&', new ItemStack(newPlanks, 1, x), '$', Block.getBlockById(4), '*', new ItemStack(Item.getItemById(265)), 'r', new ItemStack(Item.getItemById(331)) });// piston
 																																																																			// from
-																																																																							// cobble,
-																																																																							// iron
-																																																																							// and
-																																																																							// redstone
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(323)),
-						new Object[] { "&&&", "&&&", " * ", '&', new ItemStack(newPlanks, 1, x), '*',
-								new ItemStack(Item.getItemById(280)) });// sign
+																																																																			// cobble,
+																																																																			// iron
+																																																																			// and
+																																																																			// redstone
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(323)), new Object[] { "&&&", "&&&", " * ", '&', new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(280)) });// sign
 																																																	// from
-																																																					// planks
-																																																					// and
-																																																					// stick
-																																																					// bed and gate from new planks
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(355)),
-						new Object[] { "&&&", "***", "   ", '*', new ItemStack(newPlanks, 1, x), '&',
-								Block.getBlockById(35) });// bed
+																																																	// planks
+																																																	// and
+																																																	// stick
+																																																	// bed and gate from new planks
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(355)), new Object[] { "&&&", "***", "   ", '*', new ItemStack(newPlanks, 1, x), '&', Block.getBlockById(35) });// bed
 																																														// from
-																																																		// wool
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(355)),
-						new Object[] { "   ", "&&&", "***", '*', new ItemStack(newPlanks, 1, x), '&',
-								Block.getBlockById(35) });// bed
+																																														// wool
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(355)), new Object[] { "   ", "&&&", "***", '*', new ItemStack(newPlanks, 1, x), '&', Block.getBlockById(35) });// bed
 																																														// from
-																																																		// wool
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(85)),
-						new Object[] { "*&*", "*&*", "   ", '&', new ItemStack(newPlanks, 1, x), '*',
-								new ItemStack(Item.getItemById(280)) });// fence
+																																														// wool
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(85)), new Object[] { "*&*", "*&*", "   ", '&', new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(280)) });// fence
 																																																	// from
-																																																					// sticks
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(85)),
-						new Object[] { "   ", "*&*", "*&*", '&', new ItemStack(newPlanks, 1, x), '*',
-								new ItemStack(Item.getItemById(280)) });// fence
+																																																	// sticks
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(85)), new Object[] { "   ", "*&*", "*&*", '&', new ItemStack(newPlanks, 1, x), '*', new ItemStack(Item.getItemById(280)) });// fence
 																																																	// from
-																																																					// sticks
+																																																	// sticks
 			}
 			{// Crystal Stuff
-					// crystal half planks and stairs
-				GameRegistry.addRecipe(new ItemStack(halfPlank2, 6, 5),
-						new Object[] { "   ", "   ", "&&&", '&', new ItemStack(crystalWood, 1, 2) });// chalf
+				// crystal half planks and stairs
+				GameRegistry.addRecipe(new ItemStack(halfPlank2, 6, 5), new Object[] { "   ", "   ", "&&&", '&', new ItemStack(crystalWood, 1, 2) });// chalf
 																																						// planks
-																																								// from
-																																								// new
-																																								// cplanks
-				GameRegistry.addRecipe(new ItemStack(halfPlank2, 6, 5),
-						new Object[] { "   ", "&&&", "   ", '&', new ItemStack(crystalWood, 1, 2) });// chalf
+																																						// from
+																																						// new
+																																						// cplanks
+				GameRegistry.addRecipe(new ItemStack(halfPlank2, 6, 5), new Object[] { "   ", "&&&", "   ", '&', new ItemStack(crystalWood, 1, 2) });// chalf
 																																						// planks
-																																								// from
-																																								// new
-																																								// cplanks
-				GameRegistry.addRecipe(new ItemStack(halfPlank2, 6, 5),
-						new Object[] { "&&&", "   ", "   ", '&', new ItemStack(crystalWood, 1, 2) });// chalf
+																																						// from
+																																						// new
+																																						// cplanks
+				GameRegistry.addRecipe(new ItemStack(halfPlank2, 6, 5), new Object[] { "&&&", "   ", "   ", '&', new ItemStack(crystalWood, 1, 2) });// chalf
 																																						// planks
-																																								// from
-																																								// new
-																																								// cplanks
-				GameRegistry.addRecipe(new ItemStack(halfPlank2, 6, 6),
-						new Object[] { "   ", "   ", "&&&", '&', new ItemStack(crystalWood, 1, 3) });// dchalf
+																																						// from
+																																						// new
+																																						// cplanks
+				GameRegistry.addRecipe(new ItemStack(halfPlank2, 6, 6), new Object[] { "   ", "   ", "&&&", '&', new ItemStack(crystalWood, 1, 3) });// dchalf
 																																						// planks
-																																								// from
-																																								// new
-																																								// cplanks
-				GameRegistry.addRecipe(new ItemStack(halfPlank2, 6, 6),
-						new Object[] { "   ", "&&&", "   ", '&', new ItemStack(crystalWood, 1, 3) });// dchalf
+																																						// from
+																																						// new
+																																						// cplanks
+				GameRegistry.addRecipe(new ItemStack(halfPlank2, 6, 6), new Object[] { "   ", "&&&", "   ", '&', new ItemStack(crystalWood, 1, 3) });// dchalf
 																																						// planks
-																																								// from
-																																								// new
-																																								// cplanks
-				GameRegistry.addRecipe(new ItemStack(halfPlank2, 6, 6),
-						new Object[] { "&&&", "   ", "   ", '&', new ItemStack(crystalWood, 1, 3) });// dchalf
+																																						// from
+																																						// new
+																																						// cplanks
+				GameRegistry.addRecipe(new ItemStack(halfPlank2, 6, 6), new Object[] { "&&&", "   ", "   ", '&', new ItemStack(crystalWood, 1, 3) });// dchalf
 																																						// planks
-																																								// from
-																																								// new
-																																								// cplanks
-				GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs14, 4),
-						new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(crystalWood, 1, 2) });// new
+																																						// from
+																																						// new
+																																						// cplanks
+				GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs14, 4), new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(crystalWood, 1, 2) });// new
 																																							// cstairs
-																																									// from
-																																									// new
-																																									// cplanks
-				GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs15, 4),
-						new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(crystalWood, 1, 3) });// new
+																																							// from
+																																							// new
+																																							// cplanks
+				GameRegistry.addRecipe(new ItemStack(FNBlocks.newStairs15, 4), new Object[] { "&  ", "&& ", "&&&", '&', new ItemStack(crystalWood, 1, 3) });// new
 																																							// dcstairs
-																																									// from
-																																									// new
-																																									// dcplanks
-																																									// dark Crystal bricks from stone and dark focus crystal
-				GameRegistry.addRecipe(new ItemStack(blockCrystal, 8, 3), new Object[] { "&&&", "&*&", "&&&", '&',
-						new ItemStack(Block.getBlockById(1)), '*', new ItemStack(blockCrystal, 1, 1) });
+																																							// from
+																																							// new
+																																							// dcplanks
+																																							// dark Crystal bricks from stone and dark focus crystal
+				GameRegistry.addRecipe(new ItemStack(blockCrystal, 8, 3), new Object[] { "&&&", "&*&", "&&&", '&', new ItemStack(Block.getBlockById(1)), '*', new ItemStack(blockCrystal, 1, 1) });
 				// Crystal bricks from stone and focus crystal
-				GameRegistry.addRecipe(new ItemStack(blockCrystal, 8, 2), new Object[] { "&&&", "&*&", "&&&", '&',
-						new ItemStack(Block.getBlockById(1)), '*', new ItemStack(blockCrystal, 1, 0) });
+				GameRegistry.addRecipe(new ItemStack(blockCrystal, 8, 2), new Object[] { "&&&", "&*&", "&&&", '&', new ItemStack(Block.getBlockById(1)), '*', new ItemStack(blockCrystal, 1, 0) });
 				// crystal mushroom from shards
-				GameRegistry.addRecipe(new ItemStack(FNBlocks.mushroomCrystal, 1, 0),
-						new Object[] { "&&&", " & ", "   ", '&', new ItemStack(crystalItem, 1, 1) });
-				GameRegistry.addRecipe(new ItemStack(FNBlocks.mushroomCrystal, 1, 0),
-						new Object[] { "   ", "&&&", " & ", '&', new ItemStack(crystalItem, 1, 1) });
+				GameRegistry.addRecipe(new ItemStack(FNBlocks.mushroomCrystal, 1, 0), new Object[] { "&&&", " & ", "   ", '&', new ItemStack(crystalItem, 1, 1) });
+				GameRegistry.addRecipe(new ItemStack(FNBlocks.mushroomCrystal, 1, 0), new Object[] { "   ", "&&&", " & ", '&', new ItemStack(crystalItem, 1, 1) });
 				// crystal chunk from focus crystals
-				GameRegistry.addShapelessRecipe(new ItemStack(crystalItem, 9, 2),
-						new Object[] { new ItemStack(blockCrystal, 1, 0) });
+				GameRegistry.addShapelessRecipe(new ItemStack(crystalItem, 9, 2), new Object[] { new ItemStack(blockCrystal, 1, 0) });
 				// black chunk from black focus crystals
-				GameRegistry.addShapelessRecipe(new ItemStack(crystalItem, 9, 0),
-						new Object[] { new ItemStack(blockCrystal, 1, 1) });
+				GameRegistry.addShapelessRecipe(new ItemStack(crystalItem, 9, 0), new Object[] { new ItemStack(blockCrystal, 1, 1) });
 				// crystal shards from chunks
-				GameRegistry.addShapelessRecipe(new ItemStack(crystalItem, 9, 1),
-						new Object[] { new ItemStack(crystalItem, 1, 2) });
+				GameRegistry.addShapelessRecipe(new ItemStack(crystalItem, 9, 1), new Object[] { new ItemStack(crystalItem, 1, 2) });
 				// black shards from chunks
-				GameRegistry.addShapelessRecipe(new ItemStack(crystalItem, 9, 4),
-						new Object[] { new ItemStack(crystalItem, 1, 0) });
+				GameRegistry.addShapelessRecipe(new ItemStack(crystalItem, 9, 4), new Object[] { new ItemStack(crystalItem, 1, 0) });
 				// crystal chunk from crystal shards
-				GameRegistry.addRecipe(new ItemStack(crystalItem, 1, 2),
-						new Object[] { "&&&", "&&&", "&&&", '&', new ItemStack(crystalItem, 1, 1) });
+				GameRegistry.addRecipe(new ItemStack(crystalItem, 1, 2), new Object[] { "&&&", "&&&", "&&&", '&', new ItemStack(crystalItem, 1, 1) });
 				// black chunk from black shards
-				GameRegistry.addRecipe(new ItemStack(crystalItem, 1, 0),
-						new Object[] { "&&&", "&&&", "&&&", '&', new ItemStack(crystalItem, 1, 4) });
+				GameRegistry.addRecipe(new ItemStack(crystalItem, 1, 0), new Object[] { "&&&", "&&&", "&&&", '&', new ItemStack(crystalItem, 1, 4) });
 				// black crystal leaves from black shards
-				GameRegistry.addShapelessRecipe(new ItemStack(crystalLeaves, 1, 0),
-						new Object[] { new ItemStack(crystalItem, 1, 4), new ItemStack(crystalItem, 1, 4),
-								new ItemStack(crystalItem, 1, 4), new ItemStack(crystalItem, 1, 4) });
+				GameRegistry.addShapelessRecipe(new ItemStack(crystalLeaves, 1, 0), new Object[] { new ItemStack(crystalItem, 1, 4), new ItemStack(crystalItem, 1, 4), new ItemStack(crystalItem, 1, 4), new ItemStack(crystalItem, 1, 4) });
 				// crystal leaves from shards
-				GameRegistry.addShapelessRecipe(new ItemStack(crystalLeaves, 1, 1),
-						new Object[] { new ItemStack(crystalItem, 1, 1), new ItemStack(crystalItem, 1, 1),
-								new ItemStack(crystalItem, 1, 1), new ItemStack(crystalItem, 1, 1) });
+				GameRegistry.addShapelessRecipe(new ItemStack(crystalLeaves, 1, 1), new Object[] { new ItemStack(crystalItem, 1, 1), new ItemStack(crystalItem, 1, 1), new ItemStack(crystalItem, 1, 1), new ItemStack(crystalItem, 1, 1) });
 				// crystal planks
-				GameRegistry.addShapelessRecipe(new ItemStack(crystalWood, 4, 3),
-						new Object[] { new ItemStack(crystalWood, 1, 1) });
+				GameRegistry.addShapelessRecipe(new ItemStack(crystalWood, 4, 3), new Object[] { new ItemStack(crystalWood, 1, 1) });
 				// bcrystal planks
-				GameRegistry.addShapelessRecipe(new ItemStack(crystalWood, 4, 2),
-						new Object[] { new ItemStack(crystalWood, 1, 0) });
+				GameRegistry.addShapelessRecipe(new ItemStack(crystalWood, 4, 2), new Object[] { new ItemStack(crystalWood, 1, 0) });
 				// crystal sticks from shards
-				GameRegistry.addRecipe(new ItemStack(crystalItem, 1, 3),
-						new Object[] { "   ", " & ", " & ", '&', new ItemStack(crystalItem, 1, 1) });
+				GameRegistry.addRecipe(new ItemStack(crystalItem, 1, 3), new Object[] { "   ", " & ", " & ", '&', new ItemStack(crystalItem, 1, 1) });
 				// crystal sticks from shards
-				GameRegistry.addRecipe(new ItemStack(crystalItem, 1, 3),
-						new Object[] { "   ", "&  ", "&  ", '&', new ItemStack(crystalItem, 1, 1) });
+				GameRegistry.addRecipe(new ItemStack(crystalItem, 1, 3), new Object[] { "   ", "&  ", "&  ", '&', new ItemStack(crystalItem, 1, 1) });
 				// crystal sticks from shards
-				GameRegistry.addRecipe(new ItemStack(crystalItem, 1, 3),
-						new Object[] { "   ", "  &", "  &", '&', new ItemStack(crystalItem, 1, 1) });
+				GameRegistry.addRecipe(new ItemStack(crystalItem, 1, 3), new Object[] { "   ", "  &", "  &", '&', new ItemStack(crystalItem, 1, 1) });
 				// crystal sticks from shards
-				GameRegistry.addRecipe(new ItemStack(crystalItem, 1, 3),
-						new Object[] { " & ", " & ", "   ", '&', new ItemStack(crystalItem, 1, 1) });
+				GameRegistry.addRecipe(new ItemStack(crystalItem, 1, 3), new Object[] { " & ", " & ", "   ", '&', new ItemStack(crystalItem, 1, 1) });
 				// crystal sticks from shards
-				GameRegistry.addRecipe(new ItemStack(crystalItem, 1, 3),
-						new Object[] { "&  ", "&  ", "   ", '&', new ItemStack(crystalItem, 1, 1) });
+				GameRegistry.addRecipe(new ItemStack(crystalItem, 1, 3), new Object[] { "&  ", "&  ", "   ", '&', new ItemStack(crystalItem, 1, 1) });
 				// crystal sticks from shards
-				GameRegistry.addRecipe(new ItemStack(crystalItem, 1, 3),
-						new Object[] { "  &", "  &", "   ", '&', new ItemStack(crystalItem, 1, 1) });
+				GameRegistry.addRecipe(new ItemStack(crystalItem, 1, 3), new Object[] { "  &", "  &", "   ", '&', new ItemStack(crystalItem, 1, 1) });
 				// crystal sticks from planks
-				GameRegistry.addRecipe(new ItemStack(crystalItem, 4, 3),
-						new Object[] { "   ", " & ", " & ", '&', new ItemStack(crystalWood, 1, 2) });
+				GameRegistry.addRecipe(new ItemStack(crystalItem, 4, 3), new Object[] { "   ", " & ", " & ", '&', new ItemStack(crystalWood, 1, 2) });
 				// crystal sticks from planks
-				GameRegistry.addRecipe(new ItemStack(crystalItem, 4, 3),
-						new Object[] { "   ", "&  ", "&  ", '&', new ItemStack(crystalWood, 1, 2) });
+				GameRegistry.addRecipe(new ItemStack(crystalItem, 4, 3), new Object[] { "   ", "&  ", "&  ", '&', new ItemStack(crystalWood, 1, 2) });
 				// crystal sticks from planks
-				GameRegistry.addRecipe(new ItemStack(crystalItem, 4, 3),
-						new Object[] { "   ", "  &", "  &", '&', new ItemStack(crystalWood, 1, 2) });
+				GameRegistry.addRecipe(new ItemStack(crystalItem, 4, 3), new Object[] { "   ", "  &", "  &", '&', new ItemStack(crystalWood, 1, 2) });
 				// crystal sticks from planks
-				GameRegistry.addRecipe(new ItemStack(crystalItem, 4, 3),
-						new Object[] { " & ", " & ", "   ", '&', new ItemStack(crystalWood, 1, 2) });
+				GameRegistry.addRecipe(new ItemStack(crystalItem, 4, 3), new Object[] { " & ", " & ", "   ", '&', new ItemStack(crystalWood, 1, 2) });
 				// crystal sticks from planks
-				GameRegistry.addRecipe(new ItemStack(crystalItem, 4, 3),
-						new Object[] { "&  ", "&  ", "   ", '&', new ItemStack(crystalWood, 1, 2) });
+				GameRegistry.addRecipe(new ItemStack(crystalItem, 4, 3), new Object[] { "&  ", "&  ", "   ", '&', new ItemStack(crystalWood, 1, 2) });
 				// crystal sticks from planks
-				GameRegistry.addRecipe(new ItemStack(crystalItem, 4, 3),
-						new Object[] { "  &", "  &", "   ", '&', new ItemStack(crystalWood, 1, 2) });
+				GameRegistry.addRecipe(new ItemStack(crystalItem, 4, 3), new Object[] { "  &", "  &", "   ", '&', new ItemStack(crystalWood, 1, 2) });
 				// stone from shards
-				GameRegistry.addRecipe(new ItemStack(crystalStone, 1, 0),
-						new Object[] { "& &", " & ", "   ", '&', new ItemStack(crystalItem, 1, 1) });
+				GameRegistry.addRecipe(new ItemStack(crystalStone, 1, 0), new Object[] { "& &", " & ", "   ", '&', new ItemStack(crystalItem, 1, 1) });
 				// stone from shards
-				GameRegistry.addRecipe(new ItemStack(crystalStone, 1, 0),
-						new Object[] { "   ", "& &", " & ", '&', new ItemStack(crystalItem, 1, 1) });
+				GameRegistry.addRecipe(new ItemStack(crystalStone, 1, 0), new Object[] { "   ", "& &", " & ", '&', new ItemStack(crystalItem, 1, 1) });
 				// black stone from black shards
-				GameRegistry.addRecipe(new ItemStack(crystalStone, 1, 1),
-						new Object[] { "& &", " & ", "   ", '&', new ItemStack(crystalItem, 1, 4) });
+				GameRegistry.addRecipe(new ItemStack(crystalStone, 1, 1), new Object[] { "& &", " & ", "   ", '&', new ItemStack(crystalItem, 1, 4) });
 				// black stone from black shards
-				GameRegistry.addRecipe(new ItemStack(crystalStone, 1, 1),
-						new Object[] { "   ", "& &", " & ", '&', new ItemStack(crystalItem, 1, 4) });
+				GameRegistry.addRecipe(new ItemStack(crystalStone, 1, 1), new Object[] { "   ", "& &", " & ", '&', new ItemStack(crystalItem, 1, 4) });
 				// crystal block from chunks
-				GameRegistry.addRecipe(new ItemStack(blockCrystal, 1, 0),
-						new Object[] { "&&&", "&&&", "&&&", '&', new ItemStack(crystalItem, 1, 2) });
+				GameRegistry.addRecipe(new ItemStack(blockCrystal, 1, 0), new Object[] { "&&&", "&&&", "&&&", '&', new ItemStack(crystalItem, 1, 2) });
 				// black block from black chunks
-				GameRegistry.addRecipe(new ItemStack(blockCrystal, 1, 1),
-						new Object[] { "&&&", "&&&", "&&&", '&', new ItemStack(crystalItem, 1, 0) });
+				GameRegistry.addRecipe(new ItemStack(blockCrystal, 1, 1), new Object[] { "&&&", "&&&", "&&&", '&', new ItemStack(crystalItem, 1, 0) });
 				if (ForgottenNature.crystalTools) {
-					GameRegistry.addRecipe(new ItemStack(FNItems.cPickaxeItem, 1, 0), new Object[] { "&&&", " * ",
-							" * ", '&', new ItemStack(crystalItem, 1, 2), '*', new ItemStack(crystalItem, 1, 3) });
-					GameRegistry.addRecipe(new ItemStack(FNItems.cAxeItem, 1, 0), new Object[] { "&& ", "&* ", " * ",
-							'&', new ItemStack(crystalItem, 1, 2), '*', new ItemStack(crystalItem, 1, 3) });// axe
-					GameRegistry.addRecipe(new ItemStack(FNItems.cAxeItem, 1, 0),
-							new Object[] { " &&", " *&", " * ", '&', new ItemStack(crystalItem, 1, 2), '*',
-									new ItemStack(crystalItem, 1, 3) });// second
+					GameRegistry.addRecipe(new ItemStack(FNItems.cPickaxeItem, 1, 0), new Object[] { "&&&", " * ", " * ", '&', new ItemStack(crystalItem, 1, 2), '*', new ItemStack(crystalItem, 1, 3) });
+					GameRegistry.addRecipe(new ItemStack(FNItems.cAxeItem, 1, 0), new Object[] { "&& ", "&* ", " * ", '&', new ItemStack(crystalItem, 1, 2), '*', new ItemStack(crystalItem, 1, 3) });// axe
+					GameRegistry.addRecipe(new ItemStack(FNItems.cAxeItem, 1, 0), new Object[] { " &&", " *&", " * ", '&', new ItemStack(crystalItem, 1, 2), '*', new ItemStack(crystalItem, 1, 3) });// second
 																																																		// axe
-					GameRegistry.addRecipe(new ItemStack(FNItems.cHoeItem, 1, 0), new Object[] { "&& ", " * ", " * ",
-							'&', new ItemStack(crystalItem, 1, 2), '*', new ItemStack(crystalItem, 1, 3) });// hoe
-					GameRegistry.addRecipe(new ItemStack(FNItems.cHoeItem, 1, 0),
-							new Object[] { "&& ", " * ", " * ", '&', new ItemStack(crystalItem, 1, 2), '*',
-									new ItemStack(crystalItem, 1, 3) });// second
+					GameRegistry.addRecipe(new ItemStack(FNItems.cHoeItem, 1, 0), new Object[] { "&& ", " * ", " * ", '&', new ItemStack(crystalItem, 1, 2), '*', new ItemStack(crystalItem, 1, 3) });// hoe
+					GameRegistry.addRecipe(new ItemStack(FNItems.cHoeItem, 1, 0), new Object[] { "&& ", " * ", " * ", '&', new ItemStack(crystalItem, 1, 2), '*', new ItemStack(crystalItem, 1, 3) });// second
 																																																		// hoe
-					GameRegistry.addRecipe(new ItemStack(FNItems.cShovelItem, 1, 0), new Object[] { " & ", " * ", " * ",
-							'&', new ItemStack(crystalItem, 1, 2), '*', new ItemStack(crystalItem, 1, 3) });// shovel
-					GameRegistry.addRecipe(new ItemStack(FNItems.cSwordItem, 1, 0), new Object[] { " & ", " & ", " * ",
-							'&', new ItemStack(crystalItem, 1, 2), '*', new ItemStack(crystalItem, 1, 3) });// sword
-					GameRegistry.addRecipe(new ItemStack(FNItems.dcPickaxeItem, 1, 0), new Object[] { "&&&", " * ",
-							" * ", '&', new ItemStack(crystalItem, 1, 0), '*', new ItemStack(crystalItem, 1, 3) });// bpa
-					GameRegistry.addRecipe(new ItemStack(FNItems.cAxeItem, 1, 0), new Object[] { "&& ", "&* ", " * ",
-							'&', new ItemStack(crystalItem, 1, 0), '*', new ItemStack(crystalItem, 1, 3) });// baxe
-					GameRegistry.addRecipe(new ItemStack(FNItems.cAxeItem, 1, 0),
-							new Object[] { " &&", " *&", " * ", '&', new ItemStack(crystalItem, 1, 0), '*',
-									new ItemStack(crystalItem, 1, 3) });// bsecond
+					GameRegistry.addRecipe(new ItemStack(FNItems.cShovelItem, 1, 0), new Object[] { " & ", " * ", " * ", '&', new ItemStack(crystalItem, 1, 2), '*', new ItemStack(crystalItem, 1, 3) });// shovel
+					GameRegistry.addRecipe(new ItemStack(FNItems.cSwordItem, 1, 0), new Object[] { " & ", " & ", " * ", '&', new ItemStack(crystalItem, 1, 2), '*', new ItemStack(crystalItem, 1, 3) });// sword
+					GameRegistry.addRecipe(new ItemStack(FNItems.dcPickaxeItem, 1, 0), new Object[] { "&&&", " * ", " * ", '&', new ItemStack(crystalItem, 1, 0), '*', new ItemStack(crystalItem, 1, 3) });// bpa
+					GameRegistry.addRecipe(new ItemStack(FNItems.cAxeItem, 1, 0), new Object[] { "&& ", "&* ", " * ", '&', new ItemStack(crystalItem, 1, 0), '*', new ItemStack(crystalItem, 1, 3) });// baxe
+					GameRegistry.addRecipe(new ItemStack(FNItems.cAxeItem, 1, 0), new Object[] { " &&", " *&", " * ", '&', new ItemStack(crystalItem, 1, 0), '*', new ItemStack(crystalItem, 1, 3) });// bsecond
 																																																		// axe
-					GameRegistry.addRecipe(new ItemStack(FNItems.cHoeItem, 1, 0), new Object[] { "&& ", " * ", " * ",
-							'&', new ItemStack(crystalItem, 1, 0), '*', new ItemStack(crystalItem, 1, 3) });// bhoe
-					GameRegistry.addRecipe(new ItemStack(FNItems.cHoeItem, 1, 0),
-							new Object[] { "&& ", " * ", " * ", '&', new ItemStack(crystalItem, 1, 0), '*',
-									new ItemStack(crystalItem, 1, 3) });// bsecond
+					GameRegistry.addRecipe(new ItemStack(FNItems.cHoeItem, 1, 0), new Object[] { "&& ", " * ", " * ", '&', new ItemStack(crystalItem, 1, 0), '*', new ItemStack(crystalItem, 1, 3) });// bhoe
+					GameRegistry.addRecipe(new ItemStack(FNItems.cHoeItem, 1, 0), new Object[] { "&& ", " * ", " * ", '&', new ItemStack(crystalItem, 1, 0), '*', new ItemStack(crystalItem, 1, 3) });// bsecond
 																																																		// hoe
-					GameRegistry.addRecipe(new ItemStack(FNItems.cShovelItem, 1, 0), new Object[] { " & ", " * ", " * ",
-							'&', new ItemStack(crystalItem, 1, 0), '*', new ItemStack(crystalItem, 1, 3) });// bshovel
-					GameRegistry.addRecipe(new ItemStack(FNItems.cSwordItem, 1, 0), new Object[] { " & ", " & ", " * ",
-							'&', new ItemStack(crystalItem, 1, 0), '*', new ItemStack(crystalItem, 1, 3) });// bsword
+					GameRegistry.addRecipe(new ItemStack(FNItems.cShovelItem, 1, 0), new Object[] { " & ", " * ", " * ", '&', new ItemStack(crystalItem, 1, 0), '*', new ItemStack(crystalItem, 1, 3) });// bshovel
+					GameRegistry.addRecipe(new ItemStack(FNItems.cSwordItem, 1, 0), new Object[] { " & ", " & ", " * ", '&', new ItemStack(crystalItem, 1, 0), '*', new ItemStack(crystalItem, 1, 3) });// bsword
 				}
-				GameRegistry.addRecipe(new ItemStack(newSap3, 1, 2),
-						new Object[] { "&&&", " & ", " & ", '&', new ItemStack(crystalItem, 1, 1) });// cSap
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(58), 1),
-						new Object[] { "   ", "&& ", "&& ", '&', new ItemStack(crystalWood, 1, 2) });// workbench
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(58), 1),
-						new Object[] { "&& ", "&& ", "   ", '&', new ItemStack(crystalWood, 1, 2) });// workbench
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(58), 1),
-						new Object[] { "   ", " &&", " &&", '&', new ItemStack(crystalWood, 1, 2) });// workbench
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(58), 1),
-						new Object[] { " &&", " &&", "   ", '&', new ItemStack(crystalWood, 1, 2) });// workbench
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(58), 1),
-						new Object[] { "   ", "&& ", "&& ", '&', new ItemStack(crystalWood, 1, 3) });// workbench
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(58), 1),
-						new Object[] { "&& ", "&& ", "   ", '&', new ItemStack(crystalWood, 1, 3) });// workbench
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(58), 1),
-						new Object[] { "   ", " &&", " &&", '&', new ItemStack(crystalWood, 1, 3) });// workbench
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(58), 1),
-						new Object[] { " &&", " &&", "   ", '&', new ItemStack(crystalWood, 1, 3) });// workbench
+				GameRegistry.addRecipe(new ItemStack(newSap3, 1, 2), new Object[] { "&&&", " & ", " & ", '&', new ItemStack(crystalItem, 1, 1) });// cSap
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(58), 1), new Object[] { "   ", "&& ", "&& ", '&', new ItemStack(crystalWood, 1, 2) });// workbench
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(58), 1), new Object[] { "&& ", "&& ", "   ", '&', new ItemStack(crystalWood, 1, 2) });// workbench
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(58), 1), new Object[] { "   ", " &&", " &&", '&', new ItemStack(crystalWood, 1, 2) });// workbench
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(58), 1), new Object[] { " &&", " &&", "   ", '&', new ItemStack(crystalWood, 1, 2) });// workbench
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(58), 1), new Object[] { "   ", "&& ", "&& ", '&', new ItemStack(crystalWood, 1, 3) });// workbench
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(58), 1), new Object[] { "&& ", "&& ", "   ", '&', new ItemStack(crystalWood, 1, 3) });// workbench
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(58), 1), new Object[] { "   ", " &&", " &&", '&', new ItemStack(crystalWood, 1, 3) });// workbench
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(58), 1), new Object[] { " &&", " &&", "   ", '&', new ItemStack(crystalWood, 1, 3) });// workbench
 				// Chest from crystal wood
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(54), 1),
-						new Object[] { "&&&", "& &", "&&&", '&', new ItemStack(crystalWood, 1, 2) });// chest
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(54), 1),
-						new Object[] { "&&&", "& &", "&&&", '&', new ItemStack(crystalWood, 1, 3) });// chest
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(54), 1), new Object[] { "&&&", "& &", "&&&", '&', new ItemStack(crystalWood, 1, 2) });// chest
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(54), 1), new Object[] { "&&&", "& &", "&&&", '&', new ItemStack(crystalWood, 1, 3) });// chest
 				// book shelf from crystal wood
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(47), 1),
-						new Object[] { "&&&", "***", "&&&", '&', new ItemStack(crystalWood, 1, 2), '*',
-								new ItemStack(Item.getItemById(340)) });// bookshelf
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(47), 1), new Object[] { "&&&", "***", "&&&", '&', new ItemStack(crystalWood, 1, 2), '*', new ItemStack(Item.getItemById(340)) });// bookshelf
 																																																			// from
-																																																							// book
-				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(47), 1),
-						new Object[] { "&&&", "***", "&&&", '&', new ItemStack(crystalWood, 1, 3), '*',
-								new ItemStack(Item.getItemById(340)) });// bookshelf
+																																																			// book
+				GameRegistry.addRecipe(new ItemStack(Block.getBlockById(47), 1), new Object[] { "&&&", "***", "&&&", '&', new ItemStack(crystalWood, 1, 3), '*', new ItemStack(Item.getItemById(340)) });// bookshelf
 																																																			// from
-																																																							// book
-																																																							// bed from crystal wood
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(255)),
-						new Object[] { "***", "&&&", "   ", '&', new ItemStack(crystalWood, 1, 2), '*',
-								Block.getBlockById(35) });// bed
+																																																			// book
+																																																			// bed from crystal wood
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(255)), new Object[] { "***", "&&&", "   ", '&', new ItemStack(crystalWood, 1, 2), '*', Block.getBlockById(35) });// bed
 																																														// from
-																																																		// wool
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(255)),
-						new Object[] { "   ", "***", "&&&", '&', new ItemStack(crystalWood, 1, 2), '*',
-								Block.getBlockById(35) });// bed
+																																														// wool
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(255)), new Object[] { "   ", "***", "&&&", '&', new ItemStack(crystalWood, 1, 2), '*', Block.getBlockById(35) });// bed
 																																														// from
-																																																		// wool
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(255)),
-						new Object[] { "***", "&&&", "   ", '&', new ItemStack(crystalWood, 1, 3), '*',
-								Block.getBlockById(35) });// bed
+																																														// wool
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(255)), new Object[] { "***", "&&&", "   ", '&', new ItemStack(crystalWood, 1, 3), '*', Block.getBlockById(35) });// bed
 																																														// from
-																																																		// wool
-				GameRegistry.addRecipe(new ItemStack(Item.getItemById(255)),
-						new Object[] { "   ", "***", "&&&", '&', new ItemStack(crystalWood, 1, 3), '*',
-								Block.getBlockById(35) });// bed
+																																														// wool
+				GameRegistry.addRecipe(new ItemStack(Item.getItemById(255)), new Object[] { "   ", "***", "&&&", '&', new ItemStack(crystalWood, 1, 3), '*', Block.getBlockById(35) });// bed
 																																														// from
-																																																		// wool
-																																																		// crystal torches from crystal chunk and crystal stick
-				GameRegistry.addRecipe(new ItemStack(newTorch, 8, 0),
-						new Object[] { "   ", " * ", " & ", '&', new ItemStack(crystalItem, 1, 3), '*',
-								new ItemStack(crystalItem, 1, 2) });// crystal
+																																														// wool
+																																														// crystal torches from crystal chunk and crystal stick
+				GameRegistry.addRecipe(new ItemStack(newTorch, 8, 0), new Object[] { "   ", " * ", " & ", '&', new ItemStack(crystalItem, 1, 3), '*', new ItemStack(crystalItem, 1, 2) });// crystal
 																																															// torch
-				GameRegistry.addRecipe(new ItemStack(newTorch, 8, 0),
-						new Object[] { " * ", " & ", "   ", '&', new ItemStack(crystalItem, 1, 3), '*',
-								new ItemStack(crystalItem, 1, 2) });// crystal
+				GameRegistry.addRecipe(new ItemStack(newTorch, 8, 0), new Object[] { " * ", " & ", "   ", '&', new ItemStack(crystalItem, 1, 3), '*', new ItemStack(crystalItem, 1, 2) });// crystal
 																																															// torch
-				GameRegistry.addRecipe(new ItemStack(newTorch, 8, 0),
-						new Object[] { "   ", "*  ", "&  ", '&', new ItemStack(crystalItem, 1, 3), '*',
-								new ItemStack(crystalItem, 1, 2) });// crystal
+				GameRegistry.addRecipe(new ItemStack(newTorch, 8, 0), new Object[] { "   ", "*  ", "&  ", '&', new ItemStack(crystalItem, 1, 3), '*', new ItemStack(crystalItem, 1, 2) });// crystal
 																																															// torch
-				GameRegistry.addRecipe(new ItemStack(newTorch, 8, 0),
-						new Object[] { "*  ", "&  ", "   ", '&', new ItemStack(crystalItem, 1, 3), '*',
-								new ItemStack(crystalItem, 1, 2) });// crystal
+				GameRegistry.addRecipe(new ItemStack(newTorch, 8, 0), new Object[] { "*  ", "&  ", "   ", '&', new ItemStack(crystalItem, 1, 3), '*', new ItemStack(crystalItem, 1, 2) });// crystal
 																																															// torch
-				GameRegistry.addRecipe(new ItemStack(newTorch, 8, 0),
-						new Object[] { "   ", "  *", "  &", '&', new ItemStack(crystalItem, 1, 3), '*',
-								new ItemStack(crystalItem, 1, 2) });// crystal
+				GameRegistry.addRecipe(new ItemStack(newTorch, 8, 0), new Object[] { "   ", "  *", "  &", '&', new ItemStack(crystalItem, 1, 3), '*', new ItemStack(crystalItem, 1, 2) });// crystal
 																																															// torch
-				GameRegistry.addRecipe(new ItemStack(newTorch, 8, 0),
-						new Object[] { "  *", "  &", "   ", '&', new ItemStack(crystalItem, 1, 3), '*',
-								new ItemStack(crystalItem, 1, 2) });// crystal
+				GameRegistry.addRecipe(new ItemStack(newTorch, 8, 0), new Object[] { "  *", "  &", "   ", '&', new ItemStack(crystalItem, 1, 3), '*', new ItemStack(crystalItem, 1, 2) });// crystal
 																																															// torch
 			}
 			{// all about stains
-					// animal oils from bucket and raw meat
-				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewCup, 1, 1),
-						new Object[] { Item.getItemById(325), Item.getItemById(363) });// oils
+				// animal oils from bucket and raw meat
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewCup, 1, 1), new Object[] { Item.getItemById(325), Item.getItemById(363) });// oils
 																																				// from
-																																						// beef
-				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewCup, 1, 1),
-						new Object[] { Item.getItemById(325), Item.getItemById(365) });// oils
+																																				// beef
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewCup, 1, 1), new Object[] { Item.getItemById(325), Item.getItemById(365) });// oils
 																																				// from
-																																						// chicken
-				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewCup, 1, 1),
-						new Object[] { Item.getItemById(325), Item.getItemById(349) });// oils
+																																				// chicken
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewCup, 1, 1), new Object[] { Item.getItemById(325), Item.getItemById(349) });// oils
 																																				// from
-																																						// fish
-				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewCup, 1, 1),
-						new Object[] { Item.getItemById(325), Item.getItemById(319) });// oils
+																																				// fish
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewCup, 1, 1), new Object[] { Item.getItemById(325), Item.getItemById(319) });// oils
 																																				// from
-																																						// pork
-																																						// wood stains from animal oil and dye
-				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewContainer, 1, 2),
-						new Object[] { new ItemStack(ItemNewCup, 1, 1), new ItemStack(Item.getItemById(351), 1, 3) });// stain
+																																				// pork
+																																				// wood stains from animal oil and dye
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewContainer, 1, 2), new Object[] { new ItemStack(ItemNewCup, 1, 1), new ItemStack(Item.getItemById(351), 1, 3) });// stain
 																																														// from
-																																																// dye
-																																																// -
-																																																// brown
-				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewContainer, 1, 3),
-						new Object[] { new ItemStack(ItemNewCup, 1, 1), new ItemStack(Item.getItemById(351), 1, 5) });// stain
+																																														// dye
+																																														// -
+																																														// brown
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewContainer, 1, 3), new Object[] { new ItemStack(ItemNewCup, 1, 1), new ItemStack(Item.getItemById(351), 1, 5) });// stain
 																																														// from
-																																																// dye
-																																																// -
-																																																// purple
-				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewContainer, 1, 4),
-						new Object[] { new ItemStack(ItemNewCup, 1, 1), new ItemStack(Item.getItemById(351), 1, 1),
-								new ItemStack(Item.getItemById(351), 1, 1) });// stain
+																																														// dye
+																																														// -
+																																														// purple
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewContainer, 1, 4), new Object[] { new ItemStack(ItemNewCup, 1, 1), new ItemStack(Item.getItemById(351), 1, 1), new ItemStack(Item.getItemById(351), 1, 1) });// stain
 																																																									// from
-																																																													// dye
-																																																													// -
-																																																													// dark
-																																																													// red
-				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewContainer, 1, 5),
-						new Object[] { new ItemStack(ItemNewCup, 1, 1), new ItemStack(Item.getItemById(351), 1, 11),
-								new ItemStack(Item.getItemById(351), 1, 11) });// stain
+																																																									// dye
+																																																									// -
+																																																									// dark
+																																																									// red
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewContainer, 1, 5), new Object[] { new ItemStack(ItemNewCup, 1, 1), new ItemStack(Item.getItemById(351), 1, 11), new ItemStack(Item.getItemById(351), 1, 11) });// stain
 																																																									// from
-																																																													// dye
-																																																													// -
-																																																													// dark
-																																																													// yellow
-				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewContainer, 1, 6),
-						new Object[] { new ItemStack(ItemNewCup, 1, 1), new ItemStack(Item.getItemById(351), 1, 3),
-								new ItemStack(Item.getItemById(351), 1, 14) });// stain
+																																																									// dye
+																																																									// -
+																																																									// dark
+																																																									// yellow
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewContainer, 1, 6), new Object[] { new ItemStack(ItemNewCup, 1, 1), new ItemStack(Item.getItemById(351), 1, 3), new ItemStack(Item.getItemById(351), 1, 14) });// stain
 																																																									// from
-																																																													// dye
-																																																													// -
-																																																													// peach
-				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewContainer, 1, 7),
-						new Object[] { new ItemStack(ItemNewCup, 1, 1), new ItemStack(Item.getItemById(351), 1, 14) });// stain
+																																																									// dye
+																																																									// -
+																																																									// peach
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewContainer, 1, 7), new Object[] { new ItemStack(ItemNewCup, 1, 1), new ItemStack(Item.getItemById(351), 1, 14) });// stain
 																																														// from
-																																																// dye
-				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewContainer, 1, 8),
-						new Object[] { new ItemStack(ItemNewCup, 1, 1), new ItemStack(Item.getItemById(351), 1, 1) });// stain
+																																														// dye
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewContainer, 1, 8), new Object[] { new ItemStack(ItemNewCup, 1, 1), new ItemStack(Item.getItemById(351), 1, 1) });// stain
 																																														// from
-																																																// dye
-																																																// -
-																																																// red
-				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewContainer, 1, 9),
-						new Object[] { new ItemStack(ItemNewCup, 1, 1), new ItemStack(Item.getItemById(351), 1, 11) });// stain
+																																														// dye
+																																														// -
+																																														// red
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemNewContainer, 1, 9), new Object[] { new ItemStack(ItemNewCup, 1, 1), new ItemStack(Item.getItemById(351), 1, 11) });// stain
 																																														// from
-																																																// dye
-																																																// -
-																																																// yellow
-				GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(351), 2, 3),
-						new Object[] { new ItemStack(ItemNuts, 1, 3) });
+																																														// dye
+																																														// -
+																																														// yellow
+				GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemById(351), 2, 3), new Object[] { new ItemStack(ItemNuts, 1, 3) });
 				// new planks from new logs and stains
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 0),
-						new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 2), '&', newLogs });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 0), new Object[] { "&&&", "&*&", "&&&", '*',
-						new ItemStack(ItemNewContainer, 1, 2), '&', newLogs2 });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 0), new Object[] { "&&&", "&*&", "&&&", '*',
-						new ItemStack(ItemNewContainer, 1, 2), '&', newLogs3 });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 0), new Object[] { "&&&", "&*&", "&&&", '*',
-						new ItemStack(ItemNewContainer, 1, 2), '&', Block.getBlockById(17) });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 1),
-						new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 3), '&', newLogs });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 1), new Object[] { "&&&", "&*&", "&&&", '*',
-						new ItemStack(ItemNewContainer, 1, 3), '&', newLogs2 });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 1), new Object[] { "&&&", "&*&", "&&&", '*',
-						new ItemStack(ItemNewContainer, 1, 3), '&', newLogs3 });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 1), new Object[] { "&&&", "&*&", "&&&", '*',
-						new ItemStack(ItemNewContainer, 1, 3), '&', Block.getBlockById(17) });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 2),
-						new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 4), '&', newLogs });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 2), new Object[] { "&&&", "&*&", "&&&", '*',
-						new ItemStack(ItemNewContainer, 1, 4), '&', newLogs2 });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 2), new Object[] { "&&&", "&*&", "&&&", '*',
-						new ItemStack(ItemNewContainer, 1, 4), '&', newLogs3 });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 2), new Object[] { "&&&", "&*&", "&&&", '*',
-						new ItemStack(ItemNewContainer, 1, 4), '&', Block.getBlockById(17) });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 3),
-						new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 5), '&', newLogs });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 3), new Object[] { "&&&", "&*&", "&&&", '*',
-						new ItemStack(ItemNewContainer, 1, 5), '&', newLogs2 });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 3), new Object[] { "&&&", "&*&", "&&&", '*',
-						new ItemStack(ItemNewContainer, 1, 5), '&', newLogs3 });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 3), new Object[] { "&&&", "&*&", "&&&", '*',
-						new ItemStack(ItemNewContainer, 1, 5), '&', Block.getBlockById(17) });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 4),
-						new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 6), '&', newLogs });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 4), new Object[] { "&&&", "&*&", "&&&", '*',
-						new ItemStack(ItemNewContainer, 1, 6), '&', newLogs2 });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 4), new Object[] { "&&&", "&*&", "&&&", '*',
-						new ItemStack(ItemNewContainer, 1, 6), '&', newLogs3 });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 4), new Object[] { "&&&", "&*&", "&&&", '*',
-						new ItemStack(ItemNewContainer, 1, 6), '&', Block.getBlockById(17) });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 5),
-						new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 7), '&', newLogs });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 5), new Object[] { "&&&", "&*&", "&&&", '*',
-						new ItemStack(ItemNewContainer, 1, 7), '&', newLogs2 });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 5), new Object[] { "&&&", "&*&", "&&&", '*',
-						new ItemStack(ItemNewContainer, 1, 7), '&', newLogs3 });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 5), new Object[] { "&&&", "&*&", "&&&", '*',
-						new ItemStack(ItemNewContainer, 1, 7), '&', Block.getBlockById(17) });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 7),
-						new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 8), '&', newLogs });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 7), new Object[] { "&&&", "&*&", "&&&", '*',
-						new ItemStack(ItemNewContainer, 1, 8), '&', newLogs2 });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 7), new Object[] { "&&&", "&*&", "&&&", '*',
-						new ItemStack(ItemNewContainer, 1, 8), '&', newLogs3 });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 7), new Object[] { "&&&", "&*&", "&&&", '*',
-						new ItemStack(ItemNewContainer, 1, 8), '&', Block.getBlockById(17) });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 9),
-						new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 9), '&', newLogs });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 9), new Object[] { "&&&", "&*&", "&&&", '*',
-						new ItemStack(ItemNewContainer, 1, 9), '&', newLogs2 });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 9), new Object[] { "&&&", "&*&", "&&&", '*',
-						new ItemStack(ItemNewContainer, 1, 9), '&', newLogs3 });
-				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 9), new Object[] { "&&&", "&*&", "&&&", '*',
-						new ItemStack(ItemNewContainer, 1, 9), '&', Block.getBlockById(17) });
-				GameRegistry.addRecipe(new ItemStack(ItemNewCup, 6, 0),
-						new Object[] { "& &", "& &", "&&&", '&', Block.getBlockById(102) });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 0), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 2), '&', newLogs });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 0), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 2), '&', newLogs2 });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 0), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 2), '&', newLogs3 });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 0), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 2), '&', Block.getBlockById(17) });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 1), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 3), '&', newLogs });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 1), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 3), '&', newLogs2 });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 1), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 3), '&', newLogs3 });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 1), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 3), '&', Block.getBlockById(17) });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 2), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 4), '&', newLogs });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 2), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 4), '&', newLogs2 });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 2), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 4), '&', newLogs3 });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 2), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 4), '&', Block.getBlockById(17) });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 3), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 5), '&', newLogs });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 3), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 5), '&', newLogs2 });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 3), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 5), '&', newLogs3 });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 3), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 5), '&', Block.getBlockById(17) });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 4), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 6), '&', newLogs });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 4), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 6), '&', newLogs2 });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 4), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 6), '&', newLogs3 });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 4), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 6), '&', Block.getBlockById(17) });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 5), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 7), '&', newLogs });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 5), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 7), '&', newLogs2 });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 5), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 7), '&', newLogs3 });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 5), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 7), '&', Block.getBlockById(17) });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 7), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 8), '&', newLogs });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 7), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 8), '&', newLogs2 });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 7), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 8), '&', newLogs3 });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 7), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 8), '&', Block.getBlockById(17) });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 9), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 9), '&', newLogs });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 9), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 9), '&', newLogs2 });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 9), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 9), '&', newLogs3 });
+				GameRegistry.addRecipe(new ItemStack(newPlanks, 32, 9), new Object[] { "&&&", "&*&", "&&&", '*', new ItemStack(ItemNewContainer, 1, 9), '&', Block.getBlockById(17) });
+				GameRegistry.addRecipe(new ItemStack(ItemNewCup, 6, 0), new Object[] { "& &", "& &", "&&&", '&', Block.getBlockById(102) });
 			}
 			{// new glass
-				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 0),
-						new Object[] { " & ", "&&&", " & ", '&', new ItemStack(Block.getBlockById(20)) });
-				GameRegistry.addRecipe(new ItemStack(newGlass, 8, 1), new Object[] { "&&&", "&p&", "&&&", '&',
-						new ItemStack(Block.getBlockById(20)), 'p', new ItemStack(Block.getBlockById(102)) });
-				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 2),
-						new Object[] { "&s&", "s&s", "&s&", '&', new ItemStack(newGlass, 1, 1), 's',
-								new ItemStack(Item.getItemById(280)) });// framed
+				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 0), new Object[] { " & ", "&&&", " & ", '&', new ItemStack(Block.getBlockById(20)) });
+				GameRegistry.addRecipe(new ItemStack(newGlass, 8, 1), new Object[] { "&&&", "&p&", "&&&", '&', new ItemStack(Block.getBlockById(20)), 'p', new ItemStack(Block.getBlockById(102)) });
+				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 2), new Object[] { "&s&", "s&s", "&s&", '&', new ItemStack(newGlass, 1, 1), 's', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(newGlass, 9, 3),
-						new Object[] { "&&&", "&&&", "&&&", '&', new ItemStack(Block.getBlockById(20)) });
-				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 4),
-						new Object[] { "&s&", "s&s", "&s&", '&', new ItemStack(newGlass, 1, 3), 's',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(newGlass, 9, 3), new Object[] { "&&&", "&&&", "&&&", '&', new ItemStack(Block.getBlockById(20)) });
+				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 4), new Object[] { "&s&", "s&s", "&s&", '&', new ItemStack(newGlass, 1, 3), 's', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(newGlass, 4, 5),
-						new Object[] { " & ", "& &", " & ", '&', new ItemStack(Block.getBlockById(20)) });
-				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 6),
-						new Object[] { "&& ", " & ", " &&", '&', new ItemStack(Block.getBlockById(20)) });
-				GameRegistry.addRecipe(new ItemStack(newGlass, 4, 7),
-						new Object[] { "&& ", "&& ", "   ", '&', new ItemStack(Block.getBlockById(20)) });// 2x2
-				GameRegistry.addRecipe(new ItemStack(newGlass, 4, 7),
-						new Object[] { " &&", " &&", "   ", '&', new ItemStack(Block.getBlockById(20)) });// 2x2
-				GameRegistry.addRecipe(new ItemStack(newGlass, 4, 7),
-						new Object[] { "   ", "&& ", "&& ", '&', new ItemStack(Block.getBlockById(20)) });// 2x2
-				GameRegistry.addRecipe(new ItemStack(newGlass, 4, 7),
-						new Object[] { "   ", " &&", " &&", '&', new ItemStack(Block.getBlockById(20)) });// 2x2
-				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 8),
-						new Object[] { "&s&", "s&s", "&s&", '&', new ItemStack(newGlass, 1, 7), 's',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(newGlass, 4, 5), new Object[] { " & ", "& &", " & ", '&', new ItemStack(Block.getBlockById(20)) });
+				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 6), new Object[] { "&& ", " & ", " &&", '&', new ItemStack(Block.getBlockById(20)) });
+				GameRegistry.addRecipe(new ItemStack(newGlass, 4, 7), new Object[] { "&& ", "&& ", "   ", '&', new ItemStack(Block.getBlockById(20)) });// 2x2
+				GameRegistry.addRecipe(new ItemStack(newGlass, 4, 7), new Object[] { " &&", " &&", "   ", '&', new ItemStack(Block.getBlockById(20)) });// 2x2
+				GameRegistry.addRecipe(new ItemStack(newGlass, 4, 7), new Object[] { "   ", "&& ", "&& ", '&', new ItemStack(Block.getBlockById(20)) });// 2x2
+				GameRegistry.addRecipe(new ItemStack(newGlass, 4, 7), new Object[] { "   ", " &&", " &&", '&', new ItemStack(Block.getBlockById(20)) });// 2x2
+				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 8), new Object[] { "&s&", "s&s", "&s&", '&', new ItemStack(newGlass, 1, 7), 's', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(newGlass, 4, 9),
-						new Object[] { "s&s", "& &", "s&s", '&', new ItemStack(Block.getBlockById(20)), 's',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(newGlass, 4, 9), new Object[] { "s&s", "& &", "s&s", '&', new ItemStack(Block.getBlockById(20)), 's', new ItemStack(Item.getItemById(280)) });// framed
 																																																	// from
-																																																					// sticks
-				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 10),
-						new Object[] { "&s&", "s&s", "&s&", '&', new ItemStack(Block.getBlockById(20)), 's',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																																	// sticks
+				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 10), new Object[] { "&s&", "s&s", "&s&", '&', new ItemStack(Block.getBlockById(20)), 's', new ItemStack(Item.getItemById(280)) });// framed
 																																																	// from
-																																																					// sticks
-				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 11),
-						new Object[] { "s&s", "&s&", "s&s", '&', new ItemStack(Block.getBlockById(20)), 's',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																																	// sticks
+				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 11), new Object[] { "s&s", "&s&", "s&s", '&', new ItemStack(Block.getBlockById(20)), 's', new ItemStack(Item.getItemById(280)) });// framed
 																																																	// from
-																																																					// sticks
-				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 12),
-						new Object[] { "sss", "&&&", "sss", '&', new ItemStack(Block.getBlockById(20)), 's',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																																	// sticks
+				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 12), new Object[] { "sss", "&&&", "sss", '&', new ItemStack(Block.getBlockById(20)), 's', new ItemStack(Item.getItemById(280)) });// framed
 																																																	// from
-																																																					// sticks
-				GameRegistry.addRecipe(new ItemStack(newGlass, 4, 13),
-						new Object[] { "& &", "   ", "& &", '&', new ItemStack(Block.getBlockById(20)) });
-				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 14),
-						new Object[] { "ss ", "&& ", "&& ", '&', new ItemStack(Block.getBlockById(20)), 's',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																																	// sticks
+				GameRegistry.addRecipe(new ItemStack(newGlass, 4, 13), new Object[] { "& &", "   ", "& &", '&', new ItemStack(Block.getBlockById(20)) });
+				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 14), new Object[] { "ss ", "&& ", "&& ", '&', new ItemStack(Block.getBlockById(20)), 's', new ItemStack(Item.getItemById(280)) });// framed
 																																																	// from
-																																																					// sticks
-				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 14),
-						new Object[] { " ss", " &&", " &&", '&', new ItemStack(Block.getBlockById(20)), 's',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																																	// sticks
+				GameRegistry.addRecipe(new ItemStack(newGlass, 5, 14), new Object[] { " ss", " &&", " &&", '&', new ItemStack(Block.getBlockById(20)), 's', new ItemStack(Item.getItemById(280)) });// framed
 																																																	// from
-																																																					// sticks
-				GameRegistry.addRecipe(new ItemStack(newGlass, 6, 15),
-						new Object[] { "&s&", "&s&", "&s&", '&', new ItemStack(Block.getBlockById(20)), 's',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																																	// sticks
+				GameRegistry.addRecipe(new ItemStack(newGlass, 6, 15), new Object[] { "&s&", "&s&", "&s&", '&', new ItemStack(Block.getBlockById(20)), 's', new ItemStack(Item.getItemById(280)) });// framed
 																																																	// from
-																																																					// sticks
+																																																	// sticks
 			}
 			{// new fences from sticks and new planks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 0),
-						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 0), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 0), new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 0), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 0),
-						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 0), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 0), new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 0), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 1),
-						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 1), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 1), new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 1), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 1),
-						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 1), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 1), new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 1), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 2),
-						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 2), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 2), new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 2), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 2),
-						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 2), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 2), new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 2), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 3),
-						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 3), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 3), new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 3), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 3),
-						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 3), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 3), new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 3), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 4),
-						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 4), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 4), new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 4), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 4),
-						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 4), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 4), new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 4), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 5),
-						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 5), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 5), new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 5), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 5),
-						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 5), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 5), new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 5), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 6),
-						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 6), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 6), new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 6), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 6),
-						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 6), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 6), new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 6), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 7),
-						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 7), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 7), new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 7), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 7),
-						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 7), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 7), new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 7), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 8),
-						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 8), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 8), new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 8), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 8),
-						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 8), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 8), new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 8), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 9),
-						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 9), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 9), new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 9), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 9),
-						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 9), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 9), new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 9), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 10),
-						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 10), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 10), new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 10), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 10),
-						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 10), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 10), new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 10), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 11),
-						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 11), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 11), new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 11), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 11),
-						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 11), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 11), new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 11), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 12),
-						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 12), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 12), new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(newPlanks, 1, 12), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 12),
-						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 12), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 12), new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(newPlanks, 1, 12), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 13),
-						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(crystalWood, 1, 2), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 13), new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(crystalWood, 1, 2), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 13),
-						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(crystalWood, 1, 2), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 13), new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(crystalWood, 1, 2), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 14),
-						new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(crystalWood, 1, 3), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 14), new Object[] { "&*&", "&*&", "   ", '&', new ItemStack(crystalWood, 1, 3), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
-				GameRegistry.addRecipe(new ItemStack(fence, 3, 14),
-						new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(crystalWood, 1, 3), '*',
-								new ItemStack(Item.getItemById(280)) });// framed
+																																															// sticks
+				GameRegistry.addRecipe(new ItemStack(fence, 3, 14), new Object[] { "   ", "&*&", "&*&", '&', new ItemStack(crystalWood, 1, 3), '*', new ItemStack(Item.getItemById(280)) });// framed
 																																															// from
-																																																			// sticks
+																																															// sticks
 			}
 			{// flowerPot from vanilla flowerPot
-				GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.flowerPot),
-						new Object[] { Item.getItemById(390) });
+				GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.flowerPot), new Object[] { Item.getItemById(390) });
 			}
 			{// camo
-				GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.camo),
-						new Object[] { new ItemStack(Items.dye, 1, 0), new ItemStack(Items.dye, 1, 1),
-								new ItemStack(Items.dye, 1, 4), new ItemStack(Items.dye, 1, 11),
-								new ItemStack(Items.dye, 1, 15), new ItemStack(Items.dye, 1, 2),
-								new ItemStack(Items.dye, 1, 5), new ItemStack(Items.dye, 1, 14), Blocks.dirt });
-				GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.oneWayCamo),
-						new Object[] { new ItemStack(Items.dye, 1, 0), new ItemStack(Items.dye, 1, 1),
-								new ItemStack(Items.dye, 1, 4), new ItemStack(Items.dye, 1, 11),
-								new ItemStack(Items.dye, 1, 15), new ItemStack(Items.dye, 1, 2),
-								new ItemStack(Items.dye, 1, 5), new ItemStack(Items.dye, 1, 14), Blocks.glass });
+				GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.camo), new Object[] { new ItemStack(Items.dye, 1, 0), new ItemStack(Items.dye, 1, 1), new ItemStack(Items.dye, 1, 4), new ItemStack(Items.dye, 1, 11), new ItemStack(Items.dye, 1, 15), new ItemStack(Items.dye, 1, 2), new ItemStack(Items.dye, 1, 5), new ItemStack(Items.dye, 1, 14), Blocks.dirt });
+				GameRegistry.addShapelessRecipe(new ItemStack(FNBlocks.oneWayCamo), new Object[] { new ItemStack(Items.dye, 1, 0), new ItemStack(Items.dye, 1, 1), new ItemStack(Items.dye, 1, 4), new ItemStack(Items.dye, 1, 11), new ItemStack(Items.dye, 1, 15), new ItemStack(Items.dye, 1, 2), new ItemStack(Items.dye, 1, 5), new ItemStack(Items.dye, 1, 14), Blocks.glass });
 			}
 			if (ForgottenNature.surfaceTeleporter) {
-				GameRegistry.addShapelessRecipe(new ItemStack(FNItems.surfaceTeleportItem, 4, 0),
-						new Object[] { new ItemStack(Items.ender_pearl), new ItemStack(Items.ender_pearl),
-								new ItemStack(Items.blaze_powder) });
+				GameRegistry.addShapelessRecipe(new ItemStack(FNItems.surfaceTeleportItem, 4, 0), new Object[] { new ItemStack(Items.ender_pearl), new ItemStack(Items.ender_pearl), new ItemStack(Items.blaze_powder) });
 			}
 		}
 	}

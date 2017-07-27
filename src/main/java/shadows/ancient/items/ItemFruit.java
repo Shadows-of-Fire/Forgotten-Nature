@@ -15,8 +15,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ItemFruit extends ItemFood {
 	@SideOnly(Side.CLIENT)
 	private IIcon[] fruitIcons;
-	public static final String[] names = new String[] { "banana", "fig", "orange", "peach", "cherries", "blackberries",
-			"huckleberries", "blueberries", "raspberries", "lemon" };
+	public static final String[] names = new String[] { "banana", "fig", "orange", "peach", "cherries", "blackberries", "huckleberries", "blueberries", "raspberries", "lemon" };
 
 	public ItemFruit() {
 		super(1, 0.2F, false);

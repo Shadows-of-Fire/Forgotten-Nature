@@ -50,8 +50,7 @@ public class genFruitBush extends WorldGenerator {
 					fruit = 1;
 				}
 
-				if ((Math.abs(x) != var || Math.abs(y) != var) && (Math.abs(x) != var - 1 || Math.abs(y) != var)
-						&& (Math.abs(x) != var || Math.abs(y) != var - 1) && world.isAirBlock(i3 + x, j3, k3 + y)) {
+				if ((Math.abs(x) != var || Math.abs(y) != var) && (Math.abs(x) != var - 1 || Math.abs(y) != var) && (Math.abs(x) != var || Math.abs(y) != var - 1) && world.isAirBlock(i3 + x, j3, k3 + y)) {
 					world.setBlock(i3 + x, j3, k3 + y, leaf2, leafmeta + fruit, 3);
 				}
 

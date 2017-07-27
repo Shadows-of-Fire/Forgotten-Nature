@@ -90,8 +90,7 @@ public class genFruit extends WorldGenerator {
 		return true;
 	}
 
-	public static void branches(World world, Random random, boolean flower, int ii, int jj, int kk, int iD, int kD,
-			Block leaf2, int leafmeta, Block log2, int logmeta) {
+	public static void branches(World world, Random random, boolean flower, int ii, int jj, int kk, int iD, int kD, Block leaf2, int leafmeta, Block log2, int logmeta) {
 		for (int br = 0; br < 4; br++) {
 			if (iD == -1 && random.nextInt(2) == 0) {
 				ii--;
@@ -120,8 +119,7 @@ public class genFruit extends WorldGenerator {
 		}
 	}
 
-	public static void genLeaves(World world, Random random, boolean flower, int i3, int j3, int k3, Block leaf2,
-			int leafmeta) {
+	public static void genLeaves(World world, Random random, boolean flower, int i3, int j3, int k3, Block leaf2, int leafmeta) {
 		for (int x = -2; x <= 2; x++) {
 			for (int y = -2; y <= 2; y++) {
 				if (Math.abs(x) != 2 || Math.abs(y) != 2) {

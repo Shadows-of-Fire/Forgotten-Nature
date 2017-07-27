@@ -47,8 +47,7 @@ public class ItemNewContainer extends Item {
 		this.containerIcons[9] = par1IconRegister.registerIcon("forgottennature:StainBrightYellow");
 	}
 
-	public boolean onItemUse(ItemStack iStack, EntityPlayer ePlayer, World world, int x, int y, int z, int dir,
-			float p_8_, float p_9_, float p_10_) {
+	public boolean onItemUse(ItemStack iStack, EntityPlayer ePlayer, World world, int x, int y, int z, int dir, float p_8_, float p_9_, float p_10_) {
 		int xp = 0;
 		int yp = 0;
 		int zp = 0;

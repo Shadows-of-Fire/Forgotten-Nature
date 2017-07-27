@@ -153,27 +153,23 @@ public class genDesertTree extends WorldGenerator {
 		return true;
 	}
 
-	public static void branchAndLeaf(World world, int i3, int j3, int k3, Block leaf, int leafmeta, Block log,
-			int logmeta) {
+	public static void branchAndLeaf(World world, int i3, int j3, int k3, Block leaf, int leafmeta, Block log, int logmeta) {
 		world.setBlock(i3, j3, k3, log, logmeta, 3);
 
 		for (int x = -3; x <= 3; x++) {
 			for (int y = -3; y <= 3; y++) {
-				if ((Math.abs(x) != 3 || Math.abs(y) != 3) && (Math.abs(x) != 2 || Math.abs(y) != 3)
-						&& (Math.abs(x) != 3 || Math.abs(y) != 2) && world.isAirBlock(i3 + x, j3, k3 + y)) {
+				if ((Math.abs(x) != 3 || Math.abs(y) != 3) && (Math.abs(x) != 2 || Math.abs(y) != 3) && (Math.abs(x) != 3 || Math.abs(y) != 2) && world.isAirBlock(i3 + x, j3, k3 + y)) {
 					world.setBlock(i3 + x, j3, k3 + y, leaf, leafmeta, 3);
 				}
 
-				if ((Math.abs(x) < 3 && Math.abs(y) < 3 && (Math.abs(x) != 2 || Math.abs(y) != 2))
-						&& world.isAirBlock(i3 + x, j3 + 1, k3 + y)) {
+				if ((Math.abs(x) < 3 && Math.abs(y) < 3 && (Math.abs(x) != 2 || Math.abs(y) != 2)) && world.isAirBlock(i3 + x, j3 + 1, k3 + y)) {
 					world.setBlock(i3 + x, j3 + 1, k3 + y, leaf, leafmeta, 3);
 				}
 			}
 		}
 	}
 
-	public static void largeDirect(World world, Random random, int iDir, int kDir, int i2, int j2, int k2, int size,
-			int s1, int s2, int s3, Block leaf2, int leafmeta, Block log2, int logmeta) {
+	public static void largeDirect(World world, Random random, int iDir, int kDir, int i2, int j2, int k2, int size, int s1, int s2, int s3, Block leaf2, int leafmeta, Block log2, int logmeta) {
 		int i3;
 		int j3;
 		int k3;
@@ -194,8 +190,8 @@ public class genDesertTree extends WorldGenerator {
 			if (next <= 9 && size == 2) {
 				if (world.isAirBlock(i2 - iDir, j2, k2 - kDir) || world.getBlock(i2 - iDir, j2, k2 - kDir) == leaf2)
 					world.setBlock(i2 - iDir, j2, k2 - kDir, log2, logmeta, 3); // extra
-																			// tree
-																				// thickness
+				// tree
+				// thickness
 			}
 
 			if (next == 5 * size) {
@@ -521,8 +517,7 @@ public class genDesertTree extends WorldGenerator {
 		}
 	}
 
-	public static void rootGen(World world, Random random, int ii, int jj, int kk, int iD, int kD, Block leaf2,
-			int leafmeta, Block log2, int logmeta) {
+	public static void rootGen(World world, Random random, int ii, int jj, int kk, int iD, int kD, Block leaf2, int leafmeta, Block log2, int logmeta) {
 		for (int br = 0; br < 6; br++) {
 			if (iD == -1 && random.nextInt(3) == 0) {
 				ii--;

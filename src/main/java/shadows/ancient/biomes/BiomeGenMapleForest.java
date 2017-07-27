@@ -15,8 +15,7 @@ public class BiomeGenMapleForest extends BiomeGenBase {
 	public BiomeGenMapleForest(int par1) {
 		super(par1);
 		spawnableCreatureList.add(new SpawnListEntry(EntityWolf.class, 5, 4, 4));
-		this.setHeight(
-				new BiomeGenBase.Height(0.1F * ForgottenNature.mapleForestMin, 0.1F * ForgottenNature.mapleForestMax));
+		this.setHeight(new BiomeGenBase.Height(0.1F * ForgottenNature.mapleForestMin, 0.1F * ForgottenNature.mapleForestMax));
 		this.temperature = 0.5F;
 		this.rainfall = 0.7F;
 		this.setBiomeName("Maple Forest");

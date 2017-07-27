@@ -41,8 +41,7 @@ public class ItemPowder extends Item {
 		this.powderIcons[3] = par1IconRegister.registerIcon("forgottennature:PowderSoulDust");
 	}
 
-	public boolean onItemUse(ItemStack par1ItemStack, EntityPlayer entityplayer, World world, int par4, int par5,
-			int par6, int par7, float par8, float par9, float par10) {
+	public boolean onItemUse(ItemStack par1ItemStack, EntityPlayer entityplayer, World world, int par4, int par5, int par6, int par7, float par8, float par9, float par10) {
 		byte var8 = 0;
 		ItemStack equipped = entityplayer.getCurrentEquippedItem();
 		Block blk = world.getBlock(par4, par5, par6);

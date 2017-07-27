@@ -112,8 +112,7 @@ public class genNetherTree extends WorldGenerator {
 					}
 				}
 			} else if (dir == 1) {
-				if (world.isAirBlock(i - 1 * l1, j + l1, k - 1 * l1)
-						|| world.getBlock(i - 1 * l1, j + l1, k - 1 * l1) == leaf)
+				if (world.isAirBlock(i - 1 * l1, j + l1, k - 1 * l1) || world.getBlock(i - 1 * l1, j + l1, k - 1 * l1) == leaf)
 					world.setBlock(i - 1 * l1, j + l1, k - 1 * l1, log, logmeta, 3);
 				if (l1 == l - 1)
 					genLeaves(world, random, i - 1 * l1, j + l1, k - 1 * l1, leaf, leafmeta);
@@ -141,8 +140,7 @@ public class genNetherTree extends WorldGenerator {
 					}
 				}
 			} else if (dir == 3) {
-				if (world.isAirBlock(i - 1 * l1, j + l1, k + 1 * l1)
-						|| world.getBlock(i - 1 * l1, j + l1, k + 1 * l1) == leaf)
+				if (world.isAirBlock(i - 1 * l1, j + l1, k + 1 * l1) || world.getBlock(i - 1 * l1, j + l1, k + 1 * l1) == leaf)
 					world.setBlock(i - 1 * l1, j + l1, k + 1 * l1, log, logmeta, 3);
 				if (l1 == l - 1)
 					genLeaves(world, random, i - 1 * l1, j + l1, k + 1 * l1, leaf, leafmeta);
@@ -170,8 +168,7 @@ public class genNetherTree extends WorldGenerator {
 					}
 				}
 			} else if (dir == 5) {
-				if (world.isAirBlock(i + 1 * l1, j + l1, k + 1 * l1)
-						|| world.getBlock(i + 1 * l1, j + l1, k + 1 * l1) == leaf)
+				if (world.isAirBlock(i + 1 * l1, j + l1, k + 1 * l1) || world.getBlock(i + 1 * l1, j + l1, k + 1 * l1) == leaf)
 					world.setBlock(i + 1 * l1, j + l1, k + 1 * l1, log, logmeta, 3);
 				if (l1 == l - 1)
 					genLeaves(world, random, i + 1 * l1, j + l1, k + 1 * l1, leaf, leafmeta);
@@ -199,8 +196,7 @@ public class genNetherTree extends WorldGenerator {
 					}
 				}
 			} else if (dir == 7) {
-				if (world.isAirBlock(i + 1 * l1, j + l1, k - 1 * l1)
-						|| world.getBlock(i + 1 * l1, j + l1, k - 1 * l1) == leaf)
+				if (world.isAirBlock(i + 1 * l1, j + l1, k - 1 * l1) || world.getBlock(i + 1 * l1, j + l1, k - 1 * l1) == leaf)
 					world.setBlock(i + 1 * l1, j + l1, k - 1 * l1, log, logmeta, 3);
 				if (l1 == l - 1)
 					genLeaves(world, random, i + 1 * l1, j + l1, k - 1 * l1, leaf, leafmeta);
@@ -232,8 +228,7 @@ public class genNetherTree extends WorldGenerator {
 		return true;
 	}
 
-	public static void branches(World world, Random random, int ii, int jj, int kk, int iD, int kD, Block leaf2,
-			int leafmeta, Block log2, int logmeta) {
+	public static void branches(World world, Random random, int ii, int jj, int kk, int iD, int kD, Block leaf2, int leafmeta, Block log2, int logmeta) {
 		for (int br = 0; br < 4; br++) {
 			if (iD == -1 && random.nextInt(2) == 0)
 				ii--;

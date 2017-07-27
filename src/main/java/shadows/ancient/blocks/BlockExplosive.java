@@ -62,8 +62,7 @@ public class BlockExplosive extends Block {
 	 */
 	public void onBlockDestroyedByExplosion(World world, int i, int j, int k, Explosion explo) {
 		if (!world.isRemote) {
-			EntityTNTPrimed entitytntprimed = new EntityTNTPrimed(world, (double) ((float) i + 0.5F),
-					(double) ((float) j + 0.5F), (double) ((float) k + 0.5F), explo.getExplosivePlacedBy());
+			EntityTNTPrimed entitytntprimed = new EntityTNTPrimed(world, (double) ((float) i + 0.5F), (double) ((float) j + 0.5F), (double) ((float) k + 0.5F), explo.getExplosivePlacedBy());
 			entitytntprimed.fuse = world.rand.nextInt(entitytntprimed.fuse / 4) + entitytntprimed.fuse / 8;
 			world.spawnEntityInWorld(entitytntprimed);
 		}
@@ -73,23 +72,18 @@ public class BlockExplosive extends Block {
 		this.prime(world, i, j, k, met, (EntityLivingBase) null);
 	}
 
-	public void prime(World p_150114_1_, int p_150114_2_, int p_150114_3_, int p_150114_4_, int p_150114_5_,
-			EntityLivingBase p_150114_6_) {
+	public void prime(World p_150114_1_, int p_150114_2_, int p_150114_3_, int p_150114_4_, int p_150114_5_, EntityLivingBase p_150114_6_) {
 		if (!p_150114_1_.isRemote) {
 			if ((p_150114_5_ & 1) == 1) {
-				EntityTNTPrimed entitytntprimed = new EntityTNTPrimed(p_150114_1_,
-						(double) ((float) p_150114_2_ + 0.5F), (double) ((float) p_150114_3_ + 0.5F),
-						(double) ((float) p_150114_4_ + 0.5F), p_150114_6_);
+				EntityTNTPrimed entitytntprimed = new EntityTNTPrimed(p_150114_1_, (double) ((float) p_150114_2_ + 0.5F), (double) ((float) p_150114_3_ + 0.5F), (double) ((float) p_150114_4_ + 0.5F), p_150114_6_);
 				p_150114_1_.spawnEntityInWorld(entitytntprimed);
 				p_150114_1_.playSoundAtEntity(entitytntprimed, "game.tnt.primed", 1.0F, 1.0F);
 			}
 		}
 	}
 
-	public boolean onBlockActivated(World world, int i, int j, int k, EntityPlayer eplayer, int p_149727_6_,
-			float p_149727_7_, float p_149727_8_, float p_149727_9_) {
-		if (eplayer.getCurrentEquippedItem() != null
-				&& eplayer.getCurrentEquippedItem().getItem() == Items.flint_and_steel) {
+	public boolean onBlockActivated(World world, int i, int j, int k, EntityPlayer eplayer, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_) {
+		if (eplayer.getCurrentEquippedItem() != null && eplayer.getCurrentEquippedItem().getItem() == Items.flint_and_steel) {
 			this.prime(world, i, j, k, 1, eplayer);
 			world.setBlockToAir(i, j, k);
 			eplayer.getCurrentEquippedItem().damageItem(1, eplayer);
@@ -104,8 +98,7 @@ public class BlockExplosive extends Block {
 			EntityArrow entityarrow = (EntityArrow) entity;
 
 			if (entityarrow.isBurning()) {
-				this.prime(world, i, j, k, 1, entityarrow.shootingEntity instanceof EntityLivingBase
-						? (EntityLivingBase) entityarrow.shootingEntity : null);
+				this.prime(world, i, j, k, 1, entityarrow.shootingEntity instanceof EntityLivingBase ? (EntityLivingBase) entityarrow.shootingEntity : null);
 				world.setBlockToAir(i, j, k);
 			}
 		}

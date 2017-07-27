@@ -20,10 +20,7 @@ public class ItemNewPA extends ItemTool {
 	@SideOnly(Side.CLIENT)
 	private IIcon field_94594_d;
 
-	private static Set blocksEffectiveAgainst = Sets.newHashSet(
-			new Block[] { Blocks.cobblestone, Blocks.stone, Blocks.sandstone, Blocks.mossy_cobblestone, Blocks.iron_ore,
-					Blocks.iron_block, Blocks.coal_ore, Blocks.gold_block, Blocks.gold_ore, Blocks.diamond_ore,
-					Blocks.diamond_block, Blocks.ice, Blocks.lapis_ore, Blocks.lapis_block, Blocks.obsidian });
+	private static Set blocksEffectiveAgainst = Sets.newHashSet(new Block[] { Blocks.cobblestone, Blocks.stone, Blocks.sandstone, Blocks.mossy_cobblestone, Blocks.iron_ore, Blocks.iron_block, Blocks.coal_ore, Blocks.gold_block, Blocks.gold_ore, Blocks.diamond_ore, Blocks.diamond_block, Blocks.ice, Blocks.lapis_ore, Blocks.lapis_block, Blocks.obsidian });
 
 	public ItemNewPA(Item.ToolMaterial toolmaterial) {
 		super(2, toolmaterial, blocksEffectiveAgainst);
@@ -31,29 +28,11 @@ public class ItemNewPA extends ItemTool {
 	}
 
 	public boolean func_150897_b(Block par1Block) {
-		return par1Block == Blocks.obsidian ? this.toolMaterial.getHarvestLevel() >= 1
-				: (par1Block != Blocks.diamond_block && par1Block != Blocks.diamond_ore
-						? (par1Block == Blocks.emerald_ore ? this.toolMaterial.getHarvestLevel() >= 1
-								: (par1Block != Blocks.gold_block && par1Block != Blocks.gold_ore
-										? (par1Block != Blocks.iron_block && par1Block != Blocks.iron_ore
-												? (par1Block != Blocks.lapis_block && par1Block != Blocks.lapis_ore
-														? (par1Block != Blocks.redstone_ore
-																&& par1Block != Blocks.lit_redstone_ore
-																		? (par1Block.getMaterial() == Material.rock
-																				? true
-																				: par1Block
-																						.getMaterial() == Material.iron)
-																		: this.toolMaterial.getHarvestLevel() >= 1)
-														: this.toolMaterial.getHarvestLevel() >= 1)
-												: this.toolMaterial.getHarvestLevel() >= 1)
-										: this.toolMaterial.getHarvestLevel() >= 2))
-						: this.toolMaterial.getHarvestLevel() >= 1);
+		return par1Block == Blocks.obsidian ? this.toolMaterial.getHarvestLevel() >= 1 : (par1Block != Blocks.diamond_block && par1Block != Blocks.diamond_ore ? (par1Block == Blocks.emerald_ore ? this.toolMaterial.getHarvestLevel() >= 1 : (par1Block != Blocks.gold_block && par1Block != Blocks.gold_ore ? (par1Block != Blocks.iron_block && par1Block != Blocks.iron_ore ? (par1Block != Blocks.lapis_block && par1Block != Blocks.lapis_ore ? (par1Block != Blocks.redstone_ore && par1Block != Blocks.lit_redstone_ore ? (par1Block.getMaterial() == Material.rock ? true : par1Block.getMaterial() == Material.iron) : this.toolMaterial.getHarvestLevel() >= 1) : this.toolMaterial.getHarvestLevel() >= 1) : this.toolMaterial.getHarvestLevel() >= 1) : this.toolMaterial.getHarvestLevel() >= 2)) : this.toolMaterial.getHarvestLevel() >= 1);
 	}
 
 	public float func_150893_a(ItemStack par1ItemStack, Block par2Block) {
-		return par2Block != null
-				&& (par2Block.getMaterial() == Material.iron || par2Block.getMaterial() == Material.rock)
-						? this.efficiencyOnProperMaterial : 1.0F;
+		return par2Block != null && (par2Block.getMaterial() == Material.iron || par2Block.getMaterial() == Material.rock) ? this.efficiencyOnProperMaterial : 1.0F;
 	}
 
 	public IIcon getIconFromDamage(int i) {

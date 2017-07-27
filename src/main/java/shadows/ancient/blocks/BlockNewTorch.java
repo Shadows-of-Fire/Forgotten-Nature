@@ -41,8 +41,7 @@ public class BlockNewTorch extends BlockTorch {
 	}
 
 	@SideOnly(Side.CLIENT)
-	public void randomDisplayTick(World p_149734_1_, int p_149734_2_, int p_149734_3_, int p_149734_4_,
-			Random p_149734_5_) {
+	public void randomDisplayTick(World p_149734_1_, int p_149734_2_, int p_149734_3_, int p_149734_4_, Random p_149734_5_) {
 
 	}
 

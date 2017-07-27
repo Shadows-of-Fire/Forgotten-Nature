@@ -7,9 +7,7 @@ import net.minecraft.util.IIcon;
 import shadows.ancient.FNBlocks;
 
 public class ItemNewPlanks2 extends ItemBlock {
-	public static final String[] names = new String[] { "herringboneparquetplank", "xparquetplank",
-			"frederiksborgparquetplank", "fordonparquetplank", "latticeparquetplank", "diamondparquetplank",
-			"pavimentiparquetplank" };
+	public static final String[] names = new String[] { "herringboneparquetplank", "xparquetplank", "frederiksborgparquetplank", "fordonparquetplank", "latticeparquetplank", "diamondparquetplank", "pavimentiparquetplank" };
 
 	public ItemNewPlanks2(Block i) {
 		super(i);

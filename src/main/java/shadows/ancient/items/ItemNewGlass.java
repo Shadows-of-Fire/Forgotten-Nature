@@ -7,9 +7,7 @@ import net.minecraft.util.IIcon;
 import shadows.ancient.FNBlocks;
 
 public class ItemNewGlass extends ItemBlock {
-	public static final String[] names = new String[] { "blacklattice", "wide3x3", "ramedwide3x3", "3x3", "framed3x3",
-			"doublediamond", "pinwheel", "2x2", "framed2x2", "diamondlattice", "doublelattice", "squarelattice",
-			"peakingwindow", "circle", "doubledoor", "2x1" };
+	public static final String[] names = new String[] { "blacklattice", "wide3x3", "ramedwide3x3", "3x3", "framed3x3", "doublediamond", "pinwheel", "2x2", "framed2x2", "diamondlattice", "doublelattice", "squarelattice", "peakingwindow", "circle", "doubledoor", "2x1" };
 
 	public ItemNewGlass(Block i) {
 		super(i);

@@ -57,18 +57,10 @@ public class genFloatingIsland extends WorldGenerator {
 								placeIndex = 0;
 							}
 
-							world.setBlock(r + i, j + up + h - firstRan, d + k,
-									world.getBlock(r + i, j - y + up, d + k),
-									world.getBlockMetadata(r + i, j - y + up, d + k), 3);
-							world.setBlock(-r + i, j + up + h - secondRan, d + k,
-									world.getBlock(-r + i, j - y + up, d + k),
-									world.getBlockMetadata(-r + i, j - y + up, d + k), 3);
-							world.setBlock(r + i, j + up + h - thirdRan, -d + k,
-									world.getBlock(r + i, j - y + up, -d + k),
-									world.getBlockMetadata(r + i, j - y + up, -d + k), 3);
-							world.setBlock(-r + i, j + up + h - fourthRan, -d + k,
-									world.getBlock(-r + i, j - y + up, -d + k),
-									world.getBlockMetadata(-r + i, j - y + up, -d + k), 3);
+							world.setBlock(r + i, j + up + h - firstRan, d + k, world.getBlock(r + i, j - y + up, d + k), world.getBlockMetadata(r + i, j - y + up, d + k), 3);
+							world.setBlock(-r + i, j + up + h - secondRan, d + k, world.getBlock(-r + i, j - y + up, d + k), world.getBlockMetadata(-r + i, j - y + up, d + k), 3);
+							world.setBlock(r + i, j + up + h - thirdRan, -d + k, world.getBlock(r + i, j - y + up, -d + k), world.getBlockMetadata(r + i, j - y + up, -d + k), 3);
+							world.setBlock(-r + i, j + up + h - fourthRan, -d + k, world.getBlock(-r + i, j - y + up, -d + k), world.getBlockMetadata(-r + i, j - y + up, -d + k), 3);
 							world.setBlockToAir(r + i, j - y + up, d + k);
 							world.setBlockToAir(-r + i, j - y + up, d + k);
 							world.setBlockToAir(r + i, j - y + up, -d + k);
@@ -80,14 +72,10 @@ public class genFloatingIsland extends WorldGenerator {
 							fourthRan = 0;
 						}
 					} else if ((Math.pow(r, 2) + Math.pow(d, 2)) <= (powSize)) {
-						world.setBlock(r + i, j + up + h, d + k, world.getBlock(r + i, j - y + up, d + k),
-								world.getBlockMetadata(r + i, j - y + up, d + k), 3);
-						world.setBlock(-r + i, j + up + h, d + k, world.getBlock(-r + i, j - y + up, d + k),
-								world.getBlockMetadata(-r + i, j - y + up, d + k), 3);
-						world.setBlock(r + i, j + up + h, -d + k, world.getBlock(r + i, j - y + up, -d + k),
-								world.getBlockMetadata(r + i, j - y + up, -d + k), 3);
-						world.setBlock(-r + i, j + up + h, -d + k, world.getBlock(-r + i, j - y + up, -d + k),
-								world.getBlockMetadata(-r + i, j - y + up, -d + k), 3);
+						world.setBlock(r + i, j + up + h, d + k, world.getBlock(r + i, j - y + up, d + k), world.getBlockMetadata(r + i, j - y + up, d + k), 3);
+						world.setBlock(-r + i, j + up + h, d + k, world.getBlock(-r + i, j - y + up, d + k), world.getBlockMetadata(-r + i, j - y + up, d + k), 3);
+						world.setBlock(r + i, j + up + h, -d + k, world.getBlock(r + i, j - y + up, -d + k), world.getBlockMetadata(r + i, j - y + up, -d + k), 3);
+						world.setBlock(-r + i, j + up + h, -d + k, world.getBlock(-r + i, j - y + up, -d + k), world.getBlockMetadata(-r + i, j - y + up, -d + k), 3);
 						world.setBlockToAir(r + i, j - y + up, d + k);
 						world.setBlockToAir(-r + i, j - y + up, d + k);
 						world.setBlockToAir(r + i, j - y + up, -d + k);

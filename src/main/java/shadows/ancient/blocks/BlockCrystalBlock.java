@@ -36,11 +36,9 @@ public class BlockCrystalBlock extends Block {
 	}
 
 	@SideOnly(Side.CLIENT)
-	public boolean shouldSideBeRendered(IBlockAccess p_149646_1_, int p_149646_2_, int p_149646_3_, int p_149646_4_,
-			int p_149646_5_) {
+	public boolean shouldSideBeRendered(IBlockAccess p_149646_1_, int p_149646_2_, int p_149646_3_, int p_149646_4_, int p_149646_5_) {
 		Block block = p_149646_1_.getBlock(p_149646_2_, p_149646_3_, p_149646_4_);
-		return block == this ? false
-				: super.shouldSideBeRendered(p_149646_1_, p_149646_2_, p_149646_3_, p_149646_4_, p_149646_5_);
+		return block == this ? false : super.shouldSideBeRendered(p_149646_1_, p_149646_2_, p_149646_3_, p_149646_4_, p_149646_5_);
 	}
 
 	public boolean isOpaqueCube() {
@@ -72,8 +70,7 @@ public class BlockCrystalBlock extends Block {
 					int var8 = par3 + par5Random.nextInt(5) - 3;
 					int var9 = par4 + par5Random.nextInt(3) - 1;
 					id = par1World.getBlock(var7, var8, var9);
-					if ((id == Blocks.grass || id == Blocks.stone)
-							&& par1World.getBlock(var7, var8 + 1, var9) == Blocks.air) {
+					if ((id == Blocks.grass || id == Blocks.stone) && par1World.getBlock(var7, var8 + 1, var9) == Blocks.air) {
 						par1World.setBlock(var7, var8 + 1, var9, FNBlocks.crystalStone, 0, 2);
 					}
 				}
@@ -83,8 +80,7 @@ public class BlockCrystalBlock extends Block {
 					int var8 = par3 + par5Random.nextInt(5) - 3;
 					int var9 = par4 + par5Random.nextInt(3) - 1;
 					id = par1World.getBlock(var7, var8, var9);
-					if ((id == Blocks.grass || id == Blocks.stone)
-							&& par1World.getBlock(var7, var8 + 1, var9) == Blocks.air) {
+					if ((id == Blocks.grass || id == Blocks.stone) && par1World.getBlock(var7, var8 + 1, var9) == Blocks.air) {
 						par1World.setBlock(var7, var8 + 1, var9, FNBlocks.crystalStone, 1, 2);
 					}
 				}

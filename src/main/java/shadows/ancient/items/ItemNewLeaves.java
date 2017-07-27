@@ -7,17 +7,11 @@ import net.minecraft.util.IIcon;
 import shadows.ancient.FNBlocks;
 
 public class ItemNewLeaves extends ItemBlock {
-	public static final String[] names1 = new String[] { "redmapleleaves", "angeloakleaves", "yellowmapleleaves",
-			"jacarandaleaves", "figleaves", "cypressleaves", "desertironwoodleaves", "eucalyptusleaves" };
-	public static final String[] names2 = new String[] { "sequoialeaves", "pinkcherryleaves", "whitecherryleaves",
-			"appleleaves", "applebudleaves", "applefruitleaves", "dummy", "joshualeaves" };
-	public static final String[] names3 = new String[] { "swampwillowleaves", "deciduousbushleaves",
-			"evergreenbushleaves", "palmleaves", "desertwillowleaves", "cedarleaves", "ginkgoleaves", "poplarleaves" };
-	public static final String[] names4 = new String[] { "beechleaves", "walnutleaves", "dummy",
-			"widetopeucalyptusleaves", "bukkitleaves", "bananaleaves", "orangeleaves", "peachleaves" };
-	public static final String[] names5 = new String[] { "lemonleaves", "blueberryleaves", "blueberryfruitleaves",
-			"raspberryleaves", "raspberryfruitleaves", "blackberryleaves", "blackberryfruitleaves",
-			"cherryfruitleaves" };
+	public static final String[] names1 = new String[] { "redmapleleaves", "angeloakleaves", "yellowmapleleaves", "jacarandaleaves", "figleaves", "cypressleaves", "desertironwoodleaves", "eucalyptusleaves" };
+	public static final String[] names2 = new String[] { "sequoialeaves", "pinkcherryleaves", "whitecherryleaves", "appleleaves", "applebudleaves", "applefruitleaves", "dummy", "joshualeaves" };
+	public static final String[] names3 = new String[] { "swampwillowleaves", "deciduousbushleaves", "evergreenbushleaves", "palmleaves", "desertwillowleaves", "cedarleaves", "ginkgoleaves", "poplarleaves" };
+	public static final String[] names4 = new String[] { "beechleaves", "walnutleaves", "dummy", "widetopeucalyptusleaves", "bukkitleaves", "bananaleaves", "orangeleaves", "peachleaves" };
+	public static final String[] names5 = new String[] { "lemonleaves", "blueberryleaves", "blueberryfruitleaves", "raspberryleaves", "raspberryfruitleaves", "blackberryleaves", "blackberryfruitleaves", "cherryfruitleaves" };
 	public static final String[] names6 = new String[] { "huckleberryleaves", "huckleberryfruitleaves" };
 	Block blk;
 

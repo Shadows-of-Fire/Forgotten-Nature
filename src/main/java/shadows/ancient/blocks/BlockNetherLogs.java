@@ -83,17 +83,14 @@ public class BlockNetherLogs extends Block {
 		Boolean boolean1 = Boolean.valueOf(true);
 		Boolean isAxe = false;
 		ItemStack equipped = entityplayer.getCurrentEquippedItem();
-		if (equipped != null && (equipped.getItem() == Items.golden_axe || equipped.getItem() == Items.iron_axe
-				|| equipped.getItem() == Items.diamond_axe || equipped.getItem() == FNItems.dcAxeItem
-				|| equipped.getItem() == FNItems.cAxeItem || equipped.getItem() == FNItems.oAxeItem))
+		if (equipped != null && (equipped.getItem() == Items.golden_axe || equipped.getItem() == Items.iron_axe || equipped.getItem() == Items.diamond_axe || equipped.getItem() == FNItems.dcAxeItem || equipped.getItem() == FNItems.cAxeItem || equipped.getItem() == FNItems.oAxeItem))
 			isAxe = true;
 
 		if (isAxe && world.getBlock(ai[0], ai[1], ai[2]) == this && ForgottenNature.lumberjack == true) {
 			for (int i1 = -1; i1 <= 1; i1++) {
 				for (int k1 = -1; k1 <= 0; k1++) {
 					for (int i2 = -1; i2 <= 1; i2++) {
-						if ((i1 + i != i || k1 + j != j || i2 + k != k)
-								&& world.getBlock(i1 + i, k1 + j, i2 + k) == this) {
+						if ((i1 + i != i || k1 + j != j || i2 + k != k) && world.getBlock(i1 + i, k1 + j, i2 + k) == this) {
 							boolean1 = Boolean.valueOf(false);
 						}
 					}
@@ -163,13 +160,10 @@ public class BlockNetherLogs extends Block {
 				} while (true);
 
 				for (int i3 = 0; i3 < ai1.length; i3++) {
-					if (ai1[i3][1] > 0 && ai1[i3][1] < ForgottenNature.lumberjackPower
-							&& world.getBlock(ai1[i3][0], ai1[i3][1], ai1[i3][2]) == this) {
-						dropBlockAsItem(world, ai1[i3][0], ai1[i3][1], ai1[i3][2],
-								new ItemStack(this, 1, world.getBlockMetadata(ai1[i3][0], ai1[i3][1], ai1[i3][2])));
+					if (ai1[i3][1] > 0 && ai1[i3][1] < ForgottenNature.lumberjackPower && world.getBlock(ai1[i3][0], ai1[i3][1], ai1[i3][2]) == this) {
+						dropBlockAsItem(world, ai1[i3][0], ai1[i3][1], ai1[i3][2], new ItemStack(this, 1, world.getBlockMetadata(ai1[i3][0], ai1[i3][1], ai1[i3][2])));
 						world.setBlock(ai1[i3][0], ai1[i3][1], ai1[i3][2], Blocks.air, 0, 3);
-						if (equipped.getItemDamage() + 1 <= equipped.getMaxDamage() && ForgottenNature.lumberjackDamage
-								&& !entityplayer.capabilities.isCreativeMode)
+						if (equipped.getItemDamage() + 1 <= equipped.getMaxDamage() && ForgottenNature.lumberjackDamage && !entityplayer.capabilities.isCreativeMode)
 							equipped.setItemDamage(equipped.getItemDamage() + 1);
 					}
 				}
@@ -188,8 +182,7 @@ public class BlockNetherLogs extends Block {
 						int var12 = Block.getIdFromBlock(par1World.getBlock(par2 + var9, par3 + var10, par4 + var11));
 
 						if (Block.getBlockById(var12) != null) {
-							Block.getBlockById(var12).beginLeavesDecay(par1World, par2 + var9, par3 + var10,
-									par4 + var11);
+							Block.getBlockById(var12).beginLeavesDecay(par1World, par2 + var9, par3 + var10, par4 + var11);
 						}
 					}
 				}
@@ -197,8 +190,7 @@ public class BlockNetherLogs extends Block {
 		}
 	}
 
-	public boolean onBlockActivated(World world, int i, int j, int k, EntityPlayer entityplayer, int par2, float par3,
-			float par4, float par5) {
+	public boolean onBlockActivated(World world, int i, int j, int k, EntityPlayer entityplayer, int par2, float par3, float par4, float par5) {
 		ItemStack equipped = entityplayer.getCurrentEquippedItem();
 
 		if (equipped == null || world.getBlockMetadata(i, j, k) < 2)

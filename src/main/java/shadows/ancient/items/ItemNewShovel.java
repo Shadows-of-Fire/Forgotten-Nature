@@ -19,9 +19,7 @@ public class ItemNewShovel extends ItemTool {
 	@SideOnly(Side.CLIENT)
 	private IIcon field_94594_d;
 
-	public static final Set blocksEffectiveAgainst = Sets
-			.newHashSet(new Block[] { Blocks.grass, Blocks.dirt, Blocks.sand, Blocks.gravel, Blocks.snow,
-					Blocks.snow_layer, Blocks.clay, Blocks.farmland, Blocks.soul_sand, Blocks.mycelium });
+	public static final Set blocksEffectiveAgainst = Sets.newHashSet(new Block[] { Blocks.grass, Blocks.dirt, Blocks.sand, Blocks.gravel, Blocks.snow, Blocks.snow_layer, Blocks.clay, Blocks.farmland, Blocks.soul_sand, Blocks.mycelium });
 
 	public ItemNewShovel(Item.ToolMaterial enumtoolmaterial) {
 		super(2, enumtoolmaterial, blocksEffectiveAgainst);

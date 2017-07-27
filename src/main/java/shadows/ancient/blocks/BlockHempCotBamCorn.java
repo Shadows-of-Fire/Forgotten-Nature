@@ -70,8 +70,7 @@ public class BlockHempCotBamCorn extends BlockFlower {
 		}
 	}
 
-	public boolean canSustainPlant(IBlockAccess world, int x, int y, int z, ForgeDirection direction,
-			IPlantable plantable) {
+	public boolean canSustainPlant(IBlockAccess world, int x, int y, int z, ForgeDirection direction, IPlantable plantable) {
 		Block plant = plantable.getPlant(world, x, y + 1, z);
 		Block soil = world.getBlock(x, y + 1, z);
 
@@ -92,10 +91,7 @@ public class BlockHempCotBamCorn extends BlockFlower {
 				par1World.setBlock(par2, par3, par4, Blocks.air, 0, 3);
 			}
 
-			if (var6 > 8 && var6 < 12
-					&& (par1World.getBlockMetadata(par2, par3 - 1, par4) < var6
-							|| par1World.getBlockMetadata(par2, par3 - 1, par4) > 11)
-					&& par1World.getBlock(par2, par3 - 1, par4) == this) {
+			if (var6 > 8 && var6 < 12 && (par1World.getBlockMetadata(par2, par3 - 1, par4) < var6 || par1World.getBlockMetadata(par2, par3 - 1, par4) > 11) && par1World.getBlock(par2, par3 - 1, par4) == this) {
 				par1World.setBlock(par2, par3, par4, Blocks.air, 0, 3);
 			}
 
@@ -103,11 +99,7 @@ public class BlockHempCotBamCorn extends BlockFlower {
 				if (var6 == 11 && ForgottenNature.bambooSpread) {
 					for (int spreadx = -1; spreadx < 2; spreadx++) {
 						for (int spreadz = -1; spreadz < 2; spreadz++) {
-							if (par5Random.nextInt(ForgottenNature.bamSpreadBuffer) == 0
-									&& (par1World.getBlock(par2 + spreadx, par3 - 2, par4 + spreadz) == Blocks.dirt
-											|| par1World.getBlock(par2 + spreadx, par3 - 2,
-													par4 + spreadz) == Blocks.grass)
-									&& par1World.getBlock(par2 + spreadx, par3 - 1, par4 + spreadz) == Blocks.air) {
+							if (par5Random.nextInt(ForgottenNature.bamSpreadBuffer) == 0 && (par1World.getBlock(par2 + spreadx, par3 - 2, par4 + spreadz) == Blocks.dirt || par1World.getBlock(par2 + spreadx, par3 - 2, par4 + spreadz) == Blocks.grass) && par1World.getBlock(par2 + spreadx, par3 - 1, par4 + spreadz) == Blocks.air) {
 								par1World.setBlock(par2 + spreadx, par3 - 1, par4 + spreadz, this, 8, 3);
 							}
 						}
@@ -124,9 +116,7 @@ public class BlockHempCotBamCorn extends BlockFlower {
 
 			Block underblock = par1World.getBlock(par2, par3 - 1, par4);
 			int undermet = par1World.getBlockMetadata(par2, par3 - 1, par4);
-			if ((ForgottenNature.bambooGeneration && var6 > 7 && var6 < 11 && par5Random.nextInt(2) == 0)
-					&& (underblock == Blocks.dirt || underblock == Blocks.grass
-							|| (underblock == this && (undermet == var6 + 2 || undermet == 11)))) {
+			if ((ForgottenNature.bambooGeneration && var6 > 7 && var6 < 11 && par5Random.nextInt(2) == 0) && (underblock == Blocks.dirt || underblock == Blocks.grass || (underblock == this && (undermet == var6 + 2 || undermet == 11)))) {
 				par1World.setBlock(par2, par3, par4, this, var6 + 1, 3);
 			}
 
@@ -141,15 +131,13 @@ public class BlockHempCotBamCorn extends BlockFlower {
 		}
 	}
 
-	public void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_,
-			Block p_149695_5_) {
+	public void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_) {
 		this.func_150170_e(p_149695_1_, p_149695_2_, p_149695_3_, p_149695_4_);
 	}
 
 	protected final boolean func_150170_e(World p_150170_1_, int p_150170_2_, int p_150170_3_, int p_150170_4_) {
 		if (!this.canBlockStay(p_150170_1_, p_150170_2_, p_150170_3_, p_150170_4_)) {
-			this.dropBlockAsItemWithChance(p_150170_1_, p_150170_2_, p_150170_3_, p_150170_4_,
-					p_150170_1_.getBlockMetadata(p_150170_2_, p_150170_3_, p_150170_4_), 1.0F, 0);
+			this.dropBlockAsItemWithChance(p_150170_1_, p_150170_2_, p_150170_3_, p_150170_4_, p_150170_1_.getBlockMetadata(p_150170_2_, p_150170_3_, p_150170_4_), 1.0F, 0);
 			p_150170_1_.setBlockToAir(p_150170_2_, p_150170_3_, p_150170_4_);
 			return false;
 		} else {
@@ -157,8 +145,7 @@ public class BlockHempCotBamCorn extends BlockFlower {
 		}
 	}
 
-	public boolean onBlockActivated(World world, int i, int j, int k, EntityPlayer entityplayer, int par2, float par3,
-			float par4, float par5) {
+	public boolean onBlockActivated(World world, int i, int j, int k, EntityPlayer entityplayer, int par2, float par3, float par4, float par5) {
 		int full;
 		ItemStack equipped = entityplayer.getCurrentEquippedItem();
 		if (equipped == null)

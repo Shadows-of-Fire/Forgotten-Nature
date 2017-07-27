@@ -9,10 +9,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import shadows.ancient.FNBlocks;
 
 public class ItemOre extends ItemBlock {
-	public static final String[] names1 = new String[] { "barite", "bertrandite", "erythrite", "molybdenite",
-			"stibnite", "monazite", "feldspar", "fluorite", "halite", "pentlandite", "petalite", "pyrite" };
-	public static final String[] names2 = new String[] { "bauxite", "galena", "chromite", "malachite", "pyrolusite",
-			"PGMore", "sulfur", "tantalite", "ilmenite", "tungsten", "uranium", "sphalerite", "tin" };
+	public static final String[] names1 = new String[] { "barite", "bertrandite", "erythrite", "molybdenite", "stibnite", "monazite", "feldspar", "fluorite", "halite", "pentlandite", "petalite", "pyrite" };
+	public static final String[] names2 = new String[] { "bauxite", "galena", "chromite", "malachite", "pyrolusite", "PGMore", "sulfur", "tantalite", "ilmenite", "tungsten", "uranium", "sphalerite", "tin" };
 
 	public ItemOre(Block i) {
 		super(i);

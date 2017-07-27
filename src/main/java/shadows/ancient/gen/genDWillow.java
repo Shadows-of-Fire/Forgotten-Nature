@@ -147,8 +147,7 @@ public class genDWillow extends WorldGenerator {
 		return true;
 	}
 
-	public static void branch(World world, Random random, int H, int ii, int j, int jj, int kk, int iD, int kD,
-			Block leaf2, int leafmeta, Block log2, int logmeta) {
+	public static void branch(World world, Random random, int H, int ii, int j, int jj, int kk, int iD, int kD, Block leaf2, int leafmeta, Block log2, int logmeta) {
 		int index = 0;
 		jj = jj + j;
 
@@ -216,8 +215,7 @@ public class genDWillow extends WorldGenerator {
 
 			for (int x = -1; x <= 1; x++) {
 				for (int y = -1; y <= 1; y++) {
-					if ((x != 0 | y != 0) && (Math.abs(x) != 1 | Math.abs(y) != 1)
-							&& world.isAirBlock(i3 + x, j3 + jh, k3 + y)) {
+					if ((x != 0 | y != 0) && (Math.abs(x) != 1 | Math.abs(y) != 1) && world.isAirBlock(i3 + x, j3 + jh, k3 + y)) {
 						world.setBlock(i3 + x, j3 + jh, k3 + y, leaf2, leafmeta, 3);
 					}
 				}

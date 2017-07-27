@@ -40,12 +40,10 @@ public class ItemNewCropSeeds extends Item {
 		this.seedIcon = par1IconRegister.registerIcon("forgottennature:Seed");
 	}
 
-	public boolean onItemUse(ItemStack itemstack, EntityPlayer par2EntityPlayer, World world, int par4, int par5,
-			int par6, int par7, float par8, float par9, float par10) {
+	public boolean onItemUse(ItemStack itemstack, EntityPlayer par2EntityPlayer, World world, int par4, int par5, int par6, int par7, float par8, float par9, float par10) {
 		if (par7 != 1)
 			return false;
-		else if (par2EntityPlayer.canPlayerEdit(par4, par5, par6, par7, itemstack)
-				&& par2EntityPlayer.canPlayerEdit(par4, par5 + 1, par6, par7, itemstack)) {
+		else if (par2EntityPlayer.canPlayerEdit(par4, par5, par6, par7, itemstack) && par2EntityPlayer.canPlayerEdit(par4, par5 + 1, par6, par7, itemstack)) {
 			Block var8 = world.getBlock(par4, par5, par6);
 			if (var8 == this.soilBlock && world.isAirBlock(par4, par5 + 1, par6)) {
 				if (itemstack.getItemDamage() == 0)

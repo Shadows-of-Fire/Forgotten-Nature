@@ -88,16 +88,14 @@ public class genPalm extends WorldGenerator {
 					world.setBlock(i3 + x, j3, k3 + y, Block.getBlockById(0), 0, 3);// air
 				}
 
-				if (Math.abs(x) < 2 && Math.abs(y) < 2 && (Math.abs(x) != 1 || Math.abs(y) != 1)
-						&& world.isAirBlock(i3 + x, j3 + 1, k3 + y)) {
+				if (Math.abs(x) < 2 && Math.abs(y) < 2 && (Math.abs(x) != 1 || Math.abs(y) != 1) && world.isAirBlock(i3 + x, j3 + 1, k3 + y)) {
 					world.setBlock(i3 + x, j3 + 1, k3 + y, leaf2, leafmeta, 3);
 				}
 			}
 		}
 	}
 
-	public static void growDirect(World world, Random random, int iD, int kD, int i2, int j2, int k2, int hight,
-			Block leaf2, int leafmeta, Block log2, int logmeta) {
+	public static void growDirect(World world, Random random, int iD, int kD, int i2, int j2, int k2, int hight, Block leaf2, int leafmeta, Block log2, int logmeta) {
 		int iind = 0;
 		int kind = 0;
 

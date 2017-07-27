@@ -22,8 +22,7 @@ public class BreakBlockHandler {
 		} else if (event.block == Blocks.sandstone && event.world.rand.nextInt(20) == 0) {
 			event.drops.clear();
 			event.drops.add(new ItemStack(FNItems.powdersItem, 1, 1));
-		} else if (event.block == FNBlocks.newStones && ForgottenNature.craftGunpowder
-				&& (event.blockMetadata == 2 || event.blockMetadata == 3)) {
+		} else if (event.block == FNBlocks.newStones && ForgottenNature.craftGunpowder && (event.blockMetadata == 2 || event.blockMetadata == 3)) {
 			if (event.world.rand.nextInt(35) == 0) {
 				event.drops.clear();
 				if (event.world.rand.nextInt(2) == 0)
@@ -31,11 +30,9 @@ public class BreakBlockHandler {
 				else
 					event.drops.add(new ItemStack(FNItems.powdersItem, 1, 1));
 			}
-		} else if ((event.block == Blocks.log || event.block == Blocks.log2)
-				&& !(event.world.getClosestPlayer(event.x, event.y, event.z, 10) == null)) {
+		} else if ((event.block == Blocks.log || event.block == Blocks.log2) && !(event.world.getClosestPlayer(event.x, event.y, event.z, 10) == null)) {
 			int met = event.blockMetadata;
-			int ct = harvestBlock(event.world, event.world.getClosestPlayer(event.x, event.y, event.z, 10), event.x,
-					event.y, event.z);
+			int ct = harvestBlock(event.world, event.world.getClosestPlayer(event.x, event.y, event.z, 10), event.x, event.y, event.z);
 			event.drops.clear();
 			while (met > 3)
 				met = met - 4;
@@ -49,21 +46,14 @@ public class BreakBlockHandler {
 		Boolean can = Boolean.valueOf(true);
 		Boolean isAxe = false;
 		ItemStack equipped = par2EntityPlayer.getCurrentEquippedItem();
-		if (equipped != null && (equipped.getItem() == Items.golden_axe || equipped.getItem() == Items.iron_axe
-				|| equipped.getItem() == Items.diamond_axe || equipped.getItem() == FNItems.dcAxeItem
-				|| equipped.getItem() == FNItems.cAxeItem || equipped.getItem() == FNItems.oAxeItem))
+		if (equipped != null && (equipped.getItem() == Items.golden_axe || equipped.getItem() == Items.iron_axe || equipped.getItem() == Items.diamond_axe || equipped.getItem() == FNItems.dcAxeItem || equipped.getItem() == FNItems.cAxeItem || equipped.getItem() == FNItems.oAxeItem))
 			isAxe = true;
 
-		if (isAxe
-				&& (par1World.getBlock(ai[0], ai[1], ai[2]) == Blocks.log
-						|| par1World.getBlock(ai[0], ai[1], ai[2]) == Blocks.log2)
-				&& ForgottenNature.lumberjack == true) {
+		if (isAxe && (par1World.getBlock(ai[0], ai[1], ai[2]) == Blocks.log || par1World.getBlock(ai[0], ai[1], ai[2]) == Blocks.log2) && ForgottenNature.lumberjack == true) {
 			for (int i1 = -1; i1 <= 1; i1++) {
 				for (int j1 = -1; j1 <= 0; j1++) {
 					for (int i2 = -1; i2 <= 1; i2++) {
-						if ((i1 + par2 != par2 || j1 + par3 != par3 || i2 + par4 != par4)
-								&& (par1World.getBlock(i1 + par2, j1 + par3, i2 + par4) == Blocks.log)
-								|| par1World.getBlock(i1 + par2, j1 + par3, i2 + par4) == Blocks.log2) {
+						if ((i1 + par2 != par2 || j1 + par3 != par3 || i2 + par4 != par4) && (par1World.getBlock(i1 + par2, j1 + par3, i2 + par4) == Blocks.log) || par1World.getBlock(i1 + par2, j1 + par3, i2 + par4) == Blocks.log2) {
 							can = Boolean.valueOf(false);
 						}
 					}
@@ -83,10 +73,7 @@ public class BreakBlockHandler {
 						for (int k3 = -1; k3 <= 1; k3++) {
 							for (int i4 = -1; i4 <= 1; i4++) {
 								for (int j4 = -1; j4 <= 1; j4++) {
-									if (par1World.getBlock(ai1[l2][0] + k3, ai1[l2][1] + i4,
-											ai1[l2][2] + j4) != Blocks.log
-											&& par1World.getBlock(ai1[l2][0] + k3, ai1[l2][1] + i4,
-													ai1[l2][2] + j4) != Blocks.log2) {
+									if (par1World.getBlock(ai1[l2][0] + k3, ai1[l2][1] + i4, ai1[l2][2] + j4) != Blocks.log && par1World.getBlock(ai1[l2][0] + k3, ai1[l2][1] + i4, ai1[l2][2] + j4) != Blocks.log2) {
 										continue;
 									}
 									Boolean boolean3 = Boolean.valueOf(false);
@@ -124,8 +111,7 @@ public class BreakBlockHandler {
 					boolean2 = Boolean.valueOf(false);
 				} while (boolean2.booleanValue());
 				for (int i3 = 0; i3 < ai1.length; i3++) {
-					if (par1World.getBlock(ai1[i3][0], ai1[i3][1], ai1[i3][2]) == Blocks.log && ai1[i3][1] > 0
-							&& ai1[i3][1] < ForgottenNature.lumberjackPower) {
+					if (par1World.getBlock(ai1[i3][0], ai1[i3][1], ai1[i3][2]) == Blocks.log && ai1[i3][1] > 0 && ai1[i3][1] < ForgottenNature.lumberjackPower) {
 						int met = par1World.getBlockMetadata(ai1[i3][0], ai1[i3][1], ai1[i3][2]);
 						if (met >= 8)
 							met = met - 8;
@@ -137,8 +123,7 @@ public class BreakBlockHandler {
 						par1World.setBlock(ai1[i3][0], ai1[i3][1], ai1[i3][2], Blocks.air, 0, 3);
 						if (equipped.getItemDamage() + 1 <= equipped.getMaxDamage() && ForgottenNature.lumberjackDamage)
 							equipped.setItemDamage(equipped.getItemDamage() + 1);
-					} else if (par1World.getBlock(ai1[i3][0], ai1[i3][1], ai1[i3][2]) == Blocks.log2 && ai1[i3][1] > 0
-							&& ai1[i3][1] < ForgottenNature.lumberjackPower) {
+					} else if (par1World.getBlock(ai1[i3][0], ai1[i3][1], ai1[i3][2]) == Blocks.log2 && ai1[i3][1] > 0 && ai1[i3][1] < ForgottenNature.lumberjackPower) {
 						int met = par1World.getBlockMetadata(ai1[i3][0], ai1[i3][1], ai1[i3][2]);
 						if (met >= 8)
 							met = met - 8;

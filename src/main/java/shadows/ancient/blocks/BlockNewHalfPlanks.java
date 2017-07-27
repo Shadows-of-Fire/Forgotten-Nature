@@ -15,10 +15,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import shadows.ancient.FNBlocks;
 
 public class BlockNewHalfPlanks extends BlockWoodSlab {
-	public static final String[] woodType1 = new String[] { "brown", "purple", "dark red", "dark yellow", "peach",
-			"orange", "brightwood", "vibrant redwood" };
-	public static final String[] woodType2 = new String[] { "acacia", "bright yellow", "old wood", "bamboo",
-			"dried bamboo", "crystal", "dcrystal" };
+	public static final String[] woodType1 = new String[] { "brown", "purple", "dark red", "dark yellow", "peach", "orange", "brightwood", "vibrant redwood" };
+	public static final String[] woodType2 = new String[] { "acacia", "bright yellow", "old wood", "bamboo", "dried bamboo", "crystal", "dcrystal" };
 
 	@SideOnly(Side.CLIENT)
 	private IIcon[] hPlankIcons;

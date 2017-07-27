@@ -218,8 +218,7 @@ public class BlockNewLeaves extends BlockLeavesBase implements IShearable {
 		if (!world.isRemote) {
 			int l = world.getBlockMetadata(i, j, k);
 			if (figFruit && world.getBlockLightValue(i, j + 1, k) >= 9) {
-				if (world.getBlock(i, j - 1, k) == Blocks.air
-						&& (world.getBlock(i, j + 1, k) == Blocks.log || world.getBlock(i, j + 1, k) == Blocks.log2)) {
+				if (world.getBlock(i, j - 1, k) == Blocks.air && (world.getBlock(i, j + 1, k) == Blocks.log || world.getBlock(i, j + 1, k) == Blocks.log2)) {
 					if ((l & 7) == 4 && random.nextInt(150) == 0) {
 						world.setBlock(i, j - 1, k, fruit, 2, 3);
 					}
@@ -256,8 +255,7 @@ public class BlockNewLeaves extends BlockLeavesBase implements IShearable {
 				if (world.isAirBlock(i, j - 1, k)) {
 					for (int x = -1; x <= 1; x++) {
 						for (int y = -1; y <= 1; y++) {
-							if ((world.getBlockMetadata(i + x, j, k + y) & 7) == 1
-									&& (world.getBlock(i + x, j, k + y)) == FNBlocks.newLogs3) {
+							if ((world.getBlockMetadata(i + x, j, k + y) & 7) == 1 && (world.getBlock(i + x, j, k + y)) == FNBlocks.newLogs3) {
 								ffruit = 1;
 							}
 						}
@@ -316,15 +314,12 @@ public class BlockNewLeaves extends BlockLeavesBase implements IShearable {
 
 								if (!block.canSustainLeaves(world, i + var12, j + var13, k + var14)) {
 									if (block.isLeaves(world, i + var12, j + var13, k + var14)) {
-										this.adjacentTreeBlocks[(var12 + var11) * var10 + (var13 + var11) * var9 + var14
-												+ var11] = -2;
+										this.adjacentTreeBlocks[(var12 + var11) * var10 + (var13 + var11) * var9 + var14 + var11] = -2;
 									} else {
-										this.adjacentTreeBlocks[(var12 + var11) * var10 + (var13 + var11) * var9 + var14
-												+ var11] = -1;
+										this.adjacentTreeBlocks[(var12 + var11) * var10 + (var13 + var11) * var9 + var14 + var11] = -1;
 									}
 								} else {
-									this.adjacentTreeBlocks[(var12 + var11) * var10 + (var13 + var11) * var9 + var14
-											+ var11] = 0;
+									this.adjacentTreeBlocks[(var12 + var11) * var10 + (var13 + var11) * var9 + var14 + var11] = 0;
 								}
 							}
 						}
@@ -334,42 +329,29 @@ public class BlockNewLeaves extends BlockLeavesBase implements IShearable {
 						for (var13 = -var7; var13 <= var7; ++var13) {
 							for (var14 = -var7; var14 <= var7; ++var14) {
 								for (int var15 = -var7; var15 <= var7; ++var15) {
-									if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9 + var15
-											+ var11] == var12 - 1) {
-										if (this.adjacentTreeBlocks[(var13 + var11 - 1) * var10 + (var14 + var11) * var9
-												+ var15 + var11] == -2) {
-											this.adjacentTreeBlocks[(var13 + var11 - 1) * var10 + (var14 + var11) * var9
-													+ var15 + var11] = var12;
+									if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9 + var15 + var11] == var12 - 1) {
+										if (this.adjacentTreeBlocks[(var13 + var11 - 1) * var10 + (var14 + var11) * var9 + var15 + var11] == -2) {
+											this.adjacentTreeBlocks[(var13 + var11 - 1) * var10 + (var14 + var11) * var9 + var15 + var11] = var12;
 										}
 
-										if (this.adjacentTreeBlocks[(var13 + var11 + 1) * var10 + (var14 + var11) * var9
-												+ var15 + var11] == -2) {
-											this.adjacentTreeBlocks[(var13 + var11 + 1) * var10 + (var14 + var11) * var9
-													+ var15 + var11] = var12;
+										if (this.adjacentTreeBlocks[(var13 + var11 + 1) * var10 + (var14 + var11) * var9 + var15 + var11] == -2) {
+											this.adjacentTreeBlocks[(var13 + var11 + 1) * var10 + (var14 + var11) * var9 + var15 + var11] = var12;
 										}
 
-										if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11 - 1) * var9
-												+ var15 + var11] == -2) {
-											this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11 - 1) * var9
-													+ var15 + var11] = var12;
+										if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11 - 1) * var9 + var15 + var11] == -2) {
+											this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11 - 1) * var9 + var15 + var11] = var12;
 										}
 
-										if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11 + 1) * var9
-												+ var15 + var11] == -2) {
-											this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11 + 1) * var9
-													+ var15 + var11] = var12;
+										if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11 + 1) * var9 + var15 + var11] == -2) {
+											this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11 + 1) * var9 + var15 + var11] = var12;
 										}
 
-										if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9
-												+ (var15 + var11 - 1)] == -2) {
-											this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9
-													+ (var15 + var11 - 1)] = var12;
+										if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9 + (var15 + var11 - 1)] == -2) {
+											this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9 + (var15 + var11 - 1)] = var12;
 										}
 
-										if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9
-												+ var15 + var11 + 1] == -2) {
-											this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9
-													+ var15 + var11 + 1] = var12;
+										if (this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9 + var15 + var11 + 1] == -2) {
+											this.adjacentTreeBlocks[(var13 + var11) * var10 + (var14 + var11) * var9 + var15 + var11 + 1] = var12;
 										}
 									}
 								}
@@ -397,11 +379,8 @@ public class BlockNewLeaves extends BlockLeavesBase implements IShearable {
 	}
 
 	@SideOnly(Side.CLIENT)
-	public void randomDisplayTick(World p_149734_1_, int p_149734_2_, int p_149734_3_, int p_149734_4_,
-			Random p_149734_5_) {
-		if (p_149734_1_.canLightningStrikeAt(p_149734_2_, p_149734_3_ + 1, p_149734_4_)
-				&& !World.doesBlockHaveSolidTopSurface(p_149734_1_, p_149734_2_, p_149734_3_ - 1, p_149734_4_)
-				&& p_149734_5_.nextInt(15) == 1) {
+	public void randomDisplayTick(World p_149734_1_, int p_149734_2_, int p_149734_3_, int p_149734_4_, Random p_149734_5_) {
+		if (p_149734_1_.canLightningStrikeAt(p_149734_2_, p_149734_3_ + 1, p_149734_4_) && !World.doesBlockHaveSolidTopSurface(p_149734_1_, p_149734_2_, p_149734_3_ - 1, p_149734_4_) && p_149734_5_.nextInt(15) == 1) {
 			double d0 = (double) ((float) p_149734_2_ + p_149734_5_.nextFloat());
 			double d1 = (double) p_149734_3_ - 0.05D;
 			double d2 = (double) ((float) p_149734_4_ + p_149734_5_.nextFloat());
@@ -593,8 +572,7 @@ public class BlockNewLeaves extends BlockLeavesBase implements IShearable {
 	}
 
 	///////// ??????????????////////////
-	protected void func_150124_c(World p_150124_1_, int p_150124_2_, int p_150124_3_, int p_150124_4_, int p_150124_5_,
-			int p_150124_6_) {
+	protected void func_150124_c(World p_150124_1_, int p_150124_2_, int p_150124_3_, int p_150124_4_, int p_150124_5_, int p_150124_6_) {
 	}
 
 	protected int func_150123_b(int p_150123_1_) {

@@ -63,8 +63,7 @@ public class BlockGrapeTomCabPine extends BlockFlower {
 		return par1 == Blocks.farmland || par1 == this;
 	}
 
-	public boolean onBlockActivated(World world, int i, int j, int k, EntityPlayer entityplayer, int par2, float par3,
-			float par4, float par5) {
+	public boolean onBlockActivated(World world, int i, int j, int k, EntityPlayer entityplayer, int par2, float par3, float par4, float par5) {
 		int full;
 		ItemStack equipped = entityplayer.getCurrentEquippedItem();
 		int met = world.getBlockMetadata(i, j, k);
@@ -102,8 +101,7 @@ public class BlockGrapeTomCabPine extends BlockFlower {
 				par1World.setBlock(par2, par3, par4, Blocks.air, 0, 3);
 			}
 
-			if (par5Random.nextInt(10) == 0 && par1World.getBlock(par2, par3 - 1, par4) == Blocks.dirt
-					&& par1World.getBlock(par2, par3 + 1, par4) == Blocks.air && (var6 == 12 || var6 == 13)) {
+			if (par5Random.nextInt(10) == 0 && par1World.getBlock(par2, par3 - 1, par4) == Blocks.dirt && par1World.getBlock(par2, par3 + 1, par4) == Blocks.air && (var6 == 12 || var6 == 13)) {
 				par1World.setBlock(par2, par3 + 1, par4, this, 14, 3);
 			}
 

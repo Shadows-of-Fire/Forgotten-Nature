@@ -70,13 +70,11 @@ public class genWTEucalyptus extends WorldGenerator {
 							world.setBlock(i + i2, j1, k + k2, leaf, leafmeta, 2);
 						}
 
-						if (k3 == 3
-								&& (Math.abs(i2) == 3 && Math.abs(k2) == 2 || Math.abs(i2) == 2 && Math.abs(k2) == 3)) {
+						if (k3 == 3 && (Math.abs(i2) == 3 && Math.abs(k2) == 2 || Math.abs(i2) == 2 && Math.abs(k2) == 3)) {
 							world.setBlock(i + i2, j1, k + k2, Block.getBlockById(0), 0, 3);// air
 						}
 
-						if (j1 == j + l && Math.abs(i2) < 3 && Math.abs(k2) < 3
-								&& (Math.abs(i2) != 2 || Math.abs(k2) != 2)) {
+						if (j1 == j + l && Math.abs(i2) < 3 && Math.abs(k2) < 3 && (Math.abs(i2) != 2 || Math.abs(k2) != 2)) {
 							if (k3 > 1) {
 								if (world.isAirBlock(i + i2, j1 + 1, k + k2))
 									world.setBlock(i + i2, j1 + 1, k + k2, leaf, leafmeta, 2);
@@ -129,8 +127,7 @@ public class genWTEucalyptus extends WorldGenerator {
 		return true;
 	}
 
-	public static void branches(World world, Random random, int ii, int jj, int kk, int iD, int kD, Block leaf2,
-			int leafmeta, int l, Block log2, int logmeta) {
+	public static void branches(World world, Random random, int ii, int jj, int kk, int iD, int kD, Block leaf2, int leafmeta, int l, Block log2, int logmeta) {
 		for (int br = 0; br < 8; br++) {
 			if (iD == -1) {
 				ii--;
@@ -166,8 +163,7 @@ public class genWTEucalyptus extends WorldGenerator {
 	public static void genLeaves(World world, int i3, int j3, int k3, Block leaf2, int leafmeta) {
 		for (int x = -3; x <= 3; x++) {
 			for (int y = -3; y <= 3; y++) {
-				if ((Math.abs(x) != 3 || Math.abs(y) != 3) && (Math.abs(x) != 2 || Math.abs(y) != 3)
-						&& (Math.abs(x) != 3 || Math.abs(y) != 2)) {
+				if ((Math.abs(x) != 3 || Math.abs(y) != 3) && (Math.abs(x) != 2 || Math.abs(y) != 3) && (Math.abs(x) != 3 || Math.abs(y) != 2)) {
 					if (world.isAirBlock(i3 + x, j3, k3 + y)) {
 						world.setBlock(i3 + x, j3, k3 + y, leaf2, leafmeta, 2);
 					}

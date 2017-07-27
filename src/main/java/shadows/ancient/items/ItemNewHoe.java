@@ -42,8 +42,7 @@ public class ItemNewHoe extends ItemHoe {
 			this.hoeIcons = par1IconRegister.registerIcon("ForgottenNature:HoeObsidian");
 	}
 
-	public boolean onItemUse(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, World par3World, int par4,
-			int par5, int par6, int par7, float par8, float par9, float par10) {
+	public boolean onItemUse(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, World par3World, int par4, int par5, int par6, int par7, float par8, float par9, float par10) {
 		if (!par2EntityPlayer.canPlayerEdit(par4, par5, par6, par7, par1ItemStack)) {
 			return false;
 		} else {
@@ -63,9 +62,7 @@ public class ItemNewHoe extends ItemHoe {
 				return false;
 			} else {
 				Block var13 = Blocks.farmland;
-				par3World.playSoundEffect((double) ((float) par4 + 0.5F), (double) ((float) par5 + 0.5F),
-						(double) ((float) par6 + 0.5F), var13.stepSound.soundName,
-						(var13.stepSound.getVolume() + 1.0F) / 2.0F, var13.stepSound.getPitch() * 0.8F);
+				par3World.playSoundEffect((double) ((float) par4 + 0.5F), (double) ((float) par5 + 0.5F), (double) ((float) par6 + 0.5F), var13.stepSound.soundName, (var13.stepSound.getVolume() + 1.0F) / 2.0F, var13.stepSound.getPitch() * 0.8F);
 
 				if (par3World.isRemote) {
 					return true;

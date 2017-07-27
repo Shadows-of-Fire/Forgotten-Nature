@@ -42,11 +42,11 @@ public class genAngel extends WorldGenerator {
 				for (int k3 = 0; k3 <= bh; k3++) {
 					if (world.isAirBlock(i1 + i2, j1 + k3, k1 + k2) || (k3 == 0 && i2 == 0 && k2 == 0))
 						world.setBlock(i1 + i2, j1 + k3, k1 + k2, Block.getBlockById(17), 0, 3);// oak
-																							// log
+					// log
 				}
 				if (world.isAirBlock(i1, j1 + bh + 1, k1))
 					world.setBlock(i1, j1 + bh + 1, k1, Block.getBlockById(17), 0, 3);// oak
-																					// log
+																						// log
 			}
 		}
 		for (int id = -1; id <= 1; id++) {
@@ -61,8 +61,7 @@ public class genAngel extends WorldGenerator {
 		return true;
 	}
 
-	public static void mainBranch(World world, Random random, int size, int iD, int kD, int i2, int j2, int k2,
-			Block leaf2, int leafmeta) {
+	public static void mainBranch(World world, Random random, int size, int iD, int kD, int i2, int j2, int k2, Block leaf2, int leafmeta) {
 		int bend = 0;
 		int index = 0;
 		if (iD == 1)
@@ -82,7 +81,7 @@ public class genAngel extends WorldGenerator {
 				j2++;
 			if (world.isAirBlock(i2, j2, k2))
 				world.setBlock(i2, j2, k2, Block.getBlockById(17), 0, 3);// oak
-																		// log
+																			// log
 			if (random.nextInt(3) == 0 || index == size - 1)
 				leafGen(world, i2, j2, k2, leaf2, leafmeta);
 			if (iD == 0)
@@ -107,14 +106,13 @@ public class genAngel extends WorldGenerator {
 		}
 	}
 
-	public static void innerMainBranch(World world, Random random, int size, int iD, int kD, int i2, int j2, int k2,
-			Block leaf2, int leafmeta) {
+	public static void innerMainBranch(World world, Random random, int size, int iD, int kD, int i2, int j2, int k2, Block leaf2, int leafmeta) {
 		int bend2 = 0;
 		int index = 0;
 		while (index < 2 * size / 3) {
 			if (world.isAirBlock(i2, j2, k2) || world.getBlock(i2, j2, k2) == leaf2)
 				world.setBlock(i2, j2, k2, Block.getBlockById(17), 0, 3);// oak
-																		// log
+																			// log
 			if (random.nextInt(3) == 0 || index == 2 * size / 3 - 1)
 				leafGen(world, i2, j2, k2, leaf2, leafmeta);
 			if (iD == 0)
@@ -136,13 +134,12 @@ public class genAngel extends WorldGenerator {
 		}
 	}
 
-	public static void innerInnerBranch(World world, Random random, int size, int iD, int kD, int i2, int j2, int k2,
-			Block leaf2, int leafmeta) {
+	public static void innerInnerBranch(World world, Random random, int size, int iD, int kD, int i2, int j2, int k2, Block leaf2, int leafmeta) {
 		int index = 0;
 		while (index < size / 3) {
 			if (world.isAirBlock(i2, j2, k2) || world.getBlock(i2, j2, k2) == leaf2)
 				world.setBlock(i2, j2, k2, Block.getBlockById(17), 0, 3); // oak
-																		// log
+																			// log
 			if (random.nextInt(3) == 0 || index == size / 3 - 1)
 				leafGen(world, i2, j2, k2, leaf2, leafmeta);
 			if (iD == 0)
@@ -164,8 +161,7 @@ public class genAngel extends WorldGenerator {
 		}
 	}
 
-	public static void secondary(World world, Random random, int size2, int iiD, int kkD, int i3, int j3, int k3,
-			Block leaf2, int leafmeta) {
+	public static void secondary(World world, Random random, int size2, int iiD, int kkD, int i3, int j3, int k3, Block leaf2, int leafmeta) {
 		int index = 0;
 		for (int branch = 0; branch < 2; branch++) {
 			int i4 = i3;
@@ -176,7 +172,7 @@ public class genAngel extends WorldGenerator {
 					j4++;
 				if (world.isAirBlock(i4, j4, k4))
 					world.setBlock(i4, j4, k4, Block.getBlockById(17), 0, 3); // oak
-																			// log
+																				// log
 				if (random.nextInt(4) == 0 || index == size2 - 1)
 					leafGen(world, i4, j4, k4, leaf2, leafmeta);
 				if (kkD == 0) {
@@ -237,8 +233,7 @@ public class genAngel extends WorldGenerator {
 	public static void leafGen(World world, int i11, int j11, int k11, Block leaf2, int leafmeta) {
 		for (int x = -3; x <= 3; x++) {
 			for (int y = -3; y <= 3; y++) {
-				if ((Math.abs(x) != 3 || Math.abs(y) != 3) && (Math.abs(x) != 3 || Math.abs(y) != 2)
-						&& (Math.abs(x) != 2 || Math.abs(y) != 3) && (x != 0 || y != 0)) {
+				if ((Math.abs(x) != 3 || Math.abs(y) != 3) && (Math.abs(x) != 3 || Math.abs(y) != 2) && (Math.abs(x) != 2 || Math.abs(y) != 3) && (x != 0 || y != 0)) {
 					if (world.isAirBlock(i11 + x, j11, k11 + y)) {
 						world.setBlock(i11 + x, j11, k11 + y, leaf2, leafmeta, 2);
 					}

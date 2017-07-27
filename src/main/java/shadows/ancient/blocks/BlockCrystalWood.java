@@ -38,11 +38,9 @@ public class BlockCrystalWood extends Block {
 	}
 
 	@SideOnly(Side.CLIENT)
-	public boolean shouldSideBeRendered(IBlockAccess p_149646_1_, int p_149646_2_, int p_149646_3_, int p_149646_4_,
-			int p_149646_5_) {
+	public boolean shouldSideBeRendered(IBlockAccess p_149646_1_, int p_149646_2_, int p_149646_3_, int p_149646_4_, int p_149646_5_) {
 		Block block = p_149646_1_.getBlock(p_149646_2_, p_149646_3_, p_149646_4_);
-		return block == this ? false
-				: super.shouldSideBeRendered(p_149646_1_, p_149646_2_, p_149646_3_, p_149646_4_, p_149646_5_);
+		return block == this ? false : super.shouldSideBeRendered(p_149646_1_, p_149646_2_, p_149646_3_, p_149646_4_, p_149646_5_);
 	}
 
 	public boolean isOpaqueCube() {
@@ -92,18 +90,14 @@ public class BlockCrystalWood extends Block {
 		Boolean boolean1 = Boolean.valueOf(true);
 		Boolean isAxe = false;
 		ItemStack equipped = entityplayer.getCurrentEquippedItem();
-		if (equipped != null && (equipped.getItem() == Items.golden_axe || equipped.getItem() == Items.iron_axe
-				|| equipped.getItem() == Items.diamond_axe || equipped.getItem() == FNItems.dcAxeItem
-				|| equipped.getItem() == FNItems.cAxeItem || equipped.getItem() == FNItems.oAxeItem))
+		if (equipped != null && (equipped.getItem() == Items.golden_axe || equipped.getItem() == Items.iron_axe || equipped.getItem() == Items.diamond_axe || equipped.getItem() == FNItems.dcAxeItem || equipped.getItem() == FNItems.cAxeItem || equipped.getItem() == FNItems.oAxeItem))
 			isAxe = true;
 
-		if (isAxe && world.getBlock(ai[0], ai[1], ai[2]) == this && ForgottenNature.lumberjack == true
-				&& world.getBlockMetadata(ai[0], ai[1], ai[2]) < 2) {
+		if (isAxe && world.getBlock(ai[0], ai[1], ai[2]) == this && ForgottenNature.lumberjack == true && world.getBlockMetadata(ai[0], ai[1], ai[2]) < 2) {
 			for (int i1 = -1; i1 <= 1; i1++) {
 				for (int k1 = -1; k1 <= 0; k1++) {
 					for (int i2 = -1; i2 <= 1; i2++) {
-						if ((i1 + i != i || k1 + j != j || i2 + k != k)
-								&& world.getBlock(i1 + i, k1 + j, i2 + k) == this) {
+						if ((i1 + i != i || k1 + j != j || i2 + k != k) && world.getBlock(i1 + i, k1 + j, i2 + k) == this) {
 							boolean1 = Boolean.valueOf(false);
 						}
 					}
@@ -173,10 +167,8 @@ public class BlockCrystalWood extends Block {
 				} while (true);
 
 				for (int i3 = 0; i3 < ai1.length; i3++) {
-					if (ai1[i3][1] > 0 && ai1[i3][1] < ForgottenNature.lumberjackPower
-							&& world.getBlock(ai1[i3][0], ai1[i3][1], ai1[i3][2]) == this) {
-						dropBlockAsItem(world, ai1[i3][0], ai1[i3][1], ai1[i3][2],
-								new ItemStack(this, 1, world.getBlockMetadata(ai1[i3][0], ai1[i3][1], ai1[i3][2])));
+					if (ai1[i3][1] > 0 && ai1[i3][1] < ForgottenNature.lumberjackPower && world.getBlock(ai1[i3][0], ai1[i3][1], ai1[i3][2]) == this) {
+						dropBlockAsItem(world, ai1[i3][0], ai1[i3][1], ai1[i3][2], new ItemStack(this, 1, world.getBlockMetadata(ai1[i3][0], ai1[i3][1], ai1[i3][2])));
 						world.setBlockToAir(ai1[i3][0], ai1[i3][1], ai1[i3][2]);
 						if (equipped.getItemDamage() + 1 <= equipped.getMaxDamage() && ForgottenNature.lumberjackDamage)
 							equipped.setItemDamage(equipped.getItemDamage() + 1);
@@ -197,8 +189,7 @@ public class BlockCrystalWood extends Block {
 						int var12 = Block.getIdFromBlock(par1World.getBlock(par2 + var9, par3 + var10, par4 + var11));
 
 						if (Block.getBlockById(var12) != null) {
-							Block.getBlockById(var12).beginLeavesDecay(par1World, par2 + var9, par3 + var10,
-									par4 + var11);
+							Block.getBlockById(var12).beginLeavesDecay(par1World, par2 + var9, par3 + var10, par4 + var11);
 						}
 					}
 				}

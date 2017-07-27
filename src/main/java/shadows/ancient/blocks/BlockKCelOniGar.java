@@ -81,8 +81,7 @@ public class BlockKCelOniGar extends BlockFlower {
 		}
 	}
 
-	public boolean onBlockActivated(World world, int i, int j, int k, EntityPlayer entityplayer, int par2, float par3,
-			float par4, float par5) {
+	public boolean onBlockActivated(World world, int i, int j, int k, EntityPlayer entityplayer, int par2, float par3, float par4, float par5) {
 		int full;
 		ItemStack equipped = entityplayer.getCurrentEquippedItem();
 		if (equipped == null)
