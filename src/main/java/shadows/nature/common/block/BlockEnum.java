@@ -14,11 +14,10 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.NonNullList;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import shadows.nature.common.item.ItemBlockMeta;
-import shadows.nature.registry.NatureBlocks;
+import shadows.nature.registry.ModRegistry;
 import shadows.nature.util.NatureUtil;
 
 //I stole this from nut
@@ -29,8 +28,7 @@ public class BlockEnum<E extends Enum<E> & IStringSerializable> extends BlockBas
 	protected final PropertyEnum<E> property;
 	protected final BlockStateContainer realStateContainer;
 
-	public BlockEnum(String name, Material material, SoundType sound, float hardness, float resistance,
-			Class<E> enumClass, String propName, Predicate<E> valueFilter) {
+	public BlockEnum(String name, Material material, SoundType sound, float hardness, float resistance, Class<E> enumClass, String propName, Predicate<E> valueFilter) {
 		super(name, material, hardness, resistance, true, false);
 		this.setSoundType(sound);
 		this.types = enumClass.getEnumConstants();
@@ -38,18 +36,15 @@ public class BlockEnum<E extends Enum<E> & IStringSerializable> extends BlockBas
 		this.property = PropertyEnum.create(propName, enumClass, valueFilter);
 		this.realStateContainer = createStateContainer();
 		this.setDefaultState(getBlockState().getBaseState());
-		GameRegistry.register(this);
-		GameRegistry.register(getItemBlock());
-		NatureBlocks.add(this);
+		ModRegistry.BLOCKS.add(this);
+		ModRegistry.ITEMS.add(getItemBlock());
 	}
 
-	public BlockEnum(String name, Material material, SoundType sound, float hardness, float resistance,
-			Class<E> enumClass, String propName) {
+	public BlockEnum(String name, Material material, SoundType sound, float hardness, float resistance, Class<E> enumClass, String propName) {
 		this(name, material, sound, hardness, resistance, enumClass, propName, Predicates.<E>alwaysTrue());
 	}
 
-	public BlockEnum(String name, Material material, SoundType sound, float hardness, float resistance,
-			Class<E> enumClass) {
+	public BlockEnum(String name, Material material, SoundType sound, float hardness, float resistance, Class<E> enumClass) {
 		this(name, material, sound, hardness, resistance, enumClass, "type");
 	}
 
@@ -96,10 +91,10 @@ public class BlockEnum<E extends Enum<E> & IStringSerializable> extends BlockBas
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public void getSubBlocks(Item item, CreativeTabs tab, NonNullList<ItemStack> subBlocks) {
+	public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> subBlocks) {
 		for (E type : types)
 			if (valueFilter.apply(type))
-				subBlocks.add(new ItemStack(item, 1, type.ordinal()));
+				subBlocks.add(new ItemStack(this, 1, type.ordinal()));
 	}
 
 	protected BlockStateContainer createStateContainer() {

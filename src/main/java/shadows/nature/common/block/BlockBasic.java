@@ -3,18 +3,16 @@ package shadows.nature.common.block;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import shadows.nature.registry.NatureBlocks;
+import shadows.nature.registry.ModRegistry;
 import shadows.nature.util.IHasModelLocation;
 import shadows.nature.util.NatureData;
 import shadows.nature.util.NatureUtil;
 
 public class BlockBasic extends Block implements IHasModelLocation {
 
-	public BlockBasic(String name, Material material, float hardness, float resist, boolean customItemBlock,
-			boolean addToList) {
+	public BlockBasic(String name, Material material, float hardness, float resist, boolean customItemBlock, boolean addToList) {
 		super(material);
 		setRegistryName(name);
 		setUnlocalizedName(NatureData.MODID + "." + name);
@@ -22,11 +20,9 @@ public class BlockBasic extends Block implements IHasModelLocation {
 		setResistance(resist);
 		setCreativeTab(NatureData.TAB);
 		if (addToList)
-			GameRegistry.register(this);
+			ModRegistry.BLOCKS.add(this);
 		if (!customItemBlock)
-			GameRegistry.register(new ItemBlock(this).setRegistryName(getRegistryName()));
-		if (addToList)
-			NatureBlocks.add(this);
+			ModRegistry.ITEMS.add(new ItemBlock(this).setRegistryName(getRegistryName()));
 	}
 
 	public BlockBasic(String name, Material material, float hardness, float resist, boolean customItemBlock) {

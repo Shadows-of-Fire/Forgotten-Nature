@@ -10,11 +10,11 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
-import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
 import shadows.nature.common.world.feature.Bush;
-import shadows.nature.registry.NatureBlocks;
+import shadows.nature.registry.ModRegistry;
 import shadows.nature.util.NatureData;
 import shadows.nature.util.NatureData.BushSet;
 
@@ -37,20 +37,12 @@ public class BushGenerator implements IWorldGenerator {
 		}
 	}
 
-	public static final Bush BLACKBERRY_BUSH = new Bush(Blocks.LOG.getDefaultState(),
-			NatureBlocks.BUSH.getDefaultState().withProperty(NatureData.BUSHES, BushSet.BLACKBERRY), false);
-	public static final Bush BLUEBERRY_BUSH = new Bush(Blocks.LOG.getDefaultState(),
-			NatureBlocks.BUSH.getDefaultState().withProperty(NatureData.BUSHES, BushSet.BLUEBERRY), false);
-	public static final Bush DECIDUOUS_BUSH = new Bush(Blocks.LOG.getDefaultState(),
-			NatureBlocks.BUSH.getDefaultState().withProperty(NatureData.BUSHES, BushSet.DECIDUOUS), false);
-	public static final Bush EVERGREEN_BUSH = new Bush(
-			Blocks.LOG.getDefaultState().withProperty(BlockOldLog.VARIANT, EnumType.SPRUCE),
-			NatureBlocks.BUSH.getDefaultState().withProperty(NatureData.BUSHES, BushSet.EVERGREEN), false);
-	public static final Bush HUCKLEBERRY_BUSH = new Bush(Blocks.LOG.getDefaultState(),
-			NatureBlocks.BUSH.getDefaultState().withProperty(NatureData.BUSHES, BushSet.HUCKLEBERRY), false);
-	public static final Bush RASPBERRY_BUSH = new Bush(Blocks.LOG.getDefaultState(),
-			NatureBlocks.BUSH.getDefaultState().withProperty(NatureData.BUSHES, BushSet.RASPBERRY), false);
-	public static final Bush[] BUSHGENS = { BLACKBERRY_BUSH, BLUEBERRY_BUSH, DECIDUOUS_BUSH, EVERGREEN_BUSH,
-			HUCKLEBERRY_BUSH, RASPBERRY_BUSH };
+	public static final Bush BLACKBERRY_BUSH = new Bush(Blocks.LOG.getDefaultState(), ModRegistry.BUSH.getDefaultState().withProperty(NatureData.BUSHES, BushSet.BLACKBERRY), false);
+	public static final Bush BLUEBERRY_BUSH = new Bush(Blocks.LOG.getDefaultState(), ModRegistry.BUSH.getDefaultState().withProperty(NatureData.BUSHES, BushSet.BLUEBERRY), false);
+	public static final Bush DECIDUOUS_BUSH = new Bush(Blocks.LOG.getDefaultState(), ModRegistry.BUSH.getDefaultState().withProperty(NatureData.BUSHES, BushSet.DECIDUOUS), false);
+	public static final Bush EVERGREEN_BUSH = new Bush(Blocks.LOG.getDefaultState().withProperty(BlockOldLog.VARIANT, EnumType.SPRUCE), ModRegistry.BUSH.getDefaultState().withProperty(NatureData.BUSHES, BushSet.EVERGREEN), false);
+	public static final Bush HUCKLEBERRY_BUSH = new Bush(Blocks.LOG.getDefaultState(), ModRegistry.BUSH.getDefaultState().withProperty(NatureData.BUSHES, BushSet.HUCKLEBERRY), false);
+	public static final Bush RASPBERRY_BUSH = new Bush(Blocks.LOG.getDefaultState(), ModRegistry.BUSH.getDefaultState().withProperty(NatureData.BUSHES, BushSet.RASPBERRY), false);
+	public static final Bush[] BUSHGENS = { BLACKBERRY_BUSH, BLUEBERRY_BUSH, DECIDUOUS_BUSH, EVERGREEN_BUSH, HUCKLEBERRY_BUSH, RASPBERRY_BUSH };
 
 }

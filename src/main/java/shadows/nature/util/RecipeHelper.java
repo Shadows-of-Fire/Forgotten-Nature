@@ -1,71 +1,88 @@
 package shadows.nature.util;
 
-import java.util.HashMap;
-import javax.annotation.Nonnull;
+import java.util.List;
 
-import com.google.common.collect.Maps;
 import net.minecraft.block.Block;
-import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.item.crafting.ShapedRecipes;
 import net.minecraft.item.crafting.ShapelessRecipes;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.World;
-import net.minecraftforge.common.ForgeHooks;
+import net.minecraftforge.common.crafting.CraftingHelper;
+import net.minecraftforge.common.crafting.CraftingHelper.ShapedPrimer;
 import net.minecraftforge.oredict.OreIngredient;
-import net.minecraftforge.oredict.ShapelessOreRecipe;
+import shadows.nature.registry.ModRegistry;
 
 public class RecipeHelper {
 
 	private static int j = 0;
 	private static final String MODID = NatureData.MODID;
 	private static final String MODNAME = NatureData.NAME;
+	public static final List<IRecipe> recipeList = ModRegistry.RECIPES;
 
 	/*
 	 * This adds the recipe to the list of crafting recipes.  Since who cares about names, it adds it as recipesX, where X is the current recipe you are adding.
 	 */
 	public static void addRecipe(int j, IRecipe rec) {
-		CraftingManager.register(new ResourceLocation(MODID, "recipes" + j), rec);
+		if (rec.getRegistryName() == null)
+			recipeList.add(rec.setRegistryName(new ResourceLocation(MODID, "recipes" + j)));
+		else
+			recipeList.add(rec);
 	}
 
 	/*
 	 * This adds the recipe to the list of crafting recipes.  Cares about names.
 	 */
 	public static void addRecipe(String name, IRecipe rec) {
-		CraftingManager.register(new ResourceLocation(MODID, name), rec);
+		if (rec.getRegistryName() == null)
+			recipeList.add(rec.setRegistryName(new ResourceLocation(MODID, name)));
+		else
+			recipeList.add(rec);
 	}
 
 	/*
 	 * This adds a shaped recipe to the list of crafting recipes, using the forge format.
 	 */
 	public static void addOldShaped(ItemStack output, Object... input) {
-		addRecipe(j++, new FixedShapedOreRecipe(new ResourceLocation(MODID, "recipes" + j), output, input));
+		ShapedPrimer primer = CraftingHelper.parseShaped(input);
+		addRecipe(j++, new ShapedRecipes(new ResourceLocation(MODID, "recipes" + j).toString(), primer.width, primer.height, primer.input, output));
 	}
 
 	/*
 	 * This adds a shaped recipe to the list of crafting recipes, using the forge format, with a custom group.
 	 */
 	public static void addOldShaped(String group, ItemStack output, Object... input) {
-		addRecipe(j++, new FixedShapedOreRecipe(new ResourceLocation(MODID, group), output, input));
+		ShapedPrimer primer = CraftingHelper.parseShaped(input);
+		addRecipe(j++, new ShapedRecipes(new ResourceLocation(MODID, group).toString(), primer.width, primer.height, primer.input, output));
+	}
+
+	/*
+	* This adds a shaped recipe to the list of crafting recipes, using the forge format, with a custom group.
+	*/
+	public static void addOldShaped(String name, String group, ItemStack output, Object... input) {
+		ShapedPrimer primer = CraftingHelper.parseShaped(input);
+		addRecipe(j++, new ShapedRecipes(new ResourceLocation(MODID, group).toString(), primer.width, primer.height, primer.input, output).setRegistryName(MODID, name));
 	}
 
 	/*
 	 * This adds a shapeless recipe to the list of crafting recipes, using the forge format.
 	 */
 	public static void addOldShapeless(ItemStack output, Object... input) {
-		addRecipe(j++, new ShapelessOreRecipe(new ResourceLocation(MODID, "recipes" + j), output, input));
+		addRecipe(j++, new ShapelessRecipes(new ResourceLocation(MODID, "recipes" + j).toString(), output, createInput(input)));
 	}
 
 	/*
 	 * This adds a shapeless recipe to the list of crafting recipes, using the forge format, with a custom group.
 	 */
 	public static void addOldShapeless(String group, ItemStack output, Object... input) {
-		addRecipe(j++, new ShapelessOreRecipe(new ResourceLocation(MODID, group), output, input));
+		addRecipe(j++, new ShapelessRecipes(new ResourceLocation(MODID, group).toString(), output, createInput(input)));
+	}
+
+	public static void addOldShapeless(String name, String group, ItemStack output, Object... input) {
+		addRecipe(j++, new ShapelessRecipes(new ResourceLocation(MODID, group).toString(), output, createInput(input)).setRegistryName(MODID, name));
 	}
 
 	/*
@@ -134,8 +151,7 @@ public class RecipeHelper {
 		if (input[0] instanceof Object[])
 			input = (Object[]) input[0];
 		if (l * w != input.length)
-			throw new UnsupportedOperationException(
-					"Attempted to add invalid shaped recipe.  Complain to the author of  " + MODNAME);
+			throw new UnsupportedOperationException("Attempted to add invalid shaped recipe.  Complain to the author of " + MODNAME);
 		NonNullList<Ingredient> inputL = NonNullList.create();
 		for (int i = 0; i < input.length; i++) {
 			Object k = input[i];
@@ -156,11 +172,12 @@ public class RecipeHelper {
 	}
 
 	public static ShapedRecipes genShaped(String group, ItemStack output, int l, int w, Object[] input) {
-		if (input[0] instanceof Object[])
+		if (input[0] instanceof List)
+			input = ((List<?>) input[0]).toArray();
+		else if (input[0] instanceof Object[])
 			input = (Object[]) input[0];
 		if (l * w != input.length)
-			throw new UnsupportedOperationException(
-					"Attempted to add invalid shaped recipe.  Complain to the author of  " + MODNAME);
+			throw new UnsupportedOperationException("Attempted to add invalid shaped recipe.  Complain to the author of " + MODNAME);
 		NonNullList<Ingredient> inputL = NonNullList.create();
 		for (int i = 0; i < input.length; i++) {
 			Object k = input[i];
@@ -181,7 +198,9 @@ public class RecipeHelper {
 	}
 
 	public static NonNullList<Ingredient> createInput(Object[] input) {
-		if (input[0] instanceof Object[])
+		if (input[0] instanceof List)
+			input = ((List<?>) input[0]).toArray();
+		else if (input[0] instanceof Object[])
 			input = (Object[]) input[0];
 		NonNullList<Ingredient> inputL = NonNullList.create();
 		for (int i = 0; i < input.length; i++) {
@@ -195,204 +214,9 @@ public class RecipeHelper {
 			} else if (k instanceof Block) {
 				inputL.add(i, Ingredient.fromStacks(new ItemStack((Block) k)));
 			} else {
-				throw new UnsupportedOperationException(
-						"Attempted to add invalid shapeless recipe.  Complain to the author of  " + MODNAME);
+				throw new UnsupportedOperationException("Attempted to add invalid shapeless recipe.  Complain to the author of " + MODNAME);
 			}
 		}
 		return inputL;
 	}
-
-	//This is ShapedOreRecipe modified to actually work until forge re-fixes it in an update.
-	public static class FixedShapedOreRecipe implements IRecipe {
-		//Added in for future ease of change, but hard coded for now.
-		public static final int MAX_CRAFT_GRID_WIDTH = 3;
-		public static final int MAX_CRAFT_GRID_HEIGHT = 3;
-
-		@Nonnull
-		protected ItemStack output = ItemStack.EMPTY;
-		protected NonNullList<Ingredient> input = null;
-		protected int width = 0;
-		protected int height = 0;
-		protected boolean mirrored = true;
-		protected ResourceLocation group;
-
-		public FixedShapedOreRecipe(ResourceLocation group, Block result, Object... recipe) {
-			this(group, new ItemStack(result), recipe);
-		}
-
-		public FixedShapedOreRecipe(ResourceLocation group, Item result, Object... recipe) {
-			this(group, new ItemStack(result), recipe);
-		}
-
-		public FixedShapedOreRecipe(ResourceLocation group, @Nonnull ItemStack result, Object... recipe) {
-			this.group = group;
-			output = result.copy();
-
-			String shape = "";
-			int idx = 0;
-
-			if (recipe[idx] instanceof Boolean) {
-				mirrored = (Boolean) recipe[idx];
-				if (recipe[idx + 1] instanceof Object[]) {
-					recipe = (Object[]) recipe[idx + 1];
-				} else {
-					idx = 1;
-				}
-			}
-
-			if (recipe[idx] instanceof String[]) {
-				String[] parts = ((String[]) recipe[idx++]);
-
-				for (String s : parts) {
-					width = s.length();
-					shape += s;
-				}
-
-				height = parts.length;
-			} else {
-				while (recipe[idx] instanceof String) {
-					String s = (String) recipe[idx++];
-					shape += s;
-					width = s.length();
-					height++;
-				}
-			}
-
-			if (width * height != shape.length()) {
-				String ret = "Invalid shaped ore recipe: ";
-				for (Object tmp : recipe) {
-					ret += tmp + ", ";
-				}
-				ret += output;
-				throw new RuntimeException(ret);
-			}
-
-			HashMap<Character, Ingredient> itemMap = Maps.newHashMap();
-
-			for (; idx < recipe.length; idx += 2) {
-				Character chr = (Character) recipe[idx];
-				Object in = recipe[idx + 1];
-
-				if (in instanceof ItemStack) {
-					itemMap.put(chr, Ingredient.fromStacks(((ItemStack) in).copy()));
-				} else if (in instanceof Item) {
-					itemMap.put(chr, Ingredient.fromStacks(new ItemStack((Item) in)));
-				} else if (in instanceof Block) {
-					itemMap.put(chr, Ingredient.fromStacks(new ItemStack((Block) in)));
-				} else if (in instanceof String) {
-					itemMap.put(chr, new OreIngredient((String) in));
-				} else if (in instanceof Ingredient) {
-					itemMap.put(chr, (Ingredient) in);
-				} else {
-					String ret = "Invalid shaped ore recipe: ";
-					for (Object tmp : recipe) {
-						ret += tmp + ", ";
-					}
-					ret += output;
-					throw new RuntimeException(ret);
-				}
-			}
-
-			this.input = NonNullList.withSize(width * height, Ingredient.EMPTY);
-			int x = 0;
-			for (char chr : shape.toCharArray()) {
-				if (itemMap.get(chr) != null)
-					input.set(x, itemMap.get(chr));
-				x++;
-			}
-		}
-
-		/**
-		 * Returns an Item that is the result of this recipe
-		 */
-		@Override
-		@Nonnull
-		public ItemStack getCraftingResult(@Nonnull InventoryCrafting var1) {
-			return output.copy();
-		}
-
-		@Override
-		@Nonnull
-		public ItemStack getRecipeOutput() {
-			return output;
-		}
-
-		/**
-		 * Used to check if a recipe matches current crafting inventory
-		 */
-		@Override
-		public boolean matches(InventoryCrafting inv, World world) {
-			for (int x = 0; x <= MAX_CRAFT_GRID_WIDTH - width; x++) {
-				for (int y = 0; y <= MAX_CRAFT_GRID_HEIGHT - height; ++y) {
-					if (checkMatch(inv, x, y, false)) {
-						return true;
-					}
-
-					if (mirrored && checkMatch(inv, x, y, true)) {
-						return true;
-					}
-				}
-			}
-
-			return false;
-		}
-
-		protected boolean checkMatch(InventoryCrafting inv, int startX, int startY, boolean mirror) {
-			for (int x = 0; x < MAX_CRAFT_GRID_WIDTH; x++) {
-				for (int y = 0; y < MAX_CRAFT_GRID_HEIGHT; y++) {
-					int subX = x - startX;
-					int subY = y - startY;
-					Ingredient target = null;
-
-					if (subX >= 0 && subY >= 0 && subX < width && subY < height) {
-						if (mirror) {
-							target = input.get(width - subX - 1 + subY * width);
-						} else {
-							target = input.get(subX + subY * width);
-						}
-					}
-
-					if (!target.apply(inv.getStackInRowAndColumn(x, y))) {
-						return false;
-					}
-				}
-			}
-
-			return true;
-		}
-
-		public FixedShapedOreRecipe setMirrored(boolean mirror) {
-			mirrored = mirror;
-			return this;
-		}
-
-		public NonNullList<Ingredient> func_192400_c() {
-			return this.input;
-		}
-
-		@Override
-		public NonNullList<ItemStack> getRemainingItems(InventoryCrafting inv) //getRecipeLeftovers
-		{
-			return ForgeHooks.defaultRecipeGetRemainingItems(inv);
-		}
-
-		public int getWidth() {
-			return width;
-		}
-
-		public int getHeight() {
-			return height;
-		}
-
-		@Override
-		public String func_193358_e() {
-			return this.group.toString();
-		}
-
-		@Override
-		public boolean canFit(int width, int height) {
-			return width >= this.width && height >= this.height;
-		}
-	}
-
 }

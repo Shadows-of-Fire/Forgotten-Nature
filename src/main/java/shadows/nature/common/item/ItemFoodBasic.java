@@ -1,8 +1,7 @@
 package shadows.nature.common.item;
 
 import net.minecraft.item.ItemFood;
-import net.minecraftforge.fml.common.registry.GameRegistry;
-import shadows.nature.registry.NatureItems;
+import shadows.nature.registry.ModRegistry;
 import shadows.nature.util.IHasModelLocation;
 import shadows.nature.util.NatureData;
 import shadows.nature.util.NatureUtil;
@@ -16,8 +15,7 @@ public class ItemFoodBasic extends ItemFood implements IHasModelLocation {
 		setRegistryName(name);
 		setUnlocalizedName(NatureData.MODID + "." + name);
 		setCreativeTab(NatureData.TAB);
-		GameRegistry.register(this);
-		NatureItems.add(this);
+		ModRegistry.ITEMS.add(this);
 		variant = name;
 	}
 

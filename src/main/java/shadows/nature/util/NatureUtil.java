@@ -30,13 +30,11 @@ public class NatureUtil {
 	 *            The {@link IBlockState} variant to use.
 	 */
 	public static void sMRL(Item item, int meta, String variant) {
-		ModelLoader.setCustomModelResourceLocation(item, meta,
-				new ModelResourceLocation(item.getRegistryName(), variant));
+		ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(item.getRegistryName(), variant));
 	}
 
 	public static void sMRL(Item item, String suffix, int meta, String variant) {
-		ModelLoader.setCustomModelResourceLocation(item, meta,
-				new ModelResourceLocation(item.getRegistryName() + suffix, variant));
+		ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(item.getRegistryName() + suffix, variant));
 	}
 
 	/**
@@ -79,8 +77,7 @@ public class NatureUtil {
 	}
 
 	public static void sMRLF(Item food, String variant) {
-		ModelLoader.setCustomModelResourceLocation(food, 0,
-				new ModelResourceLocation(new ResourceLocation(NatureData.MODID, "food"), "type=" + variant));
+		ModelLoader.setCustomModelResourceLocation(food, 0, new ModelResourceLocation(new ResourceLocation(NatureData.MODID, "food"), "type=" + variant));
 	}
 
 }

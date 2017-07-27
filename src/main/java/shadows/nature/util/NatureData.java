@@ -1,7 +1,5 @@
 package shadows.nature.util;
 
-import javax.annotation.Nullable;
-
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.creativetab.CreativeTabs;
@@ -9,8 +7,10 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing.Axis;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
+import shadows.nature.registry.ModRegistry;
 import net.minecraft.util.IStringSerializable;
-import shadows.nature.registry.NatureItems;
+import net.minecraft.util.ResourceLocation;
 
 public class NatureData {
 
@@ -118,18 +118,21 @@ public class NatureData {
 		}
 	}
 
-	public static enum BushSet implements IStringSerializable {
-		BLACKBERRY(NatureItems.BLACKBERRY),
-		BLUEBERRY(NatureItems.BLUEBERRY),
-		DECIDUOUS(null),
-		EVERGREEN(null),
-		HUCKLEBERRY(NatureItems.HUCKLEBERRY),
-		RASPBERRY(NatureItems.RASPBERRY);
+	public static enum BushSet implements IStringSerializable, ILateUpdateEnum {
+		BLACKBERRY("forgottennature:blackberry"),
+		BLUEBERRY("forgottennature:blueberry"),
+		DECIDUOUS(""),
+		EVERGREEN(""),
+		HUCKLEBERRY("forgottennature:huckleberry"),
+		RASPBERRY("forgottennature:raspberry");
 
 		private Item item;
+		private String dropName;
 
-		BushSet(@Nullable Item harvest) {
-			item = harvest;
+		BushSet(String dropName) {
+			this.dropName = dropName;
+			if(dropName.equals("")) this.dropName = "minecraft:air";
+			ModRegistry.LATE_ENUMS.add(this);
 		}
 
 		public ItemStack getHarvest() {
@@ -139,6 +142,15 @@ public class NatureData {
 		@Override
 		public String getName() {
 			return this.toString().toLowerCase();
+		}
+		
+		private void setItem(Item item) {
+			this.item = item;
+		}
+
+		@Override
+		public void update() {
+			this.setItem(ForgeRegistries.ITEMS.getValue(new ResourceLocation(dropName)));
 		}
 
 	}

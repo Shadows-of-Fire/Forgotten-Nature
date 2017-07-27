@@ -1,21 +1,45 @@
-itemGroup.tabFN=ForgottenNature
+itemGroup.forgottennature=Forgotten Nature
 
-item.fruit.banana.name=Banana
-item.fruit.fig.name=Fig
-item.fruit.orange.name=Orange
-item.fruit.peach.name=Peach
-item.fruit.cherries.name=Cherries
-item.fruit.blackberries.name=Blackberries
-item.fruit.huckleberries.name=Huckleberries
-item.fruit.blueberries.name=Blueberries
-item.fruit.raspberries.name=Raspberries
-item.fruit.lemon.name=Lemon
+#Implemented
 
-item.nuts.ginkgoNuts.name=Ginkgo Nuts
-item.nuts.walnuts.name=Walnuts
-item.nuts.orange.name=Coconut
+item.forgottennature.blackberry.name=Blackberries
+item.forgottennature.huckleberry.name=Huckleberries
+item.forgottennature.blueberry.name=Blueberries
+item.forgottennature.raspberry.name=Raspberries
 
-item.ropeItem.name=Rope
+item.tile.forgottennature.bushling.0.name=Blackberry Bushling
+item.tile.forgottennature.bushling.1.name=Blueberry Bushling
+item.tile.forgottennature.bushling.2.name=Deciduous Bushling
+item.tile.forgottennature.bushling.3.name=Evergreen Bushling
+item.tile.forgottennature.bushling.4.name=Huckleberry Bushling
+item.tile.forgottennature.bushling.5.name=Raspberry Bushling
+
+item.tile.forgottennature.bush.0.name=Blackberry Leaves
+item.tile.forgottennature.bush.1.name=Blueberry Leaves
+item.tile.forgottennature.bush.2.name=Deciduous Leaves
+item.tile.forgottennature.bush.3.name=Evergreen Leaves
+item.tile.forgottennature.bush.4.name=Huckleberry Leaves
+item.tile.forgottennature.bush.5.name=Raspberry Leaves
+
+
+
+
+
+
+#Legacy
+
+item.forgottennature.banana.name=Banana
+item.forgottennature.fig.name=Fig
+item.forgottennature.orange.name=Orange
+item.forgottennature.peach.name=Peach
+item.forgottennature.cherries.name=Cherries
+item.forgottennature.lemon.name=Lemon
+
+item.forgottennature.nuts.ginkgoNuts.name=Ginkgo Nuts
+item.forgottennature.nuts.walnuts.name=Walnuts
+item.forgottennature.nuts.orange.name=Coconut
+
+item.forgottennature.ropeitem.forgottennature.name=Rope
 
 scythe.name=Scythe
 
@@ -23,10 +47,10 @@ ohoe.name=Obsidian Hoe
 opaxe.name=Obsidian Pickaxe
 oaxe.name=Obsidian Axe
 oshovel.name=Obsidian Shovel
-item.helmetObsidian.name=Obsidian Helmet
-item.chestPlateObsidian.name=Obsidian Chestplate
-item.leggingsObsidian.name=Obsidian Leggings
-item.bootsObsidian.name=Obsidian Boots
+item.forgottennature.helmetObsidian.name=Obsidian Helmet
+item.forgottennature.chestPlateObsidian.name=Obsidian Chestplate
+item.forgottennature.leggingsObsidian.name=Obsidian Leggings
+item.forgottennature.bootsObsidian.name=Obsidian Boots
 
 choe.name=Crystal Hoe
 cpaxe.name=Crystal Pickaxe
@@ -46,44 +70,44 @@ sawTooth.name=Saw Tooth
 sawBlade.name=Saw Blade
 sawHandle.name=Saw Handle
 
-item.helmetTitanStone.name=Titan Stone Helmet
-item.chestPlateTitanStone.name=Titan Stone Chestplate
-item.leggingsTitanStone.name=Titan Stone Leggings
-item.bootsTitanStone.name=Titan Stone Boots
+item.forgottennature.helmetTitanStone.name=Titan Stone Helmet
+item.forgottennature.chestPlateTitanStone.name=Titan Stone Chestplate
+item.forgottennature.leggingsTitanStone.name=Titan Stone Leggings
+item.forgottennature.bootsTitanStone.name=Titan Stone Boots
 
-item.oreMats1.aluminumIngot.name=Aluminum Ingot
-item.oreMats1.antimonyIngot.name=Antimony Ingot
-item.oreMats1.bariumIngot.name=Barium Ingot
-item.oreMats1.berylliumIngot.name=Beryllium Ingot
-item.oreMats1.calciumIngot.name=Calcium Ingot
-item.oreMats1.chromeIngot.name=Chrome Ingot
-item.oreMats1.cobaltIngot.name=Cobalt Ingot
-item.oreMats1.copperIngot.name=Copper Ingot
-item.oreMats1.erbiumIngot.name=Erbium Ingot
-item.oreMats1.galliumIngot.name=Gallium Ingot
-item.oreMats1.leadIngot.name=Lead Ingot
-item.oreMats1.lithiumIngot.name=Lithium Ingot
-item.oreMats1.manganeseIngot.name=Manganese Ingot
-item.oreMats1.molybdenumIngot.name=Molybdenum Ingot
-item.oreMats1.neodymiumIngot.name=Neodymium Ingot
-item.oreMats1.nickelIngot.name=Nickel Ingot
-item.oreMats2.PGMIngots.name=PGM Ingot
-item.oreMats2.potassiumIngot.name=Potassium Ingot
-item.oreMats2.pyritePowder.name=Pyrite Powder
-item.oreMats2.salt.name=Salt
-item.oreMats2.samariumIngot.name=Samarium Ingot
-item.oreMats2.siliconIngot.name=Silicon Ingot
-item.oreMats2.silverIngot.name=Silver Ingot
-item.oreMats2.sphaleriteIngot.name=Sphalerite Ingot
-item.oreMats2.sulfurChunk.name=Sulfur Chunk
-item.oreMats2.tantalumIngot.name=Tantalum Ingot
-item.oreMats2.thoriumIngot.name=Thorium Ingot
-item.oreMats2.tinIngot.name=Tin Ingot
-item.oreMats2.titaniumIngot.name=Titanium Ingot
-item.oreMats2.tungstenIngot.name=Tungsten Ingot
-item.oreMats2.uraniumIngot.name=Uranium Ingot
-item.oreMats2.vanadiumIngot.name=Vanadium Ingot
-item.oreMats3.ytterbiumIngot.name=Ytterbium Ingot
+item.forgottennature.oreMats1.aluminumIngot.name=Aluminum Ingot
+item.forgottennature.oreMats1.antimonyIngot.name=Antimony Ingot
+item.forgottennature.oreMats1.bariumIngot.name=Barium Ingot
+item.forgottennature.oreMats1.berylliumIngot.name=Beryllium Ingot
+item.forgottennature.oreMats1.calciumIngot.name=Calcium Ingot
+item.forgottennature.oreMats1.chromeIngot.name=Chrome Ingot
+item.forgottennature.oreMats1.cobaltIngot.name=Cobalt Ingot
+item.forgottennature.oreMats1.copperIngot.name=Copper Ingot
+item.forgottennature.oreMats1.erbiumIngot.name=Erbium Ingot
+item.forgottennature.oreMats1.galliumIngot.name=Gallium Ingot
+item.forgottennature.oreMats1.leadIngot.name=Lead Ingot
+item.forgottennature.oreMats1.lithiumIngot.name=Lithium Ingot
+item.forgottennature.oreMats1.manganeseIngot.name=Manganese Ingot
+item.forgottennature.oreMats1.molybdenumIngot.name=Molybdenum Ingot
+item.forgottennature.oreMats1.neodymiumIngot.name=Neodymium Ingot
+item.forgottennature.oreMats1.nickelIngot.name=Nickel Ingot
+item.forgottennature.oreMats2.PGMIngots.name=PGM Ingot
+item.forgottennature.oreMats2.potassiumIngot.name=Potassium Ingot
+item.forgottennature.oreMats2.pyritePowder.name=Pyrite Powder
+item.forgottennature.oreMats2.salt.name=Salt
+item.forgottennature.oreMats2.samariumIngot.name=Samarium Ingot
+item.forgottennature.oreMats2.siliconIngot.name=Silicon Ingot
+item.forgottennature.oreMats2.silverIngot.name=Silver Ingot
+item.forgottennature.oreMats2.sphaleriteIngot.name=Sphalerite Ingot
+item.forgottennature.oreMats2.sulfurChunk.name=Sulfur Chunk
+item.forgottennature.oreMats2.tantalumIngot.name=Tantalum Ingot
+item.forgottennature.oreMats2.thoriumIngot.name=Thorium Ingot
+item.forgottennature.oreMats2.tinIngot.name=Tin Ingot
+item.forgottennature.oreMats2.titaniumIngot.name=Titanium Ingot
+item.forgottennature.oreMats2.tungstenIngot.name=Tungsten Ingot
+item.forgottennature.oreMats2.uraniumIngot.name=Uranium Ingot
+item.forgottennature.oreMats2.vanadiumIngot.name=Vanadium Ingot
+item.forgottennature.oreMats3.ytterbiumIngot.name=Ytterbium Ingot
 
 tile.He.name=Helium
 tile.H2.name=Hydrogen
@@ -106,7 +130,7 @@ crystalStick.name=Crystal Stick
 darkCrystalShard.name=Dark Crystal Shard
 ropeYarn.name=Rope Yarn
 ropeStrand.name=Rope Strand
-surfaceTeleportItem.name=Surface Teleporter
+surfaceTeleportitem.forgottennature.name=Surface Teleporter
 
 tile.FNSapling1.desertironwoodsapling.name=Desert Ironwood Sapling
 tile.FNSapling1.cherrysappling.name=Cherry Sapling
@@ -122,8 +146,6 @@ tile.FNSapling1.cypresssapling.name=Cypress Sapling
 tile.FNSapling1.dummy.name=dummy
 tile.FNSapling1.joshuasapling.name=Jushua Sapling
 tile.FNSapling1.swampwillowsapling.name=Swamp Willow Sapling
-tile.FNSapling1.deciduoubushling.name=Deciduous Bushling
-tile.FNSapling1.evergreenbushling.name=Evergreen Bushling
 
 tile.FNSapling2.palmsapling.name=Palm Sapling
 tile.FNSapling2.desertwillowsapling.name=Desert Willow Sapling
@@ -139,12 +161,8 @@ tile.FNSapling2.bananasapling.name=Banana Sapling
 tile.FNSapling2.orangesapling.name=Orange Sapling
 tile.FNSapling2.peachsapling.name=Peach Sapling
 tile.FNSapling2.lemonsapling.name=Lemon Sapling
-tile.FNSapling2.blueberrybushling.name=Blueberry Bushling
-tile.FNSapling2.raspberrysapling.name=Raspberry Sapling
 
 tile.FNSapling3.crystalsapling.name=Crystal Sapling
-tile.FNSapling3.blackberrybushling.name=Blackberry Bushling
-tile.FNSapling3.huckleberrybushling.name=Huckleberry Bushling
 tile.FNSapling3.netherashsapling.name=Nether Ash Sapling
 tile.FNSapling3.netherblazesapling.name=Nether Blaze Sapling
 tile.FNSapling3.nethermushroom.name=Nether Mushroom

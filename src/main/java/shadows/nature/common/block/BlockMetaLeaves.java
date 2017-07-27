@@ -9,15 +9,14 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.common.IShearable;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import shadows.nature.common.item.ItemBlockMeta;
+import shadows.nature.registry.ModRegistry;
 import shadows.nature.util.NatureData;
 import shadows.nature.util.NatureUtil;
 
@@ -27,7 +26,7 @@ public class BlockMetaLeaves extends BlockBasic implements IShearable {
 		super(name, Material.LEAVES, 0.2F, 0.0F, true);
 		setDefaultState(blockState.getBaseState().withProperty(NatureData.LEAVES, NatureData.LeafSet.values()[0]));
 		setSoundType(SoundType.PLANT);
-		GameRegistry.register(new ItemBlockMeta(this));
+		ModRegistry.ITEMS.add(new ItemBlockMeta(this));
 	}
 
 	@Override
@@ -53,9 +52,9 @@ public class BlockMetaLeaves extends BlockBasic implements IShearable {
 	}
 
 	@Override
-	public void getSubBlocks(Item item, CreativeTabs tab, NonNullList<ItemStack> list) {
+	public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list) {
 		for (int i = 0; i < NatureData.LEAVES.getAllowedValues().size(); i++) {
-			list.add(new ItemStack(item, 1, i));
+			list.add(new ItemStack(this, 1, i));
 		}
 	}
 

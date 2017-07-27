@@ -13,7 +13,6 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
@@ -23,21 +22,19 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.IShearable;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import shadows.nature.common.item.ItemBlockMeta;
-import shadows.nature.registry.NatureBlocks;
+import shadows.nature.registry.ModRegistry;
 import shadows.nature.util.NatureData;
 import shadows.nature.util.NatureUtil;
 
-public class BlockFruitBush extends BlockBasic implements IGrowable, IShearable {
+public class BlockBushLeaves extends BlockBasic implements IGrowable, IShearable {
 
-	public BlockFruitBush() {
+	public BlockBushLeaves() {
 		super("bush", Material.LEAVES, 0.2F, 0.0F, true);
 		setTickRandomly(true);
-		setDefaultState(blockState.getBaseState().withProperty(NatureData.BUSHES, NatureData.BushSet.BLACKBERRY)
-				.withProperty(NatureData.FRUIT, false));
+		setDefaultState(blockState.getBaseState().withProperty(NatureData.BUSHES, NatureData.BushSet.BLACKBERRY).withProperty(NatureData.FRUIT, false));
 		setSoundType(SoundType.PLANT);
-		GameRegistry.register(new ItemBlockMeta(this));
+		ModRegistry.ITEMS.add(new ItemBlockMeta(this));
 	}
 
 	@Override
@@ -48,8 +45,7 @@ public class BlockFruitBush extends BlockBasic implements IGrowable, IShearable 
 	}
 
 	@Override
-	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand,
-			EnumFacing facing, float hitX, float hitY, float hitZ) {
+	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
 		if (hand != EnumHand.MAIN_HAND || !player.getHeldItem(hand).isEmpty())
 			return false;
 		else if (state.getValue(NatureData.FRUIT)) {
@@ -71,11 +67,6 @@ public class BlockFruitBush extends BlockBasic implements IGrowable, IShearable 
 	}
 
 	@Override
-	public int tickRate(World world) {
-		return 100;
-	}
-
-	@Override
 	public void updateTick(World world, BlockPos pos, IBlockState state, Random rand) {
 		if (rand.nextBoolean() && canGrow(world, pos, state, false))
 			grow(world, rand, pos, state);
@@ -92,9 +83,9 @@ public class BlockFruitBush extends BlockBasic implements IGrowable, IShearable 
 	}
 
 	@Override
-	public void getSubBlocks(Item item, CreativeTabs tab, NonNullList<ItemStack> list) {
+	public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list) {
 		for (int i = 0; i < NatureData.BushSet.values().length; i++) {
-			list.add(new ItemStack(item, 1, i));
+			list.add(new ItemStack(this, 1, i));
 		}
 	}
 
@@ -105,8 +96,7 @@ public class BlockFruitBush extends BlockBasic implements IGrowable, IShearable 
 
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
-		return getDefaultState().withProperty(NatureData.BUSHES, NatureData.BushSet.values()[meta % 6])
-				.withProperty(NatureData.FRUIT, meta >= 6);
+		return getDefaultState().withProperty(NatureData.BUSHES, NatureData.BushSet.values()[meta % 6]).withProperty(NatureData.FRUIT, meta >= 6);
 	}
 
 	@Override
@@ -120,7 +110,7 @@ public class BlockFruitBush extends BlockBasic implements IGrowable, IShearable 
 		if (state.getValue(NatureData.FRUIT))
 			k.add(state.getValue(NatureData.BUSHES).getHarvest());
 		if (ThreadLocalRandom.current().nextInt(5) == 0)
-			k.add(new ItemStack(NatureBlocks.BUSHLING, 1, damageDropped(state)));
+			k.add(new ItemStack(ModRegistry.BUSHLING, 1, damageDropped(state)));
 		return k;
 	}
 
@@ -131,7 +121,7 @@ public class BlockFruitBush extends BlockBasic implements IGrowable, IShearable 
 		k.add(new ItemStack(state.getBlock(), 1, damageDropped(state)));
 		if (ThreadLocalRandom.current().nextInt(15) == 0) {
 			k.clear();
-			k.add(new ItemStack(NatureBlocks.BUSHLING, 1, damageDropped(state)));
+			k.add(new ItemStack(ModRegistry.BUSHLING, 1, damageDropped(state)));
 		}
 		return k;
 	}

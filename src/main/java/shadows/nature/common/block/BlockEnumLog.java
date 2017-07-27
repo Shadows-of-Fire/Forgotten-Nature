@@ -24,10 +24,8 @@ public class BlockEnumLog<E extends Enum<E> & IStringSerializable> extends Block
 	public BlockEnumLog(String name, Class<E> enumClass) {
 		super(name, Material.WOOD, SoundType.WOOD, 2.0F, 1.0F, enumClass);
 		if (enumClass.getEnumConstants().length > 5)
-			throw new ArrayIndexOutOfBoundsException(
-					"A BlockEnumLog has attempted to be constructed with an enum class with more than 5 constants!");
-		this.setDefaultState(
-				getBlockState().getBaseState().withProperty(property, types[0]).withProperty(AXIS, Axis.Y));
+			throw new ArrayIndexOutOfBoundsException("A BlockEnumLog has attempted to be constructed with an enum class with more than 5 constants!");
+		this.setDefaultState(getBlockState().getBaseState().withProperty(property, types[0]).withProperty(AXIS, Axis.Y));
 	}
 
 	@Override
@@ -66,8 +64,7 @@ public class BlockEnumLog<E extends Enum<E> & IStringSerializable> extends Block
 	}
 
 	@Override
-	public IBlockState getStateForPlacement(World world, BlockPos pos, EnumFacing facing, float hitX, float hitY,
-			float hitZ, int meta, EntityLivingBase placer, EnumHand hand) {
+	public IBlockState getStateForPlacement(World world, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer, EnumHand hand) {
 		return this.getDefaultState().withProperty(property, types[meta]).withProperty(AXIS, facing.getAxis());
 	}
 
@@ -86,8 +83,7 @@ public class BlockEnumLog<E extends Enum<E> & IStringSerializable> extends Block
 	@Override
 	public void registerModels() {
 		for (int i = 0; i < types.length; i++) {
-			NatureUtil.sMRL(this, i,
-					AXIS.getName() + "=" + EnumAxis.Y.getName() + "," + property.getName() + "=" + types[i].getName());
+			NatureUtil.sMRL(this, i, AXIS.getName() + "=" + EnumAxis.Y.getName() + "," + property.getName() + "=" + types[i].getName());
 		}
 	}
 

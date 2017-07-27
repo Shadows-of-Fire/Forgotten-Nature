@@ -2,15 +2,12 @@ package shadows.nature.common.block;
 
 import java.util.Random;
 
-import javax.annotation.Nullable;
-
 import net.minecraft.block.IGrowable;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
@@ -21,9 +18,9 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.common.IPlantable;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import shadows.nature.common.item.ItemBlockMeta;
 import shadows.nature.common.world.gen.BushGenerator;
+import shadows.nature.registry.ModRegistry;
 import shadows.nature.util.NatureData;
 import shadows.nature.util.NatureData.BushSet;
 import shadows.nature.util.NatureUtil;
@@ -38,7 +35,7 @@ public class BlockBushling extends BlockBasic implements IGrowable, IPlantable {
 		setSoundType(SoundType.PLANT);
 		setTickRandomly(true);
 		setDefaultState(blockState.getBaseState().withProperty(NatureData.BUSHES, BushSet.BLACKBERRY));
-		GameRegistry.register(new ItemBlockMeta(this));
+		ModRegistry.ITEMS.add(new ItemBlockMeta(this));
 	}
 
 	@Override
@@ -81,8 +78,7 @@ public class BlockBushling extends BlockBasic implements IGrowable, IPlantable {
 	public boolean canGrow(World world, BlockPos pos, IBlockState state, boolean isClient) {
 		boolean[] bools = { false, false, false, false };
 		for (int i = 0; i < 4; i++) {
-			if (BushGenerator.BUSHGENS[state.getValue(NatureData.BUSHES).ordinal()].isReplaceable(world,
-					pos.offset(EnumFacing.HORIZONTALS[i])))
+			if (BushGenerator.BUSHGENS[state.getValue(NatureData.BUSHES).ordinal()].isReplaceable(world, pos.offset(EnumFacing.HORIZONTALS[i])))
 				bools[i] = true;
 		}
 		return bools[0] && bools[1] && bools[2] && bools[3];
@@ -116,9 +112,9 @@ public class BlockBushling extends BlockBasic implements IGrowable, IPlantable {
 	}
 
 	@Override
-	public void getSubBlocks(Item item, CreativeTabs tab, NonNullList<ItemStack> list) {
+	public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list) {
 		for (int i = 0; i < NatureData.BushSet.values().length; i++) {
-			list.add(new ItemStack(item, 1, i));
+			list.add(new ItemStack(this, 1, i));
 		}
 	}
 
@@ -146,5 +142,12 @@ public class BlockBushling extends BlockBasic implements IGrowable, IPlantable {
 	public IBlockState getPlant(IBlockAccess world, BlockPos pos) {
 		return getDefaultState();
 	}
+	
+	@Override
+    public boolean canPlaceBlockAt(World world, BlockPos pos) {
+		IBlockState state = world.getBlockState(pos.down());
+		return super.canPlaceBlockAt(world, pos) && state.getBlock().canSustainPlant(state, world, pos.down(), EnumFacing.UP, this);
+        
+    }
 
 }

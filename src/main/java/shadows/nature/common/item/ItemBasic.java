@@ -1,7 +1,7 @@
 package shadows.nature.common.item;
 
 import net.minecraft.item.Item;
-import net.minecraftforge.fml.common.registry.GameRegistry;
+import shadows.nature.registry.ModRegistry;
 import shadows.nature.util.IHasModelLocation;
 import shadows.nature.util.NatureData;
 import shadows.nature.util.NatureUtil;
@@ -12,7 +12,7 @@ public class ItemBasic extends Item implements IHasModelLocation {
 		setRegistryName(name);
 		setUnlocalizedName(NatureData.MODID + "." + name);
 		setCreativeTab(NatureData.TAB);
-		GameRegistry.register(this);
+		ModRegistry.ITEMS.add(this);
 	}
 
 	@Override

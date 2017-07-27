@@ -44,8 +44,7 @@ public class Bush extends WorldGenAbstractTree {
 	@Override
 	public boolean isReplaceable(World world, BlockPos pos) {
 		IBlockState state = world.getBlockState(pos);
-		return state.getBlock().isAir(state, world, pos) || state.getBlock().isLeaves(state, world, pos)
-				|| state.getBlock().isReplaceable(world, pos);
+		return state.getBlock().isAir(state, world, pos) || state.getBlock().isLeaves(state, world, pos) || state.getBlock().isReplaceable(world, pos);
 	}
 
 }
